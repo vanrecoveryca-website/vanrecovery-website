@@ -1450,10 +1450,17 @@
     });
 });
 
-            root.querySelector("#icbc-to-step-2").addEventListener("click", () => {
-                if (state.symptoms.length === 0) { showAlert("Please select at least one option."); return; }
-                showStep(2);
-            });
+root.querySelector("#icbc-to-step-2").addEventListener("click", () => {
+    state.symptoms = Array.from(root.querySelectorAll("[data-symptom].selected"))
+        .map(btn => btn.dataset.symptom);
+
+    if (state.symptoms.length === 0) {
+        showAlert("Please select at least one option.");
+        return;
+    }
+
+    showStep(2);
+});
 
             root.querySelectorAll("[data-location]").forEach((btn) => {
                 btn.addEventListener("click", () => {
