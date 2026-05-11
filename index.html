@@ -869,38 +869,39 @@
                         <h3 class="question">What are you feeling after the accident?</h3>
                         <p class="helper">Select all that apply</p>
 
-                        <div class="options">
-                            <button class="option" type="button" data-symptom="physical">
-                                <span class="check-icon"></span>
-                                <span class="option-text">Neck / back pain</span>
-                            </button>
-
-                            <button class="option" type="button" data-symptom="physical">
-                                <span class="check-icon"></span>
-                                <span class="option-text">Headaches / dizziness</span>
-                            </button>
-
-                            <button class="option" type="button" data-symptom="physical">
-                                <span class="check-icon"></span>
-                                <span class="option-text">Muscle tension / soreness</span>
-                            </button>
-
-                            <button class="option" type="button" data-symptom="emotional">
-                                <span class="check-icon"></span>
-                                <span class="option-text">Anxiety or stress</span>
-                            </button>
-
-                            <button class="option" type="button" data-symptom="both">
-                                <span class="check-icon"></span>
-                                <span class="option-text">Both physical pain and emotional stress</span>
-                            </button>
-
-                            <button class="option" type="button" data-symptom="unsure">
-                                <span class="check-icon"></span>
-                                <span class="option-text">I'm not sure</span>
-                            </button>
-                        </div>
-
+                    <div class="options">
+                    
+                        <button class="option" type="button" data-symptom="Neck / back pain">
+                            <span class="check-icon"></span>
+                            <span class="option-text">Neck / back pain</span>
+                        </button>
+                    
+                        <button class="option" type="button" data-symptom="Headaches / dizziness">
+                            <span class="check-icon"></span>
+                            <span class="option-text">Headaches / dizziness</span>
+                        </button>
+                    
+                        <button class="option" type="button" data-symptom="Muscle tension / soreness">
+                            <span class="check-icon"></span>
+                            <span class="option-text">Muscle tension / soreness</span>
+                        </button>
+                    
+                        <button class="option" type="button" data-symptom="Anxiety or stress">
+                            <span class="check-icon"></span>
+                            <span class="option-text">Anxiety or stress</span>
+                        </button>
+                    
+                        <button class="option" type="button" data-symptom="Both physical pain and emotional stress">
+                            <span class="check-icon"></span>
+                            <span class="option-text">Both physical pain and emotional stress</span>
+                        </button>
+                    
+                        <button class="option" type="button" data-symptom="I'm not sure">
+                            <span class="check-icon"></span>
+                            <span class="option-text">I'm not sure</span>
+                        </button>
+                    
+                    </div>
                         <button class="cta" type="button" id="icbc-to-step-2">Continue</button>
                     </section>
 
@@ -1353,11 +1354,16 @@
                 const copy = root.querySelector("#icbc-result-copy");
                 const list = root.querySelector("#icbc-result-list");
                 list.innerHTML = "";
-
-                const hasPhysical = state.symptoms.includes("physical");
-                const hasEmotional = state.symptoms.includes("emotional");
-                const hasBoth = state.symptoms.includes("both");
-                const isUnsure = state.symptoms.includes("unsure");
+            
+            const hasPhysical = state.symptoms.some(v =>
+                ["Neck / back pain", "Headaches / dizziness", "Muscle tension / soreness"].includes(v)
+            );
+            
+            const hasEmotional = state.symptoms.includes("Anxiety or stress");
+            
+            const hasBoth = state.symptoms.includes("Both physical pain and emotional stress");
+            
+            const isUnsure = state.symptoms.includes("I'm not sure");
 
                 let data = {
                     heading: "Integrated Recovery Support",
@@ -1407,16 +1413,16 @@
             root.querySelectorAll("[data-symptom]").forEach((btn) => {
                 btn.addEventListener("click", () => {
                     const value = btn.dataset.symptom;
-                    if (value === "unsure") {
-                        const alreadySelected = state.symptoms.includes("unsure");
+                    if (value === "I'm not sure") {
+                        const alreadySelected = state.symptoms.includes("I'm not sure");
                         state.symptoms = [];
                         root.querySelectorAll("[data-symptom]").forEach((b) => b.classList.remove("selected"));
                         if (!alreadySelected) { state.symptoms.push("unsure"); btn.classList.add("selected"); }
                         return;
                     }
-                    if (state.symptoms.includes("unsure")) {
-                        state.symptoms = state.symptoms.filter((v) => v !== "unsure");
-                        const unsureBtn = root.querySelector('[data-symptom="unsure"]');
+                        if (state.symptoms.includes("I'm not sure")) {
+                            state.symptoms = state.symptoms.filter((v) => v !== "I'm not sure");
+                            const unsureBtn = root.querySelector('[data-symptom="I\'m not sure"]');
                         if (unsureBtn) unsureBtn.classList.remove("selected");
                     }
                     if (state.symptoms.includes(value)) {
@@ -1453,6 +1459,13 @@
             root.querySelector("#icbc-back-to-result").addEventListener("click", () => showStep(3));
             
             root.querySelector("#icbc-submit-btn").addEventListener("click", async () => {
+
+                const result = root.querySelector("#icbc-result-heading").textContent.trim();
+
+                const params = new URLSearchParams(window.location.search);
+                
+                const utm_source = params.get("utm_source") || "";
+                const utm_campaign = params.get("utm_campaign") || "";
             
                 const submitBtn = root.querySelector("#icbc-submit-btn");
             
@@ -1486,6 +1499,10 @@
                             symptoms: state.symptoms.join(", "),
                             location: state.location || "",
                             result,
+
+                            utm_source,
+                            utm_campaign,
+                            
                             page: window.location.href
                         })
                     });
