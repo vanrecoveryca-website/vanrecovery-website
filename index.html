@@ -1471,8 +1471,6 @@ root.querySelector("#icbc-to-step-2").addEventListener("click", () => {
             
             root.querySelector("#icbc-submit-btn").addEventListener("click", async () => {
 
-                const result = root.querySelector("#icbc-result-heading").textContent.trim();
-
                 const params = new URLSearchParams(window.location.search);
                 
                 const utm_source = params.get("utm_source") || "";
