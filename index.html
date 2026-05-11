@@ -1451,8 +1451,56 @@
             });
             root.querySelector("#icbc-to-lead").addEventListener("click", () => showStep(4));
             root.querySelector("#icbc-back-to-result").addEventListener("click", () => showStep(3));
-            root.querySelector("#icbc-submit-btn").addEventListener("click", () => {
-                showAlert("Form submitted! We will reach out shortly.");
+            
+            root.querySelector("#icbc-submit-btn").addEventListener("click", async () => {
+            
+                const submitBtn = root.querySelector("#icbc-submit-btn");
+            
+                const name = root.querySelector("#icbc-name").value.trim();
+                const contact = root.querySelector("#icbc-contact").value.trim();
+                const email = root.querySelector("#icbc-email").value.trim();
+                const method = root.querySelector("#icbc-method").value;
+                const result = root.querySelector("#icbc-result-heading").textContent.trim();
+            
+                if (!name || !contact) {
+                    showAlert("Please enter your name and phone number.");
+                    return;
+                }
+            
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Submitting...";
+            
+                try {
+            
+                    await fetch("https://script.google.com/macros/s/AKfycbxUc3d89uo3mcghN4DXhXgWyZksIqAm9WKk45RaypW4H4RxocK1VhO07KxDS1v2nAaq/exec", {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name,
+                            contact,
+                            email,
+                            method,
+                            symptoms: state.symptoms.join(", "),
+                            location: state.location || "",
+                            result,
+                            page: window.location.href
+                        })
+                    });
+            
+                    showAlert("Submitted successfully!");
+            
+                } catch (error) {
+            
+                    showAlert("Something went wrong.");
+            
+                }
+            
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Submit";
+            
             });
         })();
     </script>
