@@ -1502,11 +1502,11 @@ function toggleFaq(index) {
                 contact,
                 email,
                 method,
-                symptoms: state.symptoms.join(", "),
-                location: state.location || "",
+                symptoms: symptoms.join(", "),
+                location,
                 result,
-                utm_source,
-                utm_campaign,
+                utm_source: utm_source,
+                utm_campaign: utm_campaign,
                 page: window.location.href
             })
         });
