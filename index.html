@@ -1417,7 +1417,7 @@
                         const alreadySelected = state.symptoms.includes("I'm not sure");
                         state.symptoms = [];
                         root.querySelectorAll("[data-symptom]").forEach((b) => b.classList.remove("selected"));
-                        if (!alreadySelected) { state.symptoms.push("unsure"); btn.classList.add("selected"); }
+                        if (!alreadySelected) { state.symptoms.push("I'm not sure"); btn.classList.add("selected"); }
                         return;
                     }
                         if (state.symptoms.includes("I'm not sure")) {
