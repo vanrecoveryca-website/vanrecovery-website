@@ -1471,6 +1471,7 @@ function toggleFaq(index) {
     });
 
 root.querySelector("#icbc-submit-btn").addEventListener("click", () => {
+
     const submitBtn = root.querySelector("#icbc-submit-btn");
 
     const name = root.querySelector("#icbc-name").value.trim();
@@ -1485,7 +1486,7 @@ root.querySelector("#icbc-submit-btn").addEventListener("click", () => {
     }
 
     submitBtn.disabled = true;
-    submitBtn.textContent = "Submitted";
+    submitBtn.textContent = "Submitting...";
 
     fetch("https://script.google.com/macros/s/AKfycbxUc3d89uo3mcghN4DXhXgWyZksIqAm9WKk45RaypW4H4RxocK1VhO07KxDS1v2nAaq/exec", {
         method: "POST",
@@ -1506,6 +1507,8 @@ root.querySelector("#icbc-submit-btn").addEventListener("click", () => {
     });
 
     showAlert("Submitted successfully!");
+
+    submitBtn.textContent = "Submitted";
 
     root.querySelector("#icbc-name").value = "";
     root.querySelector("#icbc-contact").value = "";
