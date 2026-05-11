@@ -1479,10 +1479,6 @@ function toggleFaq(index) {
         const method = root.querySelector("#icbc-method").value;
         const result = root.querySelector("#icbc-result-heading").textContent.trim();
 
-        const params = new URLSearchParams(window.location.search);
-        const utm_source = params.get("utm_source") || "";
-        const utm_campaign = params.get("utm_campaign") || "";
-
         if (!name || !contact) {
             showAlert("Please enter your name and phone number.");
             return;
@@ -1505,8 +1501,6 @@ function toggleFaq(index) {
                 symptoms: symptoms.join(", "),
                 location,
                 result,
-                utm_source,
-                utm_campaign,
                 page: window.location.href
             })
         });
