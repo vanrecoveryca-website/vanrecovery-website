@@ -1470,47 +1470,52 @@ function toggleFaq(index) {
         showStep(1);
     });
 
-    root.querySelector("#icbc-submit-btn").addEventListener("click", async () => {
-        const submitBtn = root.querySelector("#icbc-submit-btn");
+root.querySelector("#icbc-submit-btn").addEventListener("click", () => {
+    const submitBtn = root.querySelector("#icbc-submit-btn");
 
-        const name = root.querySelector("#icbc-name").value.trim();
-        const contact = root.querySelector("#icbc-contact").value.trim();
-        const email = root.querySelector("#icbc-email").value.trim();
-        const method = root.querySelector("#icbc-method").value;
-        const result = root.querySelector("#icbc-result-heading").textContent.trim();
+    const name = root.querySelector("#icbc-name").value.trim();
+    const contact = root.querySelector("#icbc-contact").value.trim();
+    const email = root.querySelector("#icbc-email").value.trim();
+    const method = root.querySelector("#icbc-method").value;
+    const result = root.querySelector("#icbc-result-heading").textContent.trim();
 
-        if (!name || !contact) {
-            showAlert("Please enter your name and phone number.");
-            return;
-        }
+    if (!name || !contact) {
+        showAlert("Please enter your name and phone number.");
+        return;
+    }
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Submitting...";
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitted";
 
-        await fetch("https://script.google.com/macros/s/AKfycbxUc3d89uo3mcghN4DXhXgWyZksIqAm9WKk45RaypW4H4RxocK1VhO07KxDS1v2nAaq/exec", {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name,
-                contact,
-                email,
-                method,
-                symptoms: symptoms.join(", "),
-                location,
-                result,
-                page: window.location.href
-            })
-        });
+    fetch("https://script.google.com/macros/s/AKfycbxUc3d89uo3mcghN4DXhXgWyZksIqAm9WKk45RaypW4H4RxocK1VhO07KxDS1v2nAaq/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            contact,
+            email,
+            method,
+            symptoms: state.symptoms.join(", "),
+            location: state.location || "",
+            result,
+            page: window.location.href
+        })
+    });
 
-        showAlert("Submitted successfully!");
+    showAlert("Submitted successfully!");
 
+    root.querySelector("#icbc-name").value = "";
+    root.querySelector("#icbc-contact").value = "";
+    root.querySelector("#icbc-email").value = "";
+
+    setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit";
-    });
-})();
+    }, 1500);
+});
 </script>
 </body>
 </html>
