@@ -58,6 +58,83 @@
     transform: translateY(-2px);
     box-shadow: 0 14px 30px rgba(37, 99, 235, 0.08);
 }
+.insurance-marquee-wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.insurance-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 16px 0;
+}
+
+.insurance-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    animation: insuranceScroll 28s linear infinite;
+}
+
+.insurance-marquee.reverse .insurance-track {
+    animation-direction: reverse;
+    animation-duration: 34s;
+}
+
+.insurance-marquee.slow .insurance-track {
+    animation-duration: 42s;
+}
+
+.insurance-track span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 48px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: #334155;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.insurance-track span:nth-child(3n) {
+    font-size: 18px;
+    color: #2563eb;
+}
+
+.insurance-track span:nth-child(4n) {
+    color: #16a34a;
+}
+
+.insurance-track span:nth-child(5n) {
+    color: #64748b;
+}
+
+@keyframes insuranceScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .insurance-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        white-space: normal;
+    }
+}
         
     </style>
 </head>
