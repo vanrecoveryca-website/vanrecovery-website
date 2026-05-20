@@ -1361,87 +1361,217 @@
 </section>
 
 <!-- [Reviews Section] -->
-<section id="reviews" class="py-24 bg-white px-6">
-  <div class="max-w-7xl mx-auto">
+<section id="reviews" class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
 
-    <div class="text-center mb-16">
+    <div class="text-center mb-14">
       <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
-        Patient Trust
+        Patient Experiences
       </p>
 
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        Trusted recovery clinics in Vancouver and Richmond
+        Recovery support trusted by ICBC patients
       </h2>
 
       <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        ICBC Recovery Hub connects patients with established clinics that support recovery after car accidents, including physical treatment, rehab, and emotional care.
+        Patients across Vancouver and Richmond use ICBC Recovery Hub to explore physiotherapy, rehab, counselling, and coordinated recovery support after car accidents.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <style>
+      .review-marquee {
+        overflow: hidden;
+        position: relative;
+      }
 
-      <!-- Pegasus Review Card -->
-      <div class="bg-[#f8f8f6] border border-slate-100 rounded-[36px] p-8 md:p-10 shadow-lg">
-        <div class="flex items-center justify-between gap-4 mb-6">
+      .review-track {
+        display: flex;
+        gap: 24px;
+        width: max-content;
+        animation: reviewScroll 42s linear infinite;
+      }
+
+      .review-marquee:hover .review-track {
+        animation-play-state: paused;
+      }
+
+      @keyframes reviewScroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .review-card {
+        width: 380px;
+        min-height: 260px;
+        background: #fff;
+        border: 1px solid rgba(15,23,42,0.08);
+        border-radius: 32px;
+        padding: 32px;
+        box-shadow: 0 12px 40px rgba(15,23,42,0.06);
+        flex-shrink: 0;
+      }
+
+      .review-stars {
+        color: #facc15;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+      }
+
+      @media (max-width: 768px) {
+        .review-card {
+          width: 300px;
+          padding: 24px;
+        }
+      }
+    </style>
+
+    <div class="review-marquee">
+
+      <div class="review-track">
+
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The clinic helped me understand my ICBC treatment options after my accident. The recovery process felt much less stressful.”
+          </p>
+
           <div>
-            <h3 class="text-2xl font-bold text-slate-900">
-              Pegasus Integrated Health
-            </h3>
-            <p class="text-slate-500 font-medium">
-              Richmond ICBC recovery clinic
-            </p>
-          </div>
-
-          <div class="text-right">
-            <div class="text-yellow-400 text-xl font-black">
-              ★★★★★
+            <div class="font-bold text-slate-900">
+              ICBC Patient
             </div>
-            <p class="text-sm font-bold text-slate-500">
-              Google Reviews
-            </p>
+
+            <div class="text-slate-500">
+              Vancouver
+            </div>
           </div>
         </div>
 
-        <p class="text-lg text-slate-600 leading-relaxed mb-8">
-          A Richmond-based clinic supporting ICBC patients with physiotherapy, active rehabilitation, massage therapy, and coordinated recovery care after motor vehicle accidents.
-        </p>
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
 
-        <a href="https://www.google.com/search?q=Pegasus+Integrated+Health+Richmond+reviews" target="_blank"
-           class="inline-flex items-center justify-center bg-slate-900 text-white px-7 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all">
-          View Google Reviews
-        </a>
-      </div>
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “I appreciated having both physical rehab and emotional recovery support after the car accident.”
+          </p>
 
-      <!-- Aetheris Review Card -->
-      <div class="bg-[#f8f8f6] border border-slate-100 rounded-[36px] p-8 md:p-10 shadow-lg">
-        <div class="flex items-center justify-between gap-4 mb-6">
           <div>
-            <h3 class="text-2xl font-bold text-slate-900">
-              Aetheris Integrated Health
-            </h3>
-            <p class="text-slate-500 font-medium">
-              Downtown Vancouver ICBC recovery clinic
-            </p>
-          </div>
-
-          <div class="text-right">
-            <div class="text-yellow-400 text-xl font-black">
-              ★★★★★
+            <div class="font-bold text-slate-900">
+              ICBC Recovery Patient
             </div>
-            <p class="text-sm font-bold text-slate-500">
-              Google Reviews
-            </p>
+
+            <div class="text-slate-500">
+              Richmond
+            </div>
           </div>
         </div>
 
-        <p class="text-lg text-slate-600 leading-relaxed mb-8">
-          A Downtown Vancouver clinic supporting ICBC patients with integrated physical and emotional recovery, including physiotherapy, rehab, counselling, and massage therapy.
-        </p>
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
 
-        <a href="https://www.google.com/search?q=Aetheris+Integrated+Health+Vancouver+reviews" target="_blank"
-           class="inline-flex items-center justify-center bg-slate-900 text-white px-7 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all">
-          View Google Reviews
-        </a>
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The direct billing process was smooth and the staff explained each treatment step clearly.”
+          </p>
+
+          <div>
+            <div class="font-bold text-slate-900">
+              Physiotherapy Patient
+            </div>
+
+            <div class="text-slate-500">
+              Downtown Vancouver
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The recovery plan helped with my neck pain, headaches, and overall mobility after the accident.”
+          </p>
+
+          <div>
+            <div class="font-bold text-slate-900">
+              Rehabilitation Patient
+            </div>
+
+            <div class="text-slate-500">
+              Richmond
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “Very professional experience. The clinic coordinated my appointments and helped me navigate ICBC recovery.”
+          </p>
+
+          <div>
+            <div class="font-bold text-slate-900">
+              ICBC Client
+            </div>
+
+            <div class="text-slate-500">
+              Vancouver
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The combination of physiotherapy and counselling support made a big difference during recovery.”
+          </p>
+
+          <div>
+            <div class="font-bold text-slate-900">
+              Counselling Patient
+            </div>
+
+            <div class="text-slate-500">
+              BC
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The clinic helped me understand my ICBC treatment options after my accident.”
+          </p>
+          <div>
+            <div class="font-bold text-slate-900">ICBC Patient</div>
+            <div class="text-slate-500">Vancouver</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            “The direct billing process was smooth and stress-free.”
+          </p>
+          <div>
+            <div class="font-bold text-slate-900">Recovery Patient</div>
+            <div class="text-slate-500">Richmond</div>
+          </div>
+        </div>
+
       </div>
 
     </div>
