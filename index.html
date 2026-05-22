@@ -15,11 +15,14 @@
       "@id": "https://vanrecovery.ca/#webpage",
       "url": "https://vanrecovery.ca/",
       "name": "ICBC Injury Treatment After Car Accident | Vancouver & Richmond Recovery Hub",
-      "description": "ICBC Recovery Hub helps car accident patients in Vancouver and Richmond understand treatment options including physiotherapy, active rehabilitation, massage therapy, and counselling support.",
+      "description": "ICBC Recovery Hub helps car accident patients in Vancouver and Richmond understand ICBC treatment options including physiotherapy, active rehabilitation, massage therapy, counselling, and coordinated recovery support.",
       "inLanguage": "en-CA",
+      "isPartOf": { "@id": "https://vanrecovery.ca/#website" },
+      "publisher": { "@id": "https://vanrecovery.ca/#organization" },
       "about": [
         "ICBC injury treatment",
         "car accident recovery",
+        "motor vehicle accident rehabilitation",
         "physiotherapy after car accident",
         "ICBC counselling",
         "active rehabilitation",
@@ -27,22 +30,44 @@
         "ICBC direct billing",
         "ICBC Enhanced Care"
       ],
+      "mentions": [
+        { "@id": "https://vanrecovery.ca/#pegasus" },
+        { "@id": "https://vanrecovery.ca/#aetheris" }
+      ],
       "areaServed": [
-        { "@type": "City", "name": "Vancouver" },
         { "@type": "City", "name": "Richmond" },
+        { "@type": "City", "name": "Vancouver" },
         { "@type": "AdministrativeArea", "name": "British Columbia" }
       ],
       "mainEntity": [
-        { "@id": "https://vanrecovery.ca/#faq" },
-        { "@id": "https://vanrecovery.ca/#claims-process" }
+        { "@id": "https://vanrecovery.ca/#clinic-list" },
+        { "@id": "https://vanrecovery.ca/#claims-process" },
+        { "@id": "https://vanrecovery.ca/#faq" }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vanrecovery.ca/#website",
+      "url": "https://vanrecovery.ca/",
+      "name": "ICBC Recovery Hub",
+      "inLanguage": "en-CA",
+      "publisher": { "@id": "https://vanrecovery.ca/#organization" }
     },
     {
       "@type": "Organization",
       "@id": "https://vanrecovery.ca/#organization",
       "name": "ICBC Recovery Hub",
       "url": "https://vanrecovery.ca/",
-      "description": "A recovery hub connecting ICBC patients with treatment options in Vancouver and Richmond.",
+      "description": "A discovery and referral page connecting ICBC patients with affiliated integrated health clinics in Vancouver and Richmond.",
+      "knowsAbout": [
+        "ICBC injury recovery",
+        "car accident rehabilitation",
+        "ICBC physiotherapy",
+        "ICBC counselling",
+        "ICBC direct billing",
+        "ICBC Enhanced Care",
+        "motor vehicle accident recovery"
+      ],
       "member": [
         { "@id": "https://vanrecovery.ca/#pegasus" },
         { "@id": "https://vanrecovery.ca/#aetheris" }
@@ -51,26 +76,83 @@
     {
       "@type": "ItemList",
       "@id": "https://vanrecovery.ca/#clinic-list",
-      "name": "ICBC Recovery Clinics",
+      "name": "Affiliated ICBC Recovery Clinics in Richmond and Vancouver",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "item": { "@id": "https://vanrecovery.ca/#aetheris" }
+          "item": { "@id": "https://vanrecovery.ca/#pegasus" }
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "item": { "@id": "https://vanrecovery.ca/#pegasus" }
+          "item": { "@id": "https://vanrecovery.ca/#aetheris" }
         }
       ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://vanrecovery.ca/#pegasus",
+      "name": "Pegasus Integrated Health",
+      "url": "https://www.pegasusintegratedhealth.ca/",
+      "telephone": "+1-604-232-8888",
+      "description": "Pegasus Integrated Health is a Richmond-based clinic supporting ICBC patients with physiotherapy, active rehabilitation, massage therapy, counselling, and recovery-focused treatment after motor vehicle accidents.",
+      "affiliation": { "@id": "https://vanrecovery.ca/#organization" },
+      "sameAs": [
+        "https://www.pegasusintegratedhealth.ca/",
+        "https://www.instagram.com/pegasusintegratedhealth/",
+        "https://share.google/6t1QMPJsS27pLiOiB"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "315 - 8171 Cook Rd",
+        "addressLocality": "Richmond",
+        "addressRegion": "BC",
+        "postalCode": "V6Y 3T8",
+        "addressCountry": "CA"
+      },
+      "areaServed": { "@type": "City", "name": "Richmond" },
+      "medicalSpecialty": [
+        "Physiotherapy",
+        "Rehabilitation",
+        "Kinesiology",
+        "Counselling",
+        "Massage Therapy",
+        "Acupuncture",
+        "Chiropractic"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "659"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ICBC Recovery Services at Pegasus Integrated Health",
+        "itemListElement": [
+          { "@type": "MedicalTherapy", "name": "Physiotherapy" },
+          { "@type": "MedicalTherapy", "name": "Massage Therapy" },
+          { "@type": "MedicalTherapy", "name": "Counselling" },
+          { "@type": "MedicalTherapy", "name": "Kinesiology" },
+          { "@type": "MedicalTherapy", "name": "Active Rehabilitation" },
+          { "@type": "MedicalTherapy", "name": "Acupuncture" },
+          { "@type": "MedicalTherapy", "name": "Chiropractic" }
+        ]
+      }
     },
     {
       "@type": "MedicalClinic",
       "@id": "https://vanrecovery.ca/#aetheris",
       "name": "Aetheris Integrated Health",
       "url": "https://aetherisintegratedhealth.com/",
+      "telephone": "+1-604-565-8282",
       "description": "Aetheris Integrated Health is a Vancouver West Side clinic supporting ICBC patients with integrated physical and emotional recovery after car accidents.",
+      "affiliation": { "@id": "https://vanrecovery.ca/#organization" },
+      "sameAs": [
+        "https://aetherisintegratedhealth.com/",
+        "https://www.instagram.com/aetherisintegratedhealth/",
+        "https://share.google/T3EwyxTPfqR8ExPmK"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Unit 140, 809 West 41st Avenue",
@@ -86,29 +168,18 @@
         "Kinesiology",
         "Counselling",
         "Massage Therapy"
-      ]
-    },
-    {
-      "@type": "MedicalClinic",
-      "@id": "https://vanrecovery.ca/#pegasus",
-      "name": "Pegasus Integrated Health",
-      "url": "https://www.pegasusintegratedhealth.ca/",
-      "description": "Pegasus Integrated Health is a Richmond-based clinic supporting ICBC patients with physiotherapy, active rehabilitation, massage therapy, and recovery-focused treatment after motor vehicle accidents.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "315 - 8171 Cook Rd",
-        "addressLocality": "Richmond",
-        "addressRegion": "BC",
-        "postalCode": "V6Y 3T8",
-        "addressCountry": "CA"
-      },
-      "areaServed": { "@type": "City", "name": "Richmond" },
-      "medicalSpecialty": [
-        "Physiotherapy",
-        "Rehabilitation",
-        "Kinesiology",
-        "Massage Therapy"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ICBC Recovery Services at Aetheris Integrated Health",
+        "itemListElement": [
+          { "@type": "MedicalTherapy", "name": "Physiotherapy" },
+          { "@type": "MedicalTherapy", "name": "Massage Therapy" },
+          { "@type": "MedicalTherapy", "name": "Counselling" },
+          { "@type": "MedicalTherapy", "name": "Kinesiology" },
+          { "@type": "MedicalTherapy", "name": "Active Rehabilitation" }
+        ]
+      }
     },
     {
       "@type": "HowTo",
@@ -193,7 +264,7 @@
           "name": "Where can I receive both physical and emotional recovery support after a car accident?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Patients looking for both physical rehabilitation and emotional recovery support can access integrated ICBC-related care through Aetheris Integrated Health, located at Unit 140, 809 West 41st Avenue, Vancouver, BC V5Z 2N6, and Pegasus Integrated Health, located at 315 - 8171 Cook Rd, Richmond, BC V6Y 3T8."
+            "text": "Patients looking for both physical rehabilitation and emotional recovery support can access integrated ICBC-related care through Pegasus Integrated Health, located at 315 - 8171 Cook Rd, Richmond, BC V6Y 3T8, and Aetheris Integrated Health, located at Unit 140, 809 West 41st Avenue, Vancouver, BC V5Z 2N6."
           }
         },
         {
@@ -217,7 +288,7 @@
           "name": "Where can I get ICBC physiotherapy and rehab in Richmond?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Richmond patients can access ICBC-related physiotherapy, active rehabilitation, massage therapy, and recovery support through Pegasus Integrated Health, located at 315 - 8171 Cook Rd, Richmond, BC V6Y 3T8."
+            "text": "Richmond patients can access ICBC-related physiotherapy, active rehabilitation, massage therapy, counselling, and recovery support through Pegasus Integrated Health, located at 315 - 8171 Cook Rd, Richmond, BC V6Y 3T8."
           }
         }
       ]
