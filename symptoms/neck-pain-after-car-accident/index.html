@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -21,12 +20,14 @@
         "name": "Neck Pain After a Car Accident | ICBC Treatment Vancouver & Richmond",
         "description": "Information about neck pain, stiffness, whiplash symptoms, headaches, treatment options, and ICBC recovery support after a car accident in Vancouver and Richmond.",
         "inLanguage": "en-CA",
-        "isPartOf": { "@id": "https://vanrecovery.ca/#website" },
-        "publisher": { "@id": "https://vanrecovery.ca/#organization" },
         "about": {
           "@type": "MedicalCondition",
           "name": "Neck pain after a motor vehicle accident",
-          "alternateName": ["Whiplash", "Post-accident neck pain", "Cervical strain after car accident"],
+          "alternateName": [
+            "Whiplash",
+            "Post-accident neck pain",
+            "Cervical strain after car accident"
+          ],
           "associatedAnatomy": {
             "@type": "AnatomicalStructure",
             "name": "Neck"
@@ -44,7 +45,9 @@
           "ICBC direct billing",
           "ICBC pre-approved treatment",
           "treatment plan after 12 weeks",
-          "Comprehensive Medical Assessment"
+          "Comprehensive Medical Assessment",
+          "neck pain after car accident",
+          "whiplash symptoms"
         ],
         "areaServed": [
           { "@type": "City", "name": "Richmond" },
@@ -143,7 +146,7 @@
 
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .toc-link.active { color: #2563eb; }
+
     #custom-message {
       display: none;
       position: fixed;
@@ -159,9 +162,16 @@
       font-weight: 600;
       animation: slideUp 0.3s ease-out;
     }
+
     @keyframes slideUp {
       from { transform: translate(-50%, 100%); opacity: 0; }
       to { transform: translate(-50%, 0); opacity: 1; }
+    }
+
+    @media (max-width: 1023px) {
+      .inner-sidebar {
+        position: static !important;
+      }
     }
   </style>
 </head>
@@ -174,12 +184,17 @@
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
+
         <!-- Logo Section -->
         <a href="/" class="flex items-center gap-2 text-blue-600">
           <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
           </svg>
-          <span class="font-bold text-xl tracking-tight text-slate-800">ICBC Recovery <span class="text-blue-600 font-black">Hub</span></span>
+
+          <span class="font-bold text-xl tracking-tight text-slate-800">
+            ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
+          </span>
         </a>
 
         <!-- Desktop Menu -->
@@ -190,13 +205,21 @@
             <a href="#treatment" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Treatment</a>
             <a href="#locations" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Locations</a>
           </div>
-          <a href="/#assessment" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md">30s Check</a>
+
+          <a href="/#assessment" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md">
+            30s Check
+          </a>
         </div>
 
         <!-- Mobile Menu Button -->
         <button class="md:hidden p-2 text-slate-600" onclick="toggleMobileMenu()" aria-label="Open menu">
-          <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
         </button>
+
       </div>
     </div>
 
@@ -215,6 +238,7 @@
     <!-- [Hero Section] -->
     <section class="relative bg-[#f8f8f6] py-12 md:py-20 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
         <div class="grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
 
           <!-- Left Content -->
@@ -237,9 +261,13 @@
 
             <!-- Trust Points -->
             <div class="mb-10 space-y-4">
+
               <div class="flex items-center justify-center lg:justify-start gap-4">
                 <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"/>
+                    <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                  </svg>
                 </div>
                 <span class="text-lg md:text-xl font-bold text-slate-800">
                   Whiplash + neck pain recovery guidance
@@ -248,7 +276,11 @@
 
               <div class="flex items-center justify-center lg:justify-start gap-4">
                 <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/></svg>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/>
+                    <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/>
+                    <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/>
+                  </svg>
                 </div>
                 <span class="text-lg md:text-xl font-bold text-slate-800">
                   ICBC direct billing support
@@ -257,18 +289,25 @@
 
               <div class="flex items-center justify-center lg:justify-start gap-4">
                 <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
                 </div>
                 <span class="text-lg md:text-xl font-bold text-slate-800">
                   Vancouver and Richmond clinic coverage
                 </span>
               </div>
+
             </div>
 
             <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
               <a href="/#assessment" class="bg-blue-600 text-white px-9 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:-translate-y-1 active:scale-95 text-center flex items-center justify-center gap-2 group">
                 <span>Start 30s Eligibility Check</span>
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/>
+                  <path d="m12 5 7 7-7 7"/>
+                </svg>
               </a>
 
               <a href="#icbc-coverage" class="bg-white text-slate-900 px-9 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-sm border border-slate-200 text-center">
@@ -280,7 +319,9 @@
 
           <!-- Right Visual -->
           <div class="relative group block mt-10 lg:mt-0">
+
             <div class="bg-white p-3 rounded-[36px] md:rounded-[48px] shadow-2xl border border-slate-100 overflow-hidden">
+
               <div class="aspect-[4/3] rounded-[28px] md:rounded-[40px] overflow-hidden bg-slate-200 relative">
                 <img
                   src="/assets/images/neck-pain-after-car-accident-ls.webp"
@@ -299,24 +340,42 @@
               </div>
 
               <div class="hidden md:grid grid-cols-3 gap-4 p-8 md:p-9 bg-white">
+
                 <div class="text-center border-r border-slate-100 px-2">
-                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">Neck Pain</div>
-                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">Whiplash</div>
+                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">
+                    Neck Pain
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">
+                    Whiplash
+                  </div>
                 </div>
+
                 <div class="text-center border-r border-slate-100 px-2">
-                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">Headaches</div>
-                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">Post-Accident</div>
+                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">
+                    Headaches
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">
+                    Post-Accident
+                  </div>
                 </div>
+
                 <div class="text-center px-2">
-                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">Stiffness</div>
-                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">Mobility Care</div>
+                  <div class="text-lg md:text-xl font-black text-slate-900 tracking-tight mb-2">
+                    Stiffness
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400 leading-relaxed">
+                    Mobility Care
+                  </div>
                 </div>
+
               </div>
 
             </div>
+
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -325,24 +384,36 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm">
-          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">Common Symptoms</div>
-          <h2 class="text-2xl font-bold text-slate-900 mb-4">Stiffness, headaches, shoulder tension</h2>
+          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
+            Common Symptoms
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">
+            Stiffness, headaches, shoulder tension
+          </h2>
           <p class="text-slate-600 leading-relaxed text-lg">
             Neck pain may appear with reduced range of motion, upper back tension, headaches, muscle spasms, or sleep discomfort.
           </p>
         </div>
 
         <div class="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm">
-          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">Possible Cause</div>
-          <h2 class="text-2xl font-bold text-slate-900 mb-4">Whiplash-type movement</h2>
+          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
+            Possible Cause
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">
+            Whiplash-type movement
+          </h2>
           <p class="text-slate-600 leading-relaxed text-lg">
             Sudden collision force may strain muscles, joints, ligaments, and soft tissues around the cervical spine.
           </p>
         </div>
 
         <div class="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm">
-          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">ICBC Support</div>
-          <h2 class="text-2xl font-bold text-slate-900 mb-4">Treatment may be covered</h2>
+          <div class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
+            ICBC Support
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">
+            Treatment may be covered
+          </h2>
           <p class="text-slate-600 leading-relaxed text-lg">
             Eligible ICBC care may include physiotherapy, active rehab, massage therapy, acupuncture, counselling, and direct billing support.
           </p>
@@ -351,9 +422,9 @@
       </div>
     </section>
 
-    <!-- [Main Content + Sidebar] -->
+    <!-- [Main Content + Simple Sidebar] -->
     <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-14">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-14">
 
         <!-- Article -->
         <article class="max-w-4xl">
@@ -430,25 +501,43 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
               <div class="rounded-[28px] border border-slate-200 p-7">
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Whiplash-type movement</h3>
-                <p class="text-slate-600 leading-relaxed">A sudden acceleration or deceleration movement may irritate soft tissues and joints around the neck.</p>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">
+                  Whiplash-type movement
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                  A sudden acceleration or deceleration movement may irritate soft tissues and joints around the neck.
+                </p>
               </div>
 
               <div class="rounded-[28px] border border-slate-200 p-7">
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Muscle guarding</h3>
-                <p class="text-slate-600 leading-relaxed">After impact, the body may tighten surrounding muscles to protect the injured area, increasing stiffness.</p>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">
+                  Muscle guarding
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                  After impact, the body may tighten surrounding muscles to protect the injured area, increasing stiffness.
+                </p>
               </div>
 
               <div class="rounded-[28px] border border-slate-200 p-7">
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Joint irritation</h3>
-                <p class="text-slate-600 leading-relaxed">Neck joints may become irritated after sudden force, especially when movement becomes painful or restricted.</p>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">
+                  Joint irritation
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                  Neck joints may become irritated after sudden force, especially when movement becomes painful or restricted.
+                </p>
               </div>
 
               <div class="rounded-[28px] border border-slate-200 p-7">
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Soft tissue strain</h3>
-                <p class="text-slate-600 leading-relaxed">Muscles, tendons, and ligaments may become strained after the neck absorbs collision-related force.</p>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">
+                  Soft tissue strain
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                  Muscles, tendons, and ligaments may become strained after the neck absorbs collision-related force.
+                </p>
               </div>
+
             </div>
           </section>
 
@@ -467,6 +556,7 @@
             </p>
 
             <div class="space-y-4">
+
               <div class="rounded-[28px] bg-white border border-slate-200 p-6 flex gap-5">
                 <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 font-black flex items-center justify-center flex-shrink-0">1</div>
                 <div>
@@ -498,6 +588,7 @@
                   <p class="text-slate-600 leading-relaxed">If symptoms continue to affect daily function, your provider may submit a treatment plan and clinical rationale to ICBC for additional treatment review.</p>
                 </div>
               </div>
+
             </div>
           </section>
 
@@ -518,6 +609,7 @@
               </p>
 
               <div class="grid md:grid-cols-3 gap-5 mb-8">
+
                 <div class="bg-white border border-slate-200 rounded-[28px] p-6">
                   <div class="text-3xl font-black text-blue-600 mb-3">12 weeks</div>
                   <h3 class="font-bold text-slate-900 mb-2">Initial recovery window</h3>
@@ -525,7 +617,7 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-[28px] p-6">
-                  <div class="text-3xl font-black text-blue-600 mb-3">No referral needed</div>
+                  <div class="text-3xl font-black text-blue-600 mb-3">No referral</div>
                   <h3 class="font-bold text-slate-900 mb-2">Faster treatment access</h3>
                   <p class="text-slate-600 leading-relaxed text-sm">Many patients can start eligible care without a doctor referral in the first 12 weeks.</p>
                 </div>
@@ -535,6 +627,7 @@
                   <h3 class="font-bold text-slate-900 mb-2">Less upfront stress</h3>
                   <p class="text-slate-600 leading-relaxed text-sm">Eligible treatments may be billed directly to ICBC depending on claim status and clinic process.</p>
                 </div>
+
               </div>
 
               <div class="rounded-[28px] bg-white border border-slate-200 p-7">
@@ -584,6 +677,7 @@
             </p>
 
             <div class="space-y-5">
+
               <div class="rounded-[28px] border border-slate-200 p-7 hover:border-blue-200 hover:bg-blue-50/30 transition">
                 <h3 class="text-2xl font-bold text-slate-900 mb-3">Physiotherapy</h3>
                 <p class="text-slate-600 leading-relaxed">Physiotherapy may help with neck mobility, movement control, posture, pain management, and gradual return to normal activities after a car accident.</p>
@@ -608,12 +702,15 @@
                 <h3 class="text-2xl font-bold text-slate-900 mb-3">Counselling Support</h3>
                 <p class="text-slate-600 leading-relaxed">Some patients experience stress, anxiety, sleep disruption, or driving-related fear after an accident. Counselling may support the emotional side of recovery.</p>
               </div>
+
             </div>
           </section>
 
-          <!-- Practitioner Guidance -->
+          <!-- Treatment Guidance -->
           <section class="rounded-[32px] bg-slate-50 border border-slate-200 p-7 md:p-8 mb-20">
+
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+
               <div>
                 <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
                   Treatment Guidance By
@@ -642,11 +739,13 @@
                  class="inline-flex items-center justify-center rounded-full border border-blue-200 px-5 py-3 text-sm font-black text-blue-600 hover:bg-blue-50 transition">
                 View clinic profile →
               </a>
+
             </div>
 
             <p class="mt-5 text-slate-600 leading-relaxed">
               Suggested recovery approaches may vary depending on symptoms, injury severity, mobility restrictions, emotional stress, and individual assessment after a motor vehicle accident.
             </p>
+
           </section>
 
           <!-- Related Symptoms -->
@@ -664,6 +763,7 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
               <a href="/symptoms/headaches-after-car-accident/" class="rounded-[28px] bg-white border border-slate-200 p-6 hover:border-blue-300 hover:bg-blue-50 transition">
                 <h3 class="font-bold text-slate-900 mb-2">Headaches</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Headaches may appear after neck strain, whiplash, concussion, or muscle tension.</p>
@@ -693,6 +793,7 @@
                 <h3 class="font-bold text-slate-900 mb-2">Numbness or tingling</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Nerve-related symptoms should be assessed, especially when they affect arms or hands.</p>
               </a>
+
             </div>
           </section>
 
@@ -711,16 +812,20 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
               <div class="rounded-[32px] bg-[#f8f8f6] border border-slate-200 p-7">
                 <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-3">
                   Vancouver
                 </p>
+
                 <h3 class="text-2xl font-bold text-slate-900 mb-3">
                   Aetheris Integrated Health
                 </h3>
+
                 <p class="text-slate-600 leading-relaxed mb-5">
                   Vancouver West Side integrated recovery support for ICBC patients seeking treatment options after a car accident.
                 </p>
+
                 <a href="https://aetherisintegratedhealth.com/" target="_blank" rel="noopener" class="font-black text-blue-600 hover:text-blue-700">
                   Visit Vancouver clinic →
                 </a>
@@ -730,16 +835,20 @@
                 <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-3">
                   Richmond
                 </p>
+
                 <h3 class="text-2xl font-bold text-slate-900 mb-3">
                   Pegasus Integrated Health
                 </h3>
+
                 <p class="text-slate-600 leading-relaxed mb-5">
                   Richmond-based integrated care options for ICBC patients recovering from neck pain, whiplash, and accident-related symptoms.
                 </p>
+
                 <a href="https://www.pegasusintegratedhealth.ca/" target="_blank" rel="noopener" class="font-black text-blue-600 hover:text-blue-700">
                   Visit Richmond clinic →
                 </a>
               </div>
+
             </div>
           </section>
 
@@ -764,6 +873,7 @@
 
           <!-- FAQ -->
           <section id="faq" class="scroll-mt-28">
+
             <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
               Frequently Asked Questions
             </p>
@@ -833,26 +943,11 @@
 
         </article>
 
-        <!-- Sidebar -->
-        <aside class="lg:sticky lg:top-28 h-fit">
-          <div class="rounded-[32px] bg-slate-950 text-white p-7 mb-6">
-            <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-300 mb-4">
-              Quick Navigation
-            </p>
+        <!-- Simple Sidebar -->
+        <aside class="inner-sidebar lg:sticky lg:top-28 h-fit">
 
-            <nav class="space-y-3 text-sm font-bold">
-              <a href="#symptoms" class="block text-slate-200 hover:text-white">Symptoms</a>
-              <a href="#urgent-care" class="block text-slate-200 hover:text-white">Urgent care signs</a>
-              <a href="#causes" class="block text-slate-200 hover:text-white">Possible causes</a>
-              <a href="#timeline" class="block text-slate-200 hover:text-white">Recovery timeline</a>
-              <a href="#icbc-coverage" class="block text-slate-200 hover:text-white">ICBC coverage</a>
-              <a href="#treatment" class="block text-slate-200 hover:text-white">Treatment options</a>
-              <a href="#locations" class="block text-slate-200 hover:text-white">Locations</a>
-              <a href="#faq" class="block text-slate-200 hover:text-white">FAQ</a>
-            </nav>
-          </div>
-
-          <div class="rounded-[32px] bg-blue-50 border border-blue-100 p-7 mb-6">
+          <!-- CTA First -->
+          <div class="rounded-[32px] bg-blue-50 border border-blue-100 p-7 mb-6 shadow-sm">
             <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
               Need Help?
             </p>
@@ -870,7 +965,8 @@
             </a>
           </div>
 
-          <div class="rounded-[32px] bg-white border border-slate-200 p-7">
+          <!-- Related Guides Only -->
+          <div class="rounded-[32px] bg-white border border-slate-200 p-7 shadow-sm">
             <p class="text-sm font-black uppercase tracking-[0.2em] text-slate-400 mb-4">
               Related Guides
             </p>
@@ -882,6 +978,7 @@
               <a href="/symptoms/dizziness-after-car-accident/" class="block text-slate-700 hover:text-blue-600">Dizziness after a car accident →</a>
             </div>
           </div>
+
         </aside>
 
       </div>
