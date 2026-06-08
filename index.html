@@ -2338,7 +2338,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             In many cases, yes. Patients can often begin the booking process with their ICBC claim number. Contact the clinic if you are unsure what information is required.
           </div>
@@ -2357,7 +2357,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             In many cases, yes. After reporting your accident to ICBC and receiving a claim number, you may be able to begin the treatment process without waiting for an adjuster to contact you.
           </div>
@@ -2376,7 +2376,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             Please bring your ICBC claim number and one piece of government-issued photo ID. Information about your accident date and symptoms may also be helpful.
           </div>
@@ -2395,7 +2395,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             In many cases, eligible ICBC treatment can be billed directly to ICBC. Most patients do not need to pay upfront, although coverage and eligibility may vary depending on the treatment provided.
           </div>
@@ -2414,7 +2414,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             Appointment availability depends on the clinic and service requested. Acupuncture and chiropractic appointments are often available within 2–3 days, while massage therapy appointments may take approximately 3–4 days depending on practitioner availability.
           </div>
@@ -2433,7 +2433,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             Under ICBC Enhanced Care, many patients are pre-approved for treatment during the first 12 weeks after a crash, regardless of who caused the accident. This recovery period may include physiotherapy, massage therapy, kinesiology, counselling, psychology, and other approved recovery services.
           </div>
@@ -2452,7 +2452,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
             After the initial 12-week pre-approved treatment period, your healthcare provider may submit a treatment request to ICBC if additional care is clinically necessary. Approval decisions are made on a case-by-case basis based on your recovery progress and treatment needs.
           </div>
@@ -2471,7 +2471,7 @@
           </div>
         </button>
 
-        <div class="faq-content hidden">
+        <div class="faq-content">
           <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
 
             Patients can access ICBC-related treatment and recovery services through partner clinics in Vancouver and Richmond.
@@ -2792,6 +2792,18 @@
 
 </footer>
 <script>
+function toggleFaq(index) {
+    const items = document.querySelectorAll('.faq-item');
+
+    items.forEach((item, i) => {
+        if (i === index) {
+            item.classList.toggle('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+    
 function toggleMobileMenu() {
     const menu = document.getElementById("mobile-menu");
     if (menu) menu.classList.toggle("hidden");
