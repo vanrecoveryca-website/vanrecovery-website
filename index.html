@@ -382,7 +382,7 @@
     animation-duration: 42s;
 }
 
-.insurance-track span {
+.insurance-track .insurance-logo {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -392,24 +392,15 @@
     border-radius: 999px;
     background: #ffffff;
     border: 1px solid rgba(15, 23, 42, 0.08);
-    color: #334155;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
-.insurance-track span:nth-child(3n) {
-    font-size: 18px;
-    color: #2563eb;
-}
-
-.insurance-track span:nth-child(4n) {
-    color: #16a34a;
-}
-
-.insurance-track span:nth-child(5n) {
-    color: #64748b;
+.insurance-logo img {
+    display: block;
+    width: auto;
+    max-width: 132px;
+    height: 25px;
+    object-fit: contain;
 }
 
 @keyframes insuranceScroll {
@@ -1944,71 +1935,39 @@
 
       <div class="insurance-marquee">
         <div class="insurance-track">
-          <span>ClaimSecure</span>
-          <span>Green Shield Canada</span>
-          <span>Canada Life</span>
-          <span>Manulife</span>
-          <span>TELUS Health</span>
-          <span>Desjardins</span>
-          <span>Blue Cross</span>
-          <span>iA Financial Group</span>
-          <span>Sun Life</span>
+          <span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="ClaimSecure"></span>
+          <span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="GreenShield Canada"></span>
+          <span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="Canada Life"></span>
+          <span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="Manulife"></span>
+          <span class="insurance-logo"><img src="/assets/logos/telus-health.svg" alt="TELUS Health"></span>
+          <span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="Desjardins"></span>
+          <span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="Blue Cross"></span>
+          <span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="iA Financial Group"></span>
+          <span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="Sun Life"></span>
 
-          <span>ClaimSecure</span>
-          <span>Green Shield Canada</span>
-          <span>Canada Life</span>
-          <span>Manulife</span>
-          <span>TELUS Health</span>
-          <span>Desjardins</span>
-          <span>Blue Cross</span>
-          <span>iA Financial Group</span>
-          <span>Sun Life</span>
+          <span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/telus-health.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="" aria-hidden="true"></span>
+          <span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="" aria-hidden="true"></span>
         </div>
       </div>
 
       <div class="insurance-marquee reverse">
         <div class="insurance-track">
-          <span>Canada Life</span>
-          <span>Blue Cross</span>
-          <span>Manulife</span>
-          <span>ClaimSecure</span>
-          <span>Desjardins</span>
-          <span>Sun Life</span>
-          <span>Green Shield Canada</span>
-          <span>iA Financial Group</span>
-          <span>TELUS Health</span>
-
-          <span>Canada Life</span>
-          <span>Blue Cross</span>
-          <span>Manulife</span>
-          <span>ClaimSecure</span>
-          <span>Desjardins</span>
-          <span>Sun Life</span>
-          <span>Green Shield Canada</span>
-          <span>iA Financial Group</span>
-          <span>TELUS Health</span>
+          <span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="Canada Life"></span><span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="Blue Cross"></span><span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="Manulife"></span><span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="ClaimSecure"></span><span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="Desjardins"></span><span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="Sun Life"></span><span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="GreenShield Canada"></span><span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="iA Financial Group"></span><span class="insurance-logo"><img src="/assets/logos/telus-health.svg" alt="TELUS Health"></span>
+          <span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/telus-health.svg" alt="" aria-hidden="true"></span>
         </div>
       </div>
 
       <div class="insurance-marquee slow">
         <div class="insurance-track">
-          <span>Desjardins</span>
-          <span>iA Financial Group</span>
-          <span>Sun Life</span>
-          <span>ClaimSecure</span>
-          <span>Green Shield Canada</span>
-          <span>Canada Life</span>
-          <span>Manulife</span>
-          <span>Blue Cross</span>
-
-          <span>Desjardins</span>
-          <span>iA Financial Group</span>
-          <span>Sun Life</span>
-          <span>ClaimSecure</span>
-          <span>Green Shield Canada</span>
-          <span>Canada Life</span>
-          <span>Manulife</span>
-          <span>Blue Cross</span>
+          <span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="Desjardins"></span><span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="iA Financial Group"></span><span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="Sun Life"></span><span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="ClaimSecure"></span><span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="GreenShield Canada"></span><span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="Canada Life"></span><span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="Manulife"></span><span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="Blue Cross"></span>
+          <span class="insurance-logo"><img src="/assets/logos/desjardins.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/ia-financial.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/sun-life.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/claimsecure.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/greenshield.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/canada-life.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/manulife.svg" alt="" aria-hidden="true"></span><span class="insurance-logo"><img src="/assets/logos/blue-cross.svg" alt="" aria-hidden="true"></span>
         </div>
       </div>
 
