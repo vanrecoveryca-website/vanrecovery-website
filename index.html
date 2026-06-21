@@ -796,131 +796,208 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   </div>
 </section>
 
-<!-- [Mobile Hero Section] -->
+<!-- Mobile Hero -->
 <section class="mobile-hero">
-  <div class="mobile-hero-inner">
 
-    <h1>
-      ICBC Recovery<br>
-      After a Car Accident
-    </h1>
+    <div class="mobile-hero-inner">
 
-    <p>
-      Direct billing support for physiotherapy, rehab, massage therapy, and counselling in Vancouver & Richmond.
-    </p>
+        <h1>
+            Recover After an
+            <span>ICBC Car Accident</span>
+        </h1>
 
-    <div class="mobile-hero-card">
-      <img
-        src="/assets/images/icbc-recovery-chiropractor-consultation-vancouver-richmond.jpg"
-        alt="ICBC recovery consultation in Vancouver and Richmond"
-      >
+        <p>
+            Physical and emotional recovery support with ICBC direct billing.
+        </p>
 
-      <div class="mobile-hero-pill">
-        Direct Billing Available
-      </div>
+        <div class="mobile-trust">
 
-      <a href="#assessment" class="mobile-hero-cta">
-        30s Eligibility Check
-      </a>
+            <span>
+                ✓ Vancouver & Richmond
+            </span>
+
+            <span>
+                ✓ ICBC Direct Billing Support
+            </span>
+
+        </div>
+
+        <div class="mobile-photo">
+
+            <img
+                src="/assets/images/icbc-recovery-chiropractor-consultation-vancouver-richmond.jpg"
+                alt="ICBC recovery consultation in Vancouver and Richmond">
+
+            <a href="#assessment" class="mobile-cta">
+                30s Eligibility Check
+            </a>
+
+        </div>
+
     </div>
 
-  </div>
 </section>
 
 <style>
-/* =========================
-   Mobile Hero Only
-========================= */
 
-.mobile-hero {
-  display: none;
+/* ==========================
+   Mobile Hero
+========================== */
+
+.mobile-hero{
+    display:none;
 }
 
-@media (max-width: 767px) {
-  .desktop-hero {
-    display: none !important;
-  }
+@media(max-width:767px){
 
-  .mobile-hero {
-    display: block;
-    background: #f8f8f6;
-    padding: 16px 16px 24px;
-  }
-
-  .mobile-hero-inner {
-    max-width: 430px;
-    margin: 0 auto;
-  }
-
-  .mobile-hero h1 {
-    margin: 0 0 10px;
-    color: #0f172a;
-    font-size: 34px;
-    line-height: 0.94;
-    letter-spacing: -0.06em;
-    font-weight: 900;
-  }
-
-  .mobile-hero p {
-    margin: 0 0 14px;
-    color: #475569;
-    font-size: 14px;
-    line-height: 1.35;
-    font-weight: 500;
-  }
-
-  .mobile-hero-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 24px;
-    background: #ffffff;
-    padding: 6px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.13);
-  }
-
-  .mobile-hero-card img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1.58 / 1;
-    object-fit: cover;
-    object-position: center 45%;
-    border-radius: 18px;
-  }
-
-  .mobile-hero-pill {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.94);
-    color: #2563eb;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-  }
-
-  .mobile-hero-cta {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    min-height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: #2563eb;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 900;
-    text-decoration: none;
-    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.3);
-  }
+.desktop-hero{
+    display:none !important;
 }
+
+.mobile-hero{
+
+    display:block;
+    background:#f8f8f6;
+    padding:20px 18px 28px;
+
+}
+
+.mobile-hero-inner{
+
+    max-width:430px;
+    margin:auto;
+
+}
+
+.mobile-hero h1{
+
+    margin:0;
+
+    font-size:40px;
+    line-height:.93;
+    letter-spacing:-.06em;
+    font-weight:900;
+
+    color:#0f172a;
+
+}
+
+.mobile-hero h1 span{
+
+    color:#2563eb;
+
+}
+
+.mobile-hero p{
+
+    margin:14px 0 16px;
+
+    color:#475569;
+
+    font-size:16px;
+    line-height:1.45;
+
+    font-weight:500;
+
+}
+
+.mobile-trust{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin-bottom:18px;
+
+}
+
+.mobile-trust span{
+
+    display:inline-flex;
+    align-items:center;
+
+    padding:8px 12px;
+
+    border-radius:999px;
+
+    background:white;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    font-size:12px;
+    font-weight:800;
+
+    color:#334155;
+
+    box-shadow:0 6px 16px rgba(15,23,42,.04);
+
+}
+
+.mobile-photo{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:white;
+
+    padding:6px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:0 18px 45px rgba(15,23,42,.12);
+
+}
+
+.mobile-photo img{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:1.4/1;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:18px;
+
+}
+
+.mobile-cta{
+
+    position:absolute;
+
+    left:18px;
+    right:18px;
+    bottom:18px;
+
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:16px;
+
+    font-size:16px;
+    font-weight:800;
+
+    box-shadow:0 14px 28px rgba(37,99,235,.35);
+
+}
+
+}
+
 </style>
 
 <!-- Post-Accident Symptoms -->
