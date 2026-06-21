@@ -620,6 +620,13 @@ document.querySelectorAll("[data-home-link]").forEach(link => {
     const target = link.dataset.homeLink;
     link.href = isHome ? `#${target}` : `/#${target}`;
 });
+
+// Close mobile menu when any link is clicked
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+    });
+});
 </script>
 
     <main>
