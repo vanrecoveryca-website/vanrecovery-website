@@ -182,107 +182,203 @@
 
 <!-- [Navigation Bar] -->
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 text-blue-600">
-        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <span class="font-bold text-xl tracking-tight text-slate-800">
-          ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
-        </span>
-      </a>
+        <div class="flex items-center justify-between h-20 overflow-visible">
 
-      <!-- Desktop -->
-      <div class="hidden md:flex items-center gap-8">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
 
-        <a href="/symptoms/"
-           class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
-          Symptoms
-        </a>
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
 
-        <a data-home-link="how-icbc-works"
-           class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
-          How ICBC Works
-        </a>
+                <span class="font-bold text-xl tracking-tight text-slate-800">
+                    ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
+                </span>
 
-        <a data-home-link="locations"
-           class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
-          Locations
-        </a>
+            </a>
 
-        <a data-home-link="assessment"
-           class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md">
-          30s Check
-        </a>
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center gap-8">
 
-      </div>
+                <!-- Symptoms -->
+                <div class="relative group">
 
-      <!-- Mobile Button -->
-      <button
-        class="md:hidden p-2 text-slate-600"
-        onclick="toggleMobileMenu()">
+                    <a href="/symptoms/"
+                       class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
 
-        <svg class="w-6 h-6"
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2">
+                        Symptoms
 
-          <line x1="4" x2="20" y1="6" y2="6"/>
-          <line x1="4" x2="20" y1="12" y2="12"/>
-          <line x1="4" x2="20" y1="18" y2="18"/>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
 
-        </svg>
-      </button>
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+
+                        <div class="w-80 rounded-2xl bg-white border border-slate-100 shadow-2xl p-3">
+
+                            <a href="/symptoms/neck-pain-after-car-accident/"
+                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
+
+                                <div class="font-bold text-slate-900">
+                                    Neck Pain & Whiplash
+                                </div>
+
+                            </a>
+
+                            <a href="/symptoms/back-pain-after-car-accident/"
+                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
+
+                                <div class="font-bold text-slate-900">
+                                    Back Pain & Stiffness
+                                </div>
+
+                            </a>
+
+                            <a href="/symptoms/headaches-after-car-accident/"
+                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
+
+                                <div class="font-bold text-slate-900">
+                                    Headaches & Dizziness
+                                </div>
+
+                            </a>
+
+                            <a href="/symptoms/anxiety-after-car-accident/"
+                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
+
+                                <div class="font-bold text-slate-900">
+                                    Anxiety & Stress
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Homepage Sections -->
+
+                <a data-home-link="how-icbc-works"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    How ICBC Works
+                </a>
+
+                <a data-home-link="locations"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Locations
+                </a>
+
+                <a data-home-link="assessment"
+                   class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">
+                    30s Check
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+
+            <button
+                class="md:hidden p-2 text-slate-600"
+                onclick="toggleMobileMenu()">
+
+                <svg class="w-6 h-6"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+
+                </svg>
+
+            </button>
+
+        </div>
 
     </div>
-  </div>
 
-  <!-- Mobile -->
-  <div
-    id="mobile-menu"
-    class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-5 space-y-4">
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
 
-    <a href="/symptoms/"
-       class="block text-base font-medium text-slate-700">
+  <div class="px-5 py-5 space-y-3">
+
+    <div class="text-xs font-black uppercase tracking-[0.18em] text-blue-600">
       Symptoms
-    </a>
+    </div>
 
-    <a data-home-link="how-icbc-works"
-       class="block text-base font-medium text-slate-700">
-      How ICBC Works
-    </a>
+    <div class="grid gap-2">
+      <a href="/symptoms/neck-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
+        Neck Pain & Whiplash
+      </a>
 
-    <a data-home-link="locations"
-       class="block text-base font-medium text-slate-700">
-      Locations
-    </a>
+      <a href="/symptoms/back-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
+        Back Pain & Stiffness
+      </a>
+
+      <a href="/symptoms/headaches-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
+        Headaches & Dizziness
+      </a>
+
+      <a href="/symptoms/anxiety-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
+        Anxiety & Stress
+      </a>
+    </div>
+
+    <div class="pt-3 grid gap-2">
+      <a data-home-link="how-icbc-works" class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
+        How ICBC Works
+      </a>
+
+      <a data-home-link="locations" class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
+        Locations
+      </a>
+    </div>
 
     <a data-home-link="assessment"
-       class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold">
+       class="mt-4 block rounded-2xl bg-blue-600 px-5 py-4 text-center text-base font-black text-white shadow-lg">
       Start 30s Check
     </a>
 
   </div>
+</div>
 </nav>
 
 <script>
 function toggleMobileMenu() {
-  document.getElementById('mobile-menu').classList.toggle('hidden');
+    document.getElementById("mobile-menu").classList.toggle("hidden");
 }
 
+// Home section links
 const isHome =
-  window.location.pathname === "/" ||
-  window.location.pathname === "/index.html";
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("/index.html");
 
 document.querySelectorAll("[data-home-link]").forEach(link => {
-  const target = link.dataset.homeLink;
-  link.href = isHome ? `#${target}` : `/#${target}`;
+    const target = link.dataset.homeLink;
+    link.href = isHome ? `#${target}` : `/#${target}`;
+});
+
+// Close mobile menu when any link is clicked
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+    });
 });
 </script>
 
