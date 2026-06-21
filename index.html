@@ -429,6 +429,143 @@
         white-space: normal;
     }
 }
+
+.mobile-hero {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-hero {
+    display: none !important;
+  }
+
+  .mobile-hero {
+    display: block;
+    background: #f8f8f6;
+    padding: 22px 16px 34px;
+  }
+
+  .mobile-hero-inner {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .mobile-hero-badge {
+    display: inline-flex;
+    margin-bottom: 12px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .mobile-hero h1 {
+    margin: 0 0 12px;
+    color: #0f172a;
+    font-size: 34px;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-weight: 900;
+  }
+
+  .mobile-hero p {
+    margin: 0 0 16px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  .mobile-hero-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #fff;
+    padding: 7px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.12);
+    margin-bottom: 16px;
+  }
+
+  .mobile-hero-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.18 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .mobile-hero-label {
+    position: absolute;
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+    padding: 11px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  }
+
+  .mobile-hero-button {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+    margin-bottom: 14px;
+  }
+
+  .mobile-hero-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .mobile-hero-points div {
+    min-height: 70px;
+    padding: 10px 6px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  }
+
+  .mobile-hero-points strong {
+    display: block;
+    color: #0f172a;
+    font-size: 12px;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+
+  .mobile-hero-points span {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+}
         
     </style>
 </head>
@@ -640,7 +777,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <main>
 <!-- [Hero Section] -->
-<section class="relative bg-[#f8f8f6] py-12 md:py-24 overflow-hidden">
+<section class="desktop-hero relative bg-[#f8f8f6] py-12 md:py-24 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
 
@@ -796,6 +933,59 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     </div>
   </div>
 </section>
+
+<!-- [Mobile Hero Section] -->
+<section class="mobile-hero">
+  <div class="mobile-hero-inner">
+
+    <div class="mobile-hero-badge">
+      Vancouver & Richmond
+    </div>
+
+    <h1>
+      ICBC recovery support after a car accident
+    </h1>
+
+    <p>
+      Physiotherapy, rehab, massage therapy, counselling, and direct billing support.
+    </p>
+
+    <div class="mobile-hero-image">
+      <img
+        src="/assets/images/icbc-recovery-chiropractor-consultation-vancouver-richmond.jpg"
+        alt="ICBC recovery consultation in Vancouver and Richmond"
+      >
+
+      <div class="mobile-hero-label">
+        Direct Billing Available
+      </div>
+    </div>
+
+    <a href="#assessment" class="mobile-hero-button">
+      30s Eligibility Check
+    </a>
+
+    <div class="mobile-hero-points">
+      <div>
+        <strong>ICBC</strong>
+        <span>Direct Billing</span>
+      </div>
+
+      <div>
+        <strong>Mind + Body</strong>
+        <span>Recovery Care</span>
+      </div>
+
+      <div>
+        <strong>2 Clinics</strong>
+        <span>Van + Richmond</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
 <!-- Post-Accident Symptoms -->
 <section class="py-16 bg-white border-b border-slate-100">
