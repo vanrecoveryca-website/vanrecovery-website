@@ -427,43 +427,120 @@
 
     <div id="custom-message"></div>
 
-    <!-- [Navigation Bar] -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo Section -->
-                <div class="flex items-center gap-2 text-blue-600">
-                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
-                    </svg>
-                    <span class="font-bold text-xl tracking-tight text-slate-800">ICBC Recovery <span class="text-blue-600 font-black">Hub</span></span>
-                </div>
+<!-- [Navigation Bar] -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8">
-                    <div class="flex items-center gap-6">
-                        <a href="#assessment" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Quiz</a>
-                        <a href="#claims-process" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Process</a>
-                        <a href="#treatment" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Treatment</a>
-                        <a href="#locations" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Locations</a>
-                    </div>
-                    <a href="#locations" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md">Find a Clinic</a>
-                </div>
+      <!-- Logo Section -->
+      <a href="/" class="flex items-center gap-2 text-blue-600">
+        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span class="font-bold text-xl tracking-tight text-slate-800">
+          ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
+        </span>
+      </a>
 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden p-2 text-slate-600" onclick="toggleMobileMenu()">
-                    <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                </button>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+
+        <!-- Symptoms Dropdown -->
+        <div class="relative group">
+          <a href="/symptoms/"
+             class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+            Symptoms
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </a>
+
+          <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="w-72 rounded-2xl bg-white border border-slate-100 shadow-xl p-3">
+              <a href="/symptoms/neck-pain-after-car-accident/" class="block rounded-xl px-4 py-3 hover:bg-blue-50">
+                <div class="font-bold text-slate-800">Neck Pain & Whiplash</div>
+                <div class="text-xs text-slate-500 mt-1">Neck stiffness and whiplash symptoms</div>
+              </a>
+
+              <a href="/symptoms/back-pain-after-car-accident/" class="block rounded-xl px-4 py-3 hover:bg-blue-50">
+                <div class="font-bold text-slate-800">Back Pain & Stiffness</div>
+                <div class="text-xs text-slate-500 mt-1">Lower back pain and muscle tightness</div>
+              </a>
+
+              <a href="/symptoms/headaches-after-car-accident/" class="block rounded-xl px-4 py-3 hover:bg-blue-50">
+                <div class="font-bold text-slate-800">Headaches & Dizziness</div>
+                <div class="text-xs text-slate-500 mt-1">Headaches, dizziness and concussion symptoms</div>
+              </a>
+
+              <a href="/symptoms/anxiety-after-car-accident/" class="block rounded-xl px-4 py-3 hover:bg-blue-50">
+                <div class="font-bold text-slate-800">Anxiety & Stress</div>
+                <div class="text-xs text-slate-500 mt-1">Stress, sleep issues and driving fear</div>
+              </a>
             </div>
+          </div>
         </div>
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-4 text-left">
-            <a href="#assessment" class="block text-base font-medium text-slate-600">Quiz</a>
-            <a href="#claims-process" class="block text-base font-medium text-slate-600">Process</a>
-            <a href="#treatment" class="block text-base font-medium text-slate-600">Treatment</a>
-            <a href="#locations" class="block text-base font-medium text-slate-600">Locations</a>
-        </div>
-    </nav>
+
+        <a data-home-link="how-icbc-works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+          How ICBC Works
+        </a>
+
+        <a data-home-link="locations" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+          Locations
+        </a>
+
+        <a data-home-link="assessment" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md">
+          30s Check
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 text-slate-600" onclick="toggleMobileMenu()">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-4 text-left">
+    <a href="/symptoms/" class="block text-base font-bold text-slate-700">Symptoms</a>
+
+    <div class="pl-4 space-y-3 border-l border-slate-100">
+      <a href="/symptoms/neck-pain-after-car-accident/" class="block text-sm text-slate-600">Neck Pain & Whiplash</a>
+      <a href="/symptoms/back-pain-after-car-accident/" class="block text-sm text-slate-600">Back Pain & Stiffness</a>
+      <a href="/symptoms/headaches-after-car-accident/" class="block text-sm text-slate-600">Headaches & Dizziness</a>
+      <a href="/symptoms/anxiety-after-car-accident/" class="block text-sm text-slate-600">Anxiety & Stress</a>
+    </div>
+
+    <a data-home-link="how-icbc-works" class="block text-base font-medium text-slate-600">How ICBC Works</a>
+    <a data-home-link="locations" class="block text-base font-medium text-slate-600">Locations</a>
+
+    <a data-home-link="assessment" class="block text-center bg-blue-600 text-white px-6 py-3 rounded-xl text-base font-bold">
+      Start 30s Check
+    </a>
+  </div>
+</nav>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+
+const isHome =
+  window.location.pathname === "/" ||
+  window.location.pathname === "/index.html";
+
+document.querySelectorAll("[data-home-link]").forEach(link => {
+  const target = link.dataset.homeLink;
+  link.href = isHome ? `#${target}` : `/#${target}`;
+});
+</script>
 
     <main>
 <!-- [Hero Section] -->
