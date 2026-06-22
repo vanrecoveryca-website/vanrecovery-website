@@ -1981,7 +1981,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
                 <div class="quiz-card">
                     <div class="eyebrow">Quick Check</div>
-                    <h2 class="title">Find Your Recovery Path</h2>
+                    <h2 class="title">Find Your Next Step</h2>
                     <p class="subtitle">
                         A simple way to explore your next step after a car accident in Richmond or Vancouver.
                     </p>
@@ -2122,6 +2122,97 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
             </div>
         </section>
+
+<style>
+@media (max-width: 767px) {
+  #assessment {
+    padding: 14px 12px 48px !important;
+  }
+
+  .icbc-quiz .quiz-card {
+    max-width: 100%;
+    padding: 18px 14px 16px;
+    border-radius: 22px;
+  }
+
+  /* Hide Quick Check on mobile */
+  .icbc-quiz .eyebrow {
+    display: none;
+  }
+
+  .icbc-quiz .title {
+    font-size: 24px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .icbc-quiz .subtitle {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 310px;
+  }
+
+  .icbc-quiz .progress {
+    margin-top: 14px;
+    gap: 7px;
+  }
+
+  .icbc-quiz .progress span {
+    height: 5px;
+  }
+
+  .icbc-quiz .step {
+    margin-top: 16px;
+  }
+
+  .icbc-quiz .question-label {
+    display: none;
+  }
+
+  .icbc-quiz .question {
+    font-size: 20px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .icbc-quiz .helper {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .icbc-quiz .options {
+    gap: 8px;
+  }
+
+  .icbc-quiz .option {
+    min-height: 52px;
+    padding: 11px 13px;
+    border-radius: 16px;
+    font-size: 15px;
+    gap: 11px;
+  }
+
+  .icbc-quiz .check-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-width: 2px;
+  }
+
+  .icbc-quiz .option-text {
+    line-height: 1.25;
+  }
+
+  .icbc-quiz .cta {
+    margin-top: 12px;
+    padding: 13px 14px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+}
+</style>
 
 <!-- [HowTo / Claims Process Section] -->
 <section id="how-icbc-works" class="py-24 bg-white border-b border-slate-100">
