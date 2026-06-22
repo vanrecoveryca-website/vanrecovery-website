@@ -1372,14 +1372,14 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   #why-choose-us .max-w-4xl > p:first-child {
     font-size: 11px !important;
     line-height: 1.35 !important;
-    letter-spacing: 0.18em !important;
+    letter-spacing: .18em !important;
     margin-bottom: 10px !important;
   }
 
   #why-choose-us h2 {
     font-size: 30px !important;
     line-height: 1.08 !important;
-    letter-spacing: -0.04em !important;
+    letter-spacing: -.04em !important;
     margin-bottom: 10px !important;
   }
 
@@ -1397,32 +1397,44 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
   #why-choose-us .grid > div {
     min-height: 0 !important;
+    height: auto !important;
+
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
+    justify-content: flex-start !important;
+
     gap: 16px !important;
     padding: 16px 18px !important;
+
     border-radius: 18px !important;
   }
 
   #why-choose-us .grid > div > div:first-child {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 14px !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+
     margin: 0 !important;
-    flex-shrink: 0 !important;
+    flex: 0 0 42px !important;
+
+    border-radius: 14px !important;
   }
 
   #why-choose-us .grid > div > div:first-child svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 21px !important;
+    height: 21px !important;
   }
 
   #why-choose-us h3 {
     margin: 0 !important;
-    font-size: 21px !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.035em !important;
+
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.035em !important;
     font-weight: 900 !important;
+
+    text-align: left !important;
   }
 
   #why-choose-us .grid > div > p {
