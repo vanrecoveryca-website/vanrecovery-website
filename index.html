@@ -1427,93 +1427,104 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </section>
 
 <style>
-/* =========================
-   Mobile Only: Experience Volume
-========================= */
+/* ==========================================
+   Experience Volume - Mobile Only
+========================================== */
 
-@media (max-width: 767px) {
+@media (max-width:767px){
 
-  #experience-volume {
-    padding: 56px 22px !important;
-  }
+#experience-volume{
+    padding:56px 24px !important;
+}
 
-  #experience-volume > div {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+#experience-volume .max-w-4xl{
+    margin-bottom:36px !important;
+}
 
-  #experience-volume .max-w-4xl {
-    margin-bottom: 30px !important;
-  }
+#experience-volume .max-w-4xl>p:first-child{
+    font-size:12px !important;
+    letter-spacing:.18em;
+    margin-bottom:14px;
+}
 
-  #experience-volume .max-w-4xl > p:first-child {
-    font-size: 11px !important;
-    line-height: 1.35 !important;
-    letter-spacing: 0.18em !important;
-    margin-bottom: 12px !important;
-  }
-
-  #experience-volume h2 {
-    font-size: 38px !important;
-    line-height: 1.02 !important;
-    letter-spacing: -0.055em !important;
-    margin-bottom: 18px !important;
-  }
-
-  #experience-volume .max-w-4xl > p:last-child {
-    font-size: 17px !important;
-    line-height: 1.5 !important;
-  }
-
-  #experience-volume .grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-  }
-
-  #experience-volume .grid > div {
-    display: grid !important;
-    grid-template-columns: 168px 1fr !important;
-    column-gap: 28px !important;
-    align-items: center !important;
-    padding: 18px 0 !important;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
-  }
-
-  #experience-volume .grid > div:last-child {
-    border-bottom: none !important;
-  }
-
-  #experience-volume .text-5xl,
-  #experience-volume .text-6xl {
+#experience-volume h2{
     font-size:3rem !important;
-    line-height: 1 !important;
-    margin: 0 !important;
-    width: 150px !important;
-  }
+    line-height:1.05;
+    letter-spacing:-.05em;
+    margin-bottom:18px;
+}
 
-  #experience-volume h3 {
-    margin: 0 !important;
-    font-size: 19px !important;
-    line-height: 1.18 !important;
-    text-align: left !important;
-  }
+#experience-volume .max-w-4xl>p:last-child{
+    font-size:18px !important;
+    line-height:1.55;
+}
 
-/* Hide note on mobile */
+/* ---------- Stats ---------- */
+
+#experience-volume .grid{
+
+    display:flex !important;
+    flex-direction:column;
+    gap:0;
+}
+
+#experience-volume .grid>div{
+
+    display:flex;
+    align-items:center;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #e2e8f0;
+}
+
+#experience-volume .grid>div:last-child{
+    border-bottom:none;
+}
+
+/* Number */
+
+#experience-volume .text-5xl,
+#experience-volume .text-6xl{
+
+    flex:0 0 180px;
+
+    width:180px;
+
+    font-size:3.2rem !important;
+
+    line-height:1;
+
+    margin:0;
+}
+
+/* Right */
+
+#experience-volume h3{
+
+    margin:0 0 0 28px;
+
+    font-size:1.6rem;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    text-align:left;
+}
+
+/* Hide grey text */
+
+#experience-volume .grid p{
+    display:none;
+}
+
+/* Hide bottom note */
+
 #experience-volume > div > p.mt-12{
-    display:none !important;
+    display:none;
 }
 
-/* Hide row description */
-#experience-volume .grid > div > p{
-    display:none !important;
-}
-
-  #experience-volume > div > p.mt-12 {
-    margin-top: 20px !important;
-    font-size: 11px !important;
-    line-height: 1.4 !important;
-  }
 }
 </style>
 
