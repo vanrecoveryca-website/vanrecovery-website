@@ -3862,228 +3862,131 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     </main>
     
 <!-- [Footer] -->
-<footer class="bg-slate-950 text-white px-6 pt-20 pb-10 border-t border-slate-800">
+<footer class="site-footer">
 
-  <div class="max-w-7xl mx-auto">
+  <div class="footer-container">
 
-    <!-- Top -->
-    <div class="footer-top grid pb-14 border-b border-slate-800">
+    <div class="footer-top">
 
       <!-- Brand -->
-      <div>
+      <div class="footer-brand">
 
-        <div class="flex items-center gap-4 mb-7">
-
-<a
-  href="/"
-  class="flex-shrink-0 w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-blue-600/20 hover:scale-105 transition-transform"
->
-  <img
-    src="/assets/favicon.svg"
-    alt="ICBC Recovery Hub"
-    class="w-full h-full"
-  >
-</a>
+        <div class="footer-logo-row">
+          <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
+            <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
+          </a>
 
           <div>
-            <a href="/" class="block text-[32px] font-black leading-[0.9] tracking-[-0.04em] hover:text-blue-400 transition-colors">
+            <a href="/" class="footer-title">
               ICBC Recovery Hub
             </a>
 
-            <div class="text-slate-400 text-sm mt-3 tracking-wide">
-              Vancouver & Richmond
+            <div class="footer-location">
+              Vancouver &amp; Richmond
             </div>
           </div>
-
         </div>
 
-        <p class="text-slate-400 leading-relaxed text-[15px] max-w-sm">
+        <p class="footer-description">
           Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
         </p>
 
-        <!-- Internal Links -->
-        <div class="flex flex-wrap gap-5 mt-8">
-
-          <a href="/#symptoms" class="text-sm text-slate-500 hover:text-white transition-colors">
-            Symptoms
-          </a>
-
-          <a href="/#how-icbc-works" class="text-sm text-slate-500 hover:text-white transition-colors">
-            How ICBC Works
-          </a>
-
-          <a href="/#locations" class="text-sm text-slate-500 hover:text-white transition-colors">
-            Locations
-          </a>
-
-          <a href="/#faq" class="text-sm text-slate-500 hover:text-white transition-colors">
-            FAQ
-          </a>
-
-        </div>
+        <nav class="footer-links">
+          <a href="/#symptoms">Symptoms</a>
+          <a href="/#how-icbc-works">How ICBC Works</a>
+          <a href="/#locations">Locations</a>
+          <a href="/#faq">FAQ</a>
+        </nav>
 
       </div>
 
       <!-- Vancouver -->
-      <div>
+      <div class="footer-clinic">
+        <h3>Vancouver</h3>
 
-        <div class="mb-7">
-          <div class="text-white font-bold text-2xl mb-5">
-            Vancouver
-          </div>
+        <a href="https://aetherisintegratedhealth.com/" target="_blank" rel="noopener" class="clinic-name">
+          Aetheris Integrated Health
+        </a>
 
-          <a
-            href="https://aetherisintegratedhealth.com/"
-            target="_blank"
-            rel="noopener"
-            class="inline-block text-xl font-bold text-white hover:text-blue-400 transition-colors leading-snug"
-          >
-            Aetheris Integrated Health
-          </a>
-        </div>
-
-        <div class="space-y-4 text-[15px] text-slate-400 leading-relaxed">
-
-          <a
-            href="https://maps.app.goo.gl/Rm3vHV2SdNpYn6PK7"
-            target="_blank"
-            rel="noopener"
-            class="block hover:text-white transition-colors"
-          >
+        <div class="clinic-info">
+          <a href="https://maps.app.goo.gl/Rm3vHV2SdNpYn6PK7" target="_blank" rel="noopener">
             Unit 140, 809 West 41st Avenue<br>
             Vancouver, BC V5Z 2N6
           </a>
 
-          <a
-            href="tel:16045658282"
-            class="inline-block text-white font-semibold hover:text-blue-400 transition-colors"
-          >
+          <a href="tel:16045658282" class="clinic-phone">
             (604) 565-8282
           </a>
 
-          <a
-            href="mailto:info@aetherishealth.ca"
-            class="block hover:text-white transition-colors"
-          >
+          <a href="mailto:info@aetherishealth.ca">
             info@aetherishealth.ca
           </a>
-
         </div>
 
-        <!-- Hours -->
-        <div class="mt-7 pt-6 border-t border-slate-800">
+        <div class="clinic-hours">
+          <div class="hours-label">Opening Hours</div>
 
-          <div class="text-xs font-black tracking-[0.22em] uppercase text-slate-500 mb-4">
-            Opening Hours
+          <div class="hours-row">
+            <span>Monday - Saturday</span>
+            <span>9:00am - 8:30pm</span>
           </div>
 
-          <div class="space-y-3 text-[15px] text-slate-400">
-            <div class="flex items-center justify-between gap-4">
-              <span>Monday - Saturday</span>
-              <span>9:00am - 8:30pm</span>
-            </div>
-
-            <div class="flex items-center justify-between gap-4">
-              <span>Sunday</span>
-              <span>10:00am - 5:30pm</span>
-            </div>
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span>10:00am - 5:30pm</span>
           </div>
-
         </div>
-
       </div>
 
       <!-- Richmond -->
-      <div>
+      <div class="footer-clinic">
+        <h3>Richmond</h3>
 
-        <div class="mb-7">
-          <div class="text-white font-bold text-2xl mb-5">
-            Richmond
-          </div>
+        <a href="https://www.pegasusintegratedhealth.ca/" target="_blank" rel="noopener" class="clinic-name">
+          Pegasus Integrated Health
+        </a>
 
-          <a
-            href="https://www.pegasusintegratedhealth.ca/"
-            target="_blank"
-            rel="noopener"
-            class="inline-block text-xl font-bold text-white hover:text-blue-400 transition-colors leading-snug"
-          >
-            Pegasus Integrated Health
-          </a>
-        </div>
-
-        <div class="space-y-4 text-[15px] text-slate-400 leading-relaxed">
-
-          <a
-            href="https://maps.app.goo.gl/8mFLj8uJoi4sQ4Xn8"
-            target="_blank"
-            rel="noopener"
-            class="block hover:text-white transition-colors"
-          >
+        <div class="clinic-info">
+          <a href="https://maps.app.goo.gl/8mFLj8uJoi4sQ4Xn8" target="_blank" rel="noopener">
             315 - 8171 Cook Rd<br>
             Richmond, BC V6Y 3T8
           </a>
 
-          <a
-            href="tel:16042328888"
-            class="inline-block text-white font-semibold hover:text-blue-400 transition-colors"
-          >
+          <a href="tel:16042328888" class="clinic-phone">
             604.232.8888
           </a>
 
-          <a
-            href="mailto:info@pegasushealth.ca"
-            class="block hover:text-white transition-colors"
-          >
+          <a href="mailto:info@pegasushealth.ca">
             info@pegasushealth.ca
           </a>
-
         </div>
 
-        <!-- Hours -->
-        <div class="mt-7 pt-6 border-t border-slate-800">
+        <div class="clinic-hours">
+          <div class="hours-label">Opening Hours</div>
 
-          <div class="text-xs font-black tracking-[0.22em] uppercase text-slate-500 mb-4">
-            Opening Hours
+          <div class="hours-row">
+            <span>Monday - Saturday</span>
+            <span>9:00am - 8:30pm</span>
           </div>
 
-          <div class="space-y-3 text-[15px] text-slate-400">
-            <div class="flex items-center justify-between gap-4">
-              <span>Monday - Saturday</span>
-              <span>9:00am - 8:30pm</span>
-            </div>
-
-            <div class="flex items-center justify-between gap-4">
-              <span>Sunday</span>
-              <span>10:00am - 5:30pm</span>
-            </div>
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span>10:00am - 5:30pm</span>
           </div>
-
         </div>
-
       </div>
 
     </div>
 
-    <!-- Bottom -->
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
+    <div class="footer-bottom">
+      <p>© 2026 ICBC Recovery Hub.</p>
 
-      <p class="text-slate-500 text-sm text-center md:text-left">
-        © 2026 ICBC Recovery Hub.
-      </p>
-
-      <p class="text-slate-500 text-sm text-center md:text-right">
+      <p>
         Website and AI Search Optimization by
-
-        <a
-          href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub"
-          target="_blank"
-          rel="noopener"
-          class="text-white font-semibold hover:text-blue-400 transition-colors"
-        >
+        <a href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub" target="_blank" rel="noopener">
           VisibleAI
         </a>
       </p>
-
     </div>
 
   </div>
@@ -4091,182 +3994,286 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </footer>
 
 <style>
-
-@media (min-width:1024px){
-
-  footer .max-w-7xl{
-    max-width:1180px !important;
-  }
-
-  footer .footer-top{
-    display:grid !important;
-    grid-template-columns: 1.05fr 1fr 1fr !important;
-    column-gap:56px !important;
-    align-items:start !important;
-  }
-
-  footer .footer-top > div:first-child{
-    max-width:none !important;
-  }
-
-  footer .footer-top > div:first-child p{
-    max-width:420px !important;
-  }
-
-  footer .footer-top > div:nth-child(2),
-  footer .footer-top > div:nth-child(3){
-    max-width:none !important;
-  }
-
+.site-footer {
+  background: #020617;
+  color: #ffffff;
+  padding: 80px 24px 40px;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
 }
-    
-/* ===================================================
-   Footer Mobile
-=================================================== */
 
-@media (max-width:767px){
+.footer-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
 
-  footer{
-    padding:42px 20px 24px !important;
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  gap: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  display: block;
+  line-height: 0;
+  transition: transform 0.2s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo img {
+  display: block;
+  width: 58px;
+  height: 58px;
+}
+
+.footer-title {
+  display: block;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  text-decoration: none;
+}
+
+.footer-title:hover,
+.footer-links a:hover,
+.clinic-name:hover,
+.clinic-info a:hover,
+.footer-bottom a:hover {
+  color: #60a5fa;
+}
+
+.footer-location {
+  margin-top: 8px;
+  color: #93c5fd;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.footer-description {
+  max-width: 420px;
+  margin: 0;
+  color: #93a4bd;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  margin-top: 28px;
+}
+
+.footer-links a,
+.clinic-info a,
+.footer-bottom p {
+  color: #8192ad;
+  text-decoration: none;
+}
+
+.footer-links a {
+  font-size: 14px;
+}
+
+.footer-clinic h3 {
+  margin: 0 0 24px;
+  color: #ffffff;
+  font-size: 27px;
+  line-height: 1.1;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+
+.clinic-name {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+
+.clinic-info {
+  display: grid;
+  gap: 14px;
+  color: #93a4bd;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.clinic-phone {
+  color: #ffffff !important;
+  font-weight: 750;
+}
+
+.clinic-hours {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.hours-label {
+  margin-bottom: 16px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: #93c5fd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hours-row + .hours-row {
+  margin-top: 10px;
+}
+
+.hours-row span:last-child {
+  color: #bfdbfe;
+  white-space: nowrap;
+}
+
+.footer-bottom {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 42px 20px 24px;
   }
 
-  footer .max-w-7xl{
-    max-width:430px;
+  .footer-container {
+    max-width: 430px;
   }
 
-  /* ---------- Layout ---------- */
-
-  footer .grid{
-    display:flex !important;
-    flex-direction:column;
-    gap:30px !important;
-    padding-bottom:28px !important;
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 28px;
   }
 
-  /* ---------- Brand ---------- */
-
-  footer .flex.items-center.gap-4{
-    gap:14px !important;
-    margin-bottom:18px !important;
-    align-items:center;
+  .footer-logo-row {
+    gap: 12px;
+    margin-bottom: 18px;
   }
 
-  footer .w-14{
-    width:46px !important;
-    height:46px !important;
-    border-radius:14px !important;
+  .footer-logo img {
+    width: 48px;
+    height: 48px;
   }
 
-  footer .w-14 span{
-    font-size:15px !important;
+  .footer-title {
+    font-size: 26px;
+    line-height: 1;
   }
 
-  footer a.text-\[32px\]{
-    font-size:26px !important;
-    line-height:1 !important;
-    letter-spacing:-.04em;
+  .footer-location {
+    margin-top: 5px;
+    font-size: 13px;
   }
 
-  footer .text-slate-400.text-sm{
-    font-size:13px !important;
-    margin-top:5px !important;
+  .footer-description {
+    max-width: none;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
-  footer p.text-slate-400{
-    font-size:14px !important;
-    line-height:1.6 !important;
-    margin-top:4px;
-    max-width:none;
+  .footer-links {
+    gap: 10px 18px;
+    margin-top: 18px;
   }
 
-  /* ---------- Nav ---------- */
-
-  footer .flex.flex-wrap.gap-5{
-    gap:10px 18px !important;
-    margin-top:18px !important;
+  .footer-links a {
+    font-size: 13px;
   }
 
-  footer .flex.flex-wrap.gap-5 a{
-    font-size:13px !important;
+  .footer-clinic h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
   }
 
-  /* ---------- Clinic ---------- */
-
-  footer .mb-7{
-    margin-bottom:12px !important;
+  .clinic-name {
+    font-size: 18px;
+    margin-bottom: 14px;
   }
 
-  footer .text-2xl{
-    font-size:22px !important;
-    margin-bottom:8px !important;
+  .clinic-info {
+    gap: 9px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
-  footer a.text-xl{
-    font-size:18px !important;
-    line-height:1.3 !important;
+  .clinic-hours {
+    margin-top: 16px;
+    padding-top: 0;
+    border-top: none;
   }
 
-  footer .space-y-4{
-    gap:9px !important;
+  .hours-label {
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
   }
 
-  footer .space-y-4,
-  footer .space-y-4 a{
-    font-size:14px !important;
-    line-height:1.5 !important;
+  .hours-row {
+    font-size: 13px;
+    line-height: 1.35;
+    gap: 10px;
   }
 
-  /* ---------- Opening Hours ---------- */
-
-  footer .mt-7{
-    margin-top:16px !important;
+  .hours-row + .hours-row {
+    margin-top: 5px;
   }
 
-  footer .pt-6{
-    padding-top:0 !important;
+  .footer-bottom {
+    padding-top: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
-  footer .border-t{
-    border-top:none !important;
+  .footer-bottom p {
+    font-size: 12px;
   }
-
-  footer .text-xs{
-    font-size:10px !important;
-    letter-spacing:.18em;
-    margin-bottom:8px !important;
-  }
-
-  footer .space-y-3{
-    gap:5px !important;
-  }
-
-  footer .space-y-3 .flex{
-    font-size:13px !important;
-    line-height:1.35;
-  }
-
-  footer .space-y-3 span:first-child{
-    color:#94a3b8;
-  }
-
-  footer .space-y-3 span:last-child{
-    color:#fff;
-    font-weight:500;
-    white-space:nowrap;
-  }
-
-  /* ---------- Bottom ---------- */
-
-  footer .pt-8{
-    padding-top:18px !important;
-    gap:6px !important;
-  }
-
-  footer .pt-8 p{
-    font-size:12px !important;
-    line-height:1.5;
-  }
-
 }
 </style>
     
