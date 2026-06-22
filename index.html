@@ -2961,135 +2961,98 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     margin-bottom: 18px;
   }
 
-  @media (max-width: 767px) {
-    .review-marquee {
-      overflow: visible;
-      margin-left: -24px;
-      margin-right: -24px;
-    }
-
-    .review-track {
-      width: auto;
-      animation: none !important;
-      transform: none !important;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      gap: 14px;
-      padding: 0 24px 12px;
-    }
-
-    .review-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .review-card {
-      width: 82vw;
-      min-width: 82vw;
-      max-width: 82vw;
-      min-height: 190px;
-      padding: 20px;
-      border-radius: 22px;
-      scroll-snap-align: center;
-    }
-
-    .review-stars {
-      font-size: 15px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .review-card p {
-      font-size: 15px !important;
-      line-height: 1.5 !important;
-      margin-bottom: 16px !important;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .review-card .font-bold {
-      font-size: 15px;
-    }
-
-    .review-card .text-slate-500 {
-      font-size: 13px;
-    }
-
-    .review-track .review-card:nth-child(n+6) {
-      display: none;
-    }
-      
-      #reviews{
-    padding-top:56px !important;
-    padding-bottom:64px !important;
+@media (max-width: 767px) {
+  #reviews {
+    padding-top: 56px !important;
+    padding-bottom: 64px !important;
   }
 
-  #reviews .text-center{
-    margin-bottom:32px !important;
+  #reviews .text-center {
+    margin-bottom: 32px !important;
   }
 
-  #reviews .text-center>p:first-child{
-    font-size:12px !important;
-    margin-bottom:10px !important;
+  #reviews .text-center > p:first-child {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
   }
 
-  #reviews h2{
-    font-size:28px !important;
-    line-height:1.15 !important;
-    margin-bottom:14px !important;
+  #reviews h2 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px !important;
   }
 
-  #reviews .text-center>p.text-lg{
-    font-size:15px !important;
-    line-height:1.55 !important;
-    max-width:320px;
+  #reviews .text-center > p.text-lg {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    max-width: 320px;
   }
 
-  #reviews .text-center a{
-    padding:10px 18px !important;
-    font-size:14px !important;
+  #reviews .text-center a {
+    padding: 10px 18px !important;
+    font-size: 14px !important;
   }
-.review-card{
-    width:88vw;
-    min-width:88vw;
-    max-width:88vw;
 
-    min-height:230px;
+  .review-marquee {
+    overflow: visible;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 
-    padding:24px;
+  .review-track {
+    width: auto;
+    animation: none !important;
+    transform: none !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 0 24px 14px;
+  }
 
-    border-radius:24px;
+  .review-track::-webkit-scrollbar {
+    display: none;
+  }
 
-    scroll-snap-align:center;
+  .review-card {
+    width: 86vw;
+    min-width: 86vw;
+    max-width: 86vw;
+    min-height: 280px;
+    padding: 24px;
+    border-radius: 24px;
+    scroll-snap-align: center;
+  }
+
+  .review-stars {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  .review-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 22px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .review-card .font-bold {
+    font-size: 15px;
+  }
+
+  .review-card .text-slate-500 {
+    font-size: 13px;
+  }
+
+  .review-track .review-card:nth-child(n+6) {
+    display: none;
+  }
 }
-
-.review-stars{
-    font-size:16px;
-    margin-bottom:14px;
-}
-
-.review-card p{
-    font-size:14px !important;
-    line-height:1.65 !important;
-    margin-bottom:22px !important;
-
-    display:-webkit-box;
-    -webkit-line-clamp:5;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-}
-
-.review-card .font-bold{
-    font-size:15px;
-}
-
-.review-card .text-slate-500{
-    font-size:13px;
-}
-  }
 </style>
 
 
