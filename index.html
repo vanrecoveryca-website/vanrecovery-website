@@ -3867,7 +3867,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   <div class="max-w-7xl mx-auto">
 
     <!-- Top -->
-    <div class="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-14 pb-14 border-b border-slate-800">
+    <div class="grid lg:grid-cols-[0.95fr_1fr_1fr] gap-20 pb-14 border-b border-slate-800">
 
       <!-- Brand -->
       <div>
@@ -4086,6 +4086,32 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </footer>
 
 <style>
+
+@media (min-width:1024px){
+
+  footer .max-w-7xl{
+    max-width:1280px;
+  }
+
+  footer .grid{
+    align-items:start;
+  }
+
+  footer .grid > div:first-child{
+    max-width:420px;
+  }
+
+  footer .grid > div:first-child p{
+    max-width:390px;
+  }
+
+  footer .grid > div:nth-child(2),
+  footer .grid > div:nth-child(3){
+    max-width:420px;
+  }
+
+}
+    
 /* ===================================================
    Footer Mobile
 =================================================== */
