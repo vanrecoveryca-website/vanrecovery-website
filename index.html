@@ -3867,7 +3867,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   <div class="max-w-7xl mx-auto">
 
     <!-- Top -->
-    <div class="grid lg:grid-cols-[0.95fr_1fr_1fr] gap-20 pb-14 border-b border-slate-800">
+    <div class="footer-top grid pb-14 border-b border-slate-800">
 
       <!-- Brand -->
       <div>
@@ -4090,24 +4090,27 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 @media (min-width:1024px){
 
   footer .max-w-7xl{
-    max-width:1280px;
+    max-width:1180px !important;
   }
 
-  footer .grid{
-    align-items:start;
+  footer .footer-top{
+    display:grid !important;
+    grid-template-columns: 1.05fr 1fr 1fr !important;
+    column-gap:56px !important;
+    align-items:start !important;
   }
 
-  footer .grid > div:first-child{
-    max-width:420px;
+  footer .footer-top > div:first-child{
+    max-width:none !important;
   }
 
-  footer .grid > div:first-child p{
-    max-width:390px;
+  footer .footer-top > div:first-child p{
+    max-width:420px !important;
   }
 
-  footer .grid > div:nth-child(2),
-  footer .grid > div:nth-child(3){
-    max-width:420px;
+  footer .footer-top > div:nth-child(2),
+  footer .footer-top > div:nth-child(3){
+    max-width:none !important;
   }
 
 }
