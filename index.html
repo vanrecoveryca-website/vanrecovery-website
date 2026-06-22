@@ -3215,7 +3215,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 <section id="locations" class="py-24 bg-[#f8f8f6]">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div class="text-center mb-16">
+    <div class="locations-heading text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-slate-900">
         Clinic Locations
       </h2>
@@ -3224,51 +3224,49 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       </p>
     </div>
 
-    <div class="flex flex-col gap-8">
+    <div class="locations-list flex flex-col gap-8">
 
       <!-- Richmond Card -->
-      <div class="bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
+      <div class="location-card bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
 
-        <!-- Content -->
-        <div class="flex-1 text-left flex flex-col gap-5">
+        <div class="location-content flex-1 text-left flex flex-col gap-5">
 
           <div>
-            <h3 class="text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
+            <h3 class="location-title text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
               Pegasus Integrated Health
             </h3>
 
-            <div class="flex items-start gap-3 mb-8">
-              <svg class="w-6 h-6 mt-1 fill-current text-blue-500 flex-shrink-0" viewBox="0 0 24 24">
+            <div class="location-address flex items-start gap-3 mb-8">
+              <svg class="location-pin w-6 h-6 mt-1 fill-current text-blue-500 flex-shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
 
               <div>
-                <p class="text-xl text-slate-600 font-medium mb-1">
+                <p class="location-street text-xl text-slate-600 font-medium mb-1">
                   315 - 8171 Cook Rd
                 </p>
-                <p class="text-lg text-slate-500">
+                <p class="location-city text-lg text-slate-500">
                   Richmond, BC V6Y 3T8
                 </p>
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-4">
+            <div class="location-tags flex flex-wrap gap-4">
               <span class="px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-bold border border-blue-100">
                 Richmond Centre Area
               </span>
-
               <span class="px-4 py-1.5 bg-green-50 text-green-600 rounded-full text-sm font-bold border border-green-100">
                 Direct Billing
               </span>
             </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="location-actions flex flex-col sm:flex-row">
             <a
               href="https://pegasushealth.janeapp.com/"
               target="_blank"
               rel="noopener"
-              class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all text-center text-lg shadow-lg"
+              class="location-primary bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all text-center text-lg shadow-lg"
             >
               Book Online
             </a>
@@ -3277,7 +3275,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
               href="https://www.pegasusintegratedhealth.ca/"
               target="_blank"
               rel="noopener"
-              class="border-2 border-slate-100 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center text-lg"
+              class="location-secondary border-2 border-slate-100 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center text-lg"
             >
               Visit Website
             </a>
@@ -3285,9 +3283,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
         </div>
 
-        <!-- Map -->
-        <div class="w-full lg:w-[480px] h-[360px] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 relative group-hover:border-blue-200 transition-colors">
-
+        <div class="location-map w-full lg:w-[480px] h-[360px] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 relative group-hover:border-blue-200 transition-colors">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2608.8081537789676!2d-123.13574176732764!3d49.16624958271079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860bacbe0b162f%3A0xdb04b8b5862143ee!2sPegasus%20Integrated%20Health!5e0!3m2!1szh-CN!2sca!4v1779253476227!5m2!1szh-CN!2sca"
             width="100%"
@@ -3297,54 +3293,51 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-
         </div>
 
       </div>
 
       <!-- Vancouver Card -->
-      <div class="bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
+      <div class="location-card bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
 
-        <!-- Content -->
-        <div class="flex-1 text-left flex flex-col gap-5">
+        <div class="location-content flex-1 text-left flex flex-col gap-5">
 
           <div>
-            <h3 class="text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
+            <h3 class="location-title text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
               Aetheris Integrated Health
             </h3>
 
-            <div class="flex items-start gap-3 mb-8">
-              <svg class="w-6 h-6 mt-1 fill-current text-blue-500 flex-shrink-0" viewBox="0 0 24 24">
+            <div class="location-address flex items-start gap-3 mb-8">
+              <svg class="location-pin w-6 h-6 mt-1 fill-current text-blue-500 flex-shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
 
               <div>
-                <p class="text-xl text-slate-600 font-medium mb-1">
+                <p class="location-street text-xl text-slate-600 font-medium mb-1">
                   Unit 140, 809 West 41st Avenue
                 </p>
-                <p class="text-lg text-slate-500">
+                <p class="location-city text-lg text-slate-500">
                   Vancouver, BC V5Z 2N6
                 </p>
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-4">
+            <div class="location-tags flex flex-wrap gap-4">
               <span class="px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-bold border border-blue-100">
                 Vancouver West Side
               </span>
-
               <span class="px-4 py-1.5 bg-green-50 text-green-600 rounded-full text-sm font-bold border border-green-100">
                 Direct Billing
               </span>
             </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="location-actions flex flex-col sm:flex-row">
             <a
               href="https://aetherishealth.janeapp.com/"
               target="_blank"
               rel="noopener"
-              class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all text-center text-lg shadow-lg"
+              class="location-primary bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all text-center text-lg shadow-lg"
             >
               Book Online
             </a>
@@ -3353,7 +3346,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
               href="https://aetherisintegratedhealth.com/"
               target="_blank"
               rel="noopener"
-              class="border-2 border-slate-100 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center text-lg"
+              class="location-secondary border-2 border-slate-100 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center text-lg"
             >
               Visit Website
             </a>
@@ -3361,9 +3354,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
         </div>
 
-        <!-- Map -->
-        <div class="w-full lg:w-[480px] h-[360px] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 relative group-hover:border-blue-200 transition-colors">
-
+        <div class="location-map w-full lg:w-[480px] h-[360px] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 relative group-hover:border-blue-200 transition-colors">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d166734.75138761278!2d-123.4291005!3d49.2341191!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486755314ebb68d%3A0xcf27781893b9c44f!2sAetheris%20Integrated%20Health!5e0!3m2!1szh-CN!2sca!4v1779253645551!5m2!1szh-CN!2sca"
             width="100%"
@@ -3373,7 +3364,6 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-
         </div>
 
       </div>
@@ -3384,128 +3374,95 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </section>
 
 <style>
-@media (max-width:767px){
-
-  #locations{
-    padding:56px 0 64px !important;
+@media (max-width: 767px) {
+  #locations {
+    padding: 52px 0 60px !important;
   }
 
-  /* Heading */
-
-  #locations .text-center{
-    margin-bottom:28px !important;
+  #locations .locations-heading {
+    margin-bottom: 26px !important;
   }
 
-  #locations .text-center h2{
-    font-size:28px !important;
-    line-height:1.15 !important;
-    margin-bottom:10px !important;
+  #locations .locations-heading h2 {
+    font-size: 27px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
   }
 
-  #locations .text-center p{
-    font-size:15px !important;
-    line-height:1.5 !important;
-    max-width:300px;
-    margin:0 auto;
+  #locations .locations-heading p {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
-  /* Cards */
-
-  #locations .flex.flex-col.gap-8{
-    gap:18px !important;
+  #locations .locations-list {
+    gap: 18px !important;
   }
 
-  #locations .group{
-    padding:18px !important;
-    gap:18px !important;
-    border-radius:24px !important;
+  #locations .location-card {
+    padding: 18px !important;
+    border-radius: 24px !important;
+    gap: 16px !important;
   }
 
-  #locations .flex-1{
-    gap:16px !important;
+  #locations .location-content {
+    gap: 14px !important;
   }
 
-  /* Clinic */
-
-  #locations h3{
-    font-size:24px !important;
-    line-height:1.18 !important;
-    margin-bottom:14px !important;
+  #locations .location-title {
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
   }
 
-  /* Address */
-
-  #locations .flex.items-start.gap-3{
-    gap:10px !important;
-    margin-bottom:14px !important;
+  #locations .location-address {
+    gap: 9px !important;
+    margin-bottom: 14px !important;
   }
 
-  #locations svg.w-6{
-    width:18px !important;
-    height:18px !important;
-    margin-top:3px;
+  #locations .location-pin {
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 3px !important;
   }
 
-  #locations .flex.items-start.gap-3 p:first-child{
-    font-size:17px !important;
-    margin-bottom:2px !important;
-    line-height:1.35;
+  #locations .location-street {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 2px !important;
   }
 
-  #locations .flex.items-start.gap-3 p:last-child{
-    font-size:15px !important;
-    line-height:1.35;
+  #locations .location-city {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
   }
 
-  /* Tags */
-
-  #locations .flex.flex-wrap{
-    gap:8px !important;
+  #locations .location-tags {
+    gap: 8px !important;
   }
 
-  #locations .flex.flex-wrap span{
-    font-size:12px !important;
-    padding:6px 12px !important;
+  #locations .location-tags span {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
   }
 
-  /* Buttons */
-
-  #locations .sm\:flex-row{
-    gap:10px !important;
+  #locations .location-actions {
+    gap: 8px !important;
   }
 
-  #locations a{
-    padding:12px 16px !important;
-    font-size:15px !important;
-    border-radius:14px !important;
+  #locations .location-actions a {
+    width: 100%;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    border-radius: 14px !important;
   }
 
-  /* Map */
-
-  #locations .w-full.lg\:w-\[480px\]{
-    height:120px !important;
-    border-radius:18px !important;
+  #locations .location-map {
+    height: 120px !important;
+    border-radius: 18px !important;
   }
-
-  /* Content block: remove extra vertical spacing */
-  #locations .flex-1.text-left{
-    justify-content:flex-start !important;
-    gap:16px !important;
-  }
-
-  /* Button wrapper */
-  #locations .flex.flex-col.sm\:flex-row{
-    gap:10px !important;
-    margin-top:0 !important;
-  }
-
-  /* Buttons */
-  #locations .flex.flex-col.sm\:flex-row a{
-    padding:12px 16px !important;
-    font-size:15px !important;
-    border-radius:14px !important;
-  }
-
 }
 </style>
 
