@@ -3069,6 +3069,37 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 .review-card>div:last-child{
     margin-top:auto;
 }
+.review-card{
+    width:86vw;
+    min-width:86vw;
+    max-width:86vw;
+
+    height:240px;       /* 不要 aspect-ratio */
+    padding:24px;
+
+    border-radius:24px;
+
+    display:flex;
+    flex-direction:column;
+
+    scroll-snap-align:center;
+}
+
+.review-card p{
+    flex:1;
+
+    font-size:15px !important;
+    line-height:1.6 !important;
+
+    display:-webkit-box;
+    -webkit-line-clamp:5;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.review-card>div:last-child{
+    margin-top:auto;
+}
 }
 </style>
 
