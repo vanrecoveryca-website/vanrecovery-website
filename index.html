@@ -2917,122 +2917,112 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     </div>
 
-    <style>
-      .review-marquee {
-        overflow: hidden;
-        position: relative;
-      }
-
-      .review-track {
-        display: flex;
-        gap: 24px;
-        width: max-content;
-        animation: reviewScroll 42s linear infinite;
-      }
-
-      .review-marquee:hover .review-track {
-        animation-play-state: paused;
-      }
-
-      @keyframes reviewScroll {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-
-      .review-card {
-        width: 380px;
-        min-height: 260px;
-        background: #ffffff;
-        border: 1px solid rgba(15,23,42,0.10);
-        border-radius: 32px;
-        padding: 32px;
-        box-shadow: 0 12px 40px rgba(15,23,42,0.06);
-        flex-shrink: 0;
-      }
-
-      .review-stars {
-        color: #facc15;
-        font-size: 20px;
-        letter-spacing: 2px;
-        margin-bottom: 18px;
-      }
-
-@media (max-width: 767px) {
-
-  .review-marquee{
-    overflow: visible;
-    margin-left: -24px;
-    margin-right: -24px;
+<style>
+  .review-marquee {
+    overflow: hidden;
+    position: relative;
   }
 
-  .review-track{
-    width: auto;
-    animation: none !important;
-    transform: none !important;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-
-    scroll-snap-type: x mandatory;
-
-    gap: 16px;
-    padding: 0 24px 12px;
+  .review-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: reviewScroll 42s linear infinite;
   }
 
-  .review-track::-webkit-scrollbar{
-    display:none;
+  .review-marquee:hover .review-track {
+    animation-play-state: paused;
   }
 
-@media (max-width:767px){
-
-.review-card{
-    width:82vw;
-    min-width:82vw;
-
-    padding:20px;
-    min-height:200px;
-
-    border-radius:22px;
-}
-
-.review-stars{
-    font-size:16px;
-    margin-bottom:12px;
-}
-
-.review-card p{
-    font-size:15px !important;
-    line-height:1.6 !important;
-    margin-bottom:18px !important;
-
-    display:-webkit-box;
-    -webkit-line-clamp:5;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-}
-
-.review-card .font-bold{
-    font-size:15px;
-}
-
-.review-card .text-slate-500{
-    font-size:13px;
-}
-
-}
-
-  /* Hide duplicated cards on mobile */
-  .review-track .review-card:nth-child(n+6){
-    display:none;
+  @keyframes reviewScroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 
-}
-    </style>
+  .review-card {
+    width: 380px;
+    min-height: 260px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+    flex-shrink: 0;
+  }
+
+  .review-stars {
+    color: #facc15;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 767px) {
+    .review-marquee {
+      overflow: visible;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    .review-track {
+      width: auto;
+      animation: none !important;
+      transform: none !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 14px;
+      padding: 0 24px 12px;
+    }
+
+    .review-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .review-card {
+      width: 82vw;
+      min-width: 82vw;
+      max-width: 82vw;
+      min-height: 190px;
+      padding: 20px;
+      border-radius: 22px;
+      scroll-snap-align: center;
+    }
+
+    .review-stars {
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      margin-bottom: 16px !important;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .review-card .font-bold {
+      font-size: 15px;
+    }
+
+    .review-card .text-slate-500 {
+      font-size: 13px;
+    }
+
+    .review-track .review-card:nth-child(n+6) {
+      display: none;
+    }
+  }
+</style>
 
 
     
