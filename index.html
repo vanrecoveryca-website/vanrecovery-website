@@ -3520,187 +3520,125 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </style>
 
 <!-- FAQ Section -->
-<section id="faq" class="py-24 bg-white border-t border-slate-100">
+<section id="faq" class="faq-section py-24 bg-white border-t border-slate-100">
   <div class="max-w-5xl mx-auto px-6 lg:px-8">
 
     <!-- Heading -->
-    <div class="text-center mb-14">
+    <div class="faq-heading text-center mb-14">
       <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
         Frequently Asked Questions
       </p>
 
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
         Common questions about ICBC treatment
       </h2>
     </div>
 
     <!-- FAQ Items -->
-    <div class="space-y-6">
+    <div class="faq-list space-y-5">
 
-      <!-- FAQ 1 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(0)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            Can I book ICBC treatment with only a claim number?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(0)">
+          <span>Can I book ICBC treatment with only a claim number?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             In many cases, yes. Patients can often begin the booking process with their ICBC claim number. Contact the clinic if you are unsure what information is required.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 2 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(1)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            Can I start treatment before my adjuster calls me?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(1)">
+          <span>Can I start treatment before my adjuster calls me?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             In many cases, yes. After reporting your accident to ICBC and receiving a claim number, you may be able to begin the treatment process without waiting for an adjuster to contact you.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 3 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(2)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            What should I bring to my first ICBC appointment?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(2)">
+          <span>What should I bring to my first ICBC appointment?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             Please bring your ICBC claim number and one piece of government-issued photo ID. Information about your accident date and symptoms may also be helpful.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 4 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(3)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            Do I need to pay upfront for ICBC treatment?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(3)">
+          <span>Do I need to pay upfront for ICBC treatment?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             In many cases, eligible ICBC treatment can be billed directly to ICBC. Most patients do not need to pay upfront, although coverage and eligibility may vary depending on the treatment provided.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 5 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(4)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            How quickly can I start treatment after a car accident?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(4)">
+          <span>How quickly can I start treatment after a car accident?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             Appointment availability depends on the clinic and service requested. Acupuncture and chiropractic appointments are often available within 2–3 days, while massage therapy appointments may take approximately 3–4 days depending on practitioner availability.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 6 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(5)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            How long can I receive ICBC treatment after a motor vehicle accident?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(5)">
+          <span>How long can I receive ICBC treatment after a motor vehicle accident?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             Under ICBC Enhanced Care, many patients are pre-approved for treatment during the first 12 weeks after a crash, regardless of who caused the accident. This recovery period may include physiotherapy, massage therapy, kinesiology, counselling, psychology, and other approved recovery services.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 7 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(6)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            What happens if my recovery takes longer than 12 weeks?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(6)">
+          <span>What happens if my recovery takes longer than 12 weeks?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
+          <div>
             After the initial 12-week pre-approved treatment period, your healthcare provider may submit a treatment request to ICBC if additional care is clinically necessary. Approval decisions are made on a case-by-case basis based on your recovery progress and treatment needs.
           </div>
         </div>
       </div>
 
-      <!-- FAQ 8 -->
-      <div class="faq-item border border-slate-100 rounded-[24px] overflow-hidden bg-[#f8f8f6]">
-        <button class="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(7)">
-          <span class="text-lg font-bold text-slate-800 pr-4">
-            Where can I get ICBC treatment in Vancouver or Richmond?
-          </span>
-          <div class="flex-shrink-0 text-blue-600 bg-white p-2 rounded-full">
-            <span class="plus-icon">+</span>
-            <span class="minus-icon hidden">−</span>
-          </div>
+      <div class="faq-item">
+        <button type="button" class="faq-button" onclick="toggleFaq(7)">
+          <span>Where can I get ICBC treatment in Vancouver or Richmond?</span>
+          <span class="faq-icon">+</span>
         </button>
-
         <div class="faq-content">
-          <div class="px-8 pb-8 pt-6 border-t border-slate-200 text-slate-600 text-lg leading-relaxed">
-
+          <div>
             Patients can access ICBC-related treatment and recovery services through partner clinics in Vancouver and Richmond.
 
             <br><br>
 
-            <strong class="text-slate-800">
-              Aetheris Integrated Health
-            </strong><br>
+            <strong>Aetheris Integrated Health</strong><br>
             Unit 140, 809 West 41st Avenue, Vancouver, BC V5Z 2N6
 
             <br><br>
 
-            <strong class="text-slate-800">
-              Pegasus Integrated Health
-            </strong><br>
+            <strong>Pegasus Integrated Health</strong><br>
             315 - 8171 Cook Rd, Richmond, BC V6Y 3T8
-
           </div>
         </div>
       </div>
@@ -3708,6 +3646,146 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     </div>
   </div>
 </section>
+
+<style>
+.faq-item {
+  background: #f8f8f6;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.faq-button {
+  width: 100%;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-align: left;
+  font-weight: 800;
+  color: #0f172a;
+  transition: 0.2s ease;
+}
+
+.faq-button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.faq-button span:first-child {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-content > div {
+  padding: 0 32px 30px;
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.faq-content strong {
+  color: #0f172a;
+}
+
+@media (max-width: 767px) {
+  #faq {
+    padding-top: 56px !important;
+    padding-bottom: 64px !important;
+  }
+
+  #faq .faq-heading {
+    margin-bottom: 30px !important;
+  }
+
+  #faq .faq-heading p {
+    font-size: 11px !important;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px !important;
+  }
+
+  #faq .faq-heading h2 {
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+  }
+
+  #faq .faq-list {
+    gap: 12px !important;
+  }
+
+  .faq-item {
+    border-radius: 18px;
+  }
+
+  .faq-button {
+    padding: 18px 20px;
+    gap: 16px;
+  }
+
+  .faq-button span:first-child {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+    font-size: 24px;
+  }
+
+  .faq-content > div {
+    padding: 0 20px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+</style>
+
+<script>
+function toggleFaq(index) {
+  const items = document.querySelectorAll('#faq .faq-item');
+  const item = items[index];
+  const content = item.querySelector('.faq-content');
+
+  const isOpen = item.classList.contains('active');
+
+  item.classList.toggle('active');
+
+  if (isOpen) {
+    content.style.maxHeight = '0px';
+  } else {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  }
+}
+</script>
         
 <!-- [Call To Action Section] -->
 <section id="cta" class="py-20 bg-white">
