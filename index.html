@@ -3229,7 +3229,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <!-- Richmond Card -->
       <div class="location-card bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
 
-        <div class="location-content flex-1 text-left flex flex-col gap-5">
+        <div class="location-content flex-1 text-left flex flex-col justify-between gap-5">
 
           <div>
             <h3 class="location-title text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
@@ -3300,7 +3300,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <!-- Vancouver Card -->
       <div class="location-card bg-white rounded-[40px] p-6 md:p-10 border border-slate-100 shadow-xl flex flex-col lg:flex-row gap-8 hover:shadow-2xl transition-all group overflow-hidden">
 
-        <div class="location-content flex-1 text-left flex flex-col gap-5">
+        <div class="location-content flex-1 text-left flex flex-col justify-between gap-5">
 
           <div>
             <h3 class="location-title text-3xl md:text-4xl font-bold mb-5 text-slate-800 group-hover:text-blue-600 transition-colors">
@@ -3462,6 +3462,9 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   #locations .location-map {
     height: 120px !important;
     border-radius: 18px !important;
+  }
+  #locations .location-content {
+    justify-content: flex-start !important;
   }
 }
 </style>
