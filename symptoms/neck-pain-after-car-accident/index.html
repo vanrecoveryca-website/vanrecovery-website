@@ -324,6 +324,56 @@ body{font-family:Inter,system-ui,sans-serif}
     letter-spacing:-0.04em;
     font-weight:800;
 }
+.point-grid{
+    margin-top:40px;
+
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:24px 56px;
+}
+
+.point-item{
+
+    position:relative;
+
+    padding-left:18px;
+
+    color:#0f172a;
+
+    font-size:20px;
+    line-height:1.45;
+    font-weight:700;
+    letter-spacing:-0.02em;
+}
+
+.point-item::before{
+    content:"•";
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    color:#2563eb;
+
+    font-size:18px;
+    line-height:1.45;
+}
+
+@media (max-width:768px){
+
+.point-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:28px;
+}
+
+.point-item{
+    padding-left:16px;
+    font-size:17px;
+}
+
+}
 </style>
 
 <section id="neck-symptoms" class="page-section">
