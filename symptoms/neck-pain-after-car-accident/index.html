@@ -1291,6 +1291,96 @@
         font-size: 12px;
       }
     }
+    /* Replace old .container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Hero spacing match homepage */
+.hero {
+  padding: 92px 0 88px;
+}
+
+/* Main hero layout */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 0.98fr);
+  gap: 72px;
+  align-items: center;
+}
+
+/* Make left content less wide */
+.hero h1 {
+  max-width: 620px;
+  font-size: 58px;
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+.hero-copy {
+  max-width: 620px;
+  font-size: 19px;
+}
+
+/* The 3 cards are too wide now */
+.hero-points {
+  max-width: 620px;
+  gap: 12px;
+}
+
+/* Image card should feel like homepage */
+.hero-media {
+  max-width: 560px;
+  margin-left: auto;
+  padding: 10px;
+  border-radius: 42px;
+}
+
+/* Image height closer to homepage */
+.hero-media img {
+  aspect-ratio: 4 / 3;
+  border-radius: 32px;
+}
+
+/* Nav should also use same width */
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 26px 0 38px;
+  }
+
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-copy {
+    font-size: 15px;
+  }
+
+  .hero-points {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    max-width: none;
+    margin-left: 0;
+  }
+}
   </style>
 </head>
 
