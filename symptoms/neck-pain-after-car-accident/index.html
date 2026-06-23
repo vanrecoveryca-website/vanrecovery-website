@@ -224,37 +224,29 @@ body{font-family:Inter,system-ui,sans-serif}
     <p class="eyebrow">WHEN TO SEEK CARE</p>
 
     <h2 class="section-title">
-      When you may need ICBC care for neck pain
+      Do you need ICBC care?
     </h2>
 
     <div class="seek-list">
 
       <div class="seek-item">
-        <div class="seek-icon">
-          <i data-lucide="circle-alert"></i>
-        </div>
-        <p>Neck pain after the crash.</p>
+        <div class="seek-number">01</div>
+        <h3>Neck pain after the crash.</h3>
       </div>
 
       <div class="seek-item">
-        <div class="seek-icon">
-          <i data-lucide="move-horizontal"></i>
-        </div>
-        <p>Stiffness or difficulty turning your neck.</p>
+        <div class="seek-number">02</div>
+        <h3>Stiffness or difficulty turning your neck.</h3>
       </div>
 
       <div class="seek-item">
-        <div class="seek-icon">
-          <i data-lucide="trending-up"></i>
-        </div>
-        <p>Pain that is getting worse.</p>
+        <div class="seek-number">03</div>
+        <h3>Pain that is getting worse.</h3>
       </div>
 
       <div class="seek-item">
-        <div class="seek-icon">
-          <i data-lucide="briefcase-medical"></i>
-        </div>
-        <p>Daily activities are becoming difficult.</p>
+        <div class="seek-number">04</div>
+        <h3>Pain is affecting work, sleep, or driving.</h3>
       </div>
 
     </div>
@@ -264,15 +256,16 @@ body{font-family:Inter,system-ui,sans-serif}
 
 <style>
 .seek-list{
-    margin-top:48px;
+    margin-top:42px;
 }
 
 .seek-item{
-    display:flex;
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:18px;
     align-items:center;
-    gap:22px;
 
-    padding:26px 0;
+    padding:24px 0;
 
     border-top:1px solid #e2e8f0;
 }
@@ -281,37 +274,22 @@ body{font-family:Inter,system-ui,sans-serif}
     border-bottom:1px solid #e2e8f0;
 }
 
-.seek-icon{
-    flex-shrink:0;
-
-    width:56px;
-    height:56px;
-
-    border-radius:50%;
-
-    background:#eff6ff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.seek-number{
+    color:#2563eb;
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:.18em;
 }
 
-.seek-icon svg{
-    width:26px;
-    height:26px;
-    stroke:#2563eb;
-    stroke-width:2;
-}
-
-.seek-item p{
+.seek-item h3{
     margin:0;
 
     color:#0f172a;
 
-    font-size:28px;
-    line-height:1.25;
-    font-weight:850;
+    font-size:22px;
+    line-height:1.35;
     letter-spacing:-0.03em;
+    font-weight:750;
 }
 
 @media (max-width:768px){
@@ -321,23 +299,18 @@ body{font-family:Inter,system-ui,sans-serif}
 }
 
 .seek-item{
-    gap:16px;
+    grid-template-columns:38px 1fr;
+    gap:14px;
     padding:18px 0;
 }
 
-.seek-icon{
-    width:44px;
-    height:44px;
+.seek-number{
+    font-size:11px;
 }
 
-.seek-icon svg{
-    width:20px;
-    height:20px;
-}
-
-.seek-item p{
-    font-size:18px;
-    line-height:1.4;
+.seek-item h3{
+    font-size:17px;
+    line-height:1.45;
 }
 
 }
