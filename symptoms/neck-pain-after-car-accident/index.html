@@ -785,280 +785,285 @@
   </div>
 </section>
 
-<!-- Expert Insight Section -->
+<!-- Expert Insight -->
 <section class="expert-insight-section">
   <div class="expert-card">
 
-    <div class="expert-header">
-      <div class="expert-icon">PT</div>
+    <div class="expert-top">
+      <div class="expert-badge">PT</div>
 
       <div>
-        <div class="eyebrow">Expert Insight</div>
+        <p class="expert-label">Expert Insight</p>
         <h2>Reviewed by a Physiotherapist</h2>
-        <p>Registered Physiotherapist · ICBC Recovery Care</p>
+        <p class="expert-meta">Registered Physiotherapist · ICBC Recovery Care</p>
       </div>
     </div>
 
-    <blockquote>
-      “Neck pain does not always appear immediately after a collision. Early
-      assessment helps identify whether symptoms are related to whiplash,
-      muscle strain, joint irritation, or nerve-related signs.”
-    </blockquote>
+    <p class="expert-quote">
+      “Neck pain may not appear immediately after a collision. Early assessment helps determine whether symptoms are caused by whiplash, muscle strain, joint irritation, or nerve involvement.”
+    </p>
 
     <div class="assessment-grid">
-
-      <div class="assessment-item">
-        <div class="assessment-icon">
-          <i data-lucide="rotate-ccw"></i>
+      <div class="assessment-card">
+        <div class="assessment-icon"><i data-lucide="rotate-ccw"></i></div>
+        <div>
+          <h3>Neck movement</h3>
+          <p>Checks how well you can move your neck in different directions.</p>
         </div>
-        <h3>Neck movement</h3>
-        <p>Checks how well you can move your neck in different directions.</p>
       </div>
 
-      <div class="assessment-item">
-        <div class="assessment-icon">
-          <i data-lucide="dumbbell"></i>
+      <div class="assessment-card">
+        <div class="assessment-icon"><i data-lucide="dumbbell"></i></div>
+        <div>
+          <h3>Muscle strength</h3>
+          <p>Assesses strength in your neck, shoulders, and arms.</p>
         </div>
-        <h3>Muscle strength</h3>
-        <p>Assesses strength in your neck, shoulders, and arms.</p>
       </div>
 
-      <div class="assessment-item">
-        <div class="assessment-icon">
-          <i data-lucide="activity"></i>
+      <div class="assessment-card">
+        <div class="assessment-icon"><i data-lucide="activity"></i></div>
+        <div>
+          <h3>Nerve function</h3>
+          <p>Looks for numbness, tingling, or other signs of nerve involvement.</p>
         </div>
-        <h3>Nerve function</h3>
-        <p>Looks for numbness, tingling, or signs of nerve involvement.</p>
       </div>
 
-      <div class="assessment-item">
-        <div class="assessment-icon">
-          <i data-lucide="target"></i>
+      <div class="assessment-card">
+        <div class="assessment-icon"><i data-lucide="target"></i></div>
+        <div>
+          <h3>Pain pattern</h3>
+          <p>Identifies where it hurts and what movements trigger pain.</p>
         </div>
-        <h3>Pain pattern</h3>
-        <p>Identifies where it hurts and what movements trigger pain.</p>
       </div>
-
     </div>
 
-    <div class="expert-note">
-      Last reviewed: June 2026 · Educational content only
-    </div>
+    <p class="expert-note">Last reviewed: June 2026 · Educational content only</p>
 
   </div>
 </section>
 
 <style>
 .expert-insight-section {
-  padding: 80px 24px;
+  padding: 56px 24px;
   background: #f8fafc;
 }
 
 .expert-card {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 64px;
-  border-radius: 36px;
+  padding: 48px;
+  border-radius: 34px;
   background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%);
-  border: 1px solid #dbeafe;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
 }
 
-.expert-header {
+.expert-top {
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-bottom: 48px;
+  gap: 24px;
+  margin-bottom: 34px;
 }
 
-.expert-icon {
-  width: 86px;
-  height: 86px;
-  border-radius: 24px;
-  background: #ffffff;
+.expert-badge {
+  width: 74px;
+  height: 74px;
+  border-radius: 20px;
+  background: #fff;
+  color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+  flex-shrink: 0;
 }
 
-.eyebrow {
-  font-size: 14px;
+.expert-label {
+  margin: 0 0 8px;
+  font-size: 13px;
   font-weight: 900;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #2563eb;
-  margin-bottom: 12px;
 }
 
-.expert-header h2 {
-  font-size: clamp(34px, 4vw, 56px);
-  line-height: 1;
-  letter-spacing: -0.05em;
-  color: #020617;
-  margin: 0 0 14px;
-  font-weight: 900;
-}
-
-.expert-header p {
-  margin: 0;
-  font-size: 19px;
-  color: #334155;
-}
-
-.expert-card blockquote {
-  margin: 0 0 48px;
-  max-width: 1120px;
-  font-size: clamp(28px, 3vw, 44px);
-  line-height: 1.22;
+.expert-top h2 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 2.8vw, 42px);
+  line-height: 1.05;
   letter-spacing: -0.045em;
   font-weight: 900;
   color: #020617;
 }
 
+.expert-meta {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #475569;
+}
+
+.expert-quote {
+  max-width: 1080px;
+  margin: 0 0 34px;
+  font-size: clamp(20px, 1.7vw, 27px);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  color: #0f172a;
+}
+
 .assessment-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-bottom: 36px;
+  gap: 16px;
+  margin-bottom: 26px;
 }
 
-.assessment-item {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 28px;
-  min-height: 245px;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+.assessment-card {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 20px;
+  padding: 22px;
+  min-height: 190px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.035);
 }
 
 .assessment-icon {
-  width: 68px;
-  height: 68px;
+  width: 54px;
+  height: 54px;
   border-radius: 999px;
   background: #eff6ff;
   color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
 }
 
 .assessment-icon svg {
-  width: 32px;
-  height: 32px;
-  stroke-width: 2.5;
+  width: 26px;
+  height: 26px;
+  stroke-width: 2.4;
 }
 
-.assessment-item h3 {
-  margin: 0 0 18px;
-  font-size: 24px;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  color: #2563eb;
+.assessment-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
   font-weight: 900;
+  color: #2563eb;
 }
 
-.assessment-item p {
+.assessment-card p {
   margin: 0;
-  color: #0f172a;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #334155;
 }
 
 .expert-note {
-  font-size: 16px;
-  font-weight: 800;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
   color: #64748b;
 }
 
+/* Tablet */
+@media (max-width: 1100px) {
+  .assessment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .expert-insight-section {
-    padding: 56px 18px;
+    padding: 44px 18px;
   }
 
   .expert-card {
-    padding: 32px 22px;
+    padding: 26px 20px;
     border-radius: 28px;
   }
 
-  .expert-header {
+  .expert-top {
+    gap: 15px;
     align-items: flex-start;
-    gap: 18px;
-    margin-bottom: 34px;
+    margin-bottom: 24px;
   }
 
-  .expert-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
-    font-size: 23px;
-    flex-shrink: 0;
+  .expert-badge {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    font-size: 22px;
   }
 
-  .eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.18em;
+  .expert-label {
+    font-size: 11px;
+    letter-spacing: 0.17em;
+    margin-bottom: 7px;
   }
 
-  .expert-header h2 {
-    font-size: 32px;
+  .expert-top h2 {
+    font-size: 27px;
     line-height: 1.05;
   }
 
-  .expert-header p {
-    font-size: 16px;
-    line-height: 1.4;
+  .expert-meta {
+    font-size: 14.5px;
   }
 
-  .expert-card blockquote {
-    font-size: 27px;
-    line-height: 1.2;
-    margin-bottom: 28px;
+  .expert-quote {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
 
   .assessment-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
   }
 
-  .assessment-item {
+  .assessment-card {
     min-height: auto;
-    padding: 22px;
+    padding: 17px;
     display: grid;
-    grid-template-columns: 54px 1fr;
-    column-gap: 16px;
+    grid-template-columns: 48px 1fr;
+    gap: 0 15px;
     align-items: start;
   }
 
   .assessment-icon {
-    width: 54px;
-    height: 54px;
-    margin-bottom: 0;
+    width: 48px;
+    height: 48px;
+    margin: 0;
     grid-row: span 2;
   }
 
   .assessment-icon svg {
-    width: 26px;
-    height: 26px;
+    width: 23px;
+    height: 23px;
   }
 
-  .assessment-item h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
+  .assessment-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
   }
 
-  .assessment-item p {
-    font-size: 16px;
+  .assessment-card p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .expert-note {
-    font-size: 14px;
-    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 13px;
   }
 }
 </style>
