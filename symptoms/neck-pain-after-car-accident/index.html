@@ -977,133 +977,105 @@ body{
   </div>
 </section>
 
-<section id="icbc-treatment" class="page-section soft">
-  <div class="page-container">
+<section id="icbc-treatment" class="treatment-section">
+  <div class="treatment-container">
 
-    <p class="eyebrow">Treatment Options</p>
+    <div class="treatment-header">
+      <p class="eyebrow">Treatment Options</p>
 
-    <h2 class="section-title">
-      How neck pain is commonly treated
-    </h2>
+      <h2 class="section-title">
+        How neck pain is commonly treated
+      </h2>
 
-    <p class="section-copy">
-      Treatment for neck pain after a car accident usually focuses on reducing pain, improving movement, and helping you return to work, sleep, driving, and daily activities safely.
-    </p>
+      <p class="section-copy">
+        Treatment for neck pain after a car accident usually focuses on reducing pain, improving movement, and helping you return to work, sleep, driving, and daily activities safely.
+      </p>
+    </div>
 
-<div class="treatment-grid">
+    <div class="treatment-grid">
 
-    <!-- Physiotherapy -->
-    <article class="treatment-card">
-
-        <div class="treatment-icon">
-            <i data-lucide="activity"></i>
-        </div>
-
+      <article class="treatment-card">
         <h3>Physiotherapy</h3>
 
-        <div class="treatment-divider"></div>
-
-        <div class="treatment-item">
-            <span>Sessions</span>
+        <div class="treatment-info">
+          <div>
             <strong>25</strong>
-        </div>
+            <span>Sessions</span>
+          </div>
 
-        <div class="treatment-item">
-            <span>Minimum Session</span>
+          <div>
             <strong>45 min</strong>
+            <span>Minimum Session</span>
+          </div>
         </div>
+      </article>
 
-    </article>
-
-    <!-- Massage -->
-    <article class="treatment-card">
-
-        <div class="treatment-icon">
-            <i data-lucide="hand"></i>
-        </div>
-
+      <article class="treatment-card">
         <h3>Massage Therapy</h3>
 
-        <div class="treatment-divider"></div>
-
-        <div class="treatment-item">
-            <span>Sessions</span>
+        <div class="treatment-info">
+          <div>
             <strong>12</strong>
-        </div>
+            <span>Sessions</span>
+          </div>
 
-        <div class="treatment-item">
-            <span>Minimum Session</span>
+          <div>
             <strong>45 min</strong>
+            <span>Minimum Session</span>
+          </div>
         </div>
+      </article>
 
-    </article>
-
-    <!-- Rehab -->
-    <article class="treatment-card">
-
-        <div class="treatment-icon">
-            <i data-lucide="dumbbell"></i>
-        </div>
-
+      <article class="treatment-card">
         <h3>Exercise Rehabilitation</h3>
 
-        <div class="treatment-divider"></div>
-
-        <div class="treatment-item">
-            <span>Sessions</span>
+        <div class="treatment-info">
+          <div>
             <strong>12</strong>
-        </div>
+            <span>Sessions</span>
+          </div>
 
-        <div class="treatment-item">
-            <span>Minimum Session</span>
+          <div>
             <strong>45 min</strong>
+            <span>Minimum Session</span>
+          </div>
         </div>
+      </article>
 
-    </article>
-
-    <!-- Counselling -->
-    <article class="treatment-card">
-
-        <div class="treatment-icon">
-            <i data-lucide="heart-handshake"></i>
-        </div>
-
+      <article class="treatment-card">
         <h3>Counselling</h3>
 
-        <div class="treatment-divider"></div>
-
-        <div class="treatment-item">
-            <span>Sessions</span>
+        <div class="treatment-info">
+          <div>
             <strong>12</strong>
-        </div>
+            <span>Sessions</span>
+          </div>
 
-        <div class="treatment-item">
-            <span>Minimum Session</span>
+          <div>
             <strong>50 min</strong>
+            <span>Minimum Session</span>
+          </div>
         </div>
+      </article>
 
-    </article>
+    </div>
 
-</div>
-
-    <div class="text-panel">
+    <div class="coverage-panel">
       <p class="eyebrow">ICBC Coverage</p>
 
-      <h3>
-        Does ICBC cover treatment?
-      </h3>
+      <h3>Does ICBC cover treatment?</h3>
 
       <p>
         ICBC may cover eligible treatment for accident-related neck pain, including physiotherapy, massage therapy, active rehabilitation, and counselling, depending on claim eligibility and clinical need.
       </p>
 
-      <div class="mini-points">
+      <div class="coverage-points">
         <span>12-week recovery window</span>
         <span>No referral required for many treatments</span>
         <span>Direct billing support may be available</span>
       </div>
 
-      <a href="/#how-icbc-works" class="learn-more">
+      <a href="/#how-icbc-works">
         Learn how ICBC treatment works →
       </a>
     </div>
@@ -1112,42 +1084,38 @@ body{
 </section>
 
 <style>
+.treatment-section{
+  padding:88px 24px;
+  background:#f8fafc;
+}
+
+.treatment-container{
+  max-width:1080px;
+  margin:0 auto;
+}
+
+.treatment-header{
+  max-width:860px;
+}
+
 .treatment-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
-  margin-top:40px;
+  margin-top:42px;
 }
 
 .treatment-card{
   background:#fff;
   border:1px solid #e2e8f0;
   border-radius:24px;
-  padding:26px;
-  box-shadow:0 10px 28px rgba(15,23,42,.05);
-}
-
-.treatment-icon{
-  width:54px;
-  height:54px;
-  border-radius:18px;
-  background:#eef4ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:20px;
-}
-
-.treatment-icon svg{
-  width:26px;
-  height:26px;
-  stroke:#2563eb;
-  stroke-width:2.3;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(15,23,42,.04);
 }
 
 .treatment-card h3{
-  margin:0;
   min-height:56px;
+  margin:0 0 22px;
   color:#0f172a;
   font-size:22px;
   line-height:1.12;
@@ -1155,83 +1123,121 @@ body{
   letter-spacing:-.035em;
 }
 
-.treatment-divider{
-  height:1px;
-  background:#e2e8f0;
-  margin:22px 0;
+.treatment-info{
+  display:grid;
+  gap:16px;
+  padding-top:20px;
+  border-top:1px solid #e2e8f0;
 }
 
-.treatment-item{
-  display:block;
-  margin-bottom:16px;
-}
-
-.treatment-item:last-child{
-  margin-bottom:0;
-}
-
-.treatment-item span{
-  display:block;
-  margin-bottom:5px;
-  color:#64748b;
-  font-size:13px;
-  line-height:1.35;
-  font-weight:600;
-}
-
-.treatment-item strong{
+.treatment-info strong{
   display:block;
   color:#2563eb;
-  font-size:24px;
+  font-size:28px;
   line-height:1;
   font-weight:900;
-  letter-spacing:-.035em;
+  letter-spacing:-.04em;
   white-space:nowrap;
 }
 
-/* Tablet */
+.treatment-info span{
+  display:block;
+  margin-top:5px;
+  color:#64748b;
+  font-size:13px;
+  line-height:1.35;
+  font-weight:650;
+}
+
+.coverage-panel{
+  margin-top:46px;
+  padding-top:36px;
+  border-top:1px solid #dbeafe;
+  max-width:900px;
+}
+
+.coverage-panel h3{
+  margin:0 0 16px;
+  color:#0f172a;
+  font-size:34px;
+  line-height:1.1;
+  font-weight:850;
+  letter-spacing:-.04em;
+}
+
+.coverage-panel p{
+  margin:0;
+  color:#475569;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.coverage-points{
+  display:grid;
+  gap:8px;
+  margin-top:22px;
+}
+
+.coverage-points span{
+  color:#334155;
+  font-size:15px;
+  font-weight:700;
+}
+
+.coverage-panel a{
+  display:inline-flex;
+  margin-top:24px;
+  color:#2563eb;
+  font-size:15px;
+  font-weight:900;
+  text-decoration:none;
+}
+
 @media(max-width:1024px){
   .treatment-grid{
     grid-template-columns:repeat(2,1fr);
   }
 }
 
-/* Mobile */
 @media(max-width:767px){
+  .treatment-section{
+    padding:58px 20px;
+  }
+
   .treatment-grid{
     grid-template-columns:1fr;
-    gap:14px;
+    gap:12px;
     margin-top:30px;
   }
 
   .treatment-card{
-    padding:22px;
-    border-radius:22px;
+    padding:20px;
+    border-radius:20px;
   }
 
   .treatment-card h3{
     min-height:0;
+    margin-bottom:16px;
     font-size:21px;
   }
 
-  .treatment-divider{
-    margin:18px 0;
+  .treatment-info{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    padding-top:16px;
   }
 
-  .treatment-item{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:12px;
-  }
-
-  .treatment-item span{
-    margin:0;
-    font-size:14px;
-  }
-
-  .treatment-item strong{
+  .treatment-info strong{
     font-size:24px;
+  }
+
+  .coverage-panel{
+    margin-top:34px;
+    padding-top:28px;
+  }
+
+  .coverage-panel h3{
+    font-size:26px;
   }
 }
 </style>
