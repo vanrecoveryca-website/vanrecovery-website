@@ -304,6 +304,44 @@
         line-height: 1.4 !important;
       }
     }
+    @media (max-width: 767px) {
+  #symptoms .grid,
+  #icbc-treatment .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .treatment-header {
+    display: none !important;
+  }
+
+  .treatment-row {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+  }
+
+  .treatment-row > div {
+    padding: 0 !important;
+  }
+
+  .treatment-row > div:first-child {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .treatment-row > div:last-child {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  #expert-insight .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #expert-insight blockquote {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+}
   </style>
 </head>
 
@@ -497,6 +535,8 @@
   </div>
 </section>
 
+<!-- 直接替換 main 裡面 Hero 後的所有 section -->
+
 <!-- QUICK ANSWERS -->
 <section class="page-section">
   <div class="page-container">
@@ -533,53 +573,62 @@
 <!-- SYMPTOMS + CAUSES -->
 <section id="symptoms" class="page-section">
   <div class="page-container">
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-      <div>
-        <p class="eyebrow">Symptoms</p>
-        <h2 class="section-title">Common neck pain symptoms after a car accident</h2>
-        <p class="section-copy mb-8">
-          Neck pain after a crash may feel sharp, tight, stiff, heavy, or difficult to move. Symptoms can appear right away or develop over the next several hours or days.
-        </p>
+    <div class="max-w-4xl mb-12">
+      <p class="eyebrow">Symptoms & Causes</p>
 
-        <div class="grid gap-3">
-          <div class="card py-4">✓ Neck stiffness or tightness</div>
-          <div class="card py-4">✓ Pain when turning the head</div>
-          <div class="card py-4">✓ Headaches after the accident</div>
-          <div class="card py-4">✓ Shoulder or upper back tension</div>
-          <div class="card py-4">✓ Muscle spasms or tenderness</div>
-          <div class="card py-4">✓ Difficulty sleeping comfortably</div>
-        </div>
-      </div>
+      <h2 class="section-title">
+        Common neck pain symptoms after a car accident
+      </h2>
 
-      <div>
-        <p class="eyebrow">Why It Happens</p>
-        <h2 class="section-title">Why neck pain can happen after a collision</h2>
-        <p class="section-copy mb-8">
-          A sudden impact can force the head and neck to move quickly. This may irritate muscles, joints, ligaments, nerves, or other soft tissues around the cervical spine.
-        </p>
-
-        <div class="mobile-grid-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="card">
-            <h3 class="text-xl font-black mb-2">Whiplash</h3>
-            <p class="text-slate-600">Rapid neck movement after impact.</p>
-          </div>
-          <div class="card">
-            <h3 class="text-xl font-black mb-2">Muscle Strain</h3>
-            <p class="text-slate-600">Soft tissue tension or guarding.</p>
-          </div>
-          <div class="card">
-            <h3 class="text-xl font-black mb-2">Joint Irritation</h3>
-            <p class="text-slate-600">Cervical spine stress or stiffness.</p>
-          </div>
-          <div class="card">
-            <h3 class="text-xl font-black mb-2">Nerve Signs</h3>
-            <p class="text-slate-600">Numbness, tingling, or weakness.</p>
-          </div>
-        </div>
-      </div>
-
+      <p class="section-copy">
+        Neck pain after a crash may feel sharp, tight, stiff, heavy, or difficult to move. Symptoms can appear right away or develop over the next several hours or days.
+      </p>
     </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-14">
+      <div class="card py-4 font-bold text-slate-800">✓ Neck stiffness or tightness</div>
+      <div class="card py-4 font-bold text-slate-800">✓ Pain when turning the head</div>
+      <div class="card py-4 font-bold text-slate-800">✓ Headaches after the accident</div>
+      <div class="card py-4 font-bold text-slate-800">✓ Shoulder or upper back tension</div>
+      <div class="card py-4 font-bold text-slate-800">✓ Muscle spasms or tenderness</div>
+      <div class="card py-4 font-bold text-slate-800">✓ Difficulty sleeping comfortably</div>
+    </div>
+
+    <div class="max-w-4xl mb-8">
+      <p class="eyebrow">Why It Happens</p>
+
+      <h3 class="text-3xl md:text-4xl font-black tracking-[-0.04em] leading-tight text-slate-900 mb-4">
+        Why neck pain can happen after a collision
+      </h3>
+
+      <p class="section-copy">
+        A sudden impact can force the head and neck to move quickly. This may irritate muscles, joints, ligaments, nerves, or other soft tissues around the cervical spine.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-5">
+      <div class="card">
+        <h3 class="text-xl font-black mb-2">Whiplash</h3>
+        <p class="text-slate-600">Rapid neck movement after impact.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-black mb-2">Muscle Strain</h3>
+        <p class="text-slate-600">Soft tissue tension or guarding.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-black mb-2">Joint Irritation</h3>
+        <p class="text-slate-600">Cervical spine stress or stiffness.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-black mb-2">Nerve Signs</h3>
+        <p class="text-slate-600">Numbness, tingling, or weakness.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -625,84 +674,99 @@
 <!-- ICBC + TREATMENT -->
 <section id="icbc-treatment" class="page-section">
   <div class="page-container">
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-      <div>
-        <p class="eyebrow">ICBC Coverage</p>
-        <h2 class="section-title">Can ICBC cover treatment for neck pain?</h2>
-        <p class="section-copy mb-8">
-          ICBC may cover eligible treatment for accident-related neck pain and whiplash symptoms. During the first 12 weeks after a crash, many patients can access eligible treatment without a physician referral or prior ICBC approval, depending on claim eligibility and treatment type.
+    <div class="max-w-4xl mb-12">
+      <p class="eyebrow">ICBC Coverage</p>
+
+      <h2 class="section-title">
+        Can ICBC cover treatment for neck pain?
+      </h2>
+
+      <p class="section-copy">
+        ICBC may cover eligible treatment for accident-related neck pain and whiplash symptoms. During the first 12 weeks after a crash, many patients can access eligible treatment without a physician referral or prior ICBC approval, depending on claim eligibility and treatment type.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 mb-14">
+      <div class="card">
+        <h3 class="text-3xl font-black text-blue-600 mb-3">12 Weeks</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Initial recovery window may include pre-approved treatment access.
         </p>
-
-        <div class="mobile-grid-1 grid grid-cols-1 gap-4 mb-6">
-          <div class="card">
-            <h3 class="text-2xl font-black text-blue-600 mb-2">12 Weeks</h3>
-            <p class="text-slate-600">Initial recovery window may include pre-approved treatment access.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="text-2xl font-black text-blue-600 mb-2">No Referral</h3>
-            <p class="text-slate-600">Many patients can start eligible care without a doctor referral.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="text-2xl font-black text-blue-600 mb-2">Direct Billing</h3>
-            <p class="text-slate-600">Eligible treatment may be billed directly to ICBC.</p>
-          </div>
-        </div>
-
-        <a href="https://icbc.com/claims/injury/accessing-treatment-during-your-first-12-weeks-of-recovery"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="inline-flex text-blue-600 font-black hover:text-blue-700">
-          View official ICBC treatment information →
-        </a>
       </div>
 
-      <div>
-        <p class="eyebrow">Treatment Options</p>
-        <h2 class="section-title">Common treatment options</h2>
-        <p class="section-copy mb-8">
-          Treatment usually starts with assessing pain level, range of motion, strength, nerve-related symptoms, and daily function.
+      <div class="card">
+        <h3 class="text-3xl font-black text-blue-600 mb-3">No Referral</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Many patients can start eligible care without a doctor referral.
         </p>
+      </div>
 
-        <div class="overflow-hidden rounded-[28px] border border-slate-200">
-          <div class="grid grid-cols-[1fr_1.4fr] bg-slate-50 border-b border-slate-200">
-            <div class="p-5 font-black">Treatment</div>
-            <div class="p-5 font-black">Commonly Used For</div>
-          </div>
+      <div class="card">
+        <h3 class="text-3xl font-black text-blue-600 mb-3">Direct Billing</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Eligible treatment may be billed directly to ICBC.
+        </p>
+      </div>
+    </div>
 
-          <div class="divide-y divide-slate-200">
-            <div class="grid grid-cols-[1fr_1.4fr]">
-              <div class="p-5 font-black">Physiotherapy</div>
-              <div class="p-5 text-slate-600">Mobility, pain control, posture, movement retraining.</div>
-            </div>
+    <div class="max-w-4xl mb-10">
+      <p class="eyebrow">Treatment Options</p>
 
-            <div class="grid grid-cols-[1fr_1.4fr]">
-              <div class="p-5 font-black">Active Rehab</div>
-              <div class="p-5 text-slate-600">Strength, function, confidence with movement.</div>
-            </div>
+      <h2 class="section-title">
+        Common treatment options
+      </h2>
 
-            <div class="grid grid-cols-[1fr_1.4fr]">
-              <div class="p-5 font-black">Massage</div>
-              <div class="p-5 text-slate-600">Muscle tension, guarding, soft tissue tightness.</div>
-            </div>
+      <p class="section-copy">
+        Treatment usually starts with assessing pain level, range of motion, strength, nerve-related symptoms, and daily function.
+      </p>
+    </div>
 
-            <div class="grid grid-cols-[1fr_1.4fr]">
-              <div class="p-5 font-black">Acupuncture</div>
-              <div class="p-5 text-slate-600">Pain modulation and post-accident discomfort.</div>
-            </div>
+    <div class="overflow-hidden rounded-[28px] border border-slate-200 max-w-5xl">
 
-            <div class="grid grid-cols-[1fr_1.4fr]">
-              <div class="p-5 font-black">Counselling</div>
-              <div class="p-5 text-slate-600">Driving anxiety, stress, sleep disruption, emotional recovery.</div>
-            </div>
-          </div>
+      <div class="grid grid-cols-[1fr_1.5fr] bg-slate-50 border-b border-slate-200 treatment-header">
+        <div class="p-5 font-black text-slate-900">Treatment</div>
+        <div class="p-5 font-black text-slate-900">Commonly Used For</div>
+      </div>
+
+      <div class="divide-y divide-slate-200 treatment-table">
+        <div class="grid grid-cols-[1fr_1.5fr] treatment-row">
+          <div class="p-5 font-black text-slate-900">Physiotherapy</div>
+          <div class="p-5 text-slate-600">Mobility, pain control, posture, movement retraining.</div>
         </div>
 
+        <div class="grid grid-cols-[1fr_1.5fr] treatment-row">
+          <div class="p-5 font-black text-slate-900">Active Rehab</div>
+          <div class="p-5 text-slate-600">Strength, function, confidence with movement.</div>
+        </div>
+
+        <div class="grid grid-cols-[1fr_1.5fr] treatment-row">
+          <div class="p-5 font-black text-slate-900">Massage</div>
+          <div class="p-5 text-slate-600">Muscle tension, guarding, soft tissue tightness.</div>
+        </div>
+
+        <div class="grid grid-cols-[1fr_1.5fr] treatment-row">
+          <div class="p-5 font-black text-slate-900">Acupuncture</div>
+          <div class="p-5 text-slate-600">Pain modulation and post-accident discomfort.</div>
+        </div>
+
+        <div class="grid grid-cols-[1fr_1.5fr] treatment-row">
+          <div class="p-5 font-black text-slate-900">Counselling</div>
+          <div class="p-5 text-slate-600">Driving anxiety, stress, sleep disruption, emotional recovery.</div>
+        </div>
       </div>
 
     </div>
+
+    <div class="mt-8">
+      <a href="https://icbc.com/claims/injury/accessing-treatment-during-your-first-12-weeks-of-recovery"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="inline-flex text-blue-600 font-black hover:text-blue-700">
+        View official ICBC treatment information →
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -798,6 +862,7 @@
 
     <p class="eyebrow">Related Symptoms</p>
     <h2 class="section-title">Other symptoms after a car accident</h2>
+
     <p class="section-copy mb-10">
       Neck pain can appear together with other post-accident symptoms. Explore related guides below.
     </p>
