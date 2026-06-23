@@ -1071,6 +1071,59 @@ body{
     margin-bottom:10px;
     color:#0f172a;
 }
+@media (max-width:767px){
+
+.treatment-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:28px;
+}
+
+.treatment-card{
+    padding:22px;
+    border-radius:20px;
+}
+
+.treatment-card h3{
+    margin:0 0 18px;
+    font-size:22px;
+    line-height:1.2;
+}
+
+/* 左右兩個數值 */
+.treatment-meta{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.treatment-meta span{
+    display:flex;
+    flex-direction:column;
+
+    font-size:14px;
+    line-height:1.4;
+    color:#64748b;
+}
+
+.treatment-meta strong{
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:26px;
+    line-height:1;
+
+    color:#0f172a;
+    font-weight:800;
+}
+
+.coverage-note{
+    margin-top:20px;
+    padding:20px;
+}
+
+}
 </style>
 
 <section class="page-section expert-section">
