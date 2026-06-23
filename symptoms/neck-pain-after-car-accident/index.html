@@ -342,6 +342,33 @@
     line-height: 1.35 !important;
   }
 }
+@media (max-width: 767px) {
+  .page-section .rounded-\[42px\] {
+    border-radius: 26px !important;
+    padding: 42px 22px !important;
+  }
+
+  .page-section .rounded-\[42px\] h2 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.045em !important;
+    margin-bottom: 14px !important;
+  }
+
+  .page-section .rounded-\[42px\] p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .page-section .rounded-\[42px\] a {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 14.5px !important;
+    padding: 0 18px !important;
+    border-radius: 14px !important;
+  }
+}
   </style>
 </head>
 
@@ -836,23 +863,33 @@
 <!-- CTA -->
 <section class="page-section">
   <div class="page-container">
-    <div class="rounded-[36px] bg-blue-600 text-white p-8 md:p-10">
-      <p class="text-sm font-black uppercase tracking-[0.2em] text-blue-100 mb-4">
-        Next Step
-      </p>
 
-      <h2 class="text-3xl md:text-5xl font-black leading-tight tracking-[-0.045em] mb-5">
-        Still not sure what treatment fits your neck pain?
+    <div class="rounded-[42px] bg-gradient-to-br from-blue-600 to-blue-500 text-white px-8 py-16 md:px-14 md:py-24 text-center shadow-2xl shadow-blue-600/20">
+
+      <h2 class="text-4xl md:text-6xl font-black tracking-[-0.055em] leading-tight mb-6">
+        Recovery starts here.
       </h2>
 
-      <p class="text-lg leading-relaxed text-blue-50 mb-7 max-w-3xl">
-        Start with a simple 30-second check to explore which recovery support may match your symptoms.
+      <p class="text-lg md:text-2xl text-blue-50 leading-relaxed max-w-3xl mx-auto mb-12">
+        Take our 30-second recovery check to find the most suitable next step after your accident.
       </p>
 
-      <a href="/#assessment" class="inline-flex items-center justify-center rounded-xl bg-white px-8 py-5 text-blue-600 font-black hover:bg-blue-50 transition">
-        Start 30s Eligibility Check
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <a href="/#assessment"
+           class="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-5 text-blue-600 font-black text-lg hover:bg-blue-50 transition">
+          Start 30s Check
+        </a>
+
+        <a href="/#locations"
+           class="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/10 px-8 py-5 text-white font-black text-lg hover:bg-white/15 transition">
+          Find a Clinic
+        </a>
+
+      </div>
+
     </div>
+
   </div>
 </section>
 
