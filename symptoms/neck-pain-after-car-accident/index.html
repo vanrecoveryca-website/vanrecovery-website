@@ -785,43 +785,288 @@
   </div>
 </section>
 
-<!-- Expert -->
-<section id="expert-insight" class="inner-section inner-section-soft">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="rounded-[36px] bg-blue-50 border border-blue-100 p-8 md:p-10">
-      <div class="flex flex-col md:flex-row gap-6 md:gap-8 md:items-center mb-8">
-        <div class="w-20 h-20 rounded-3xl bg-white border border-blue-100 flex items-center justify-center text-blue-600 text-2xl font-black shadow-sm">
-          PT
-        </div>
+<!-- Expert Insight Section -->
+<section class="expert-insight-section">
+  <div class="expert-card">
 
-        <div>
-          <p class="eyebrow mb-2">Expert Insight</p>
-          <h2 class="text-3xl md:text-4xl font-black tracking-[-0.04em] leading-tight text-slate-900">
-            Reviewed by a Physiotherapist
-          </h2>
-          <p class="text-slate-600 mt-2 font-medium">
-            Registered Physiotherapist · ICBC Recovery Care
-          </p>
-        </div>
+    <div class="expert-header">
+      <div class="expert-icon">PT</div>
+
+      <div>
+        <div class="eyebrow">Expert Insight</div>
+        <h2>Reviewed by a Physiotherapist</h2>
+        <p>Registered Physiotherapist · ICBC Recovery Care</p>
       </div>
-
-      <blockquote class="text-2xl md:text-3xl font-bold leading-snug tracking-[-0.035em] text-slate-900 max-w-5xl">
-        “Neck pain does not always appear immediately after a collision. Early assessment helps identify whether symptoms are related to whiplash, muscle strain, joint irritation, or nerve-related signs.”
-      </blockquote>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8">
-        <div class="bg-white rounded-2xl px-5 py-4 text-center text-blue-600 font-black">Range of motion</div>
-        <div class="bg-white rounded-2xl px-5 py-4 text-center text-blue-600 font-black">Strength</div>
-        <div class="bg-white rounded-2xl px-5 py-4 text-center text-blue-600 font-black">Nerve signs</div>
-        <div class="bg-white rounded-2xl px-5 py-4 text-center text-blue-600 font-black">Pain pattern</div>
-      </div>
-
-      <p class="mt-6 text-sm font-bold text-slate-500">
-        Last reviewed: June 2026 · Educational content only
-      </p>
     </div>
+
+    <blockquote>
+      “Neck pain does not always appear immediately after a collision. Early
+      assessment helps identify whether symptoms are related to whiplash,
+      muscle strain, joint irritation, or nerve-related signs.”
+    </blockquote>
+
+    <div class="assessment-grid">
+
+      <div class="assessment-item">
+        <div class="assessment-icon">
+          <i data-lucide="rotate-ccw"></i>
+        </div>
+        <h3>Neck movement</h3>
+        <p>Checks how well you can move your neck in different directions.</p>
+      </div>
+
+      <div class="assessment-item">
+        <div class="assessment-icon">
+          <i data-lucide="dumbbell"></i>
+        </div>
+        <h3>Muscle strength</h3>
+        <p>Assesses strength in your neck, shoulders, and arms.</p>
+      </div>
+
+      <div class="assessment-item">
+        <div class="assessment-icon">
+          <i data-lucide="activity"></i>
+        </div>
+        <h3>Nerve function</h3>
+        <p>Looks for numbness, tingling, or signs of nerve involvement.</p>
+      </div>
+
+      <div class="assessment-item">
+        <div class="assessment-icon">
+          <i data-lucide="target"></i>
+        </div>
+        <h3>Pain pattern</h3>
+        <p>Identifies where it hurts and what movements trigger pain.</p>
+      </div>
+
+    </div>
+
+    <div class="expert-note">
+      Last reviewed: June 2026 · Educational content only
+    </div>
+
   </div>
 </section>
+
+<style>
+.expert-insight-section {
+  padding: 80px 24px;
+  background: #f8fafc;
+}
+
+.expert-card {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px;
+  border-radius: 36px;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%);
+  border: 1px solid #dbeafe;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.expert-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.expert-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 24px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 30px;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.expert-header h2 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #020617;
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+
+.expert-header p {
+  margin: 0;
+  font-size: 19px;
+  color: #334155;
+}
+
+.expert-card blockquote {
+  margin: 0 0 48px;
+  max-width: 1120px;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  color: #020617;
+}
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.assessment-item {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px;
+  min-height: 245px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+}
+
+.assessment-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.assessment-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.5;
+}
+
+.assessment-item h3 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #2563eb;
+  font-weight: 900;
+}
+
+.assessment-item p {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.expert-note {
+  font-size: 16px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .expert-insight-section {
+    padding: 56px 18px;
+  }
+
+  .expert-card {
+    padding: 32px 22px;
+    border-radius: 28px;
+  }
+
+  .expert-header {
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 34px;
+  }
+
+  .expert-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    font-size: 23px;
+    flex-shrink: 0;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  .expert-header h2 {
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
+  .expert-header p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .expert-card blockquote {
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+
+  .assessment-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .assessment-item {
+    min-height: auto;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    column-gap: 16px;
+    align-items: start;
+  }
+
+  .assessment-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 0;
+    grid-row: span 2;
+  }
+
+  .assessment-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .assessment-item h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .assessment-item p {
+    font-size: 16px;
+  }
+
+  .expert-note {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+</style>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 
 <!-- Treatment + ICBC -->
 <section id="icbc-treatment" class="inner-section">
