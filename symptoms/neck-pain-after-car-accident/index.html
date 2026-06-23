@@ -440,8 +440,6 @@ body{font-family:Inter,system-ui,sans-serif}
 
     padding:20px 0 20px 18px;
 
-    border-top:1px solid #e2e8f0;
-
     color:#0f172a;
 
     font-size:20px;
@@ -461,10 +459,6 @@ body{font-family:Inter,system-ui,sans-serif}
 
     font-size:18px;
     line-height:1;
-}
-
-.point-grid .point-item:nth-last-child(-n+2){
-    border-bottom:1px solid #e2e8f0;
 }
 
 @media (max-width:768px){
@@ -487,8 +481,39 @@ body{font-family:Inter,system-ui,sans-serif}
     border-bottom:none;
 }
 
-.point-grid .point-item:last-child{
-    border-bottom:1px solid #e2e8f0;
+}
+
+/* Symptoms */
+
+.point-grid{
+    margin-top:40px;
+
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:20px 56px;
+}
+
+.point-item{
+    color:#0f172a;
+
+    font-size:20px;
+    line-height:1.45;
+    font-weight:700;
+    letter-spacing:-0.02em;
+}
+
+@media (max-width:768px){
+
+.point-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:28px;
+}
+
+.point-item{
+    font-size:17px;
+    line-height:1.5;
 }
 
 }
