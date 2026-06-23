@@ -298,34 +298,206 @@ body{font-family:Inter,system-ui,sans-serif}
   </div>
 </section>
 
-<section id="faq" class="page-section">
-  <div class="page-container">
-    <p class="eyebrow">Common Questions</p>
-    <h2 class="section-title">Questions about neck pain after a car accident</h2>
+<!-- FAQ Section -->
+<section id="faq" class="faq-section">
+  <div class="faq-container">
 
-    <div class="plain-faq-list">
-      <div class="plain-faq-item">
-        <h3>Why does my neck hurt more the next day?</h3>
-        <p>Neck pain can become more noticeable 24–72 hours after a collision as muscle guarding, inflammation, or joint irritation develops.</p>
-      </div>
+    <div class="faq-heading">
+      <p>Frequently Asked Questions</p>
+      <h2>Questions about neck pain after a car accident</h2>
+    </div>
 
-      <div class="plain-faq-item">
-        <h3>Can whiplash heal by itself?</h3>
-        <p>Mild symptoms may improve with time, but persistent pain, headaches, dizziness, numbness, weakness, or reduced movement should be assessed.</p>
-      </div>
+    <div class="faq-list">
 
-      <div class="plain-faq-item">
-        <h3>Should I use heat or ice?</h3>
-        <p>Ice may help early soreness. Gentle heat may help muscle tightness later. Avoid anything that worsens pain, dizziness, or nerve symptoms.</p>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Why does my neck hurt more the next day?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Neck pain can become more noticeable 24–72 hours after a collision as muscle guarding, inflammation, joint irritation, or whiplash-related soft tissue injury develops.
+        </div>
+      </details>
 
-      <div class="plain-faq-item">
-        <h3>Can ICBC cover massage therapy for neck pain?</h3>
-        <p>ICBC may cover eligible massage therapy for accident-related neck pain depending on claim eligibility, treatment period, and clinical need.</p>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can whiplash heal by itself?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Mild symptoms may improve with time, but persistent pain, headaches, dizziness, numbness, weakness, or reduced movement should be assessed by a qualified healthcare provider.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>How long should I wait before seeing a physiotherapist?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          If symptoms are not improving, affecting sleep, limiting movement, or worsening after the accident, an early assessment can help guide safe recovery.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Should I use heat or ice for neck pain?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          It depends on your symptoms and injury stage. Some people prefer ice for early soreness, while others respond better to gentle heat for muscle tightness. Avoid anything that worsens pain, dizziness, or nerve symptoms.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can ICBC cover massage therapy for neck pain?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          ICBC may cover eligible massage therapy for accident-related neck pain depending on claim eligibility, treatment period, and clinical need.
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
+
+<style>
+.faq-section {
+  padding: 96px 0;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.faq-heading p {
+  margin: 0 0 14px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.faq-heading h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.faq-list {
+  display: grid;
+  gap: 20px;
+}
+
+.faq-item {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+.faq-question {
+  list-style: none;
+  cursor: pointer;
+  min-height: 86px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  color: #2563eb;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 32px 30px;
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 56px 0 64px;
+  }
+
+  .faq-container {
+    padding: 0 20px;
+  }
+
+  .faq-heading {
+    margin-bottom: 30px;
+  }
+
+  .faq-heading p {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+  }
+
+  .faq-heading h2 {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  .faq-list {
+    gap: 12px;
+  }
+
+  .faq-question {
+    min-height: 72px;
+    padding: 18px 20px;
+    gap: 16px;
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+
+  .faq-icon {
+    font-size: 26px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+</style>
 
 <section id="related-guides" class="page-section soft">
   <div class="page-container" style="max-width:1080px;">
