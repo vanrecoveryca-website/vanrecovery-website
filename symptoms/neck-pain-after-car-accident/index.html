@@ -16,6 +16,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,17 +31,26 @@
         "about": {
           "@type": "MedicalCondition",
           "name": "Neck pain after a car accident",
-          "alternateName": ["Whiplash", "Post-accident neck pain", "Cervical strain after car accident"]
+          "alternateName": [
+            "Whiplash",
+            "Post-accident neck pain",
+            "Cervical strain after car accident"
+          ]
         },
-        "mainEntity": {
-          "@id": "https://vanrecovery.ca/symptoms/neck-pain-after-car-accident/#faq"
-        },
+        "areaServed": [
+          { "@type": "City", "name": "Vancouver" },
+          { "@type": "City", "name": "Richmond" },
+          { "@type": "AdministrativeArea", "name": "British Columbia" }
+        ],
         "reviewedBy": {
           "@type": "Person",
           "name": "Registered Physiotherapist",
           "jobTitle": "Physiotherapist"
         },
-        "lastReviewed": "2026-06"
+        "lastReviewed": "2026-06",
+        "mainEntity": {
+          "@id": "https://vanrecovery.ca/symptoms/neck-pain-after-car-accident/#faq"
+        }
       },
       {
         "@type": "FAQPage",
@@ -93,7 +103,9 @@
   </script>
 
   <style>
-    body { font-family: Inter, system-ui, sans-serif; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+    }
 
     .inner-section {
       padding: 80px 0;
@@ -106,28 +118,28 @@
     }
 
     .eyebrow {
+      margin: 0 0 16px;
+      color: #2563eb;
       font-size: 13px;
       font-weight: 900;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: #2563eb;
-      margin-bottom: 16px;
     }
 
     .section-title {
+      margin: 0 0 20px;
+      color: #0f172a;
       font-size: 48px;
       line-height: 1.04;
       letter-spacing: -.045em;
       font-weight: 900;
-      color: #0f172a;
-      margin-bottom: 20px;
     }
 
     .section-copy {
+      max-width: 760px;
+      color: #475569;
       font-size: 18px;
       line-height: 1.65;
-      color: #475569;
-      max-width: 760px;
     }
 
     .hub-card {
@@ -142,17 +154,167 @@
     .hub-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 16px 36px rgba(15,23,42,.08);
-      border-color: rgba(37,99,235,.22);
+      border-color: rgba(37,99,235,.24);
     }
 
-    .faq-answer { display: none; }
-    .faq-item.active .faq-answer { display: block; }
-    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+    }
 
-    .mobile-hero { display: none; }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .mobile-hero {
+      display: none;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #020617;
+      color: #ffffff;
+      padding: 80px 24px 40px;
+      border-top: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .footer-container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr;
+      gap: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .footer-logo img {
+      display: block;
+      width: 58px;
+      height: 58px;
+    }
+
+    .footer-title {
+      display: block;
+      color: #ffffff;
+      font-size: 34px;
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: -0.055em;
+      text-decoration: none;
+    }
+
+    .footer-title:hover,
+    .footer-links a:hover,
+    .clinic-name:hover,
+    .clinic-info a:hover,
+    .footer-bottom a:hover {
+      color: #60a5fa;
+    }
+
+    .footer-location {
+      margin-top: 8px;
+      color: #93c5fd;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-description {
+      max-width: 420px;
+      margin: 0;
+      color: #93a4bd;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 24px;
+      margin-top: 28px;
+    }
+
+    .footer-links a,
+    .clinic-info a,
+    .footer-bottom p {
+      color: #8192ad;
+      text-decoration: none;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+    }
+
+    .footer-clinic h3 {
+      margin: 0 0 24px;
+      color: #ffffff;
+      font-size: 27px;
+      line-height: 1.1;
+      font-weight: 850;
+      letter-spacing: -0.035em;
+    }
+
+    .clinic-name {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      font-weight: 800;
+      text-decoration: none;
+      margin-bottom: 28px;
+    }
+
+    .clinic-info {
+      display: grid;
+      gap: 14px;
+      color: #93a4bd;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .clinic-phone {
+      color: #ffffff !important;
+      font-weight: 750;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .footer-bottom a {
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: none;
+    }
 
     @media (max-width: 767px) {
-      .desktop-hero { display: none !important; }
+      .desktop-hero {
+        display: none !important;
+      }
+
       .mobile-hero {
         display: block;
         background: #fff;
@@ -273,12 +435,91 @@
         padding: 18px;
       }
 
-      .mobile-grid-1 {
-        grid-template-columns: 1fr !important;
+      #related-guides img {
+        height: 132px !important;
+        border-radius: 16px !important;
+        margin-bottom: 16px !important;
       }
 
-      .mobile-grid-2 {
-        grid-template-columns: repeat(2, 1fr) !important;
+      #related-guides h3 {
+        font-size: 20px !important;
+      }
+
+      .site-footer {
+        padding: 42px 20px 24px;
+      }
+
+      .footer-container {
+        max-width: 430px;
+      }
+
+      .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 28px;
+      }
+
+      .footer-logo-row {
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .footer-logo img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .footer-title {
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .footer-location {
+        margin-top: 5px;
+        font-size: 13px;
+      }
+
+      .footer-description {
+        max-width: none;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .footer-links {
+        gap: 10px 18px;
+        margin-top: 18px;
+      }
+
+      .footer-links a {
+        font-size: 13px;
+      }
+
+      .footer-clinic h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .clinic-name {
+        font-size: 18px;
+        margin-bottom: 14px;
+      }
+
+      .clinic-info {
+        gap: 9px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .footer-bottom {
+        padding-top: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .footer-bottom p {
+        font-size: 12px;
       }
     }
   </style>
@@ -286,6 +527,7 @@
 
 <body class="bg-white text-slate-900 selection:bg-blue-100">
 
+<!-- Nav -->
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-20 overflow-visible">
@@ -295,6 +537,7 @@
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           <path d="m9 12 2 2 4-4"/>
         </svg>
+
         <span class="font-bold text-xl tracking-tight text-slate-800">
           ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
         </span>
@@ -339,16 +582,19 @@
           <line x1="4" x2="20" y1="18" y2="18"/>
         </svg>
       </button>
+
     </div>
   </div>
 
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
     <div class="px-5 py-5 space-y-3">
       <div class="text-xs font-black uppercase tracking-[0.18em] text-blue-600">Symptoms</div>
+
       <a href="/symptoms/neck-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">Neck Pain & Whiplash</a>
       <a href="/symptoms/back-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">Back Pain & Stiffness</a>
       <a href="/symptoms/headaches-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">Headaches & Dizziness</a>
       <a href="/symptoms/anxiety-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">Anxiety & Stress</a>
+
       <a href="/#assessment" class="mt-4 block rounded-2xl bg-blue-600 px-5 py-4 text-center text-base font-black text-white shadow-lg">Start 30s Check</a>
     </div>
   </div>
@@ -695,6 +941,39 @@
   </div>
 </section>
 
+<!-- Related Guides -->
+<section id="related-guides" class="inner-section">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-4xl mb-12">
+      <p class="eyebrow">Related Guides</p>
+      <h2 class="section-title">Other symptoms after a car accident</h2>
+      <p class="section-copy">
+        Neck pain can appear together with other post-accident symptoms. Explore related guides below.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <a href="/symptoms/headaches-after-car-accident/" class="hub-card block no-underline">
+        <img src="/assets/images/headaches-after-car-accident-card.png" alt="Headaches after a car accident" class="w-full h-[180px] object-cover rounded-[20px] mb-6">
+        <h3 class="text-2xl font-black text-slate-900 leading-tight mb-3">Headaches After a Car Accident</h3>
+        <p class="text-slate-600 leading-relaxed">Headaches may appear after neck strain, whiplash, concussion, or muscle tension.</p>
+      </a>
+
+      <a href="/symptoms/back-pain-after-car-accident/" class="hub-card block no-underline">
+        <img src="/assets/images/back-pain-after-car-accident-card.png" alt="Back pain after a car accident" class="w-full h-[180px] object-cover rounded-[20px] mb-6">
+        <h3 class="text-2xl font-black text-slate-900 leading-tight mb-3">Back Pain After a Car Accident</h3>
+        <p class="text-slate-600 leading-relaxed">Back discomfort may occur when the spine absorbs collision-related force.</p>
+      </a>
+
+      <a href="/symptoms/anxiety-after-car-accident/" class="hub-card block no-underline">
+        <img src="/assets/images/anxiety-after-car-accident-card.png" alt="Anxiety after a car accident" class="w-full h-[180px] object-cover rounded-[20px] mb-6">
+        <h3 class="text-2xl font-black text-slate-900 leading-tight mb-3">Anxiety After a Car Accident</h3>
+        <p class="text-slate-600 leading-relaxed">Stress, sleep disruption, and driving fear may appear after a traumatic crash.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="inner-section border-b-0">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -721,6 +1000,86 @@
 </section>
 
 </main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
+            <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
+          </a>
+
+          <div>
+            <a href="/" class="footer-title">ICBC Recovery Hub</a>
+            <div class="footer-location">Vancouver &amp; Richmond</div>
+          </div>
+        </div>
+
+        <p class="footer-description">
+          Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
+        </p>
+
+        <nav class="footer-links">
+          <a href="/#symptoms">Symptoms</a>
+          <a href="/#how-icbc-works">How ICBC Works</a>
+          <a href="/#locations">Locations</a>
+          <a href="/#faq">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="footer-clinic">
+        <h3>Vancouver</h3>
+
+        <a href="https://aetherisintegratedhealth.com/" target="_blank" rel="noopener" class="clinic-name">
+          Aetheris Integrated Health
+        </a>
+
+        <div class="clinic-info">
+          <a href="https://maps.app.goo.gl/Rm3vHV2SdNpYn6PK7" target="_blank" rel="noopener">
+            Unit 140, 809 West 41st Avenue<br>
+            Vancouver, BC V5Z 2N6
+          </a>
+
+          <a href="tel:16045658282" class="clinic-phone">(604) 565-8282</a>
+          <a href="mailto:info@aetherishealth.ca">info@aetherishealth.ca</a>
+        </div>
+      </div>
+
+      <div class="footer-clinic">
+        <h3>Richmond</h3>
+
+        <a href="https://www.pegasusintegratedhealth.ca/" target="_blank" rel="noopener" class="clinic-name">
+          Pegasus Integrated Health
+        </a>
+
+        <div class="clinic-info">
+          <a href="https://maps.app.goo.gl/8mFLj8uJoi4sQ4Xn8" target="_blank" rel="noopener">
+            315 - 8171 Cook Rd<br>
+            Richmond, BC V6Y 3T8
+          </a>
+
+          <a href="tel:16042328888" class="clinic-phone">604.232.8888</a>
+          <a href="mailto:info@pegasushealth.ca">info@pegasushealth.ca</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 ICBC Recovery Hub.</p>
+
+      <p>
+        Website and AI Search Optimization by
+        <a href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub" target="_blank" rel="noopener">
+          VisibleAI
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
 
 <script>
   function toggleMobileMenu() {
