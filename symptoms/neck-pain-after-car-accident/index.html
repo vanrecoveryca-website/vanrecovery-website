@@ -227,20 +227,78 @@ body{font-family:Inter,system-ui,sans-serif}
       When you may need ICBC care for neck pain
     </h2>
 
-<div class="answer-stack">
+<div class="seek-grid">
 
-    <p><strong>Your neck hurts after the crash.</strong></p>
+    <div class="seek-item">
+        <strong>Neck pain</strong>
+        <span>after the crash</span>
+    </div>
 
-    <p><strong>It hurts to turn your head.</strong></p>
+    <div class="seek-item">
+        <strong>Stiffness</strong>
+        <span>or difficult to turn</span>
+    </div>
 
-    <p><strong>The pain isn't getting better.</strong></p>
+    <div class="seek-item">
+        <strong>Pain</strong>
+        <span>is getting worse</span>
+    </div>
 
-    <p><strong>You want to start ICBC treatment.</strong></p>
+    <div class="seek-item">
+        <strong>ICBC care</strong>
+        <span>may be available</span>
+    </div>
 
-</div
-
+</div>
   </div>
 </section>
+
+<style>
+.seek-grid{
+    margin-top:42px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.seek-item{
+    padding:24px 0;
+    border-top:1px solid #e2e8f0;
+}
+
+.seek-item strong{
+    display:block;
+    margin-bottom:6px;
+    color:#0f172a;
+    font-size:26px;
+    line-height:1.1;
+    font-weight:900;
+    letter-spacing:-0.03em;
+}
+
+.seek-item span{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.5;
+}
+
+@media (max-width:768px){
+
+.seek-grid{
+    grid-template-columns:1fr;
+    gap:0;
+}
+
+.seek-item strong{
+    font-size:22px;
+}
+
+.seek-item span{
+    font-size:15px;
+}
+
+}
+</style>
 
 <section id="symptoms" class="page-section">
   <div class="page-container">
