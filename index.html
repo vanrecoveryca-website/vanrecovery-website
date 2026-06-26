@@ -3951,37 +3951,66 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <div class="footer-top">
 
-      <!-- Brand -->
-      <div class="footer-brand">
+<!-- Brand -->
+<div class="footer-brand">
 
-        <div class="footer-logo-row">
-          <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
-            <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
-          </a>
+  <div class="footer-logo-row">
 
-          <div>
-            <a href="/" class="footer-title">
-              ICBC Recovery Hub
-            </a>
+    <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
+      <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
+    </a>
 
-            <div class="footer-location">
-              Vancouver &amp; Richmond
-            </div>
-          </div>
-        </div>
+    <div>
 
-        <p class="footer-description">
-          Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
-        </p>
+      <a href="/" class="footer-title">
+        ICBC Recovery Hub
+      </a>
 
-        <nav class="footer-links">
-          <a href="/#symptoms">Symptoms</a>
-          <a href="/#how-icbc-works">How ICBC Works</a>
-          <a href="/#locations">Locations</a>
-          <a href="/#faq">FAQ</a>
-        </nav>
-
+      <div class="footer-location">
+        Vancouver &amp; Richmond
       </div>
+
+    </div>
+
+  </div>
+
+  <p class="footer-description">
+    Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
+  </p>
+
+  <div class="footer-links-group">
+
+    <div class="footer-links-title">
+      EXPLORE
+    </div>
+
+    <nav class="footer-links">
+
+      <a href="/#symptoms">
+        Symptoms
+      </a>
+
+      <a href="/#how-icbc-works">
+        How ICBC Works
+      </a>
+
+      <a href="/#locations">
+        Locations
+      </a>
+
+      <a href="/#assessment">
+        30s Check
+      </a>
+
+      <a href="/privacy-policy/">
+        Privacy Policy
+      </a>
+
+    </nav>
+
+  </div>
+
+</div>
 
       <!-- Vancouver -->
       <div class="footer-clinic">
@@ -4357,6 +4386,37 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   .footer-bottom p {
     font-size: 12px;
   }
+
+.footer-links-group{
+    margin-top:42px;
+}
+
+.footer-links-title{
+    margin-bottom:18px;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#64748b;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+}
+
+.footer-links a{
+    color:#94a3b8;
+    text-decoration:none;
+    font-weight:500;
+    transition:.25s ease;
+}
+
+.footer-links a:hover{
+    color:#ffffff;
+}   
 
 </style>
     
