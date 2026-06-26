@@ -4061,24 +4061,31 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2026 ICBC Recovery Hub.</p>
+<div class="footer-bottom">
 
-    <p>
-        <a href="/privacy-policy/">
-            Privacy Policy
-        </a>
-    </p>
-        
-      <p>
-        Website and AI Search Optimization by
-        <a href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub" target="_blank" rel="noopener">
-          VisibleAI
-        </a>
-      </p>
-    </div>
+  <p>
+    © 2026 ICBC Recovery Hub.
+  </p>
+
+  <div class="footer-bottom-links">
+
+    <a href="/privacy-policy/">
+      Privacy Policy
+    </a>
+
+    <span>
+      Website &amp; AI Search Optimization by
+      <a class="visibleai-link"
+         href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub"
+         target="_blank"
+         rel="noopener">
+        VisibleAI
+      </a>
+    </span>
 
   </div>
+
+</div>
 
 </footer>
 
@@ -4363,6 +4370,21 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   .footer-bottom p {
     font-size: 12px;
   }
+}
+.footer-bottom a {
+  color: #94a3b8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom strong,
+.footer-bottom .visibleai-link {
+  color: #ffffff;
+  font-weight: 800;
 }
 </style>
     
