@@ -429,12 +429,15 @@
 
     <div id="custom-message"></div>
 
-<!-- [Navigation Bar] -->
+<!-- =========================
+     Navigation
+========================= -->
+
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="flex items-center justify-between h-20 overflow-visible">
+        <div class="flex items-center justify-between h-20">
 
             <!-- Logo -->
             <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
@@ -453,72 +456,10 @@
             <!-- Desktop -->
             <div class="hidden md:flex items-center gap-8">
 
-                <!-- Symptoms -->
-                <div class="relative group">
-
-                    <a href="/symptoms/"
-                       class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
-
-                        Symptoms
-
-                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-
-                    </a>
-
-                    <!-- Dropdown -->
-                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-
-                        <div class="w-80 rounded-2xl bg-white border border-slate-100 shadow-2xl p-3">
-
-                            <a href="/symptoms/neck-pain-after-car-accident/"
-                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
-
-                                <div class="font-bold text-slate-900">
-                                    Neck Pain & Whiplash
-                                </div>
-
-                            </a>
-
-                            <a href="/symptoms/back-pain-after-car-accident/"
-                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
-
-                                <div class="font-bold text-slate-900">
-                                    Back Pain & Stiffness
-                                </div>
-
-                            </a>
-
-                            <a href="/symptoms/headaches-after-car-accident/"
-                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
-
-                                <div class="font-bold text-slate-900">
-                                    Headaches & Dizziness
-                                </div>
-
-                            </a>
-
-                            <a href="/symptoms/anxiety-after-car-accident/"
-                               class="block rounded-xl px-4 py-3 hover:bg-blue-50 transition">
-
-                                <div class="font-bold text-slate-900">
-                                    Anxiety & Stress
-                                </div>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Homepage Sections -->
+                <a data-home-link="symptoms"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Symptoms
+                </a>
 
                 <a data-home-link="how-icbc-works"
                    class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
@@ -537,8 +478,7 @@
 
             </div>
 
-            <!-- Mobile Button -->
-
+            <!-- Mobile -->
             <button
                 class="md:hidden p-2 text-slate-600"
                 onclick="toggleMobileMenu()">
@@ -561,51 +501,36 @@
 
     </div>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu"
-     class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
 
-  <div class="px-5 py-5 space-y-3">
+        <div class="px-5 py-5 space-y-3">
 
-    <div class="text-xs font-black uppercase tracking-[0.18em] text-blue-600">
-      Symptoms
+            <a data-home-link="symptoms"
+               class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
+                Symptoms
+            </a>
+
+            <a data-home-link="how-icbc-works"
+               class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
+                How ICBC Works
+            </a>
+
+            <a data-home-link="locations"
+               class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
+                Locations
+            </a>
+
+            <a data-home-link="assessment"
+               class="mt-4 block rounded-2xl bg-blue-600 px-5 py-4 text-center text-base font-black text-white shadow-lg">
+                Start 30s Check
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="grid gap-2">
-      <a href="/symptoms/neck-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
-        Neck Pain & Whiplash
-      </a>
-
-      <a href="/symptoms/back-pain-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
-        Back Pain & Stiffness
-      </a>
-
-      <a href="/symptoms/headaches-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
-        Headaches & Dizziness
-      </a>
-
-      <a href="/symptoms/anxiety-after-car-accident/" class="block rounded-2xl bg-slate-50 px-5 py-4 text-base font-bold text-slate-800">
-        Anxiety & Stress
-      </a>
-    </div>
-
-    <div class="pt-3 grid gap-2">
-      <a data-home-link="how-icbc-works" class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
-        How ICBC Works
-      </a>
-
-      <a data-home-link="locations" class="block rounded-2xl px-5 py-4 text-base font-bold text-slate-800 bg-white border border-slate-100">
-        Locations
-      </a>
-    </div>
-
-    <a data-home-link="assessment"
-       class="mt-4 block rounded-2xl bg-blue-600 px-5 py-4 text-center text-base font-black text-white shadow-lg">
-      Start 30s Check
-    </a>
-
-  </div>
-</div>
 </nav>
 
 <script>
@@ -613,25 +538,34 @@ function toggleMobileMenu() {
     document.getElementById("mobile-menu").classList.toggle("hidden");
 }
 
-// Home section links
+const HOME_PATH = "/";
+
 const isHome =
-    window.location.pathname === "/" ||
+    window.location.pathname === HOME_PATH ||
+    window.location.pathname === "/index.html" ||
     window.location.pathname.endsWith("/index.html");
 
 document.querySelectorAll("[data-home-link]").forEach(link => {
+
     const target = link.dataset.homeLink;
-    link.href = isHome ? `#${target}` : `/#${target}`;
+
+    link.href = isHome
+        ? `#${target}`
+        : `${HOME_PATH}#${target}`;
+
 });
 
-// Close mobile menu when any link is clicked
 document.querySelectorAll("#mobile-menu a").forEach(link => {
+
     link.addEventListener("click", () => {
         document.getElementById("mobile-menu").classList.add("hidden");
     });
+
 });
 </script>
-
+    
     <main>
+        
 <!-- [Hero Section] -->
 <section class="desktop-hero relative bg-white py-12 md:py-24 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -1036,10 +970,12 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </style>
 
 <!-- Post-Accident Symptoms -->
-    <section id="symptoms" class="symptoms-section">
-    <div class="symptoms-container">
+<section id="symptoms" class="symptoms-section">
+
+  <div class="symptoms-container">
 
     <div class="symptoms-header">
+
       <p class="symptoms-eyebrow">
         Symptoms
       </p>
@@ -1051,45 +987,79 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <p>
         Recognize common symptoms early and know when to seek treatment.
       </p>
+
     </div>
 
     <div class="symptoms-grid">
 
-      <a href="/symptoms/neck-pain-after-car-accident/" class="symptom-card">
-        <img src="/assets/images/neck-pain-after-car-accident-card.png" alt="Neck pain and whiplash after a car accident">
+      <div class="symptom-card">
+
+        <img
+          src="/assets/images/neck-pain-after-car-accident-card.png"
+          alt="Neck pain and whiplash after a car accident">
+
         <div>
+
           <h3>Neck Pain</h3>
+
           <span>Whiplash</span>
-        </div>
-      </a>
 
-      <a href="/symptoms/back-pain-after-car-accident/" class="symptom-card">
-        <img src="/assets/images/back-pain-after-car-accident-card.png" alt="Back pain and stiffness after a motor vehicle accident">
+        </div>
+
+      </div>
+
+      <div class="symptom-card">
+
+        <img
+          src="/assets/images/back-pain-after-car-accident-card.png"
+          alt="Back pain and stiffness after a motor vehicle accident">
+
         <div>
+
           <h3>Back Pain</h3>
+
           <span>Stiffness</span>
-        </div>
-      </a>
 
-      <a href="/symptoms/headaches-after-car-accident" class="symptom-card">
-        <img src="/assets/images/headaches-after-car-accident-card.png" alt="Headaches and dizziness after a car accident">
+        </div>
+
+      </div>
+
+      <div class="symptom-card">
+
+        <img
+          src="/assets/images/headaches-after-car-accident-card.png"
+          alt="Headaches and dizziness after a car accident">
+
         <div>
+
           <h3>Headaches</h3>
-          <span>Dizziness</span>
-        </div>
-      </a>
 
-      <a href="/symptoms/anxiety-after-car-accident" class="symptom-card">
-        <img src="/assets/images/anxiety-after-car-accident-card.png" alt="Anxiety and stress after a car accident">
-        <div>
-          <h3>Anxiety</h3>
-          <span>Stress</span>
+          <span>Dizziness</span>
+
         </div>
-      </a>
+
+      </div>
+
+      <div class="symptom-card">
+
+        <img
+          src="/assets/images/anxiety-after-car-accident-card.png"
+          alt="Anxiety and stress after a car accident">
+
+        <div>
+
+          <h3>Anxiety</h3>
+
+          <span>Stress</span>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
+
 </section>
 
 <style>
@@ -1241,6 +1211,16 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     font-size: 12px;
   }
 }
+
+.symptom-card{
+    cursor:default;
+}
+
+.symptom-card:hover{
+    transform:none;
+    box-shadow:0 8px 24px rgba(15,23,42,.05);
+}
+    
 </style>
 
 <!-- [Why Patients Choose Partner Clinics Section] -->
@@ -4084,6 +4064,12 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     <div class="footer-bottom">
       <p>© 2026 ICBC Recovery Hub.</p>
 
+    <p>
+        <a href="/privacy-policy/">
+            Privacy Policy
+        </a>
+    </p>
+        
       <p>
         Website and AI Search Optimization by
         <a href="https://visibleai.ca/?utm_source=client&utm_medium=footer&utm_campaign=ICBC_hub" target="_blank" rel="noopener">
