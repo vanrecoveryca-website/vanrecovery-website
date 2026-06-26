@@ -3943,74 +3943,53 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 </style>
         
     </main>
-    
-<!-- [Footer] -->
+    <!-- [Footer] -->
 <footer class="site-footer">
 
   <div class="footer-container">
 
     <div class="footer-top">
 
-<!-- Brand -->
-<div class="footer-brand">
+      <!-- Brand -->
+      <div class="footer-brand">
 
-  <div class="footer-logo-row">
+        <div class="footer-logo-row">
+          <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
+            <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
+          </a>
 
-    <a href="/" class="footer-logo" aria-label="ICBC Recovery Hub">
-      <img src="/assets/favicon.svg" alt="ICBC Recovery Hub Logo">
-    </a>
+          <div>
+            <a href="/" class="footer-title">
+              ICBC Recovery Hub
+            </a>
 
-    <div>
+            <div class="footer-location">
+              Vancouver &amp; Richmond
+            </div>
+          </div>
+        </div>
 
-      <a href="/" class="footer-title">
-        ICBC Recovery Hub
-      </a>
+        <p class="footer-description">
+          Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
+        </p>
 
-      <div class="footer-location">
-        Vancouver &amp; Richmond
+        <div class="footer-links-group">
+
+          <div class="footer-links-title">
+            Quick Links
+          </div>
+
+          <nav class="footer-links">
+            <a href="/#symptoms">Symptoms</a>
+            <a href="/#how-icbc-works">How ICBC Works</a>
+            <a href="/#locations">Locations</a>
+            <a href="/#assessment">30s Check</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+          </nav>
+
+        </div>
+
       </div>
-
-    </div>
-
-  </div>
-
-  <p class="footer-description">
-    Recovery support for ICBC patients after motor vehicle accidents, including physiotherapy, rehabilitation, massage therapy, and counselling care.
-  </p>
-
-  <div class="footer-links-group">
-
-    <div class="footer-links-title">
-      EXPLORE
-    </div>
-
-    <nav class="footer-links">
-
-      <a href="/#symptoms">
-        Symptoms
-      </a>
-
-      <a href="/#how-icbc-works">
-        How ICBC Works
-      </a>
-
-      <a href="/#locations">
-        Locations
-      </a>
-
-      <a href="/#assessment">
-        30s Check
-      </a>
-
-      <a href="/privacy-policy/">
-        Privacy Policy
-      </a>
-
-    </nav>
-
-  </div>
-
-</div>
 
       <!-- Vancouver -->
       <div class="footer-clinic">
@@ -4183,22 +4162,34 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   line-height: 1.65;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 24px;
-  margin-top: 28px;
+/* Quick Links */
+.footer-links-group {
+  margin-top: 42px;
 }
 
-.footer-links a,
-.clinic-info a,
-.footer-bottom p {
-  color: #8192ad;
-  text-decoration: none;
+.footer-links-title {
+  margin-bottom: 18px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .footer-links a {
-  font-size: 14px;
+  color: #93a4bd;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.25s ease;
 }
 
 .footer-clinic h3 {
@@ -4226,6 +4217,11 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   color: #93a4bd;
   font-size: 15px;
   line-height: 1.55;
+}
+
+.clinic-info a {
+  color: #93a4bd;
+  text-decoration: none;
 }
 
 .clinic-phone {
@@ -4276,6 +4272,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
 .footer-bottom p {
   margin: 0;
+  color: #8192ad;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -4329,13 +4326,22 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     line-height: 1.55;
   }
 
+  .footer-links-group {
+    margin-top: 26px;
+  }
+
+  .footer-links-title {
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
   .footer-links {
-    gap: 10px 18px;
-    margin-top: 18px;
+    gap: 10px;
   }
 
   .footer-links a {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .footer-clinic h3 {
@@ -4386,38 +4392,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   .footer-bottom p {
     font-size: 12px;
   }
-
-.footer-links-group{
-    margin-top:42px;
 }
-
-.footer-links-title{
-    margin-bottom:18px;
-    font-size:.78rem;
-    font-weight:700;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:#64748b;
-}
-
-.footer-links{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:14px;
-}
-
-.footer-links a{
-    color:#94a3b8;
-    text-decoration:none;
-    font-weight:500;
-    transition:.25s ease;
-}
-
-.footer-links a:hover{
-    color:#ffffff;
-}   
-
 </style>
     
 <script>
