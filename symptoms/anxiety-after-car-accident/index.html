@@ -3333,9 +3333,555 @@ nav.sticky{
     white-space:nowrap!important;
   }
 }
+
+/* Family therapy note copy sizing */
+.family-therapy-note{
+  font-size:15px!important;
+  line-height:1.65!important;
+}
+.family-therapy-note strong{
+  display:block!important;
+  margin-bottom:12px!important;
+  font-size:18px!important;
+  line-height:1.2!important;
+}
+@media (max-width:767px){
+  .family-therapy-note{
+    font-size:14px!important;
+    line-height:1.58!important;
+  }
+  .family-therapy-note strong{
+    font-size:18px!important;
+    margin-bottom:10px!important;
+  }
+}
+
+/* Expert card divider removal */
+.expert-divider{
+  display:none!important;
+}
+.expert-content{
+  border-top:0!important;
+}
+@media (max-width:767px){
+  .expert-divider{
+    display:none!important;
+  }
+  .expert-content{
+    border-top:0!important;
+    padding-top:0!important;
+  }
+}
+
+/* Early assessment note copy sizing */
+.early-assessment-note p{
+  font-size:15px!important;
+  line-height:1.65!important;
+}
+@media (max-width:767px){
+  .early-assessment-note p{
+    font-size:14px!important;
+    line-height:1.58!important;
+  }
+}
+
+/* Seek-care checklist format */
+#seek-care .seek-care-checklist{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+  margin-top:26px!important;
+}
+#seek-care .seek-care-checklist .point-item{
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:12px!important;
+  min-height:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#0f172a!important;
+  font-size:17px!important;
+  line-height:1.45!important;
+  font-weight:750!important;
+}
+#seek-care .seek-care-checklist .point-item::before{
+  content:"✓"!important;
+  position:static!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  height:auto!important;
+  margin-top:1px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#2563eb!important;
+  font-size:18px!important;
+  line-height:1.35!important;
+  font-weight:900!important;
+}
+@media (max-width:767px){
+  #seek-care .seek-care-checklist{
+    gap:14px!important;
+    margin-top:24px!important;
+  }
+  #seek-care .seek-care-checklist .point-item{
+    font-size:17px!important;
+    line-height:1.42!important;
+  }
+}
+
+/* Seek-care checklist typography refinement */
+#seek-care .seek-care-checklist{
+  gap:22px!important;
+}
+#seek-care .seek-care-checklist .point-item{
+  gap:12px!important;
+  font-size:18px!important;
+  line-height:1.5!important;
+  font-weight:600!important;
+}
+#seek-care .seek-care-checklist .point-item::before{
+  margin-top:2px!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  font-weight:800!important;
+}
+@media (max-width:767px){
+  #seek-care .seek-care-checklist{
+    gap:22px!important;
+  }
+  #seek-care .seek-care-checklist .point-item{
+    font-size:18px!important;
+    line-height:1.5!important;
+    font-weight:600!important;
+  }
+  #seek-care .seek-care-checklist .point-item::before{
+    font-size:15px!important;
+  }
+}
+
+/* Mobile-only short seek-care labels */
+#seek-care .seek-care-checklist .mobile-copy{
+  display:none!important;
+}
+@media (max-width:767px){
+  #seek-care .seek-care-checklist .desktop-copy{
+    display:none!important;
+  }
+  #seek-care .seek-care-checklist .mobile-copy{
+    display:inline!important;
+  }
+}
+
+/* Expert card type size refinement */
+.expert-profile h3{
+  font-size:28px!important;
+  line-height:1.08!important;
+}
+.expert-content .quote{
+  font-size:19px!important;
+  line-height:1.55!important;
+}
+@media (max-width:767px){
+  .expert-profile h3{
+    font-size:25px!important;
+    line-height:1.08!important;
+  }
+  .expert-content .quote{
+    font-size:17px!important;
+    line-height:1.55!important;
+  }
+}
+
+/* Desktop expert footer alignment */
+@media (min-width:768px){
+  .expert-panel{
+    align-items:stretch!important;
+  }
+  .expert-profile,
+  .expert-content{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .expert-experience{
+    margin-top:auto!important;
+    align-self:center!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:8px!important;
+    width:auto!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  .expert-experience .experience-icon{
+    width:28px!important;
+    height:28px!important;
+    flex:0 0 28px!important;
+  }
+  .expert-experience strong{
+    display:block!important;
+    margin:0!important;
+    font-size:13px!important;
+    line-height:1!important;
+    letter-spacing:.12em!important;
+    white-space:nowrap!important;
+  }
+  .expert-note{
+    margin-top:auto!important;
+  }
+}
+
+/* Expert profile desktop type and badge alignment */
+@media (min-width:768px){
+  .expert-profile h3{
+    font-size:24px!important;
+    line-height:1.12!important;
+  }
+  .expert-experience{
+    align-items:center!important;
+    gap:6px!important;
+    line-height:1!important;
+  }
+  .expert-experience .experience-icon{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:24px!important;
+    height:24px!important;
+    flex:0 0 24px!important;
+    margin:0!important;
+  }
+  .expert-experience .experience-icon svg,
+  .expert-experience .experience-icon i{
+    display:block!important;
+    width:18px!important;
+    height:18px!important;
+  }
+  .expert-experience strong{
+    display:inline-flex!important;
+    align-items:center!important;
+    height:24px!important;
+    line-height:24px!important;
+    margin:0!important;
+  }
+}
+
+/* Expert experience text-only bottom alignment */
+@media (min-width:768px){
+  .expert-profile{
+    justify-content:flex-start!important;
+  }
+  .expert-experience{
+    margin-top:auto!important;
+    margin-bottom:0!important;
+    align-self:center!important;
+    transform:translateY(2px)!important;
+  }
+  .expert-experience .experience-icon{
+    display:none!important;
+  }
+  .expert-experience strong{
+    height:auto!important;
+    line-height:1!important;
+  }
+  .expert-content{
+    justify-content:flex-start!important;
+  }
+  .expert-note{
+    margin-top:auto!important;
+    margin-bottom:0!important;
+    transform:translateY(2px)!important;
+  }
+}
+@media (max-width:767px){
+  .expert-experience .experience-icon{
+    display:none!important;
+  }
+}
+
+/* Expert review heading smaller */
+.expert-content .section-title{
+  font-size:34px!important;
+  line-height:1.08!important;
+}
+@media (max-width:767px){
+  .expert-content .section-title{
+    font-size:27px!important;
+    line-height:1.12!important;
+  }
+}
+
+/* Expert insight label size */
+.expert-content .eyebrow{
+  font-size:15px!important;
+  line-height:1.2!important;
+  letter-spacing:.18em!important;
+}
+@media (max-width:767px){
+  .expert-content .eyebrow{
+    font-size:14px!important;
+    line-height:1.2!important;
+  }
+}
+
+/* Desktop seek-care checklist 2x2 */
+@media (min-width:768px){
+  #seek-care .seek-care-checklist{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    column-gap:42px!important;
+    row-gap:22px!important;
+    margin-top:30px!important;
+  }
+  #seek-care .seek-care-checklist .point-item{
+    min-width:0!important;
+  }
+}
+
+/* Mobile expert profile spacing */
+@media (max-width:767px){
+  .expert-profile{
+    margin-bottom:18px!important;
+  }
+  .expert-content .eyebrow{
+    margin-top:2px!important;
+  }
+}
+
+/* Mobile expert role row lift */
+@media (max-width:767px){
+  .expert-role{
+    margin-top:-4px!important;
+  }
+  .expert-experience{
+    margin-top:-2px!important;
+  }
+}
 </style>
 
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://vanrecovery.ca/#organization",
+      "name": "ICBC Recovery Hub",
+      "url": "https://vanrecovery.ca/",
+      "areaServed": [
+        "Vancouver",
+        "Richmond",
+        "British Columbia"
+      ],
+      "medicalSpecialty": [
+        "PhysicalTherapy",
+        "PsychologicalTreatment",
+        "Rehabilitation"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vanrecovery.ca/#hoi-pan-cheng",
+      "name": "Hoi Pan (DaDa) Cheng",
+      "jobTitle": "Registered Clinical Counsellor",
+      "worksFor": {
+        "@id": "https://vanrecovery.ca/#organization"
+      },
+      "knowsAbout": [
+        "Motor vehicle accident recovery",
+        "Post-accident anxiety",
+        "Driving anxiety",
+        "Sleep disruption after trauma",
+        "PTSD symptoms",
+        "ICBC counselling",
+        "Family therapy for children"
+      ]
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#webpage",
+      "url": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/",
+      "name": "Anxiety & Stress After a Car Accident",
+      "description": "Learn about anxiety, stress, sleep disruption, driving fear, PTSD-related symptoms, counselling options, and ICBC recovery support after a motor vehicle accident in Vancouver and Richmond.",
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@id": "https://vanrecovery.ca/#organization"
+      },
+      "reviewedBy": {
+        "@id": "https://vanrecovery.ca/#hoi-pan-cheng"
+      },
+      "lastReviewed": "2026-06",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Anxiety and stress after a car accident",
+        "alternateName": [
+          "Post-accident anxiety",
+          "Driving anxiety after a car accident",
+          "Fear of driving after a collision",
+          "Stress after a motor vehicle accident"
+        ],
+        "signOrSymptom": [
+          {
+            "@type": "MedicalSymptom",
+            "name": "Anxious getting into a car"
+          },
+          {
+            "@type": "MedicalSymptom",
+            "name": "Avoiding driving"
+          },
+          {
+            "@type": "MedicalSymptom",
+            "name": "Nightmares after the accident"
+          },
+          {
+            "@type": "MedicalSymptom",
+            "name": "Sleep or work affected"
+          },
+          {
+            "@type": "MedicalSymptom",
+            "name": "Fear of driving"
+          }
+        ],
+        "possibleTreatment": [
+          {
+            "@type": "MedicalTherapy",
+            "name": "Registered Clinical Counselling"
+          },
+          {
+            "@type": "MedicalTherapy",
+            "name": "Virtual Registered Clinical Counselling"
+          },
+          {
+            "@type": "MedicalTherapy",
+            "name": "Family Therapy for Children"
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "@type": "MedicalCondition",
+          "name": "PTSD"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Sleep disruption"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "ICBC counselling"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Family counselling"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "I wasn't seriously injured. Why do I still feel anxious?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A collision can affect emotional well-being even when physical injuries are minor. Anxiety, fear, or sleep problems may appear days or weeks later as your mind processes the experience. If these feelings continue or begin affecting daily life, an assessment can help determine the right support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my anxiety start days after the accident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Emotional symptoms do not always appear immediately after a collision. Many people focus on physical recovery first and notice anxiety, stress, or sleep difficulties later. This delayed response is a common reaction after a traumatic event."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it normal to be afraid of driving after a car accident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Feeling nervous about driving or even riding in a car is common after a collision. If the fear does not improve or begins affecting your daily routine, counselling may help you regain confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if it's anxiety or PTSD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both anxiety and PTSD can develop after a traumatic event and may share similar symptoms. PTSD often involves persistent nightmares, flashbacks, avoidance, or feeling constantly on edge. A clinical assessment can help identify what is causing your symptoms and recommend appropriate support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will these feelings go away on their own?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some people recover naturally over time, while others continue to experience anxiety or fear long after the accident. Early assessment can help identify your recovery needs and recommend appropriate support if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I see a counsellor even if my physical injuries are improving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Physical and emotional recovery do not always happen at the same pace. In our clinical experience, people often recover more completely when both physical and emotional symptoms are addressed together."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ICBC cover counselling after a car accident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many cases, ICBC may cover counselling for emotional symptoms related to a motor vehicle accident. Treatment recommendations depend on your symptoms, claim, and clinical assessment. Participating clinics may also offer direct billing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My child seems different after the accident. Is that normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Children may respond differently after a collision and may become fearful, withdrawn, have nightmares, or avoid riding in a car. Family counselling can help parents understand these changes and support their child's recovery."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vanrecovery.ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Symptoms",
+          "item": "https://vanrecovery.ca/symptoms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Anxiety & Stress After a Car Accident",
+          "item": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -3445,7 +3991,7 @@ nav.sticky{
         </h1>
 
         <p class="text-lg md:text-xl text-slate-500 font-medium mb-8 leading-relaxed max-w-[620px] mx-auto lg:mx-0">
-          Anxiety and stress after a collision can affect sleep, driving confidence, mood, and daily routines. Learn when to seek support and what ICBC may cover.
+          Feeling anxious, avoiding driving, or having trouble sleeping after a car accident? Learn when these symptoms are common, when to seek support, and how recovery may help.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
@@ -3489,7 +4035,7 @@ nav.sticky{
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
           <path d="M20 6L9 17l-5-5"/>
         </svg>
-        <span>Emotional Recovery Support</span>
+        <span>Anxiety &amp; Stress Support</span>
       </div>
     </div>
 
@@ -3507,24 +4053,20 @@ nav.sticky{
     <p class="eyebrow">When to seek care</p>
 
     <h2 class="section-title">
-      Should you seek care?
+      Does this sound familiar?
     </h2>
 
-    <p class="section-copy">
-      You should consider support if anxiety, stress, or fear started after the accident and any of the following apply.
-    </p>
-
-    <div class="point-grid">
-      <div class="point-item">Anxiety or stress began after the collision</div>
-      <div class="point-item">You feel dizzy, foggy, or sensitive to light</div>
-      <div class="point-item">Stress is getting worse instead of better</div>
-      <div class="point-item">Symptoms affect work, sleep, or driving</div>
+        <div class="point-grid seek-care-checklist">
+      <div class="point-item"><span class="desktop-copy">Anxious getting into a car</span><span class="mobile-copy">Anxious getting into a car</span></div>
+      <div class="point-item"><span class="desktop-copy">Avoiding driving</span><span class="mobile-copy">Avoiding driving</span></div>
+      <div class="point-item"><span class="desktop-copy">Nightmares or flashbacks</span><span class="mobile-copy">Nightmares or flashbacks</span></div>
+      <div class="point-item"><span class="desktop-copy">Sleep, work, or daily life affected</span><span class="mobile-copy">Sleep, work, or daily life affected</span></div>
     </div>
 
-    <div class="answer-panel">
-      <h3>Not sure if it is serious?</h3>
+        <div class="answer-panel early-assessment-note">
+      <h3>Why get assessed early?</h3>
       <p>
-        If anxiety, stress, sleep disruption, or driving fear is new, worsening, or affecting daily life, it is reasonable to get support. Early care can help identify whether symptoms are related to trauma response, anxiety, stress, pain, or other accident-related factors.
+        Early support isn&#39;t only about reducing symptoms. It also helps identify the right treatment and recovery plan before symptoms begin affecting daily life.
       </p>
     </div>
 
@@ -3544,7 +4086,7 @@ nav.sticky{
         </h2>
 
         <p class="section-copy">
-            If emotional symptoms are affecting your recovery, counselling may be included as part of your ICBC treatment plan, depending on your assessment and claim.
+            If anxiety, stress, sleep problems, or driving fear are affecting your recovery, counselling may be included as part of your ICBC treatment plan, depending on your assessment and claim.
         </p>
 
         <div class="treatment-grid">
@@ -3585,12 +4127,11 @@ nav.sticky{
 
             </article>
 
-        </div>
-        <div class="coverage-note">
+        </div>        <div class="coverage-note family-therapy-note">
 
-            <strong>ICBC Coverage</strong>
+            <strong>Family Therapy for Children</strong>
 
-            Treatment availability depends on your claim, diagnosis, and clinical assessment. Participating clinics may offer direct billing.
+            When a child is involved in a collision, recovery may include family counselling as part of the treatment plan. Family therapy helps parents better understand their child's emotional changes and support recovery together at home.
 
         </div>
 
@@ -3625,7 +4166,6 @@ nav.sticky{
 
         <div>
           <strong>8+ Years Experience</strong>
-          <span>Supporting ICBC patients with anxiety, stress, sleep disruption, and post-accident recovery</span>
         </div>
       </div>
 
@@ -3641,11 +4181,11 @@ nav.sticky{
       </h2>
 
       <p class="quote">
-        “In our clinical experience, many people focus on physical recovery first, while emotional symptoms often appear days or weeks later. People often recover more completely when both physical and emotional symptoms are addressed together.”
+        "In our clinical experience, many people focus on physical recovery first, while emotional symptoms often appear days or weeks later. People often recover more completely when both physical and emotional symptoms are addressed together."
       </p>
 
       <p class="expert-note">
-        Last reviewed: June 2026 · Educational content only
+        Last reviewed: June 2026 &middot; Educational content only
       </p>
 
     </div>
@@ -3663,64 +4203,76 @@ nav.sticky{
     </div>
 
     <div class="faq-list">
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>Why do I feel anxious after a car accident?</span>
+          <span>I wasn&#39;t seriously injured. Why do I still feel anxious?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          Anxiety can appear after the immediate shock wears off. A collision can trigger stress responses such as tension, racing thoughts, sleep disruption, or fear around driving.
+          A collision can affect emotional well-being even when physical injuries are minor. Anxiety, fear, or sleep problems may appear days or weeks later as your mind processes the experience. If these feelings continue or begin affecting daily life, an assessment can help determine the right support.
         </div>
       </details>
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>Is anxiety after a car accident normal?</span>
+          <span>Why did my anxiety start days after the accident?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          Feeling anxious, stressed, or shaken after a motor vehicle accident is common. It should still be taken seriously when it affects sleep, driving, work, relationships, or daily routines.
+          Anxiety or stress does not always appear immediately after a collision. Many people focus on physical recovery first and notice sleep difficulties, driving fear, or stress later. This delayed response is a common reaction after a traumatic event.
         </div>
       </details>
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>When should I see a healthcare provider?</span>
+          <span>Is it normal to be afraid of driving after a car accident?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          You should consider support if anxiety is getting worse, causing panic, disrupting sleep, making driving difficult, or interfering with work, relationships, or daily activities.
+          Yes. Feeling nervous about driving&mdash;or even riding in a car&mdash;is common after a collision. If the fear doesn&#39;t improve or begins affecting your daily routine, counselling may help you regain confidence.
         </div>
       </details>
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>Can ICBC cover treatment for anxiety or stress?</span>
+          <span>How do I know if it&#39;s anxiety or PTSD?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          In many cases, yes. Eligible ICBC claims may include treatment such as physiotherapy, massage therapy, active rehabilitation, and other approved recovery services.
+          Both anxiety and PTSD can develop after a traumatic event and may share similar symptoms. PTSD often involves persistent nightmares, flashbacks, avoidance, or feeling constantly on edge. A clinical assessment can help identify what&#39;s causing your symptoms and recommend appropriate support.
         </div>
       </details>
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>How long does anxiety usually last after a car accident?</span>
+          <span>Will these feelings go away on their own?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          Recovery varies depending on the cause and severity of symptoms. Some people improve within a few weeks, while others may require ongoing rehabilitation, strengthening, mobility work, and follow-up care.
+          Some people recover naturally over time, while others continue to experience anxiety or fear long after the accident. Early assessment can help identify your recovery needs and recommend appropriate support if needed.
         </div>
       </details>
-
       <details class="faq-item">
         <summary class="faq-question">
-          <span>Can I start treatment before my adjuster contacts me?</span>
+          <span>Should I see a counsellor even if my physical injuries are improving?</span>
           <span class="faq-icon">+</span>
         </summary>
         <div class="faq-answer">
-          In many cases, yes. After reporting your accident and receiving an ICBC claim number, you may be able to begin treatment without waiting for your adjuster to contact you.
+          Yes. Physical and emotional recovery do not always happen at the same pace. In our clinical experience, people often recover more completely when both physical and emotional symptoms are addressed together.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Does ICBC cover counselling after a car accident?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          In many cases, ICBC may cover counselling for anxiety, stress, sleep problems, or driving fear related to a motor vehicle accident. Treatment recommendations depend on your symptoms, claim, and clinical assessment. Participating clinics may also offer direct billing.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>My child seems different after the accident. Is that normal?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Yes. Children may respond differently after a collision and may become fearful, withdrawn, have nightmares, or avoid riding in a car. Family counselling can help parents understand these changes and support their child&#39;s recovery.
         </div>
       </details>
 
@@ -3764,7 +4316,7 @@ nav.sticky{
         <img src="https://vanrecovery.ca/assets/images/neck-pain-after-car-accident-card.png" alt="Neck pain after a car accident">
         <div>
           <h3>Neck Pain After a Car Accident</h3>
-          <p>Neck pain may appear after whiplash, muscle strain, joint irritation, or soft tissue injury.</p>
+          <p>Neck pain, including shoulder pain, may result from whiplash or soft tissue injury.</p>
         </div>
       </a>
 
@@ -3777,7 +4329,7 @@ nav.sticky{
   <div class="cta-panel">
 
     <h2>
-      Not sure whether you should seek treatment?
+      Not sure what to do next?
     </h2>
 
     <p>
@@ -3920,7 +4472,7 @@ nav.sticky{
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 ICBC Recovery Hub.</p>
+      <p>&copy; 2026 ICBC Recovery Hub.</p>
 
       <p>
         Website and AI Search Optimization by
