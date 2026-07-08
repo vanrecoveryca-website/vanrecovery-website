@@ -3282,12 +3282,23 @@ nav.sticky{
 /* Desktop treatment card alignment */
 @media (min-width:768px){
   #icbc-treatment .page-container{
-    max-width:1120px!important;
+    max-width:900px!important;
+  }
+  #icbc-treatment .section-title{
+    max-width:760px!important;
+    font-size:42px!important;
+    line-height:1.08!important;
+    letter-spacing:-0.04em!important;
+  }
+  #icbc-treatment .section-copy{
+    max-width:760px!important;
+    font-size:17px!important;
+    line-height:1.75!important;
   }
   #icbc-treatment .treatment-grid{
     display:grid!important;
     grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:22px!important;
+    gap:16px!important;
     align-items:stretch!important;
     background:transparent!important;
     border:0!important;
@@ -3297,18 +3308,18 @@ nav.sticky{
   #icbc-treatment .treatment-card{
     display:flex!important;
     flex-direction:column!important;
-    justify-content:flex-start!important;
+    justify-content:space-between!important;
     min-width:0!important;
-    min-height:154px!important;
-    padding:30px!important;
+    min-height:150px!important;
+    padding:20px!important;
     background:#fff!important;
     border:1px solid #dbe6f3!important;
     border-radius:12px!important;
     box-shadow:0 10px 24px rgba(15,23,42,.04)!important;
   }
   #icbc-treatment .treatment-card h3{
-    margin:0 0 34px!important;
-    font-size:24px!important;
+    margin:0 0 24px!important;
+    font-size:18px!important;
     line-height:1.18!important;
     letter-spacing:0!important;
   }
@@ -3317,8 +3328,8 @@ nav.sticky{
     flex-direction:row!important;
     flex-wrap:nowrap!important;
     align-items:center!important;
-    justify-content:flex-start!important;
-    gap:10px!important;
+    justify-content:space-between!important;
+    gap:6px!important;
     width:100%!important;
   }
   #icbc-treatment .treatment-meta span{
@@ -3327,10 +3338,10 @@ nav.sticky{
     justify-content:center!important;
     flex:0 0 auto!important;
     min-width:max-content!important;
-    padding:8px 12px!important;
+    padding:6px 8px!important;
     border:1px solid rgba(37,99,235,.12)!important;
     border-radius:999px!important;
-    font-size:15px!important;
+    font-size:12px!important;
     line-height:1!important;
     font-weight:800!important;
     white-space:nowrap!important;
@@ -3684,6 +3695,8 @@ nav.sticky{
   }
 }
 </style>
+
+
 
 <script type="application/ld+json">
 {
@@ -4103,7 +4116,7 @@ nav.sticky{
         </h2>
 
         <p class="section-copy">
-            If neck pain, stiffness, headaches, or shoulder discomfort are affecting your recovery, treatment may be included as part of your ICBC treatment plan, depending on your assessment and claim.
+            Treatment recommendations depend on your symptoms, movement, and clinical assessment. Depending on your recovery needs, one or more treatment options may be recommended.
         </p>
 
         <div class="treatment-grid">
@@ -4163,7 +4176,7 @@ nav.sticky{
     <aside class="expert-profile">
 
       <img 
-        src="/assets/images/marianne-roxette-danzalan.png" 
+        src="marianne-roxette-danzalan.png" 
         alt="Marianne Roxette Danzalan, Registered Physiotherapist"
         class="expert-photo"
       >
