@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -201,7 +199,7 @@ nav{
 
 .treatment-card{
   min-width:0;
-  min-height:150px;
+  min-height:128px;
   padding:20px;
   display:flex;
   flex-direction:column;
@@ -210,10 +208,12 @@ nav{
   border:1px solid #dbe6f3;
   border-radius:12px;
   box-shadow:0 10px 24px rgba(15,23,42,.04);
+  overflow:hidden;
 }
 
 .treatment-card h3{
-  margin:0 0 24px;
+  min-height:43px;
+  margin:0;
   color:var(--ink);
   font-size:18px;
   line-height:1.18;
@@ -492,8 +492,8 @@ nav{
   max-width:1080px;
   margin:0 auto;
   padding:72px 48px;
-  border-radius:32px;
-  background:linear-gradient(135deg,var(--blue),#3b82f6);
+  border-radius:42px;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
   color:#fff;
   text-align:center;
 }
@@ -527,10 +527,15 @@ nav{
   font-size:17px;
   font-weight:900;
   text-decoration:none;
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
 
 .cta-primary{background:#fff;color:var(--blue);}
 .cta-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);}
+
+.cta-actions a:hover{
+  transform:translateY(-3px);
+}
 
 /* Footer */
 .site-footer{
@@ -690,6 +695,97 @@ nav{
   text-decoration:none;
 }
 
+/* Homepage footer alignment */
+.site-footer{
+  padding:80px 24px 40px;
+  border-top:1px solid rgba(148,163,184,.16);
+}
+
+.site-footer .footer-container{
+  max-width:1180px;
+}
+
+.site-footer .footer-top{
+  padding-bottom:56px;
+}
+
+.site-footer .footer-logo-row{
+  margin-bottom:28px;
+}
+
+.site-footer .footer-logo{
+  flex:0 0 auto;
+  transition:transform .2s ease;
+}
+
+.site-footer .footer-logo:hover{
+  transform:scale(1.05);
+}
+
+.site-footer .footer-logo img{
+  display:block;
+}
+
+.site-footer .footer-location{
+  letter-spacing:.02em;
+}
+
+.site-footer .footer-links-group,
+.site-footer .footer-links-title,
+.site-footer .footer-links,
+.site-footer .footer-links a,
+.site-footer .footer-clinic{
+  background:transparent;
+}
+
+.site-footer .footer-links-group{
+  display:block;
+}
+
+.site-footer .footer-links{
+  align-items:flex-start;
+  margin-top:0;
+  border:0;
+  box-shadow:none;
+}
+
+.site-footer .footer-links a{
+  display:inline-block;
+  padding:0;
+  color:#93a4bd;
+  border:0;
+  box-shadow:none;
+  font-size:15px;
+  line-height:1.2;
+  font-weight:500;
+  transition:.25s ease;
+}
+
+.site-footer .footer-clinic{
+  padding:0;
+  border:0;
+  border-radius:0;
+}
+
+.site-footer .clinic-name{
+  margin-bottom:20px;
+  font-size:19px;
+}
+
+.site-footer .clinic-info a{
+  color:#93a4bd;
+}
+
+.site-footer .clinic-hours{
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid rgba(148,163,184,.18);
+}
+
+.site-footer .hours-row{
+  color:#93c5fd;
+}
+
 .section-reveal{
   opacity:0;
   transform:translateY(18px);
@@ -840,30 +936,41 @@ nav{
 
   .treatment-grid{
     grid-template-columns:1fr;
-    gap:16px;
+    gap:12px;
     margin-top:28px;
   }
 
   .treatment-card{
     min-height:0;
-    padding:22px;
-    border-radius:16px;
+    padding:18px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(15,23,42,.05);
   }
 
   .treatment-card h3{
-    margin-bottom:18px;
-    font-size:17px;
-    line-height:1.25;
+    min-height:0;
+    margin-bottom:14px;
+    font-size:18px;
+    line-height:1.2;
   }
 
   .treatment-meta{
-    flex-wrap:nowrap;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
     gap:8px;
   }
 
   .treatment-meta span{
-    padding:8px 12px;
-    font-size:15px;
+    width:auto;
+    padding:8px 10px;
+    border:0;
+    border-radius:999px;
+    font-size:12px;
+    line-height:1;
+    font-weight:850;
   }
 
   .coverage-note{
@@ -981,6 +1088,7 @@ nav{
   .cta-panel{
     padding:48px 24px;
     border-radius:0;
+    text-align:center;
   }
 
   .cta-panel p{
@@ -990,6 +1098,27 @@ nav{
 
   .cta-actions{
     flex-direction:column;
+    gap:10px;
+  }
+
+  .cta-actions a{
+    width:100%;
+    padding:15px 18px;
+    border-radius:16px;
+    text-align:center;
+    font-size:15px;
+    transition:none;
+  }
+
+  .cta-section{
+    padding:48px 0 0;
+    margin:0;
+    background:#fff;
+  }
+
+  .cta-section .cta-panel{
+    margin:0;
+    border-radius:0;
   }
 
   .site-footer{
@@ -1070,11 +1199,24 @@ nav{
 
   .clinic-hours{
     margin-top:16px;
+    padding-top:0;
+    border-top:none;
+  }
+
+  .hours-label{
+    margin-bottom:8px;
+    font-size:10px;
+    letter-spacing:.18em;
   }
 
   .hours-row{
-    gap:18px;
-    font-size:14px;
+    gap:10px;
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  .hours-row + .hours-row{
+    margin-top:5px;
   }
 
   .footer-bottom{
@@ -1087,6 +1229,28 @@ nav{
   .footer-bottom p{
     font-size:12px;
   }
+
+  .site-footer{padding:42px 20px 24px;}
+  .site-footer .footer-container{max-width:430px;}
+  .site-footer .footer-top{display:flex;flex-direction:column;gap:50px;padding-bottom:28px;}
+  .site-footer .footer-logo-row{display:flex;gap:12px;margin-bottom:18px;}
+  .site-footer .footer-logo img{width:48px;height:48px;}
+  .site-footer .footer-title{font-size:26px;line-height:1;}
+  .site-footer .footer-location{margin-top:5px;font-size:13px;}
+  .site-footer .footer-description{max-width:none;font-size:14px;line-height:1.55;}
+  .site-footer .footer-links-group{margin-top:26px;}
+  .site-footer .footer-links-title{margin-bottom:12px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;}
+  .site-footer .footer-links a{font-size:14px;}
+  .site-footer .footer-clinic h3{font-size:22px;margin-bottom:10px;}
+  .site-footer .clinic-name{font-size:18px;margin-bottom:14px;}
+  .site-footer .clinic-info{gap:9px;font-size:14px;line-height:1.5;}
+  .site-footer .clinic-hours{margin-top:16px;padding-top:0;border-top:none;}
+  .site-footer .hours-label{margin-bottom:8px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .hours-row{font-size:13px;line-height:1.35;gap:10px;}
+  .site-footer .hours-row + .hours-row{margin-top:5px;}
+  .site-footer .footer-bottom{padding-top:18px;flex-direction:column;align-items:flex-start;gap:6px;}
+  .site-footer .footer-bottom p{font-size:12px;}
 }
 </style>
 
@@ -1573,7 +1737,7 @@ nav{
     <aside class="expert-profile">
 
       <img 
-        src="marianne-roxette-danzalan.png" 
+        src="/assets/images/marianne-roxette-danzalan.png" 
         alt="Marianne Roxette Danzalan, Registered Physiotherapist"
         class="expert-photo"
       >
@@ -1752,7 +1916,7 @@ nav{
   </div>
 </section>
 
-<section class="page-section" style="border-bottom:0;">
+<section class="page-section cta-section" style="border-bottom:0;">
   <div class="cta-panel">
 
     <h2>
@@ -1936,5 +2100,3 @@ nav{
 </script>
 </body>
 </html>
-
-
