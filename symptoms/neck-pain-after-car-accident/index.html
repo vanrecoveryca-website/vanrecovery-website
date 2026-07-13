@@ -4,16 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9EGLLJWNQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F9EGLLJWNQ');
-    </script>
-
 <title>Neck Pain After a Car Accident | ICBC Recovery Vancouver & Richmond</title>
 <meta name="description" content="Neck pain, stiffness, shoulder pain, headaches, or whiplash symptoms after a car accident? Learn when to seek care, symptoms to watch for, treatment options, and ICBC recovery support in Vancouver and Richmond." />
 <link rel="canonical" href="https://vanrecovery.ca/symptoms/neck-pain-after-car-accident/" />
@@ -94,26 +84,74 @@ img{max-width:100%;}
 
 /* Navigation */
 nav{
-  border-bottom:1px solid rgba(226,232,240,.85);
+  border-bottom:0!important;
+  box-shadow:none!important;
 }
 
 .mobile-menu-panel{
-  display:none;
+  overflow:hidden;
+  max-height:0;
+  opacity:0;
+  transform:translateY(-8px);
+  pointer-events:none;
   border-top:1px solid var(--border);
+  transition:max-height 320ms ease, opacity 220ms ease, transform 260ms ease;
 }
 
 .mobile-menu-panel.is-open{
-  display:block;
+  max-height:360px;
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.mobile-menu-button{
+  border-radius:10px;
+  transition:background-color 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.mobile-menu-button:active{
+  transform:scale(.94);
 }
 
 .mobile-menu-button svg line{
+  transform-box:fill-box;
   transform-origin:center;
-  transition:transform .2s ease, opacity .2s ease;
+  transition:transform 220ms ease, opacity 180ms ease;
+}
+
+.mobile-menu-button.is-open{
+  background:#eff6ff;
+  color:#2563eb;
 }
 
 .mobile-menu-button.is-open svg line:nth-child(1){transform:translateY(6px) rotate(45deg);}
 .mobile-menu-button.is-open svg line:nth-child(2){opacity:0;}
 .mobile-menu-button.is-open svg line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+main > section[id]{
+  scroll-margin-top:96px;
+}
+
+.desktop-hero .group > div{
+  border-radius:12px!important;
+  border:1px solid rgba(15,23,42,.06)!important;
+  box-shadow:0 18px 42px rgba(15,23,42,.08)!important;
+}
+
+.desktop-hero .aspect-\[4\/3\]{
+  border-radius:14px!important;
+}
+
+.mobile-menu-inner{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.mobile-menu-cta{
+  margin-top:28px!important;
+}
 
 /* Mobile hero */
 .mobile-hero{display:none;}
@@ -177,7 +215,7 @@ nav{
 .answer-panel{
   margin-top:42px;
   padding:34px;
-  border-radius:24px;
+  border-radius:16px;
   background:#fff;
   border:1px solid var(--line);
   box-shadow:0 18px 45px rgba(15,23,42,.06);
@@ -209,7 +247,7 @@ nav{
 
 .treatment-card{
   min-width:0;
-  min-height:128px;
+  min-height:190px;
   padding:20px;
   display:flex;
   flex-direction:column;
@@ -229,6 +267,14 @@ nav{
   line-height:1.18;
   letter-spacing:0;
   font-weight:800;
+}
+
+.treatment-description{
+  margin:10px 0 18px;
+  color:#64748b;
+  font-size:14px;
+  line-height:1.55;
+  font-weight:500;
 }
 
 .treatment-meta{
@@ -262,7 +308,7 @@ nav{
   margin-top:32px;
   padding:24px 28px;
   background:var(--soft);
-  border-radius:20px;
+  border-radius:14px;
   border:1px solid var(--border);
   color:var(--muted);
   font-size:15px;
@@ -288,15 +334,19 @@ nav{
   display:grid;
   grid-template-columns:280px minmax(0,1fr);
   gap:72px;
-  align-items:center;
+  align-items:stretch;
   padding:64px;
   background:#fff;
   border:1px solid #e5e7eb;
-  border-radius:32px;
+  border-radius:16px;
   box-shadow:0 12px 40px rgba(15,23,42,.05),0 2px 8px rgba(15,23,42,.03);
 }
 
-.expert-profile{text-align:center;}
+.expert-profile{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
 
 .expert-photo{
   width:180px;
@@ -318,21 +368,15 @@ nav{
   font-weight:800;
 }
 
-.expert-role{
-  margin:10px 0 0;
-  color:#64748b;
-  font-size:16px;
-  line-height:1.45;
-}
-
 .expert-divider{display:none;}
 
 .expert-experience{
-  margin-top:28px;
+  margin-top:auto;
   display:flex;
   justify-content:center;
   gap:12px;
   color:var(--blue);
+  transform:translateY(16px);
 }
 
 .experience-icon{display:none;}
@@ -347,7 +391,11 @@ nav{
   text-transform:uppercase;
 }
 
-.expert-content{max-width:700px;}
+.expert-content{
+  display:flex;
+  flex-direction:column;
+  max-width:700px;
+}
 
 .expert-content .section-title{
   margin-bottom:14px;
@@ -356,20 +404,21 @@ nav{
 }
 
 .quote{
-  margin:28px 0 0;
+  margin:6px 0 0;
   color:var(--ink);
-  font-size:22px;
-  line-height:1.75;
+  font-size:19px;
+  line-height:1.6;
   letter-spacing:0;
   font-weight:600;
 }
 
 .expert-note{
-  margin-top:36px;
+  margin-top:auto;
   color:#64748b;
   font-size:14px;
-  line-height:1.5;
+  line-height:1;
   font-weight:700;
+  transform:translateY(16px);
 }
 
 /* FAQ */
@@ -463,7 +512,7 @@ nav{
   overflow:hidden;
   text-decoration:none;
   background:#fff;
-  border-radius:20px;
+  border-radius:12px;
   box-shadow:0 12px 32px rgba(15,23,42,.08);
   transition:transform .2s ease, box-shadow .2s ease;
 }
@@ -495,56 +544,6 @@ nav{
   color:#64748b;
   font-size:15px;
   line-height:1.55;
-}
-
-/* CTA */
-.cta-panel{
-  max-width:1080px;
-  margin:0 auto;
-  padding:72px 48px;
-  border-radius:42px;
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
-  color:#fff;
-  text-align:center;
-}
-
-.cta-panel h2{
-  margin:0 0 22px;
-  font-size:clamp(36px,5vw,64px);
-  line-height:1;
-  letter-spacing:-.06em;
-  font-weight:900;
-}
-
-.cta-panel p{
-  max-width:720px;
-  margin:0 auto 36px;
-  color:#dbeafe;
-  font-size:20px;
-  line-height:1.55;
-}
-
-.cta-actions{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.cta-actions a{
-  padding:17px 28px;
-  border-radius:18px;
-  font-size:17px;
-  font-weight:900;
-  text-decoration:none;
-  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
-}
-
-.cta-primary{background:#fff;color:var(--blue);}
-.cta-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);}
-
-.cta-actions a:hover{
-  transform:translateY(-3px);
 }
 
 /* Footer */
@@ -809,12 +808,19 @@ nav{
 
 @media (prefers-reduced-motion:reduce){
   .section-reveal{opacity:1;transform:none;transition:none;}
+  .mobile-menu-button,
+  .mobile-menu-button svg line,
+  .mobile-menu-panel{transition:none;}
 }
 
 @media (max-width:767px){
   html,body,main{background:#fff;}
 
   nav{box-shadow:none;}
+
+  main > section[id]{
+    scroll-margin-top:88px;
+  }
 
   .desktop-hero{display:none!important;}
 
@@ -936,7 +942,7 @@ nav{
   .answer-panel{
     margin-top:30px;
     padding:24px;
-    border-radius:18px;
+    border-radius:14px;
   }
 
   .answer-panel h3{
@@ -966,6 +972,12 @@ nav{
     line-height:1.2;
   }
 
+  .treatment-description{
+    margin:8px 0 16px;
+    font-size:14px;
+    line-height:1.5;
+  }
+
   .treatment-meta{
     flex-direction:row;
     flex-wrap:wrap;
@@ -986,7 +998,7 @@ nav{
   .coverage-note{
     margin-top:30px;
     padding:24px;
-    border-radius:18px;
+    border-radius:14px;
     font-size:15px;
     line-height:1.65;
   }
@@ -998,7 +1010,7 @@ nav{
   .expert-panel{
     display:block;
     padding:28px;
-    border-radius:16px;
+    border-radius:14px;
   }
 
   .expert-profile{
@@ -1028,27 +1040,16 @@ nav{
     line-height:1.08;
   }
 
-  .expert-role{
+  .expert-experience{
     grid-area:meta;
-    display:flex;
-    justify-content:space-between;
-    gap:14px;
+    display:block;
     margin:4px 0 0;
-    font-size:15px;
+    text-align:left;
+    transform:none;
   }
-
-  .expert-role::after{
-    content:"10+ YEARS";
-    color:var(--blue);
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.12em;
-    white-space:nowrap;
-  }
-
-  .expert-experience{display:none;}
 
   .expert-content{
+    display:block;
     margin-top:24px;
     padding-top:24px;
     border-top:1px solid #e5e7eb;
@@ -1061,13 +1062,15 @@ nav{
 
   .quote{
     margin-top:18px;
-    font-size:18px;
-    line-height:1.7;
+    font-size:16px;
+    line-height:1.55;
   }
 
   .expert-note{
     margin-top:20px;
     font-size:12px;
+    line-height:1.5;
+    transform:none;
   }
 
   .faq-heading{margin-bottom:28px;}
@@ -1088,47 +1091,11 @@ nav{
   }
 
   .related-card{
-    border-radius:16px;
+    border-radius:12px;
   }
 
   .related-card img{
     height:190px;
-  }
-
-  .cta-panel{
-    padding:48px 24px;
-    border-radius:0;
-    text-align:center;
-  }
-
-  .cta-panel p{
-    font-size:16px;
-    line-height:1.65;
-  }
-
-  .cta-actions{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .cta-actions a{
-    width:100%;
-    padding:15px 18px;
-    border-radius:16px;
-    text-align:center;
-    font-size:15px;
-    transition:none;
-  }
-
-  .cta-section{
-    padding:48px 0 0;
-    margin:0;
-    background:#fff;
-  }
-
-  .cta-section .cta-panel{
-    margin:0;
-    border-radius:0;
   }
 
   .site-footer{
@@ -1279,10 +1246,37 @@ nav{
         "Vancouver",
         "Richmond",
         "British Columbia"
-      ],
-      "medicalSpecialty": [
-        "PhysicalTherapy",
-        "Rehabilitation"
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://vanrecovery.ca/symptoms/neck-pain-after-car-accident/#treatment-catalog",
+      "name": "Neck Pain Treatment Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Physiotherapy for Neck Pain",
+            "description": "Helps restore neck movement, reduce stiffness, and improve daily function."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Registered Massage Therapy for Neck Tension",
+            "description": "Helps reduce muscle tension, soreness, and soft-tissue discomfort."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kinesiology for Neck Mobility",
+            "description": "Uses guided exercise to rebuild movement, strength, and confidence."
+          }
+        }
       ]
     },
     {
@@ -1346,20 +1340,6 @@ nav{
           {
             "@type": "MedicalSymptom",
             "name": "Headaches after neck strain"
-          }
-        ],
-        "possibleTreatment": [
-          {
-            "@type": "MedicalTherapy",
-            "name": "Physiotherapy"
-          },
-          {
-            "@type": "MedicalTherapy",
-            "name": "Registered Massage Therapy"
-          },
-          {
-            "@type": "MedicalTherapy",
-            "name": "Kinesiology"
           }
         ]
       },
@@ -1489,91 +1469,172 @@ nav{
 
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md">
 
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-      <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
-        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-        <span class="font-bold text-xl tracking-tight text-slate-800">
-          ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
-        </span>
-      </a>
+        <div class="flex items-center justify-between h-20">
 
-      <div class="hidden md:flex items-center gap-8">
-        <a data-home-link="symptoms" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">Symptoms</a>
-        <a data-home-link="how-icbc-works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">How ICBC Works</a>
-        <a data-home-link="locations" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">Locations</a>
-        <a data-home-link="assessment" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">30s Check</a>
-      </div>
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
 
-      <button id="mobile-menu-button" class="mobile-menu-button md:hidden p-2 text-slate-600" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="4" x2="20" y1="6" y2="6"/>
-          <line x1="4" x2="20" y1="12" y2="12"/>
-          <line x1="4" x2="20" y1="18" y2="18"/>
-        </svg>
-      </button>
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+
+                <span class="font-bold text-xl tracking-tight text-slate-800">
+                    Van<span class="text-blue-600 font-black">Recovery</span>
+                </span>
+
+            </a>
+
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <a data-home-link="symptoms"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Symptoms
+                </a>
+
+                <a data-home-link="treatment"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Treatment
+                </a>
+
+                <a data-home-link="locations"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Locations
+                </a>
+
+                <a data-home-link="assessment"
+                   class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">
+                    Recovery Check
+                </a>
+
+            </div>
+
+            <!-- Mobile -->
+            <button
+                id="mobile-menu-button"
+                class="mobile-menu-button md:hidden p-2 text-slate-600"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                type="button">
+
+                <svg class="w-6 h-6"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+
+                </svg>
+
+            </button>
+
+        </div>
 
     </div>
-  </div>
 
-  <div id="mobile-menu" class="mobile-menu-panel md:hidden bg-white shadow-lg">
-    <div class="mobile-menu-inner px-8 py-7">
-      <a data-home-link="symptoms" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">Symptoms</a>
-      <a data-home-link="how-icbc-works" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">How ICBC Works</a>
-      <a data-home-link="locations" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">Locations</a>
-      <a data-home-link="assessment" class="mobile-menu-cta block rounded-xl bg-blue-600 px-5 py-4 text-center text-[18px] font-black text-white shadow-lg">Start 30s Check</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="mobile-menu-panel md:hidden bg-white shadow-lg">
+
+        <div class="mobile-menu-inner px-8 py-7">
+
+            <a data-home-link="symptoms"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Symptoms
+            </a>
+
+            <a data-home-link="treatment"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Treatment
+            </a>
+
+            <a data-home-link="locations"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Locations
+            </a>
+
+            <a data-home-link="assessment"
+               class="mobile-menu-cta block rounded-xl bg-blue-600 px-5 py-4 text-center text-[18px] font-black text-white shadow-lg">
+                Recovery Check
+            </a>
+
+        </div>
+
     </div>
-  </div>
 
 </nav>
 
 <script>
-(function(){
-  const mobileMenu = document.getElementById("mobile-menu");
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuButton = document.getElementById("mobile-menu-button");
 
-  function setMobileMenuOpen(isOpen){
-    if(!mobileMenu || !mobileMenuButton) return;
+function setMobileMenuOpen(isOpen) {
+    if (!mobileMenu || !mobileMenuButton) return;
+
     mobileMenu.classList.toggle("is-open", isOpen);
     mobileMenuButton.classList.toggle("is-open", isOpen);
     mobileMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  }
+}
 
-  if(mobileMenuButton){
-    mobileMenuButton.addEventListener("click", function(){
-      setMobileMenuOpen(!mobileMenu.classList.contains("is-open"));
-    });
-  }
+function toggleMobileMenu() {
+    if (!mobileMenu) return;
+    setMobileMenuOpen(!mobileMenu.classList.contains("is-open"));
+}
 
-  const localTargets = ["symptoms", "how-icbc-works", "locations", "assessment"];
-  const isHomePage = localTargets.some(function(target){ return document.getElementById(target); });
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", toggleMobileMenu);
+}
 
-  function scrollToSection(target){
+const HOME_ANCHOR_PATH = "/";
+const currentPath = window.location.pathname;
+const isLocalFile = window.location.protocol === "file:";
+const isHomePage =
+    isLocalFile ||
+    currentPath === "/" ||
+    currentPath.endsWith("/index.html") ||
+    currentPath.endsWith("/icbc-hub.html");
+
+function scrollToHomeSection(target) {
     const section = document.getElementById(target);
-    if(!section) return false;
+    if (!section) return false;
+
     const nav = document.querySelector("nav");
     const navOffset = nav ? nav.offsetHeight + 18 : 96;
     const top = section.getBoundingClientRect().top + window.pageYOffset - navOffset;
-    window.scrollTo({ top: top, behavior: "smooth" });
-    history.replaceState(null, "", "#" + target);
-    return true;
-  }
 
-  document.querySelectorAll("[data-home-link]").forEach(function(link){
+    window.scrollTo({ top, behavior: "smooth" });
+    history.replaceState(null, "", `#${target}`);
+    return true;
+}
+
+document.querySelectorAll("[data-home-link]").forEach(link => {
+
     const target = link.dataset.homeLink;
-    link.href = isHomePage ? "#" + target : "/#" + target;
-    link.addEventListener("click", function(event){
-      setMobileMenuOpen(false);
-      if(!isHomePage) return;
-      event.preventDefault();
-      scrollToSection(target);
+    link.href = isHomePage ? `#${target}` : `${HOME_ANCHOR_PATH}#${target}`;
+
+    link.addEventListener("click", event => {
+        if (!isHomePage) return;
+
+        event.preventDefault();
+        scrollToHomeSection(target);
     });
-  });
-})();
+
+});
+
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        setMobileMenuOpen(false);
+    });
+
+});
 </script>
 
 <main>
@@ -1584,26 +1645,46 @@ nav{
 
       <div class="z-10 text-center lg:text-left">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ebf3ff] text-[#2563eb] text-[13px] font-bold tracking-wider mb-8 border border-[#dbeafe]">
-          <span class="uppercase">ICBC Symptom Guide</span>
+          <span class="uppercase">ICBC Recovery Guide</span>
         </div>
 
-        <h1 class="text-[44px] md:text-[56px] lg:text-[58px] font-bold text-slate-900 leading-[0.94] tracking-[-0.045em] max-w-[620px] mx-auto lg:mx-0 mb-6">
-          Neck Pain After an ICBC Car Accident
+        <h1 class="text-[44px] md:text-[56px] lg:text-[58px] font-black text-slate-900 leading-[0.94] tracking-[-0.045em] max-w-[620px] mx-auto lg:mx-0 mb-6">
+          Neck Pain After an <span class="text-blue-600">ICBC Car Accident</span>
         </h1>
 
         <p class="text-lg md:text-xl text-slate-500 font-medium mb-8 leading-relaxed max-w-[620px] mx-auto lg:mx-0">
-          Neck pain, stiffness, shoulder pain, or headaches after a car accident? Learn when these symptoms are common, when to seek support, and how recovery may help.
+          Recover sooner with the right assessment and ICBC treatment for neck pain after a car accident.
         </p>
 
+        <div class="mb-10 space-y-4">
+          <div class="flex items-center justify-center lg:justify-start gap-4">
+            <div class="w-6 h-6 flex items-center justify-center text-blue-600">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <span class="text-lg md:text-xl font-bold text-slate-800">Response Within 24 Hours</span>
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-4">
+            <div class="w-6 h-6 flex items-center justify-center text-blue-600">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <span class="text-lg md:text-xl font-bold text-slate-800">Treatment in 2-4 Days</span>
+          </div>
+        </div>
+
         <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-          <a href="/#assessment" class="bg-blue-600 text-white px-9 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-xl text-center">30s Eligibility Check</a>
+          <a href="/#assessment" class="bg-blue-600 text-white px-9 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-xl text-center">Start Recovery Check</a>
           <a href="#seek-care" class="bg-white text-slate-900 px-9 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 shadow-sm border border-slate-200 text-center">Should I Seek Care?</a>
         </div>
       </div>
 
       <div class="relative group block mt-10 lg:mt-0">
-        <div class="bg-white p-3 rounded-[36px] md:rounded-[48px] shadow-2xl border border-slate-100 overflow-hidden">
-          <div class="aspect-[4/3] rounded-[28px] md:rounded-[40px] overflow-hidden bg-slate-200 relative">
+        <div class="bg-white p-3 rounded-[22px] md:rounded-[18px] shadow-2xl border border-slate-100 overflow-hidden">
+          <div class="aspect-[4/3] rounded-[18px] md:rounded-[24px] overflow-hidden bg-slate-200 relative">
             <img src="/assets/images/neck-pain-after-car-accident-card.png" alt="Person experiencing neck pain after a car accident" class="w-full h-full object-cover object-[38%_center]">
           </div>
         </div>
@@ -1621,7 +1702,7 @@ nav{
     </div>
 
     <p class="mobile-subtitle">
-      Neck pain recovery with ICBC direct billing.
+      Recover sooner from neck pain with the right assessment and ICBC treatment.
     </p>
 
     <div class="mobile-trust">
@@ -1629,14 +1710,14 @@ nav{
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
           <path d="M20 6L9 17l-5-5"/>
         </svg>
-        <span>ICBC Direct Billing Support</span>
+        <span>Response Within 24 Hours</span>
       </div>
 
       <div class="mobile-trust-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
           <path d="M20 6L9 17l-5-5"/>
         </svg>
-        <span>Neck Pain &amp; Whiplash Support</span>
+        <span>Treatment in 2-4 Days</span>
       </div>
     </div>
 
@@ -1644,7 +1725,7 @@ nav{
       <img src="https://vanrecovery.ca/assets/images/neck-pain-after-car-accident-card.png" alt="Neck pain after a car accident">
     </div>
 
-    <a href="/#assessment" class="mobile-cta">30s Eligibility Check</a>
+    <a href="/#assessment" class="mobile-cta">Start Recovery Check</a>
   </div>
 </section>
 
@@ -1674,7 +1755,7 @@ nav{
   </div>
 </section>
 
-<section id="icbc-treatment" class="page-section">
+<section id="treatment" class="page-section">
 
     <div class="page-container">
 
@@ -1693,37 +1774,43 @@ nav{
         <div class="treatment-grid">
 
             <article class="treatment-card">
-
-                <h3>Physiotherapy for Neck Pain</h3>
+                <div>
+                    <h3>Physiotherapy for Neck Pain</h3>
+                    <p class="treatment-description">Helps restore neck movement, reduce stiffness, and improve daily function.</p>
+                </div>
 
                 <div class="treatment-meta">
                     <span>25 Sessions</span>
-                    <span>In person</span>
-                    <span>30 min</span>
+                    <span>In Person</span>
+                    <span>30 Min</span>
                 </div>
 
             </article>
 
             <article class="treatment-card">
-
-                <h3>RMT for Neck Tension</h3>
+                <div>
+                    <h3>RMT for Neck Tension</h3>
+                    <p class="treatment-description">Helps reduce muscle tension, soreness, and soft-tissue discomfort.</p>
+                </div>
 
                 <div class="treatment-meta">
                     <span>12 Sessions</span>
-                    <span>In person</span>
-                    <span>45 min</span>
+                    <span>In Person</span>
+                    <span>45 Min</span>
                 </div>
 
             </article>
 
             <article class="treatment-card">
-
-                <h3>Kinesiology for Neck Mobility</h3>
+                <div>
+                    <h3>Kinesiology for Neck Mobility</h3>
+                    <p class="treatment-description">Uses guided exercise to rebuild movement, strength, and confidence.</p>
+                </div>
 
                 <div class="treatment-meta">
                     <span>12 Sessions</span>
-                    <span>In person</span>
-                    <span>45 min</span>
+                    <span>In Person</span>
+                    <span>45 Min</span>
                 </div>
 
             </article>
@@ -1732,7 +1819,7 @@ nav{
 
             <strong>Neck Pain Isn't Always Just Neck Pain</strong>
 
-            After a collision, neck pain may involve muscles, joints, ligaments, nerves, or surrounding soft tissues. Because different injuries can cause similar symptoms, a professional assessment helps identify what's contributing to your pain and determine the most appropriate treatment.
+            After a collision, neck pain may involve muscles, joints, ligaments, nerves, or surrounding soft tissues. Because different injuries can cause similar symptoms, a professional assessment helps identify what's contributing to your pain and guide the right recovery plan.
 
         </div>
 
@@ -1754,10 +1841,6 @@ nav{
 
       <h3>Marianne Roxette Danzalan</h3>
 
-      <p class="expert-role">
-        Registered Physiotherapist
-      </p>
-
       <div class="expert-divider"></div>
 
       <div class="expert-experience">
@@ -1766,7 +1849,7 @@ nav{
         </div>
 
         <div>
-          <strong>10+ Years Experience</strong>
+          <strong>10 YEARS EXPERIENCE</strong>
         </div>
       </div>
 
@@ -1892,7 +1975,7 @@ nav{
     </h2>
 
     <p class="section-copy">
-      Neck pain can appear together with other post-accident symptoms.
+      Car accident injuries often occur together. Explore other symptoms that may affect your recovery.
     </p>
 
     <div class="related-grid">
@@ -1926,22 +2009,20 @@ nav{
   </div>
 </section>
 
-<section class="page-section cta-section" style="border-bottom:0;">
-  <div class="cta-panel">
-
-    <h2>
-      Not sure what to do next?
-    </h2>
-
-    <p>
-      Complete the 30-second check to learn what ICBC recovery options may be available.
-    </p>
-
-    <div class="cta-actions">
-      <a href="/#assessment" class="cta-primary">Start 30s Check</a>
-      <a href="/#locations" class="cta-secondary">Find a Clinic</a>
+<section id="cta" class="py-0 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-0 md:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-none md:rounded-[18px] bg-gradient-to-r from-blue-600 to-blue-500 px-8 md:px-20 py-16 md:py-24 text-center shadow-2xl">
+      <div class="relative z-10">
+        <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">Ready to Take the Next Step?</h2>
+        <p class="max-w-2xl mx-auto text-xl md:text-2xl text-blue-100 leading-relaxed mb-12">
+          Start your 30-second Recovery Check or choose the clinic location that's most convenient for you.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+          <a href="/#assessment" class="inline-flex items-center justify-center bg-white text-blue-600 px-12 py-5 rounded-xl font-black text-xl hover:-translate-y-1 hover:shadow-2xl transition-all">Take Recovery Check</a>
+          <a href="/#locations" class="inline-flex items-center justify-center border border-white/25 bg-white/10 backdrop-blur text-white px-12 py-5 rounded-xl font-black text-xl hover:bg-white/20 transition-all">View Clinic Locations</a>
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
 
