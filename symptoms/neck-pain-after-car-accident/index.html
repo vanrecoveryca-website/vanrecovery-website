@@ -368,6 +368,13 @@ main > section[id]{
   font-weight:800;
 }
 
+.expert-role{
+  margin:10px 0 0;
+  color:#64748b;
+  font-size:16px;
+  line-height:1.45;
+}
+
 .expert-divider{display:none;}
 
 .expert-experience{
@@ -1018,6 +1025,7 @@ main > section[id]{
     grid-template-columns:84px 1fr;
     grid-template-areas:
       "photo name"
+      "photo role"
       "meta meta";
     column-gap:22px;
     row-gap:8px;
@@ -1040,10 +1048,18 @@ main > section[id]{
     line-height:1.08;
   }
 
+  .expert-role{
+    grid-area:role;
+    align-self:start;
+    margin:6px 0 0;
+    font-size:14px;
+    line-height:1.35;
+  }
+
   .expert-experience{
     grid-area:meta;
     display:block;
-    margin:4px 0 0;
+    margin:14px 0 0;
     text-align:left;
     transform:none;
   }
@@ -1841,6 +1857,8 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
       <h3>Marianne Roxette Danzalan</h3>
 
+      <p class="expert-role">Registered Physiotherapist</p>
+
       <div class="expert-divider"></div>
 
       <div class="expert-experience">
@@ -1861,7 +1879,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <p class="eyebrow">Expert Insight</p>
 
       <h2 class="section-title">
-        Reviewed by a Registered Physiotherapist
+        Clinically Reviewed Neck Pain Guidance
       </h2>
 
       <p class="quote">
