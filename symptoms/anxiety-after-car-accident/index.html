@@ -4,18 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9EGLLJWNQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F9EGLLJWNQ');
-    </script>
-
-<title>Anxiety & Stress After a Car Accident | ICBC Recovery Vancouver & Richmond</title>
-<meta name="description" content="Anxiety, stress, sleep disruption, driving fear, or panic after a car accident? Learn when to seek care, symptoms to watch for, treatment options, and ICBC recovery support in Vancouver and Richmond." />
+<title>Anxiety After a Car Accident | ICBC Recovery Vancouver & Richmond</title>
+<meta name="description" content="Anxiety, driving fear, panic, sleep changes, or stress after a car accident? Learn when to seek care, symptoms to watch for, counselling options, and ICBC recovery support in Vancouver and Richmond." />
 <link rel="canonical" href="https://vanrecovery.ca/symptoms/anxiety-after-car-accident/" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -28,16 +18,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-body{
-  font-family:Inter,system-ui,sans-serif;
-  background:#fff;
-  color:#0f172a;
+:root{
+  --blue:#2563eb;
+  --blue-dark:#1d4ed8;
+  --ink:#0f172a;
+  --muted:#475569;
+  --soft:#f8fafc;
+  --line:#dbeafe;
+  --border:#e2e8f0;
 }
 
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:#fff;
+  color:var(--ink);
+}
+
+img{max-width:100%;}
+
 .page-section{
-    padding:88px 24px;
-    background:transparent;
-    border:none;
+  padding:88px 24px;
+  background:transparent;
+  border:0;
 }
 
 .page-container{
@@ -52,7 +57,7 @@ body{
 
 .eyebrow{
   margin:0 0 14px;
-  color:#2563eb;
+  color:var(--blue);
   font-size:13px;
   font-weight:900;
   letter-spacing:.2em;
@@ -61,60 +66,164 @@ body{
 
 .section-title{
   margin:0 0 20px;
-  color:#0f172a;
-  font-size:clamp(38px,5vw,58px);
-  line-height:1.04;
-  letter-spacing:-.055em;
-  font-weight:900;
+  color:var(--ink);
+  font-size:42px;
+  line-height:1.08;
+  letter-spacing:-.04em;
+  font-weight:800;
 }
 
 .section-copy{
   margin:0;
-  color:#475569;
-  font-size:18px;
-  line-height:1.65;
+  max-width:760px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.75;
+  font-weight:400;
 }
 
+/* Navigation */
+nav{
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+
+.mobile-menu-panel{
+  overflow:hidden;
+  max-height:0;
+  opacity:0;
+  transform:translateY(-8px);
+  pointer-events:none;
+  border-top:1px solid var(--border);
+  transition:max-height 320ms ease, opacity 220ms ease, transform 260ms ease;
+}
+
+.mobile-menu-panel.is-open{
+  max-height:360px;
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.mobile-menu-button{
+  border-radius:10px;
+  transition:background-color 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.mobile-menu-button:active{
+  transform:scale(.94);
+}
+
+.mobile-menu-button svg line{
+  transform-box:fill-box;
+  transform-origin:center;
+  transition:transform 220ms ease, opacity 180ms ease;
+}
+
+.mobile-menu-button.is-open{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+.mobile-menu-button.is-open svg line:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.mobile-menu-button.is-open svg line:nth-child(2){opacity:0;}
+.mobile-menu-button.is-open svg line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+main > section[id]{
+  scroll-margin-top:96px;
+}
+
+.desktop-hero .group > div{
+  border-radius:12px!important;
+  border:1px solid rgba(15,23,42,.06)!important;
+  box-shadow:0 18px 42px rgba(15,23,42,.08)!important;
+}
+
+.desktop-hero .aspect-\[4\/3\]{
+  border-radius:14px!important;
+}
+
+.mobile-menu-inner{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.mobile-menu-cta{
+  margin-top:28px!important;
+}
+
+/* Mobile hero */
+.mobile-hero{display:none;}
+
+.mobile-trust{
+  display:grid;
+  gap:10px;
+  margin:18px 0 18px;
+}
+
+.mobile-trust-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#334155;
+  font-size:14px;
+  font-weight:800;
+}
+
+.mobile-trust-item svg{
+  width:18px;
+  height:18px;
+  color:var(--blue);
+  flex:0 0 auto;
+}
+
+/* Seek care */
 .point-grid{
-  margin-top:40px;
+  margin-top:30px;
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px 56px;
+  gap:22px 42px;
 }
 
 .point-item{
   position:relative;
-  padding:16px 0 16px 18px;
-  color:#0f172a;
-  font-size:20px;
-  line-height:1.45;
-  font-weight:750;
-  letter-spacing:-.025em;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  min-width:0;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.5;
+  font-weight:600;
+  letter-spacing:-.02em;
 }
 
 .point-item::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:28px;
-  width:6px;
-  height:6px;
-  border-radius:999px;
-  background:#2563eb;
+  content:"\2713";
+  flex:0 0 auto;
+  margin-top:2px;
+  color:var(--blue);
+  font-size:15px;
+  line-height:1.5;
+  font-weight:900;
+  background:transparent;
 }
+
+.mobile-copy{display:none;}
 
 .answer-panel{
   margin-top:42px;
   padding:34px;
-  border-radius:30px;
+  border-radius:16px;
   background:#fff;
-  border:1px solid #dbeafe;
+  border:1px solid var(--line);
   box-shadow:0 18px 45px rgba(15,23,42,.06);
 }
 
 .answer-panel h3{
   margin:0 0 14px;
-  color:#0f172a;
+  color:var(--ink);
   font-size:26px;
   line-height:1.15;
   letter-spacing:-.04em;
@@ -123,112 +232,315 @@ body{
 
 .answer-panel p{
   margin:0;
-  color:#475569;
+  color:var(--muted);
   font-size:17px;
   line-height:1.65;
 }
 
-.expert-panel{
-    max-width:900px;
-    margin:0 auto;
-
-    padding:48px;
-    border-radius:28px;
-
-    background:#fff;
-    border:1px solid #e2e8f0;
-    box-shadow:0 8px 24px rgba(15,23,42,.05);
+/* Treatment */
+.treatment-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
 }
 
-.expert-badge{
-  width:62px;
-  height:62px;
-  border-radius:18px;
+.treatment-card{
+  min-width:0;
+  min-height:190px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
   background:#fff;
-  color:#2563eb;
+  border:1px solid #dbe6f3;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(15,23,42,.04);
+  overflow:hidden;
+}
+
+.treatment-card h3{
+  min-height:43px;
+  margin:0;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.18;
+  letter-spacing:0;
+  font-weight:800;
+}
+
+.treatment-description{
+  margin:10px 0 18px;
+  color:#64748b;
+  font-size:14px;
+  line-height:1.55;
+  font-weight:500;
+}
+
+.treatment-meta{
   display:flex;
   align-items:center;
+  justify-content:space-between;
+  gap:6px;
+  width:100%;
+}
+
+.treatment-meta span{
+  display:inline-flex;
+  align-items:center;
   justify-content:center;
-  font-size:24px;
+  flex:0 0 auto;
+  min-width:max-content;
+  padding:6px 8px;
+  border-radius:999px;
+  border:1px solid rgba(37,99,235,.12);
+  font-size:12px;
+  line-height:1;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.treatment-meta span:nth-child(1){background:#eff6ff;color:var(--blue);}
+.treatment-meta span:nth-child(2){background:#ecfdf5;color:#059669;}
+.treatment-meta span:nth-child(3){background:#eef2ff;color:#4f46e5;}
+
+.coverage-note{
+  margin-top:32px;
+  padding:24px 28px;
+  background:var(--soft);
+  border-radius:14px;
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.65;
+}
+
+.coverage-note strong{
+  display:block;
+  margin-bottom:12px;
+  color:var(--ink);
+  font-size:22px;
+  line-height:1.2;
   font-weight:900;
-  margin-bottom:26px;
-  box-shadow:0 12px 28px rgba(37,99,235,.12);
+  letter-spacing:-.035em;
+}
+
+/* Expert */
+.expert-section{background:#fff;}
+
+.expert-panel{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:72px;
+  align-items:stretch;
+  padding:64px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  box-shadow:0 12px 40px rgba(15,23,42,.05),0 2px 8px rgba(15,23,42,.03);
+}
+
+.expert-profile{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+.expert-photo{
+  width:180px;
+  height:180px;
+  margin:0 auto 28px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;
+  border:4px solid #fff;
+  box-shadow:0 12px 30px rgba(15,23,42,.10);
+}
+
+.expert-profile h3{
+  margin:0;
+  color:var(--ink);
+  font-size:24px;
+  line-height:1.12;
+  letter-spacing:-.04em;
+  font-weight:800;
+}
+
+.expert-role{
+  margin:10px 0 0;
+  color:#64748b;
+  font-size:16px;
+  line-height:1.45;
+}
+
+.expert-divider{display:none;}
+
+.expert-experience{
+  margin-top:auto;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  color:var(--blue);
+  transform:translateY(16px);
+}
+
+.experience-icon{display:none;}
+
+.expert-experience strong{
+  display:block;
+  color:var(--blue);
+  font-size:13px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.expert-content{
+  display:flex;
+  flex-direction:column;
+  max-width:700px;
+}
+
+.expert-content .section-title{
+  margin-bottom:14px;
+  font-size:34px;
+  line-height:1.08;
 }
 
 .quote{
-  margin:28px 0 0;
-  color:#0f172a;
-  font-size:clamp(22px,2.5vw,31px);
-  line-height:1.45;
-  letter-spacing:-.04em;
+  margin:6px 0 0;
+  color:var(--ink);
+  font-size:19px;
+  line-height:1.6;
+  letter-spacing:0;
   font-weight:600;
 }
 
 .expert-note{
-  margin:34px 0 0;
+  margin-top:auto;
   color:#64748b;
   font-size:14px;
+  line-height:1;
   font-weight:700;
+  transform:translateY(16px);
 }
 
-.pill-row{
-  margin-top:34px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+/* CTA */
+.cta{
+  overflow:hidden;
+  padding:48px 24px;
+  text-align:center;
+  border-radius:0;
+  background:linear-gradient(to right,#2563eb,#3b82f6);
+  box-shadow:0 25px 50px rgba(15,23,42,.25);
 }
 
-.pill-row span{
-  padding:12px 18px;
-  border-radius:999px;
-  background:#eff6ff;
-  color:#2563eb;
-  font-size:16px;
-  font-weight:850;
+.cta h2{
+  margin:0 0 24px;
+  color:white;
+  font-size:32px;
+  font-weight:700;
+  line-height:1.25;
 }
 
-.text-panel{
-  margin-top:48px;
-  padding-top:38px;
-  border-top:1px solid #dbeafe;
-}
-
-.text-panel h3{
-  margin:0 0 18px;
-  color:#0f172a;
-  font-size:clamp(30px,4vw,46px);
-  line-height:1.08;
-  letter-spacing:-.045em;
-  font-weight:900;
-}
-
-.text-panel p{
-  margin:0;
-  color:#475569;
+.cta p{
+  max-width:672px;
+  margin:0 auto 32px;
+  color:#dbeafe;
   font-size:18px;
-  line-height:1.65;
+  line-height:1.625;
 }
 
-.mini-points{
-  margin-top:26px;
-  display:grid;
-  gap:10px;
-}
-
-.mini-points span{
-  color:#334155;
-  font-size:16px;
-  font-weight:750;
-}
-
-.learn-more{
-  display:inline-flex;
-  margin-top:28px;
-  color:#2563eb;
+.cta a{
+  min-height:56px;
+  padding:16px 32px;
+  border-radius:12px;
+  font-size:18px;
   font-weight:900;
-  text-decoration:none;
 }
 
+/* FAQ */
+.faq-section{
+  padding:88px 24px;
+  background:#fff;
+}
+
+.faq-container{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.faq-heading{margin-bottom:40px;}
+
+.faq-heading p{
+  margin:0 0 14px;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.faq-heading h2{
+  margin:0;
+  color:var(--ink);
+  font-size:42px;
+  line-height:1.08;
+  letter-spacing:-.04em;
+  font-weight:800;
+}
+
+.faq-list{display:grid;gap:0;}
+
+.faq-item{border:0;}
+
+.faq-question{
+  list-style:none;
+  cursor:pointer;
+  padding:22px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.45;
+  font-weight:700;
+  letter-spacing:-.02em;
+  border:0;
+}
+
+.faq-question::-webkit-details-marker{display:none;}
+
+.faq-icon{
+  flex:0 0 auto;
+  width:28px;
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--blue);
+  background:transparent;
+  font-size:26px;
+  font-weight:300;
+  line-height:1;
+  transition:transform .2s ease;
+}
+
+.faq-item[open] .faq-icon{transform:rotate(45deg);}
+
+.faq-answer{
+  max-width:760px;
+  padding:0 0 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.75;
+}
+
+/* Related */
 .related-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -238,10 +550,10 @@ body{
 
 .related-card{
   display:block;
+  overflow:hidden;
   text-decoration:none;
   background:#fff;
-  border-radius:26px;
-  overflow:hidden;
+  border-radius:12px;
   box-shadow:0 12px 32px rgba(15,23,42,.08);
   transition:transform .2s ease, box-shadow .2s ease;
 }
@@ -257,13 +569,11 @@ body{
   object-fit:cover;
 }
 
-.related-card div{
-  padding:24px;
-}
+.related-card div{padding:24px;}
 
 .related-card h3{
   margin:0 0 10px;
-  color:#0f172a;
+  color:var(--ink);
   font-size:22px;
   line-height:1.12;
   font-weight:900;
@@ -275,62 +585,6 @@ body{
   color:#64748b;
   font-size:15px;
   line-height:1.55;
-}
-
-.cta-panel{
-  max-width:1080px;
-  margin:0 auto;
-  padding:72px 48px;
-  border-radius:42px;
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
-  color:#fff;
-  text-align:center;
-}
-
-.cta-panel h2{
-  margin:0 0 22px;
-  font-size:clamp(36px,5vw,64px);
-  line-height:1;
-  letter-spacing:-.06em;
-  font-weight:900;
-}
-
-.cta-panel p{
-  max-width:720px;
-  margin:0 auto 36px;
-  color:#dbeafe;
-  font-size:20px;
-  line-height:1.55;
-}
-
-.cta-actions{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.cta-actions a{
-  padding:17px 28px;
-  border-radius:18px;
-  font-size:17px;
-  font-weight:900;
-  text-decoration:none;
-}
-
-.cta-primary{
-  background:#fff;
-  color:#2563eb;
-}
-
-.cta-secondary{
-  background:rgba(255,255,255,.12);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.28);
-}
-
-.mobile-hero{
-  display:none;
 }
 
 /* Footer */
@@ -360,15 +614,8 @@ body{
   margin-bottom:26px;
 }
 
-.footer-logo{
-  display:block;
-  line-height:0;
-}
-
-.footer-logo img{
-  width:58px;
-  height:58px;
-}
+.footer-logo{display:block;line-height:0;}
+.footer-logo img{width:58px;height:58px;}
 
 .footer-title{
   display:block;
@@ -394,11 +641,21 @@ body{
   line-height:1.65;
 }
 
+.footer-links-group{margin-top:60px;}
+
+.footer-links-title{
+  margin-bottom:18px;
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
 .footer-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px 24px;
-  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px 28px;
 }
 
 .footer-links a,
@@ -412,9 +669,7 @@ body{
 .clinic-info a:hover,
 .footer-title:hover,
 .clinic-name:hover,
-.footer-bottom a:hover{
-  color:#60a5fa;
-}
+.footer-bottom a:hover{color:#60a5fa;}
 
 .footer-clinic h3{
   margin:0 0 24px;
@@ -427,12 +682,12 @@ body{
 
 .clinic-name{
   display:inline-block;
+  margin-bottom:24px;
   color:#fff;
   font-size:21px;
   line-height:1.25;
   font-weight:800;
   text-decoration:none;
-  margin-bottom:24px;
 }
 
 .clinic-info{
@@ -443,10 +698,32 @@ body{
   line-height:1.55;
 }
 
-.clinic-phone{
-  color:#fff!important;
-  font-weight:750;
+.clinic-phone{color:#fff!important;font-weight:750;}
+
+.clinic-hours{
+  margin-top:24px;
+  color:#93c5fd;
 }
+
+.hours-label{
+  margin-bottom:12px;
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.hours-row{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.hours-row + .hours-row{margin-top:10px;}
+.hours-row span:last-child{color:#bfdbfe;white-space:nowrap;}
 
 .footer-bottom{
   padding-top:28px;
@@ -468,40 +745,162 @@ body{
   text-decoration:none;
 }
 
-/* Mobile */
-@media(max-width:767px){
-  .desktop-hero{
-    display:none!important;
+/* Homepage footer alignment */
+.site-footer{
+  padding:80px 24px 40px;
+  border-top:1px solid rgba(148,163,184,.16);
+}
+
+.site-footer .footer-container{
+  max-width:1180px;
+}
+
+.site-footer .footer-top{
+  padding-bottom:56px;
+}
+
+.site-footer .footer-logo-row{
+  margin-bottom:28px;
+}
+
+.site-footer .footer-logo{
+  flex:0 0 auto;
+  transition:transform .2s ease;
+}
+
+.site-footer .footer-logo:hover{
+  transform:scale(1.05);
+}
+
+.site-footer .footer-logo img{
+  display:block;
+}
+
+.site-footer .footer-location{
+  letter-spacing:.02em;
+}
+
+.site-footer .footer-links-group,
+.site-footer .footer-links-title,
+.site-footer .footer-links,
+.site-footer .footer-links a,
+.site-footer .footer-clinic{
+  background:transparent;
+}
+
+.site-footer .footer-links-group{
+  display:block;
+}
+
+.site-footer .footer-links{
+  align-items:flex-start;
+  margin-top:0;
+  border:0;
+  box-shadow:none;
+}
+
+.site-footer .footer-links a{
+  display:inline-block;
+  padding:0;
+  color:#93a4bd;
+  border:0;
+  box-shadow:none;
+  font-size:15px;
+  line-height:1.2;
+  font-weight:500;
+  transition:.25s ease;
+}
+
+.site-footer .footer-clinic{
+  padding:0;
+  border:0;
+  border-radius:0;
+}
+
+.site-footer .clinic-name{
+  margin-bottom:20px;
+  font-size:19px;
+}
+
+.site-footer .clinic-info a{
+  color:#93a4bd;
+}
+
+.site-footer .clinic-hours{
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid rgba(148,163,184,.18);
+}
+
+.site-footer .hours-row{
+  color:#93c5fd;
+}
+
+.section-reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .45s ease, transform .45s ease;
+}
+
+.section-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .section-reveal{opacity:1;transform:none;transition:none;}
+  .mobile-menu-button,
+  .mobile-menu-button svg line,
+  .mobile-menu-panel{transition:none;}
+}
+
+@media (max-width:767px){
+  html,body,main{background:#fff;}
+
+  nav{box-shadow:none;}
+
+  main > section[id]{
+    scroll-margin-top:88px;
   }
+
+  .desktop-hero{display:none!important;}
 
   .mobile-hero{
     display:block;
+    padding:34px 20px 32px;
     background:#fff;
-    padding:20px 18px 28px;
-    border-bottom:1px solid #e2e8f0;
   }
 
   .mobile-hero-inner{
     max-width:430px;
-    margin:auto;
+    margin:0 auto;
   }
 
-  .mobile-hero h1{
+  .mobile-hero-title{
+    width:100%;
+    max-width:390px;
     margin:0;
-    color:#0f172a;
-    font-size:38px;
-    line-height:.94;
-    letter-spacing:-.06em;
+    color:var(--ink);
+    line-height:.93;
+    letter-spacing:-.055em;
     font-weight:900;
   }
 
-  .mobile-hero h1 span{
-    color:#2563eb;
+  .mobile-hero-title .title-line{
+    display:block;
+    width:max-content;
+    max-width:none;
+    white-space:nowrap;
+  }
+
+  .mobile-hero-title .title-line-accent{
+    margin-top:4px;
+    color:var(--blue);
   }
 
   .mobile-subtitle{
     margin:14px 0 18px;
-    color:#475569;
+    color:var(--muted);
     font-size:15.5px;
     line-height:1.45;
     font-weight:500;
@@ -510,118 +909,249 @@ body{
   .mobile-photo{
     position:relative;
     overflow:hidden;
+    width:100%;
     background:#fff;
-    padding:6px;
-    border-radius:24px;
     border:1px solid rgba(15,23,42,.08);
+    border-radius:12px;
     box-shadow:0 18px 45px rgba(15,23,42,.12);
   }
 
   .mobile-photo img{
     display:block;
     width:100%;
-    aspect-ratio:1.38/1;
+    aspect-ratio:1.45/1;
     object-fit:cover;
     object-position:center;
-    border-radius:18px;
+    border-radius:12px;
   }
 
   .mobile-cta{
-    position:absolute;
-    left:18px;
-    right:18px;
-    bottom:18px;
-    height:50px;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#2563eb;
+    min-height:50px;
+    margin-top:14px;
+    background:var(--blue);
     color:#fff;
     text-decoration:none;
     font-size:15px;
     font-weight:800;
-    border-radius:16px;
+    border-radius:12px;
   }
 
-  .page-section{
-    padding:58px 20px;
+  .page-section,
+  .faq-section,
+  .expert-section{
+    padding:54px 20px;
   }
 
-  .section-title{
-    font-size:34px;
+  .page-container,
+  .wide-container,
+  .faq-container{
+    max-width:430px;
+  }
+
+  .eyebrow,
+  .faq-heading p{
+    margin-bottom:10px;
+    font-size:12px;
+    letter-spacing:.18em;
+  }
+
+  .section-title,
+  .faq-heading h2{
+    font-size:32px;
+    line-height:1.12;
+    letter-spacing:-.04em;
   }
 
   .section-copy,
-  .text-panel p{
-    font-size:16px;
+  .answer-panel p,
+  .faq-answer{
+    font-size:15px;
+    line-height:1.75;
   }
 
   .point-grid{
     grid-template-columns:1fr;
-    gap:10px;
+    gap:22px;
     margin-top:28px;
   }
 
   .point-item{
-    padding:13px 0 13px 16px;
-    font-size:17px;
+    font-size:18px;
     line-height:1.5;
   }
 
-  .point-item::before{
-    top:25px;
-    width:5px;
-    height:5px;
-  }
+  .desktop-copy{display:none;}
+  .mobile-copy{display:inline;}
 
   .answer-panel{
     margin-top:30px;
     padding:24px;
-    border-radius:24px;
+    border-radius:14px;
   }
 
   .answer-panel h3{
     font-size:22px;
+    line-height:1.2;
+  }
+
+  .treatment-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-top:28px;
+  }
+
+  .treatment-card{
+    min-height:0;
+    padding:18px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(15,23,42,.05);
+  }
+
+  .treatment-card h3{
+    min-height:0;
+    margin-bottom:14px;
+    font-size:18px;
+    line-height:1.2;
+  }
+
+  .treatment-description{
+    margin:8px 0 16px;
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  .treatment-meta{
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  .treatment-meta span{
+    width:auto;
+    padding:8px 10px;
+    border:0;
+    border-radius:999px;
+    font-size:12px;
+    line-height:1;
+    font-weight:850;
+  }
+
+  .coverage-note{
+    margin-top:30px;
+    padding:24px;
+    border-radius:14px;
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  .coverage-note strong{
+    font-size:22px;
   }
 
   .expert-panel{
-    padding:30px 22px;
-    border-radius:28px;
+    display:block;
+    padding:28px;
+    border-radius:14px;
+  }
+
+  .expert-profile{
+    display:grid;
+    grid-template-columns:84px 1fr;
+    grid-template-areas:
+      "photo name"
+      "photo role"
+      "meta meta";
+    column-gap:22px;
+    row-gap:8px;
+    align-items:center;
+    text-align:left;
+  }
+
+  .expert-photo{
+    grid-area:photo;
+    width:84px;
+    height:84px;
+    margin:0;
+    border-width:3px;
+  }
+
+  .expert-profile h3{
+    grid-area:name;
+    align-self:center;
+    font-size:22px;
+    line-height:1.08;
+  }
+
+  .expert-role{
+    grid-area:role;
+    align-self:start;
+    margin:6px 0 0;
+    font-size:14px;
+    line-height:1.35;
+  }
+
+  .expert-experience{
+    grid-area:meta;
+    display:block;
+    margin:14px 0 0;
+    text-align:left;
+    transform:none;
+  }
+
+  .expert-content{
+    display:block;
+    margin-top:24px;
+    padding-top:24px;
+    border-top:1px solid #e5e7eb;
+  }
+
+  .expert-content .section-title{
+    font-size:22px;
+    line-height:1.14;
   }
 
   .quote{
-    font-size:21px;
+    margin-top:18px;
+    font-size:16px;
+    line-height:1.55;
   }
 
-  .pill-row span{
-    font-size:15px;
+  .expert-note{
+    margin-top:20px;
+    font-size:12px;
+    line-height:1.5;
+    transform:none;
+  }
+
+  .faq-heading{margin-bottom:28px;}
+
+  .faq-question{
+    padding:18px 0;
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  .faq-answer{
+    padding-bottom:20px;
   }
 
   .related-grid{
     grid-template-columns:1fr;
+    gap:18px;
   }
 
-  .faq-question{
-    padding:21px 0;
-    font-size:16px;
+  .related-card{
+    border-radius:12px;
   }
 
-  .faq-answer{
-    font-size:15px;
-    padding-bottom:22px;
-  }
-
-  .cta-panel{
-    padding:48px 24px;
-    border-radius:30px;
-  }
-
-  .cta-panel p{
-    font-size:17px;
-  }
-
-  .cta-actions{
-    flex-direction:column;
+  .related-card img{
+    height:190px;
   }
 
   .site-footer{
@@ -635,7 +1165,7 @@ body{
   .footer-top{
     display:flex;
     flex-direction:column;
-    gap:30px;
+    gap:50px;
     padding-bottom:28px;
   }
 
@@ -665,29 +1195,61 @@ body{
     line-height:1.55;
   }
 
+  .footer-links-group{
+    margin-top:26px;
+  }
+
+  .footer-links-title{
+    margin-bottom:12px;
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+
   .footer-links{
-    gap:10px 18px;
-    margin-top:18px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px 28px;
   }
 
   .footer-links a{
-    font-size:13px;
+    font-size:14px;
   }
 
   .footer-clinic h3{
-    font-size:22px;
     margin-bottom:10px;
+    font-size:22px;
   }
 
   .clinic-name{
-    font-size:18px;
     margin-bottom:14px;
+    font-size:18px;
   }
 
   .clinic-info{
     gap:9px;
     font-size:14px;
     line-height:1.5;
+  }
+
+  .clinic-hours{
+    margin-top:16px;
+    padding-top:0;
+    border-top:none;
+  }
+
+  .hours-label{
+    margin-bottom:8px;
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+
+  .hours-row{
+    gap:10px;
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  .hours-row + .hours-row{
+    margin-top:5px;
   }
 
   .footer-bottom{
@@ -700,2979 +1262,28 @@ body{
   .footer-bottom p{
     font-size:12px;
   }
-}
-/* Body */
-.section-copy{
-    margin:0;
-    color:#475569;
-    font-size:17px;
-    line-height:1.75;
-    font-weight:400;
-}
-.point-item{
-    font-size:18px;
-    line-height:1.6;
-    font-weight:700;
-}
-.faq-question{
-    font-size:18px;
-    line-height:1.45;
-}
-.faq-answer{
-    font-size:16px;
-    line-height:1.75;
-}
-.quote{
-    font-size:26px;
-    line-height:1.55;
-    font-weight:600;
-}
-@media(max-width:767px){
 
-  .section-title{
-    font-size:32px;
-    line-height:1.12;
-    letter-spacing:-0.04em;
-  }
-
-  .section-copy{
-    font-size:15px;
-    line-height:1.75;
-  }
-
-  .point-item{
-    font-size:16px;
-    line-height:1.6;
-    font-weight:650;
-  }
-
-  .answer-panel h3,
-  .text-panel h3{
-    font-size:22px;
-    line-height:1.2;
-  }
-
-  .answer-panel p,
-  .text-panel p{
-    font-size:15px;
-    line-height:1.75;
-  }
-
-  .quote{
-    font-size:20px;
-    line-height:1.65;
-    font-weight:500;
-  }
-
-  .faq-question{
-    font-size:16px;
-    line-height:1.5;
-    font-weight:650;
-  }
-
-  .faq-answer{
-    font-size:15px;
-    line-height:1.75;
-  }
-
-  .pill-row span,
-  .mini-points span{
-    font-size:14px;
-  }
-
-  .cta-panel p{
-    font-size:16px;
-    line-height:1.65;
-  }
-
-}
-
-
-/* Treatment cards */
-.treatment-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-    margin-top:40px;
-}
-
-.treatment-card{
-    padding:28px;
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:24px;
-    transition:.25s;
-}
-
-.treatment-card h3{
-    margin:0 0 18px;
-    font-size:22px;
-    font-weight:800;
-    line-height:1.2;
-    color:#0f172a;
-}
-
-.treatment-meta{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    color:#64748b;
-    font-size:15px;
-    font-weight:700;
-}
-
-.coverage-note{
-    margin-top:32px;
-    padding:24px 28px;
-    background:#f8fafc;
-    border-radius:20px;
-    border:1px solid #e2e8f0;
-    color:#475569;
-    line-height:1.7;
-}
-
-.coverage-note strong{
-    display:block;
-    margin-bottom:10px;
-    color:#0f172a;
-}
-@media (max-width:767px){
-
-  .treatment-grid{
-      grid-template-columns:1fr;
-      gap:0;
-      margin-top:32px;
-      border-top:1px solid #e2e8f0;
-  }
-
-  .treatment-card{
-      padding:22px 0;
-      border:none;
-      border-bottom:1px solid #e2e8f0;
-      border-radius:0;
-      box-shadow:none;
-  }
-
-  .treatment-card h3{
-      margin:0 0 12px;
-      font-size:20px;
-      line-height:1.25;
-      font-weight:800;
-  }
-
-  .treatment-meta{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      color:#64748b;
-      font-size:15px;
-      line-height:1.5;
-      font-weight:650;
-  }
-
-  .coverage-note{
-      margin-top:24px;
-      padding:20px;
-      border-radius:18px;
-  }
-
-}
-
-
-/* Expert reviewer panel */
-.expert-panel{
-    max-width:1100px;
-    margin:0 auto;
-
-    display:grid;
-    grid-template-columns:280px minmax(0,1fr);
-    gap:72px;
-
-    padding:64px;
-
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:32px;
-
-    box-shadow:
-        0 12px 40px rgba(15,23,42,.05),
-        0 2px 8px rgba(15,23,42,.03);
-
-    align-items:center;
-}
-
-.expert-profile{
-    text-align:center;
-}
-
-.expert-photo{
-    width:180px;
-    height:180px;
-    margin:0 auto 28px;
-
-    object-fit:cover;
-    border-radius:50%;
-
-    border:4px solid #fff;
-
-    box-shadow:
-        0 12px 30px rgba(15,23,42,.10);
-}
-
-.expert-profile h3{
-    margin:0;
-    font-size:28px;
-    line-height:1.15;
-    font-weight:800;
-    letter-spacing:-0.04em;
-    color:#0f172a;
-}
-
-.expert-role{
-    margin-top:10px;
-    color:#64748b;
-    font-size:16px;
-}
-
-.expert-divider{
-    width:80px;
-    height:1px;
-    margin:28px auto;
-
-    background:#e2e8f0;
-}
-
-.expert-experience{
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
-    text-align:left;
-}
-
-.experience-icon{
-    color:#2563eb;
-    flex-shrink:0;
-}
-
-.experience-icon svg{
-    width:34px;
-    height:34px;
-}
-
-.expert-experience strong{
-    display:block;
-    margin-bottom:6px;
-
-    color:#2563eb;
-    font-size:13px;
-    font-weight:800;
-
-    letter-spacing:.12em;
-    text-transform:uppercase;
-}
-
-.expert-experience span{
-    color:#475569;
-    font-size:15px;
-    line-height:1.65;
-}
-
-/* Right */
-
-.expert-content{
-    max-width:700px;
-}
-
-.expert-badge{
-    width:52px;
-    height:52px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:24px;
-
-    border-radius:14px;
-
-    background:#eff6ff;
-    color:#2563eb;
-
-    font-size:22px;
-    font-weight:900;
-}
-
-.expert-content .section-title{
-    margin-bottom:14px;
-    font-size:38px;
-    line-height:1.08;
-    letter-spacing:-0.04em;
-}
-
-.expert-content .section-copy{
-    font-size:17px;
-    color:#64748b;
-}
-
-.quote{
-    margin-top:34px;
-
-    font-size:22px;
-    line-height:1.75;
-    font-weight:600;
-
-    color:#0f172a;
-}
-
-.expert-note{
-    margin-top:36px;
-
-    font-size:14px;
-    color:#64748b;
-}
-
-@media (max-width:768px){
-
-  .expert-section{
-      padding:58px 20px;
-  }
-
-  .expert-panel{
-      grid-template-columns:1fr;
-      gap:28px;
-
-      padding:28px 22px;
-      border-radius:24px;
-  }
-
-  .expert-profile{
-      padding:0;
-      border-bottom:none;
-
-      display:grid;
-      grid-template-columns:84px 1fr;
-      gap:16px;
-      align-items:center;
-
-      text-align:left;
-  }
-
-  .expert-photo{
-      width:84px;
-      height:84px;
-      margin:0;
-      border:3px solid #fff;
-  }
-
-  .expert-profile h3{
-      font-size:21px;
-      line-height:1.15;
-  }
-
-  .expert-role{
-      margin-top:5px;
-      font-size:14px;
-      line-height:1.45;
-  }
-
-  .expert-divider{
-      display:none;
-  }
-
-  .expert-experience{
-      grid-column:1 / -1;
-
-      margin-top:12px;
-      padding:14px 16px;
-
-      display:flex;
-      gap:12px;
-
-      background:#f8fafc;
-      border:1px solid #e2e8f0;
-      border-radius:16px;
-  }
-
-  .experience-icon svg{
-      width:26px;
-      height:26px;
-  }
-
-  .expert-experience strong{
-      font-size:12px;
-      letter-spacing:.1em;
-      margin-bottom:4px;
-  }
-
-  .expert-experience span{
-      font-size:14px;
-      line-height:1.5;
-  }
-
-  .expert-content{
-      max-width:none;
-      padding-top:24px;
-      border-top:1px solid #e5e7eb;
-  }
-
-  .expert-content .eyebrow{
-      font-size:11px;
-      margin-bottom:10px;
-  }
-
-  .expert-content .section-title{
-      font-size:28px;
-      line-height:1.12;
-      margin-bottom:12px;
-  }
-
-  .expert-content .section-copy{
-      font-size:14px;
-      line-height:1.55;
-  }
-
-  .quote{
-      margin-top:22px;
-      font-size:17px;
-      line-height:1.7;
-      font-weight:600;
-  }
-
-  .expert-note{
-      margin-top:24px;
-      font-size:12px;
-      line-height:1.5;
-  }
-
-}
-
-
-/* FAQ section */
-.faq-section{
-    padding:88px 24px;
-    background:#fff;
-}
-
-.faq-container{
-    max-width:900px;
-    margin:0 auto;
-}
-
-.faq-heading{
-    margin-bottom:40px;
-}
-
-.faq-heading p{
-    margin:0 0 14px;
-    color:#2563eb;
-    font-size:13px;
-    font-weight:900;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-}
-
-.faq-heading h2{
-    margin:0;
-    color:#0f172a;
-    font-size:42px;
-    line-height:1.08;
-    letter-spacing:-.04em;
-    font-weight:800;
-}
-
-.faq-list{
-    display:grid;
-    gap:0;
-}
-
-.faq-question{
-    list-style:none;
-    cursor:pointer;
-
-    padding:22px 0;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-
-    color:#0f172a;
-    font-size:18px;
-    line-height:1.45;
-    font-weight:700;
-    letter-spacing:-.02em;
-}
-
-.faq-question::-webkit-details-marker{
-    display:none;
-}
-
-.faq-icon{
-    flex-shrink:0;
-    width:28px;
-    height:28px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:#2563eb;
-    font-size:26px;
-    font-weight:300;
-    line-height:1;
-
-    transition:transform .2s ease;
-}
-
-.faq-item[open] .faq-icon{
-    transform:rotate(45deg);
-}
-
-.faq-answer{
-    max-width:760px;
-    padding:0 0 24px;
-
-    color:#475569;
-    font-size:16px;
-    line-height:1.75;
-}
-
-/* Mobile */
-@media(max-width:767px){
-
-    .faq-section{
-        padding:58px 20px;
-    }
-
-    .faq-heading{
-        margin-bottom:28px;
-    }
-
-    .faq-heading h2{
-        font-size:32px;
-        line-height:1.12;
-    }
-
-    .faq-question{
-        padding:18px 0;
-        font-size:16px;
-        line-height:1.5;
-        font-weight:650;
-    }
-
-    .faq-answer{
-        padding:0 0 20px;
-        font-size:15px;
-        line-height:1.75;
-    }
-
-    .faq-icon{
-        width:24px;
-        height:24px;
-        font-size:24px;
-    }
-
-}
-
-
-/* Footer base styles */
-.site-footer {
-  background: #020617;
-  color: #ffffff;
-  padding: 80px 24px 40px;
-  border-top: 1px solid rgba(148, 163, 184, 0.16);
-}
-
-.footer-container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr 1fr;
-  gap: 56px;
-  padding-bottom: 56px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.footer-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.footer-logo {
-  flex: 0 0 auto;
-  display: block;
-  line-height: 0;
-  transition: transform 0.2s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.05);
-}
-
-.footer-logo img {
-  display: block;
-  width: 58px;
-  height: 58px;
-}
-
-.footer-title {
-  display: block;
-  color: #ffffff;
-  font-size: 34px;
-  line-height: 0.95;
-  font-weight: 900;
-  letter-spacing: -0.055em;
-  text-decoration: none;
-}
-
-.footer-title:hover,
-.footer-links a:hover,
-.clinic-name:hover,
-.clinic-info a:hover,
-.footer-bottom a:hover {
-  color: #60a5fa;
-}
-
-.footer-location {
-  margin-top: 8px;
-  color: #93c5fd;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-}
-
-.footer-description {
-  max-width: 420px;
-  margin: 0;
-  color: #93a4bd;
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 24px;
-  margin-top: 28px;
-}
-
-.footer-links a,
-.clinic-info a,
-.footer-bottom p {
-  color: #8192ad;
-  text-decoration: none;
-}
-
-.footer-links a {
-  font-size: 14px;
-}
-
-.footer-clinic h3 {
-  margin: 0 0 24px;
-  color: #ffffff;
-  font-size: 27px;
-  line-height: 1.1;
-  font-weight: 850;
-  letter-spacing: -0.035em;
-}
-
-.clinic-name {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 21px;
-  line-height: 1.25;
-  font-weight: 800;
-  text-decoration: none;
-  margin-bottom: 28px;
-}
-
-.clinic-info {
-  display: grid;
-  gap: 14px;
-  color: #93a4bd;
-  font-size: 15px;
-  line-height: 1.55;
-}
-
-.clinic-phone {
-  color: #ffffff !important;
-  font-weight: 750;
-}
-
-.clinic-hours {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.hours-label {
-  margin-bottom: 16px;
-  color: #64748b;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.hours-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  color: #93c5fd;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.hours-row + .hours-row {
-  margin-top: 10px;
-}
-
-.hours-row span:last-child {
-  color: #bfdbfe;
-  white-space: nowrap;
-}
-
-.footer-bottom {
-  padding-top: 28px;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: center;
-}
-
-.footer-bottom p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-bottom a {
-  color: #ffffff;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .site-footer {
-    padding: 42px 20px 24px;
-  }
-
-  .footer-container {
-    max-width: 430px;
-  }
-
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-bottom: 28px;
-  }
-
-  .footer-logo-row {
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-
-  .footer-logo img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .footer-title {
-    font-size: 26px;
-    line-height: 1;
-  }
-
-  .footer-location {
-    margin-top: 5px;
-    font-size: 13px;
-  }
-
-  .footer-description {
-    max-width: none;
-    font-size: 14px;
-    line-height: 1.55;
-  }
-
-  .footer-links {
-    gap: 10px 18px;
-    margin-top: 18px;
-  }
-
-  .footer-links a {
-    font-size: 13px;
-  }
-
-  .footer-clinic h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .clinic-name {
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .clinic-info {
-    gap: 9px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .clinic-hours {
-    margin-top: 16px;
-    padding-top: 0;
-    border-top: none;
-  }
-
-  .hours-label {
-    margin-bottom: 8px;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-  }
-
-  .hours-row {
-    font-size: 13px;
-    line-height: 1.35;
-    gap: 10px;
-  }
-
-  .hours-row + .hours-row {
-    margin-top: 5px;
-  }
-
-  .footer-bottom {
-    padding-top: 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-  }
-}
-.section-title{
-    margin:0 0 20px;
-
-    color:#0f172a;
-
-    font-size:42px;
-    line-height:1.08;
-    letter-spacing:-0.04em;
-    font-weight:800;
-}
-@media (max-width:768px){
-
-.section-title{
-    font-size:32px;
-    line-height:1.12;
-}
-
-}
-
-
-/* Final page polish overrides */
-@media (max-width:767px){
-  html{
-    background:#f8fafc;
-  }
-
-  body{
-    background:#f8fafc;
-    color:#0f172a;
-  }
-
-  nav{
-    position:sticky;
-    top:0;
-    background:rgba(255,255,255,.94)!important;
-    backdrop-filter:blur(18px);
-    box-shadow:0 10px 28px rgba(15,23,42,.06);
-  }
-
-  nav .h-20{
-    height:64px;
-  }
-
-  nav .text-xl{
-    font-size:17px;
-    line-height:1;
-  }
-
-  nav .w-8,
-  nav .h-8{
-    width:28px;
-    height:28px;
-  }
-
-  #mobile-menu .px-5{
-    padding:16px;
-  }
-
-  #mobile-menu a{
-    border-radius:14px;
-    padding:14px 16px;
-    font-size:15px;
-    box-shadow:inset 0 0 0 1px rgba(226,232,240,.75);
-  }
-
-  .mobile-hero{
-    padding:18px 16px 34px;
-    background:linear-gradient(180deg,#ffffff 0%,#f8fbff 72%,#f8fafc 100%);
-    border-bottom:1px solid #e2e8f0;
-  }
-
-  .mobile-hero-inner{
-    max-width:430px;
-  }
-
-  .mobile-hero h1{
-    max-width:390px;
-    font-size:39px;
-    line-height:.98;
-    letter-spacing:-.045em;
-  }
-
-  .mobile-hero h1 span{
-    display:block;
-    margin-top:4px;
-  }
-
-  .mobile-subtitle{
-    margin:15px 0 14px;
-    max-width:390px;
-    color:#475569;
-    font-size:16px;
-    line-height:1.55;
-  }
-
-  .mobile-trust-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin:0 0 18px;
-  }
-
-  .mobile-trust-row span{
-    display:inline-flex;
-    align-items:center;
-    min-height:32px;
-    padding:7px 11px;
-    border-radius:999px;
-    background:#eff6ff;
-    color:#1d4ed8;
-    font-size:12px;
-    line-height:1;
-    font-weight:850;
-    letter-spacing:.02em;
-    border:1px solid #dbeafe;
-  }
-
-  .mobile-photo{
-    padding:0;
-    border-radius:28px;
-    border:1px solid rgba(37,99,235,.14);
-    background:#fff;
-    box-shadow:0 22px 52px rgba(15,23,42,.14);
-  }
-
-  .mobile-photo::after{
-    content:"";
-    position:absolute;
-    inset:auto 0 0;
-    height:42%;
-    background:linear-gradient(180deg,rgba(15,23,42,0),rgba(15,23,42,.46));
-    pointer-events:none;
-  }
-
-  .mobile-photo img{
-    aspect-ratio:1.2/1;
-    border-radius:28px;
-    object-position:38% center;
-  }
-
-  .mobile-cta{
-    z-index:1;
-    left:14px;
-    right:14px;
-    bottom:14px;
-    height:52px;
-    border-radius:16px;
-    background:#2563eb;
-    box-shadow:0 14px 30px rgba(37,99,235,.35);
-  }
-
-  .page-section,
-  .faq-section,
-  .expert-section{
-    padding:54px 16px;
-    background:#f8fafc;
-  }
-
-  .page-container,
-  .wide-container,
-  .faq-container{
-    max-width:430px;
-  }
-
-  .eyebrow,
-  .faq-heading p{
-    margin-bottom:10px;
-    font-size:11px;
-    letter-spacing:.16em;
-  }
-
-  .section-title,
-  .faq-heading h2{
-    font-size:30px;
-    line-height:1.12;
-    letter-spacing:-.035em;
-  }
-
-  .section-copy,
-  .answer-panel p,
-  .text-panel p,
-  .faq-answer{
-    font-size:15.5px;
-    line-height:1.72;
-  }
-
-  .point-grid{
-    gap:12px;
-    margin-top:26px;
-  }
-
-  .point-item{
-    padding:16px 16px 16px 42px;
-    border:1px solid #e2e8f0;
-    border-radius:18px;
-    background:#fff;
-    box-shadow:0 10px 28px rgba(15,23,42,.045);
-    font-size:15.5px;
-    line-height:1.45;
-  }
-
-  .point-item::before{
-    top:20px;
-    left:18px;
-    width:10px;
-    height:10px;
-    background:#2563eb;
-    box-shadow:0 0 0 5px #dbeafe;
-  }
-
-  .answer-panel,
-  .text-panel{
-    margin-top:28px;
-  }
-
-  .answer-panel{
-    padding:22px;
-    border-radius:22px;
-    border-color:#bfdbfe;
-    box-shadow:0 16px 36px rgba(37,99,235,.08);
-  }
-
-  .answer-panel h3,
-  .text-panel h3{
-    font-size:22px;
-    line-height:1.18;
-    letter-spacing:-.025em;
-  }
-
-  .treatment-grid{
-    gap:12px;
-    margin-top:28px;
-  }
-
-  .treatment-card{
-    padding:18px;
-    border:1px solid #e2e8f0;
-    border-radius:20px;
-    background:#fff;
-    box-shadow:0 12px 30px rgba(15,23,42,.05);
-  }
-
-  .treatment-card h3{
-    font-size:18px;
-    margin-bottom:14px;
-  }
-
-  .treatment-meta{
-    flex-direction:row;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-
-  .treatment-meta span{
-    width:auto;
-    padding:8px 10px;
-    border-radius:999px;
-    background:#eff6ff;
-    color:#1d4ed8;
-    font-size:12px;
-    line-height:1;
-    font-weight:850;
-  }
-
-  .expert-panel{
-    padding:22px;
-    border-radius:24px;
-    box-shadow:0 16px 38px rgba(15,23,42,.07);
-  }
-
-  .expert-content .section-title{
-    font-size:27px;
-  }
-
-  .quote{
-    padding-left:16px;
-    border-left:3px solid #2563eb;
-    font-size:17px;
-    line-height:1.68;
-  }
-
-  .faq-section{
-    background:#fff;
-  }
-
-  .faq-heading{
-    margin-bottom:22px;
-  }
-
-  .faq-item{
-    border-bottom:1px solid #e2e8f0;
-  }
-
-  .faq-question{
-    padding:18px 0;
-    gap:16px;
-  }
-
-  .faq-icon{
-    border-radius:50%;
-    background:#eff6ff;
-    font-size:22px;
-  }
-
-  .related-grid{
-    gap:14px;
-    margin-top:26px;
-  }
-
-  .related-card{
-    display:grid;
-    grid-template-columns:92px 1fr;
-    align-items:stretch;
-    min-height:108px;
-    border-radius:20px;
-    border:1px solid #e2e8f0;
-    box-shadow:0 12px 30px rgba(15,23,42,.06);
-  }
-
-  .related-card img{
-    height:100%;
-    min-height:108px;
-  }
-
-  .related-card div{
-    padding:16px;
-  }
-
-  .related-card h3{
-    font-size:17px;
-    line-height:1.18;
-    margin-bottom:6px;
-  }
-
-  .related-card p{
-    font-size:13px;
-    line-height:1.45;
-  }
-
-  .cta-panel{
-    padding:34px 20px;
-    border-radius:26px;
-    text-align:left;
-    background:linear-gradient(135deg,#1d4ed8,#2563eb 54%,#0f766e);
-    box-shadow:0 20px 44px rgba(37,99,235,.22);
-  }
-
-  .cta-panel h2{
-    font-size:30px;
-    line-height:1.08;
-    letter-spacing:-.04em;
-  }
-
-  .cta-panel p{
-    margin-bottom:24px;
-    font-size:15.5px;
-  }
-
-  .cta-actions{
-    gap:10px;
-  }
-
-  .cta-actions a{
-    width:100%;
-    padding:15px 18px;
-    border-radius:16px;
-    text-align:center;
-    font-size:15px;
-  }
-
-  .site-footer{
-    padding:40px 16px 24px;
-  }
-
-  .footer-top{
-    gap:26px;
-  }
-
-  .footer-clinic{
-    padding:18px;
-    border:1px solid rgba(148,163,184,.18);
-    border-radius:20px;
-    background:rgba(15,23,42,.42);
-  }
-
-  .hours-row{
-    align-items:flex-start;
-  }
-
-  .footer-bottom{
-    line-height:1.45;
-  }
-}
-
-/* Homepage alignment overrides */
-.section-reveal{
-  opacity:0;
-  transform:translateY(14px);
-  transition:opacity 800ms ease, transform 800ms ease;
-}
-.section-reveal.is-visible{
-  opacity:1;
-  transform:translateY(0);
-}
-@media (prefers-reduced-motion: reduce){
-  .section-reveal{
-    opacity:1;
-    transform:none;
-    transition:none;
-  }
-}
-main > section{
-  border-top:0!important;
-  border-bottom:0!important;
-}
-main > section[id]{
-  scroll-margin-top:96px;
-}
-.mobile-menu-button{
-  border-radius:10px;
-  transition:background-color 180ms ease, transform 180ms ease, color 180ms ease;
-}
-.mobile-menu-button:active{
-  transform:scale(.94);
-}
-.mobile-menu-button svg line{
-  transform-box:fill-box;
-  transform-origin:center;
-  transition:transform 220ms ease, opacity 180ms ease;
-}
-.mobile-menu-button.is-open{
-  background:#eff6ff;
-  color:#2563eb;
-}
-.mobile-menu-button.is-open svg line:nth-child(1){
-  transform:translateY(6px) rotate(45deg);
-}
-.mobile-menu-button.is-open svg line:nth-child(2){
-  opacity:0;
-}
-.mobile-menu-button.is-open svg line:nth-child(3){
-  transform:translateY(-6px) rotate(-45deg);
-}
-.mobile-menu-panel{
-  overflow:hidden;
-  max-height:0;
-  opacity:0;
-  transform:translateY(-8px);
-  pointer-events:none;
-  transition:max-height 320ms ease, opacity 220ms ease, transform 260ms ease;
-}
-.mobile-menu-panel.is-open{
-  max-height:360px;
-  opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
-}
-.mobile-menu-inner{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
-}
-.mobile-menu-cta{
-  margin-top:28px!important;
-}
-.footer-links-group{
-  margin-top:60px;
-}
-.footer-links-title{
-  margin-bottom:18px;
-  color:#64748b;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-}
-.footer-links{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:14px;
-  margin-top:0;
-}
-.footer-links a{
-  color:#93a4bd;
-  font-size:15px;
-  line-height:1.2;
-  font-weight:500;
-  text-decoration:none;
-  transition:.25s ease;
-}
-.cta-panel{
-  border-radius:18px;
-  background:linear-gradient(to right,#2563eb,#3b82f6);
-  box-shadow:0 24px 60px rgba(37,99,235,.24);
-}
-.cta-actions a{
-  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
-}
-.cta-actions a:hover{
-  transform:translateY(-3px);
-}
-@media (max-width:767px){
-  main > section[id]{
-    scroll-margin-top:88px;
-  }
-  nav .h-20{
-    height:64px;
-  }
-  #mobile-menu a{
-    box-shadow:none;
-  }
-  .footer-top{
-    gap:50px;
-  }
-  .footer-links-group{
-    margin-top:26px;
-  }
-  .footer-links-title{
-    margin-bottom:12px;
-    font-size:10px;
-    letter-spacing:.18em;
-  }
-  .footer-links{
-    gap:10px;
-  }
-  .footer-clinic{
-    padding:0;
-    border:0;
-    border-radius:0;
-    background:transparent;
-  }
-  .cta-panel{
-    border-radius:0;
-    margin-left:-16px;
-    margin-right:-16px;
-    padding:48px 24px;
-    text-align:center;
-  }
-}
-@media (prefers-reduced-motion: reduce){
-  .mobile-menu-button,
-  .mobile-menu-button svg line,
-  .mobile-menu-panel,
-  .cta-actions a{
-    transition:none;
-  }
-}
-/* Annotation refinements */
-.footer-links-compact{
-  margin-top:28px;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  gap:14px 22px;
-}
-.footer-links-compact a{
-  color:#8192ad;
-  font-size:14px;
-  line-height:1.35;
-  font-weight:650;
-}
-@media (max-width:767px){
-  .footer-links-group,
-  .footer-links-title{
-    display:none!important;
-  }
-  .footer-links-compact{
-    margin-top:20px;
-    gap:10px 18px;
-  }
-  .footer-links-compact a{
-    font-size:13px;
-    color:#93a4bd;
-  }
-  #icbc-treatment .treatment-grid{
-    display:block;
-    margin-top:30px;
-    overflow:hidden;
-    border:1px solid #e5e7eb;
-    border-radius:18px;
-    background:#fff;
-    box-shadow:0 16px 34px rgba(15,23,42,.06);
-  }
-  #icbc-treatment .treatment-card{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) auto;
-    column-gap:18px;
-    align-items:center;
-    min-height:96px;
-    padding:22px 22px;
-    border:0;
-    border-bottom:1px solid #e5e7eb;
-    border-radius:0;
-    background:#fff;
-    box-shadow:none;
-  }
-  #icbc-treatment .treatment-card:last-child{
-    border-bottom:0;
-  }
-  #icbc-treatment .treatment-card h3{
-    grid-column:1;
-    margin:0 0 4px;
-    color:#020617;
-    font-size:24px;
-    line-height:1.05;
-    font-weight:900;
-    letter-spacing:-.03em;
-  }
-  #icbc-treatment .treatment-meta{
-    display:contents;
-  }
-  #icbc-treatment .treatment-meta span{
-    width:auto;
-    padding:0;
-    border-radius:0;
-    background:transparent;
-    box-shadow:none;
-  }
-  #icbc-treatment .treatment-meta span:first-child{
-    grid-column:1;
-    color:#2563eb;
-    font-size:17px;
-    line-height:1.1;
-    font-weight:900;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-  }
-  #icbc-treatment .treatment-meta span:last-child{
-    grid-column:2;
-    grid-row:1 / span 2;
-    align-self:center;
-    min-width:72px;
-    color:#020617;
-    font-size:21px;
-    line-height:1.05;
-    font-weight:900;
-    text-align:right;
-    white-space:nowrap;
-  }
-  #icbc-treatment .treatment-meta span:last-child::before{
-    content:"Length";
-    display:block;
-    margin-bottom:4px;
-    color:#94a3b8;
-    font-size:12px;
-    line-height:1;
-    font-weight:900;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-  }
-}
-@media (max-width:380px){
-  #icbc-treatment .treatment-card{
-    padding:20px 18px;
-    column-gap:12px;
-  }
-  #icbc-treatment .treatment-card h3{
-    font-size:22px;
-  }
-  #icbc-treatment .treatment-meta span:first-child{
-    font-size:15px;
-    letter-spacing:.14em;
-  }
-  #icbc-treatment .treatment-meta span:last-child{
-    font-size:19px;
-    min-width:66px;
-  }
-}
-/* Footer correction after annotation */
-.footer-links-compact{
-  display:none!important;
-}
-.footer-links-group{
-  display:block!important;
-  margin-top:60px;
-  background:transparent!important;
-}
-.footer-links-title{
-  display:block!important;
-  margin-bottom:18px;
-  color:#64748b;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  background:transparent!important;
-}
-.footer-links{
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:flex-start!important;
-  gap:14px!important;
-  margin-top:0!important;
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-.footer-links a{
-  display:inline-block;
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  color:#93a4bd;
-  font-size:15px;
-  line-height:1.2;
-  font-weight:500;
-  text-decoration:none;
-}
-@media (max-width:767px){
-  .footer-links-group{
-    display:block!important;
-    margin-top:26px;
-    background:transparent!important;
-  }
-  .footer-links-title{
-    display:block!important;
-    margin-bottom:12px;
-    font-size:10px;
-    letter-spacing:.18em;
-  }
-  .footer-links{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:10px!important;
-    background:transparent!important;
-  }
-  .footer-links a{
-    display:inline-block;
-    width:auto!important;
-    background:transparent!important;
-    color:#93a4bd;
-    font-size:14px;
-  }
-  .footer-clinic{
-    padding:0!important;
-    border:0!important;
-    border-radius:0!important;
-    background:transparent!important;
-  }
-}
-/* Final footer and treatment corrections */
-.footer-logo-mark{
-  width:58px;
-  height:58px;
-  color:#2563eb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.footer-logo-mark svg{
-  width:58px;
-  height:58px;
-  display:block;
-}
-.footer-logo-row{
-  align-items:center;
-}
-.footer-links-group{
-  background:transparent!important;
-}
-.footer-links{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-.footer-links a{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-@media (max-width:767px){
-  .footer-brand{
-    max-width:430px;
-  }
-  .footer-logo-row{
-    display:grid!important;
-    grid-template-columns:58px minmax(0,1fr);
-    gap:16px!important;
-    align-items:center!important;
-    margin-bottom:24px!important;
-  }
-  .footer-logo-mark,
-  .footer-logo-mark svg{
-    width:58px!important;
-    height:58px!important;
-  }
-  .footer-title{
-    font-size:30px!important;
-    line-height:.98!important;
-    letter-spacing:-.055em!important;
-  }
-  .footer-location{
-    margin-top:8px!important;
-    color:#93c5fd!important;
-    font-size:16px!important;
-  }
-  .footer-description{
-    max-width:390px!important;
-    font-size:18px!important;
-    line-height:1.52!important;
-    color:#a9b8d0!important;
-  }
-  .footer-links-group{
-    margin-top:34px!important;
-  }
-  .footer-links-title{
-    margin-bottom:18px!important;
-    color:#64748b!important;
-    font-size:12px!important;
-    letter-spacing:.22em!important;
-  }
-  .footer-links{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:18px 42px!important;
-    align-items:start!important;
-    width:100%!important;
-  }
-  .footer-links a{
-    padding:0!important;
-    color:#93c5fd!important;
-    font-size:18px!important;
-    line-height:1.2!important;
-    font-weight:500!important;
-    white-space:nowrap;
-  }
-  #icbc-treatment .treatment-grid{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:12px!important;
-    margin-top:28px!important;
-    overflow:visible!important;
-    border:0!important;
-    border-radius:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-  }
-  #icbc-treatment .treatment-card{
-    display:block!important;
-    min-height:0!important;
-    padding:18px!important;
-    border:1px solid #e2e8f0!important;
-    border-radius:20px!important;
-    background:#fff!important;
-    box-shadow:0 12px 30px rgba(15,23,42,.05)!important;
-  }
-  #icbc-treatment .treatment-card h3{
-    display:block!important;
-    margin:0 0 14px!important;
-    color:#0f172a!important;
-    font-size:18px!important;
-    line-height:1.2!important;
-    font-weight:800!important;
-    letter-spacing:-.02em!important;
-  }
-  #icbc-treatment .treatment-meta{
-    display:flex!important;
-    flex-direction:row!important;
-    flex-wrap:wrap!important;
-    justify-content:space-between!important;
-    gap:8px!important;
-  }
-  #icbc-treatment .treatment-meta span{
-    display:inline-flex!important;
-    align-items:center!important;
-    width:auto!important;
-    min-width:0!important;
-    padding:8px 10px!important;
-    border-radius:999px!important;
-    background:#eff6ff!important;
-    color:#1d4ed8!important;
-    font-size:12px!important;
-    line-height:1!important;
-    font-weight:850!important;
-    letter-spacing:0!important;
-    text-transform:none!important;
-    box-shadow:none!important;
-    text-align:left!important;
-    white-space:nowrap!important;
-  }
-  #icbc-treatment .treatment-meta span:last-child::before{
-    content:none!important;
-  }
-}
-@media (max-width:380px){
-  .footer-links{
-    gap:16px 24px!important;
-  }
-  .footer-links a{
-    font-size:16px!important;
-  }
-}
-/* Mobile hero white background correction */
-@media (max-width:767px){
-  .mobile-hero{
-    background:#fff!important;
-    border-bottom:0!important;
-  }
-  .mobile-photo{
-    background:#fff!important;
-    border-color:#e2e8f0!important;
-  }
-  .mobile-photo img{
-    background:#f8fafc!important;
-  }
-}
-/* Full page white background alignment */
-html,
-body,
-main,
-.page-section,
-.faq-section,
-.expert-section,
-.mobile-hero{
-  background:#fff!important;
-}
-@media (max-width:767px){
-  html,
-  body,
-  main,
-  .page-section,
-  .faq-section,
-  .expert-section,
-  .mobile-hero{
-    background:#fff!important;
-  }
-  .mobile-hero{
-    border-bottom:0!important;
-  }
-}
-/* Homepage-style white mobile hero */
-@media (max-width:767px){
-  body main > section.mobile-hero,
-  body main > section.mobile-hero.section-reveal,
-  .mobile-hero,
-  .mobile-hero-inner{
-    background:#fff!important;
-    background-image:none!important;
-    box-shadow:none!important;
-  }
-  .mobile-hero{
-    padding:34px 20px 32px!important;
-    border:0!important;
-  }
-  .mobile-hero .mobile-trust-row span{
-    background:#fff!important;
-  }
-  .mobile-photo{
-    background:#fff!important;
-    border:0!important;
-    border-radius:14px!important;
-    box-shadow:none!important;
-    padding:0!important;
-  }
-  .mobile-photo::after{
-    display:none!important;
-  }
-  .mobile-photo img{
-    display:block!important;
-    background:#fff!important;
-    border-radius:14px!important;
-    box-shadow:none!important;
-  }
-  .mobile-cta{
-    position:static!important;
-    margin-top:16px!important;
-    width:100%!important;
-    height:64px!important;
-    border-radius:14px!important;
-    box-shadow:none!important;
-  }
-}
-/* Homepage-style hero highlight list */
-@media (max-width:767px){
-  .mobile-trust-row{
-    display:grid!important;
-    gap:14px!important;
-    margin:24px 0 28px!important;
-  }
-  .mobile-trust-row span{
-    position:relative!important;
-    display:block!important;
-    min-height:0!important;
-    padding:0 0 0 34px!important;
-    border:0!important;
-    border-radius:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-    color:#17233b!important;
-    font-size:20px!important;
-    line-height:1.28!important;
-    font-weight:850!important;
-    letter-spacing:-.025em!important;
-  }
-  .mobile-trust-row span::before{
-    content:"✓";
-    position:absolute;
-    left:2px;
-    top:0;
-    color:#2563eb;
-    font-size:22px;
-    line-height:1;
-    font-weight:900;
-  }
-}
-/* Homepage-matched mobile hero sizing */
-@media (max-width:767px){
-  .mobile-hero{
-    padding:34px 20px 32px!important;
-  }
-  .mobile-hero-inner{
-    max-width:540px!important;
-  }
-  .mobile-hero h1{
-    max-width:100%!important;
-    margin:0!important;
-    font-size:38px!important;
-    line-height:.98!important;
-    letter-spacing:-.055em!important;
-    font-weight:900!important;
-  }
-  .mobile-hero h1 span{
-    display:inline!important;
-    color:#2563eb!important;
-  }
-  .mobile-subtitle{
-    margin:18px 0 24px!important;
-    max-width:520px!important;
-    font-size:20px!important;
-    line-height:1.45!important;
-    font-weight:500!important;
-    color:#334155!important;
-  }
-  .mobile-trust-row{
-    display:grid!important;
-    gap:14px!important;
-    margin:0 0 28px!important;
-  }
-  .mobile-trust-row span{
-    padding-left:34px!important;
-    color:#17233b!important;
-    font-size:18px!important;
-    line-height:1.35!important;
-    font-weight:800!important;
-    letter-spacing:-.02em!important;
-  }
-  .mobile-trust-row span::before{
-    left:2px!important;
-    top:1px!important;
-    font-size:21px!important;
-  }
-  .mobile-photo{
-    width:100%!important;
-    margin-top:0!important;
-    border-radius:14px!important;
-    overflow:visible!important;
-  }
-  .mobile-photo img{
-    width:100%!important;
-    height:auto!important;
-    aspect-ratio:1.45 / 1!important;
-    object-fit:cover!important;
-    object-position:center!important;
-    border-radius:14px!important;
-  }
-  .mobile-cta{
-    margin-top:16px!important;
-    height:56px!important;
-    min-height:56px!important;
-    border-radius:14px!important;
-    font-size:18px!important;
-    font-weight:900!important;
-    box-shadow:none!important;
-  }
-}
-@media (max-width:430px){
-  .mobile-hero h1{
-    font-size:36px!important;
-  }
-  .mobile-subtitle{
-    font-size:19px!important;
-  }
-}
-@media (max-width:380px){
-  .mobile-hero h1{
-    font-size:33px!important;
-  }
-  .mobile-subtitle{
-    font-size:18px!important;
-  }
-  .mobile-trust-row span{
-    font-size:17px!important;
-  }
-}
-/* Final mobile hero scale correction */
-@media (max-width:767px){
-  body main > section.mobile-hero,
-  body main > section.mobile-hero.section-reveal,
-  .mobile-hero,
-  .mobile-hero-inner,
-  .mobile-hero *{
-    box-shadow:none!important;
-    filter:none!important;
-  }
-  .mobile-hero{
-    padding:34px 20px 28px!important;
-    background:#fff!important;
-    background-image:none!important;
-    border:0!important;
-  }
-  .mobile-hero h1{
-    max-width:360px!important;
-    font-size:31px!important;
-    line-height:1!important;
-    letter-spacing:-.045em!important;
-  }
-  .mobile-hero h1 span{
-    display:inline!important;
-  }
-  .mobile-subtitle{
-    margin:16px 0 22px!important;
-    max-width:360px!important;
-    font-size:17px!important;
-    line-height:1.45!important;
-    font-weight:500!important;
-  }
-  .mobile-trust-row{
-    gap:10px!important;
-    margin:0 0 24px!important;
-  }
-  .mobile-trust-row span{
-    padding-left:28px!important;
-    font-size:16px!important;
-    line-height:1.35!important;
-    font-weight:800!important;
-  }
-  .mobile-trust-row span::before{
-    left:1px!important;
-    top:1px!important;
-    font-size:18px!important;
-  }
-  .mobile-photo img{
-    aspect-ratio:1.48 / 1!important;
-  }
-  .mobile-cta{
-    height:56px!important;
-    min-height:56px!important;
-    font-size:17px!important;
-  }
-}
-@media (max-width:380px){
-  .mobile-hero h1{
-    max-width:330px!important;
-    font-size:29px!important;
-  }
-  .mobile-subtitle{
-    max-width:330px!important;
-    font-size:16px!important;
-  }
-  .mobile-trust-row span{
-    font-size:15px!important;
-  }
-}
-/* Replace symptom mobile hero with homepage rhythm */
-@media (max-width:767px){
-  .desktop-hero{
-    display:none!important;
-  }
-  .mobile-hero{
-    display:block!important;
-    background:#fff!important;
-    padding:20px 18px 28px!important;
-    border:0!important;
-    box-shadow:none!important;
-  }
-  .mobile-hero-inner{
-    max-width:430px!important;
-    margin:auto!important;
-    background:#fff!important;
-    box-shadow:none!important;
-  }
-  .mobile-hero h1{
-    margin:0!important;
-    max-width:430px!important;
-    color:#0f172a!important;
-    font-size:30px!important;
-    line-height:.96!important;
-    letter-spacing:-.052em!important;
-    font-weight:900!important;
-  }
-  .mobile-hero h1 span{
-    display:block!important;
-    color:#2563eb!important;
-  }
-  .mobile-subtitle{
-    margin:14px 0 18px!important;
-    max-width:430px!important;
-    color:#475569!important;
-    font-size:16px!important;
-    line-height:1.45!important;
-    font-weight:500!important;
-  }
-  .mobile-trust{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:10px!important;
-    margin:0 0 20px!important;
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-  }
-  .mobile-trust-item{
-    display:flex!important;
-    align-items:center!important;
-    gap:10px!important;
-    color:#334155!important;
-    font-size:15px!important;
-    line-height:1.25!important;
-    font-weight:700!important;
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-  }
-  .mobile-trust-item svg{
-    width:18px!important;
-    height:18px!important;
-    color:#2563eb!important;
-    flex-shrink:0!important;
-  }
-  .mobile-photo{
-    position:relative!important;
-    overflow:hidden!important;
-    background:#fff!important;
-    padding:0!important;
-    border-radius:12px!important;
-    border:1px solid rgba(15,23,42,.08)!important;
-    box-shadow:0 14px 34px rgba(15,23,42,.08)!important;
-    margin:0 0 12px!important;
-  }
-  .mobile-photo::after{
-    display:none!important;
-  }
-  .mobile-photo img{
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    aspect-ratio:1.45 / 1!important;
-    object-fit:cover!important;
-    object-position:center 45%!important;
-    border-radius:12px!important;
-    background:#f8fafc!important;
-  }
-  .mobile-cta{
-    position:static!important;
-    width:100%!important;
-    height:52px!important;
-    min-height:52px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    margin:0!important;
-    background:#2563eb!important;
-    color:#fff!important;
-    text-decoration:none!important;
-    font-size:16px!important;
-    line-height:1!important;
-    font-weight:800!important;
-    border-radius:12px!important;
-    box-shadow:0 14px 30px rgba(37,99,235,.35)!important;
-    transition:.25s!important;
-  }
-  .mobile-cta:active{
-    transform:scale(.98)!important;
-  }
-}
-@media (max-width:380px){
-  .mobile-hero h1{
-    font-size:28px!important;
-  }
-}
-/* Final shadow cleanup */
-nav,
-nav.sticky{
-  box-shadow:none!important;
-  border-bottom:0!important;
-}
-@media (max-width:767px){
-  nav,
-  nav.sticky{
-    box-shadow:none!important;
-    border-bottom:0!important;
-  }
-  .mobile-photo img{
-    aspect-ratio:1.45/1!important;
-  }
-  .mobile-cta{
-    box-shadow:0 6px 14px rgba(37,99,235,.12)!important;
-  }
-}
-/* Match homepage mobile hero title size */
-@media (max-width:767px){
-  .mobile-hero h1{
-    font-size:40px!important;
-    line-height:.93!important;
-    letter-spacing:-.06em!important;
-  }
-}
-@media (max-width:380px){
-  .mobile-hero h1{
-    font-size:36px!important;
-  }
-}
-/* Compact expert section on mobile */
-@media (max-width:767px){
-  .expert-section{
-    padding:36px 20px!important;
-    background:#fff!important;
-  }
-  .expert-panel{
-    display:block!important;
-    padding:22px!important;
-    border-radius:22px!important;
-    box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
-  }
-  .expert-profile{
-    display:grid!important;
-    grid-template-columns:72px 1fr!important;
-    gap:14px!important;
-    align-items:center!important;
-    text-align:left!important;
-  }
-  .expert-photo{
-    width:72px!important;
-    height:72px!important;
-    margin:0!important;
-    border-width:3px!important;
-  }
-  .expert-profile h3{
-    margin:0!important;
-    font-size:22px!important;
-    line-height:1.1!important;
-  }
-  .expert-role{
-    margin-top:5px!important;
-    font-size:14px!important;
-    line-height:1.35!important;
-  }
-  .expert-divider{
-    display:none!important;
-  }
-  .expert-experience{
-    grid-column:1 / -1!important;
-    margin-top:14px!important;
-    padding:12px 14px!important;
-    border-radius:16px!important;
-    gap:10px!important;
-  }
-  .experience-icon svg{
-    width:24px!important;
-    height:24px!important;
-  }
-  .expert-experience strong{
-    margin-bottom:3px!important;
-    font-size:11px!important;
-    letter-spacing:.12em!important;
-  }
-  .expert-experience span{
-    font-size:13px!important;
-    line-height:1.45!important;
-  }
-  .expert-content{
-    margin-top:18px!important;
-    padding-top:18px!important;
-    border-top:1px solid #e5e7eb!important;
-  }
-  .expert-content .eyebrow{
-    margin-bottom:8px!important;
-    font-size:10px!important;
-  }
-  .expert-content .section-title{
-    margin-bottom:8px!important;
-    font-size:24px!important;
-    line-height:1.1!important;
-  }
-  .expert-content .section-copy{
-    font-size:13px!important;
-    line-height:1.45!important;
-  }
-  .quote{
-    margin-top:16px!important;
-    padding-left:12px!important;
-    font-size:14px!important;
-    line-height:1.55!important;
-  }
-  .expert-note{
-    margin-top:14px!important;
-    font-size:11px!important;
-    line-height:1.35!important;
-  }
-}
-/* Mobile expert profile simplification */
-@media (max-width:767px){
-  .expert-profile{
-    grid-template-columns:72px 1fr!important;
-    grid-template-areas:
-      "photo name"
-      "meta meta"!important;
-  }
-  .expert-photo{
-    grid-area:photo!important;
-  }
-  .expert-profile h3{
-    grid-area:name!important;
-    align-self:center!important;
-  }
-  .expert-role{
-    grid-area:meta!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:space-between!important;
-    gap:14px!important;
-    width:100%!important;
-    margin-top:10px!important;
-    color:#64748b!important;
-    font-size:13px!important;
-    line-height:1!important;
-    white-space:nowrap!important;
-  }
-  .expert-role::after{
-    content:"7+ YEARS";
-    color:#2563eb;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    white-space:nowrap;
-  }
-  .expert-experience{
-    display:none!important;
-  }
-  .expert-content{
-    margin-top:16px!important;
-  }
-}
-/* Counsellor expert mobile alignment */
-@media (max-width:767px){
-  .expert-role{
-    display:flex!important;
-    justify-content:space-between!important;
-    align-items:center!important;
-    gap:12px!important;
-    white-space:nowrap!important;
-    width:100%!important;
-  }
-  .expert-role::after{
-    content:"7+ YEARS"!important;
-    margin-left:auto!important;
-    text-align:right!important;
-  }
-}
-/* Remove mobile gap around final CTA */
-@media (max-width:767px){
-  main > section.page-section:has(.cta-panel){
-    padding:0!important;
-    margin:0!important;
-    background:#2563eb!important;
-  }
-  main > section.page-section:has(.cta-panel) .cta-panel{
-    margin:0!important;
-    border-radius:0!important;
-  }
-}
-/* Final CTA spacing: keep top air, remove bottom gap */
-@media (max-width:767px){
-  main > section.page-section:has(.cta-panel){
-    padding:48px 0 0!important;
-    margin:0!important;
-    background:#fff!important;
-  }
-  main > section.page-section:has(.cta-panel) .cta-panel{
-    margin:0!important;
-    border-radius:0!important;
-  }
-}
-/* Remove FAQ dividers */
-.faq-item,
-.faq-question{
-  border:0!important;
-}
-@media (max-width:767px){
-  .faq-item,
-  .faq-question{
-    border:0!important;
-  }
-}
-/* Remove circle behind FAQ plus icon */
-.faq-icon{
-  background:transparent!important;
-  border-radius:0!important;
-}
-@media(max-width:767px){
-  .faq-icon{
-    background:transparent!important;
-    border-radius:0!important;
-  }
-}
-/* Slightly smaller treatment card titles */
-@media (max-width:767px){
-  #icbc-treatment .treatment-card h3{
-    font-size:16px!important;
-    line-height:1.25!important;
-  }
-}
-/* Treatment card title exact size */
-@media (max-width:767px){
-  #icbc-treatment .treatment-card h3{
-    font-size:13px!important;
-  }
-}
-/* Distinct treatment meta pill colors */
-.treatment-meta span:nth-child(1){
-  background:#eff6ff!important;
-  color:#2563eb!important;
-}
-.treatment-meta span:nth-child(2){
-  background:#ecfdf5!important;
-  color:#059669!important;
-}
-.treatment-meta span:nth-child(3){
-  background:#eef2ff!important;
-  color:#4f46e5!important;
-}
-@media(max-width:767px){
-  #icbc-treatment .treatment-meta span:nth-child(1){
-    background:#eff6ff!important;
-    color:#2563eb!important;
-  }
-  #icbc-treatment .treatment-meta span:nth-child(2){
-    background:#ecfdf5!important;
-    color:#059669!important;
-  }
-  #icbc-treatment .treatment-meta span:nth-child(3){
-    background:#eef2ff!important;
-    color:#4f46e5!important;
-  }
-}
-
-/* Smaller global radii */
-@media (max-width:767px){
-  .mobile-photo,
-  .mobile-photo img,
-  .mobile-cta,
-  .point-item,
-  .answer-panel,
-  .coverage-note,
-  .treatment-card,
-  .expert-panel,
-  .expert-experience,
-  .related-card,
-  .cta-panel,
-  .footer-clinic{
-    border-radius:12px!important;
-  }
-  .mobile-photo,
-  .mobile-photo img{
-    border-radius:12px!important;
-  }
-  .point-item,
-  .answer-panel,
-  .coverage-note,
-  #icbc-treatment .treatment-card,
-  .expert-panel,
-  .related-card{
-    border-radius:14px!important;
-  }
-  .cta-actions a,
-  .mobile-menu-cta{
-    border-radius:12px!important;
-  }
-}
-/* Related symptoms as image cards on mobile */
-@media (max-width:767px){
-  #related-guides{
-    background:#fff!important;
-  }
-  #related-guides .related-grid{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:20px!important;
-    margin-top:26px!important;
-  }
-  #related-guides .related-card{
-    display:block!important;
-    min-height:0!important;
-    overflow:hidden!important;
-    border:0!important;
-    border-radius:18px!important;
-    background:#fff!important;
-    box-shadow:0 12px 32px rgba(15,23,42,.06)!important;
-  }
-  #related-guides .related-card img{
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    min-height:0!important;
-    aspect-ratio:1.55 / 1!important;
-    object-fit:cover!important;
-    border-radius:0!important;
-  }
-  #related-guides .related-card div{
-    padding:26px 28px 30px!important;
-  }
-  #related-guides .related-card h3{
-    margin:0 0 14px!important;
-    color:#020617!important;
-    font-size:25px!important;
-    line-height:1.08!important;
-    font-weight:900!important;
-    letter-spacing:-.04em!important;
-  }
-  #related-guides .related-card p{
-    color:#475569!important;
-    font-size:17px!important;
-    line-height:1.55!important;
-  }
-}
-/* Smaller desktop radii */
-@media (min-width:768px){
-  .desktop-hero .rounded-\[36px\],
-  .desktop-hero .rounded-\[48px\],
-  .desktop-hero .rounded-\[28px\],
-  .desktop-hero .rounded-\[40px\],
-  .answer-panel,
-  .expert-panel,
-  .treatment-card,
-  .coverage-note,
-  .related-card,
-  .cta-panel,
-  .footer-clinic{
-    border-radius:16px!important;
-  }
-  .related-card img{
-    border-radius:0!important;
-  }
-  .cta-actions a,
-  .desktop-hero .rounded-xl{
-    border-radius:12px!important;
-  }
-  .pill-row span,
-  .treatment-meta span{
-    border-radius:999px!important;
-  }
-}
-/* Softer desktop shadows */
-@media (min-width:768px){
-  .desktop-hero .shadow-2xl,
-  .desktop-hero .shadow-xl,
-  .answer-panel,
-  .expert-panel,
-  .treatment-card,
-  .coverage-note,
-  .related-card,
-  .related-card:hover,
-  .cta-panel{
-    box-shadow:0 8px 22px rgba(15,23,42,.045)!important;
-  }
-  .cta-panel{
-    box-shadow:0 12px 28px rgba(37,99,235,.16)!important;
-  }
-  .desktop-hero .group > div{
-    box-shadow:0 10px 28px rgba(15,23,42,.06)!important;
-  }
-  .expert-badge{
-    box-shadow:0 8px 18px rgba(37,99,235,.08)!important;
-  }
-}
-/* Exact homepage footer override */
-.site-footer { background:#020617!important; color:#ffffff!important; padding:80px 24px 40px!important; border-top:1px solid rgba(148,163,184,.16)!important; }
-.site-footer .footer-container { max-width:1180px!important; margin:0 auto!important; }
-.site-footer .footer-top { display:grid!important; grid-template-columns:1.05fr 1fr 1fr!important; gap:56px!important; padding-bottom:56px!important; border-bottom:1px solid rgba(148,163,184,.18)!important; }
-.site-footer .footer-logo-row { display:flex!important; align-items:center!important; gap:16px!important; margin-bottom:28px!important; }
-.site-footer .footer-logo { flex:0 0 auto!important; display:block!important; line-height:0!important; transition:transform .2s ease!important; }
-.site-footer .footer-logo:hover { transform:scale(1.05)!important; }
-.site-footer .footer-logo img { display:block!important; width:58px!important; height:58px!important; }
-.site-footer .footer-title { display:block!important; color:#fff!important; font-size:34px!important; line-height:.95!important; font-weight:900!important; letter-spacing:-.055em!important; text-decoration:none!important; }
-.site-footer .footer-title:hover,.site-footer .footer-links a:hover,.site-footer .clinic-name:hover,.site-footer .clinic-info a:hover,.site-footer .footer-bottom a:hover { color:#60a5fa!important; }
-.site-footer .footer-location { margin-top:8px!important; color:#93c5fd!important; font-size:14px!important; letter-spacing:.02em!important; }
-.site-footer .footer-description { max-width:420px!important; margin:0!important; color:#93a4bd!important; font-size:15px!important; line-height:1.65!important; }
-.site-footer .footer-links-group { display:block!important; margin-top:60px!important; background:transparent!important; }
-.site-footer .footer-links-title { display:block!important; margin-bottom:18px!important; color:#64748b!important; font-size:12px!important; font-weight:900!important; letter-spacing:.22em!important; text-transform:uppercase!important; background:transparent!important; }
-.site-footer .footer-links { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:14px 28px!important; align-items:flex-start!important; margin-top:0!important; background:transparent!important; border:0!important; box-shadow:none!important; }
-.site-footer .footer-links a { display:inline-block!important; padding:0!important; color:#93a4bd!important; background:transparent!important; border:0!important; box-shadow:none!important; font-size:15px!important; line-height:1.2!important; font-weight:500!important; text-decoration:none!important; transition:.25s ease!important; }
-.site-footer .footer-clinic { padding:0!important; border:0!important; border-radius:0!important; background:transparent!important; }
-.site-footer .footer-clinic h3 { margin:0 0 24px!important; color:#fff!important; font-size:27px!important; line-height:1.1!important; font-weight:850!important; letter-spacing:-.035em!important; }
-.site-footer .clinic-name { display:inline-block!important; color:#fff!important; font-size:19px!important; line-height:1.25!important; font-weight:800!important; text-decoration:none!important; margin-bottom:20px!important; }
-.site-footer .clinic-info { display:grid!important; gap:14px!important; color:#93a4bd!important; font-size:15px!important; line-height:1.55!important; }
-.site-footer .clinic-info a { color:#93a4bd!important; text-decoration:none!important; }
-.site-footer .clinic-phone { color:#fff!important; font-weight:750!important; }
-.site-footer .clinic-hours { margin-top:20px!important; padding-top:18px!important; border-top:1px solid rgba(148,163,184,.18)!important; }
-.site-footer .hours-label { margin-bottom:12px!important; color:#64748b!important; font-size:12px!important; font-weight:900!important; letter-spacing:.22em!important; text-transform:uppercase!important; }
-.site-footer .hours-row { display:flex!important; justify-content:space-between!important; gap:24px!important; color:#93c5fd!important; font-size:15px!important; line-height:1.6!important; }
-.site-footer .hours-row + .hours-row { margin-top:10px!important; }
-.site-footer .hours-row span:last-child { color:#bfdbfe!important; white-space:nowrap!important; }
-.site-footer .footer-bottom { padding-top:28px!important; display:flex!important; justify-content:space-between!important; gap:24px!important; align-items:center!important; }
-.site-footer .footer-bottom p { margin:0!important; color:#8192ad!important; font-size:14px!important; line-height:1.5!important; }
-.site-footer .footer-bottom a { color:#fff!important; font-weight:800!important; text-decoration:none!important; }
-@media (max-width:767px){
-  .site-footer { padding:42px 20px 24px!important; }
-  .site-footer .footer-container { max-width:430px!important; }
-  .site-footer .footer-top { display:flex!important; flex-direction:column!important; gap:50px!important; padding-bottom:28px!important; }
-  .site-footer .footer-logo-row { display:flex!important; gap:12px!important; margin-bottom:18px!important; }
-  .site-footer .footer-logo img { width:48px!important; height:48px!important; }
-  .site-footer .footer-title { font-size:26px!important; line-height:1!important; }
-  .site-footer .footer-location { margin-top:5px!important; font-size:13px!important; }
-  .site-footer .footer-description { max-width:none!important; font-size:14px!important; line-height:1.55!important; }
-  .site-footer .footer-links-group { margin-top:26px!important; }
-  .site-footer .footer-links-title { margin-bottom:12px!important; font-size:10px!important; letter-spacing:.18em!important; }
-  .site-footer .footer-links { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:14px 28px!important; }
-  .site-footer .footer-links a { font-size:14px!important; }
-  .site-footer .footer-clinic h3 { font-size:22px!important; margin-bottom:10px!important; }
-  .site-footer .clinic-name { font-size:18px!important; margin-bottom:14px!important; }
-  .site-footer .clinic-info { gap:9px!important; font-size:14px!important; line-height:1.5!important; }
-  .site-footer .clinic-hours { margin-top:16px!important; padding-top:0!important; border-top:none!important; }
-  .site-footer .hours-label { margin-bottom:8px!important; font-size:10px!important; letter-spacing:.18em!important; }
-  .site-footer .hours-row { font-size:13px!important; line-height:1.35!important; gap:10px!important; }
-  .site-footer .hours-row + .hours-row { margin-top:5px!important; }
-  .site-footer .footer-bottom { padding-top:18px!important; flex-direction:column!important; align-items:flex-start!important; gap:6px!important; }
-  .site-footer .footer-bottom p { font-size:12px!important; }
-}
-
-/* Desktop treatment card alignment */
-@media (min-width:768px){
-  #icbc-treatment .treatment-grid{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:18px!important;
-    align-items:stretch!important;
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-    overflow:visible!important;
-  }
-  #icbc-treatment .treatment-card{
-    display:flex!important;
-    flex-direction:column!important;
-    justify-content:space-between!important;
-    min-width:0!important;
-    min-height:158px!important;
-    padding:24px 24px 22px!important;
-    background:#fff!important;
-    border:1px solid #dbe6f3!important;
-    border-radius:12px!important;
-    box-shadow:0 10px 24px rgba(15,23,42,.04)!important;
-  }
-  #icbc-treatment .treatment-card h3{
-    margin:0 0 22px!important;
-    font-size:18px!important;
-    line-height:1.18!important;
-    letter-spacing:0!important;
-  }
-  #icbc-treatment .treatment-meta{
-    display:flex!important;
-    flex-direction:row!important;
-    flex-wrap:nowrap!important;
-    align-items:center!important;
-    justify-content:space-between!important;
-    gap:8px!important;
-    width:100%!important;
-  }
-  #icbc-treatment .treatment-meta span{
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    flex:0 0 auto!important;
-    min-width:max-content!important;
-    padding:7px 10px!important;
-    border:1px solid rgba(37,99,235,.12)!important;
-    border-radius:999px!important;
-    font-size:12px!important;
-    line-height:1!important;
-    font-weight:800!important;
-    white-space:nowrap!important;
-  }
-}
-
-/* Family therapy note copy sizing */
-.family-therapy-note{
-  font-size:15px!important;
-  line-height:1.65!important;
-}
-.family-therapy-note strong{
-  display:block!important;
-  margin-bottom:12px!important;
-  font-size:18px!important;
-  line-height:1.2!important;
-}
-@media (max-width:767px){
-  .family-therapy-note{
-    font-size:14px!important;
-    line-height:1.58!important;
-  }
-  .family-therapy-note strong{
-    font-size:18px!important;
-    margin-bottom:10px!important;
-  }
-}
-
-/* Expert card divider removal */
-.expert-divider{
-  display:none!important;
-}
-.expert-content{
-  border-top:0!important;
-}
-@media (max-width:767px){
-  .expert-divider{
-    display:none!important;
-  }
-  .expert-content{
-    border-top:0!important;
-    padding-top:0!important;
-  }
-}
-
-/* Early assessment note copy sizing */
-.early-assessment-note p{
-  font-size:15px!important;
-  line-height:1.65!important;
-}
-@media (max-width:767px){
-  .early-assessment-note p{
-    font-size:14px!important;
-    line-height:1.58!important;
-  }
-}
-
-/* Seek-care checklist format */
-#seek-care .seek-care-checklist{
-  display:flex!important;
-  flex-direction:column!important;
-  gap:12px!important;
-  margin-top:26px!important;
-}
-#seek-care .seek-care-checklist .point-item{
-  display:flex!important;
-  align-items:flex-start!important;
-  gap:12px!important;
-  min-height:0!important;
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  color:#0f172a!important;
-  font-size:17px!important;
-  line-height:1.45!important;
-  font-weight:750!important;
-}
-#seek-care .seek-care-checklist .point-item::before{
-  content:"✓"!important;
-  position:static!important;
-  flex:0 0 auto!important;
-  width:auto!important;
-  height:auto!important;
-  margin-top:1px!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  color:#2563eb!important;
-  font-size:18px!important;
-  line-height:1.35!important;
-  font-weight:900!important;
-}
-@media (max-width:767px){
-  #seek-care .seek-care-checklist{
-    gap:14px!important;
-    margin-top:24px!important;
-  }
-  #seek-care .seek-care-checklist .point-item{
-    font-size:17px!important;
-    line-height:1.42!important;
-  }
-}
-
-/* Seek-care checklist typography refinement */
-#seek-care .seek-care-checklist{
-  gap:22px!important;
-}
-#seek-care .seek-care-checklist .point-item{
-  gap:12px!important;
-  font-size:18px!important;
-  line-height:1.5!important;
-  font-weight:600!important;
-}
-#seek-care .seek-care-checklist .point-item::before{
-  margin-top:2px!important;
-  font-size:15px!important;
-  line-height:1.5!important;
-  font-weight:800!important;
-}
-@media (max-width:767px){
-  #seek-care .seek-care-checklist{
-    gap:22px!important;
-  }
-  #seek-care .seek-care-checklist .point-item{
-    font-size:18px!important;
-    line-height:1.5!important;
-    font-weight:600!important;
-  }
-  #seek-care .seek-care-checklist .point-item::before{
-    font-size:15px!important;
-  }
-}
-
-/* Mobile-only short seek-care labels */
-#seek-care .seek-care-checklist .mobile-copy{
-  display:none!important;
-}
-@media (max-width:767px){
-  #seek-care .seek-care-checklist .desktop-copy{
-    display:none!important;
-  }
-  #seek-care .seek-care-checklist .mobile-copy{
-    display:inline!important;
-  }
-}
-
-/* Expert card type size refinement */
-.expert-profile h3{
-  font-size:28px!important;
-  line-height:1.08!important;
-}
-.expert-content .quote{
-  font-size:19px!important;
-  line-height:1.55!important;
-}
-@media (max-width:767px){
-  .expert-profile h3{
-    font-size:25px!important;
-    line-height:1.08!important;
-  }
-  .expert-content .quote{
-    font-size:17px!important;
-    line-height:1.55!important;
-  }
-}
-
-/* Desktop expert footer alignment */
-@media (min-width:768px){
-  .expert-panel{
-    align-items:stretch!important;
-  }
-  .expert-profile,
-  .expert-content{
-    display:flex!important;
-    flex-direction:column!important;
-  }
-  .expert-experience{
-    margin-top:auto!important;
-    align-self:center!important;
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    gap:8px!important;
-    width:auto!important;
-    padding:0!important;
-    border:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-  }
-  .expert-experience .experience-icon{
-    width:28px!important;
-    height:28px!important;
-    flex:0 0 28px!important;
-  }
-  .expert-experience strong{
-    display:block!important;
-    margin:0!important;
-    font-size:13px!important;
-    line-height:1!important;
-    letter-spacing:.12em!important;
-    white-space:nowrap!important;
-  }
-  .expert-note{
-    margin-top:auto!important;
-  }
-}
-
-/* Expert profile desktop type and badge alignment */
-@media (min-width:768px){
-  .expert-profile h3{
-    font-size:24px!important;
-    line-height:1.12!important;
-  }
-  .expert-experience{
-    align-items:center!important;
-    gap:6px!important;
-    line-height:1!important;
-  }
-  .expert-experience .experience-icon{
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    width:24px!important;
-    height:24px!important;
-    flex:0 0 24px!important;
-    margin:0!important;
-  }
-  .expert-experience .experience-icon svg,
-  .expert-experience .experience-icon i{
-    display:block!important;
-    width:18px!important;
-    height:18px!important;
-  }
-  .expert-experience strong{
-    display:inline-flex!important;
-    align-items:center!important;
-    height:24px!important;
-    line-height:24px!important;
-    margin:0!important;
-  }
-}
-
-/* Expert experience text-only bottom alignment */
-@media (min-width:768px){
-  .expert-profile{
-    justify-content:flex-start!important;
-  }
-  .expert-experience{
-    margin-top:auto!important;
-    margin-bottom:0!important;
-    align-self:center!important;
-    transform:translateY(2px)!important;
-  }
-  .expert-experience .experience-icon{
-    display:none!important;
-  }
-  .expert-experience strong{
-    height:auto!important;
-    line-height:1!important;
-  }
-  .expert-content{
-    justify-content:flex-start!important;
-  }
-  .expert-note{
-    margin-top:auto!important;
-    margin-bottom:0!important;
-    transform:translateY(2px)!important;
-  }
-}
-@media (max-width:767px){
-  .expert-experience .experience-icon{
-    display:none!important;
-  }
-}
-
-/* Expert review heading smaller */
-.expert-content .section-title{
-  font-size:34px!important;
-  line-height:1.08!important;
-}
-@media (max-width:767px){
-  .expert-content .section-title{
-    font-size:27px!important;
-    line-height:1.12!important;
-  }
-}
-
-/* Expert insight label size */
-.expert-content .eyebrow{
-  font-size:15px!important;
-  line-height:1.2!important;
-  letter-spacing:.18em!important;
-}
-@media (max-width:767px){
-  .expert-content .eyebrow{
-    font-size:14px!important;
-    line-height:1.2!important;
-  }
-}
-
-/* Desktop seek-care checklist 2x2 */
-@media (min-width:768px){
-  #seek-care .seek-care-checklist{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    column-gap:42px!important;
-    row-gap:22px!important;
-    margin-top:30px!important;
-  }
-  #seek-care .seek-care-checklist .point-item{
-    min-width:0!important;
-  }
-}
-
-/* Mobile expert profile spacing */
-@media (max-width:767px){
-  .expert-profile{
-    margin-bottom:18px!important;
-  }
-  .expert-content .eyebrow{
-    margin-top:2px!important;
-  }
-}
-
-/* Mobile expert role row lift */
-@media (max-width:767px){
-  .expert-role{
-    margin-top:-4px!important;
-  }
-  .expert-experience{
-    margin-top:-2px!important;
-  }
+  .site-footer{padding:42px 20px 24px;}
+  .site-footer .footer-container{max-width:430px;}
+  .site-footer .footer-top{display:flex;flex-direction:column;gap:50px;padding-bottom:28px;}
+  .site-footer .footer-logo-row{display:flex;gap:12px;margin-bottom:18px;}
+  .site-footer .footer-logo img{width:48px;height:48px;}
+  .site-footer .footer-title{font-size:26px;line-height:1;}
+  .site-footer .footer-location{margin-top:5px;font-size:13px;}
+  .site-footer .footer-description{max-width:none;font-size:14px;line-height:1.55;}
+  .site-footer .footer-links-group{margin-top:26px;}
+  .site-footer .footer-links-title{margin-bottom:12px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;}
+  .site-footer .footer-links a{font-size:14px;}
+  .site-footer .footer-clinic h3{font-size:22px;margin-bottom:10px;}
+  .site-footer .clinic-name{font-size:18px;margin-bottom:14px;}
+  .site-footer .clinic-info{gap:9px;font-size:14px;line-height:1.5;}
+  .site-footer .clinic-hours{margin-top:16px;padding-top:0;border-top:none;}
+  .site-footer .hours-label{margin-bottom:8px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .hours-row{font-size:13px;line-height:1.35;gap:10px;}
+  .site-footer .hours-row + .hours-row{margin-top:5px;}
+  .site-footer .footer-bottom{padding-top:18px;flex-direction:column;align-items:flex-start;gap:6px;}
+  .site-footer .footer-bottom p{font-size:12px;}
 }
 </style>
 
@@ -3685,208 +1296,73 @@ nav.sticky{
     {
       "@type": "MedicalOrganization",
       "@id": "https://vanrecovery.ca/#organization",
-      "name": "ICBC Recovery Hub",
+      "name": "VanRecovery",
       "url": "https://vanrecovery.ca/",
-      "areaServed": [
-        "Vancouver",
-        "Richmond",
-        "British Columbia"
-      ],
-      "medicalSpecialty": [
-        "PhysicalTherapy",
-        "PsychologicalTreatment",
-        "Rehabilitation"
-      ]
+      "areaServed": ["Vancouver", "Richmond", "British Columbia"]
     },
     {
       "@type": "Person",
-      "@id": "https://vanrecovery.ca/#hoi-pan-cheng",
+      "@id": "https://vanrecovery.ca/#clinical-reviewer-hoi-pan-cheng",
       "name": "Hoi Pan (DaDa) Cheng",
       "jobTitle": "Registered Clinical Counsellor",
-      "worksFor": {
-        "@id": "https://vanrecovery.ca/#organization"
-      },
+      "worksFor": {"@id": "https://vanrecovery.ca/#organization"},
       "knowsAbout": [
-        "Motor vehicle accident recovery",
         "Post-accident anxiety",
-        "Driving anxiety",
-        "Sleep disruption after trauma",
-        "PTSD symptoms",
-        "ICBC counselling",
-        "Family therapy for children"
+        "Driving fear after a collision",
+        "Sleep problems after a motor vehicle accident",
+        "Emotional recovery after a collision",
+        "Clinical counselling",
+        "Family therapy"
       ]
     },
     {
       "@type": "MedicalWebPage",
       "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#webpage",
       "url": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/",
-      "name": "Anxiety & Stress After a Car Accident",
-      "description": "Learn about anxiety, stress, sleep disruption, driving fear, PTSD-related symptoms, counselling options, and ICBC recovery support after a motor vehicle accident in Vancouver and Richmond.",
+      "name": "Anxiety After a Car Accident",
+      "description": "Learn about anxiety, driving fear, panic symptoms, sleep changes, counselling options, and ICBC recovery support after a motor vehicle accident in Vancouver and Richmond.",
       "inLanguage": "en-CA",
-      "isPartOf": {
-        "@id": "https://vanrecovery.ca/#organization"
-      },
-      "reviewedBy": {
-        "@id": "https://vanrecovery.ca/#hoi-pan-cheng"
-      },
-      "lastReviewed": "2026-06",
+      "isPartOf": {"@id": "https://vanrecovery.ca/#organization"},
+      "reviewedBy": {"@id": "https://vanrecovery.ca/#clinical-reviewer-hoi-pan-cheng"},
+      "lastReviewed": "2026-07-13",
       "about": {
         "@type": "MedicalCondition",
-        "name": "Anxiety and stress after a car accident",
-        "alternateName": [
-          "Post-accident anxiety",
-          "Driving anxiety after a car accident",
-          "Fear of driving after a collision",
-          "Stress after a motor vehicle accident"
-        ],
+        "name": "Anxiety after a car accident",
+        "alternateName": ["Post-accident anxiety", "Driving anxiety after a collision", "Travel fear after a motor vehicle accident", "Post-collision stress"],
         "signOrSymptom": [
-          {
-            "@type": "MedicalSymptom",
-            "name": "Anxious getting into a car"
-          },
-          {
-            "@type": "MedicalSymptom",
-            "name": "Avoiding driving"
-          },
-          {
-            "@type": "MedicalSymptom",
-            "name": "Nightmares after the accident"
-          },
-          {
-            "@type": "MedicalSymptom",
-            "name": "Sleep or work affected"
-          },
-          {
-            "@type": "MedicalSymptom",
-            "name": "Fear of driving"
-          }
+          {"@type": "MedicalSymptom", "name": "Anxiety when getting into a car"},
+          {"@type": "MedicalSymptom", "name": "Avoiding driving"},
+          {"@type": "MedicalSymptom", "name": "Nightmares or flashbacks"},
+          {"@type": "MedicalSymptom", "name": "Sleep, work, or daily life affected"}
         ],
         "possibleTreatment": [
-          {
-            "@type": "MedicalTherapy",
-            "name": "Registered Clinical Counselling"
-          },
-          {
-            "@type": "MedicalTherapy",
-            "name": "Virtual Registered Clinical Counselling"
-          },
-          {
-            "@type": "MedicalTherapy",
-            "name": "Family Therapy for Children"
-          }
+          {"@type": "MedicalTherapy", "name": "Clinical counselling"},
+          {"@type": "MedicalTherapy", "name": "Family therapy"},
+          {"@type": "MedicalTherapy", "name": "Virtual clinical counselling"}
         ]
-      },
-      "mentions": [
-        {
-          "@type": "MedicalCondition",
-          "name": "PTSD"
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Sleep disruption"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "ICBC counselling"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Family counselling"
-        }
-      ]
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "I wasn't seriously injured. Why do I still feel anxious?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A collision can affect emotional well-being even when physical injuries are minor. Anxiety, fear, or sleep problems may appear days or weeks later as your mind processes the experience. If these feelings continue or begin affecting daily life, an assessment can help determine the right support."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why did my anxiety start days after the accident?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Emotional symptoms do not always appear immediately after a collision. Many people focus on physical recovery first and notice anxiety, stress, or sleep difficulties later. This delayed response is a common reaction after a traumatic event."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is it normal to be afraid of driving after a car accident?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Feeling nervous about driving or even riding in a car is common after a collision. If the fear does not improve or begins affecting your daily routine, counselling may help you regain confidence."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know if it's anxiety or PTSD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Both anxiety and PTSD can develop after a traumatic event and may share similar symptoms. PTSD often involves persistent nightmares, flashbacks, avoidance, or feeling constantly on edge. A clinical assessment can help identify what is causing your symptoms and recommend appropriate support."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will these feelings go away on their own?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some people recover naturally over time, while others continue to experience anxiety or fear long after the accident. Early assessment can help identify your recovery needs and recommend appropriate support if needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I see a counsellor even if my physical injuries are improving?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Physical and emotional recovery do not always happen at the same pace. In our clinical experience, people often recover more completely when both physical and emotional symptoms are addressed together."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does ICBC cover counselling after a car accident?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In many cases, ICBC may cover counselling for emotional symptoms related to a motor vehicle accident. Treatment recommendations depend on your symptoms, claim, and clinical assessment. Participating clinics may also offer direct billing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "My child seems different after the accident. Is that normal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Children may respond differently after a collision and may become fearful, withdrawn, have nightmares, or avoid riding in a car. Family counselling can help parents understand these changes and support their child's recovery."
-          }
-        }
+        {"@type":"Question","name":"Is anxiety normal after a car accident?","acceptedAnswer":{"@type":"Answer","text":"Yes. Feeling shaken, tense, watchful, or nervous about driving can be a common response after a collision. Consider support when symptoms are intense, persistent, or interfere with sleep, work, relationships, or travel."}},
+        {"@type":"Question","name":"What can post-accident anxiety feel like?","acceptedAnswer":{"@type":"Answer","text":"It may include racing thoughts, a pounding heart, muscle tension, irritability, poor sleep, distressing memories, difficulty concentrating, or avoiding driving and certain routes."}},
+        {"@type":"Question","name":"Why did anxiety start days after the crash?","acceptedAnswer":{"@type":"Answer","text":"Some people feel focused on practical tasks immediately after a collision and notice emotional effects later. Pain, disrupted sleep, claim stress, and returning to the road can also trigger or intensify symptoms."}},
+        {"@type":"Question","name":"When should I seek urgent help?","acceptedAnswer":{"@type":"Answer","text":"Seek urgent help if you feel unable to stay safe, have thoughts of self-harm, feel disconnected from reality, or are in severe distress. Call 911 for immediate danger or contact a local crisis service. Otherwise, arrange a prompt assessment if symptoms are worsening or disrupting daily life."}},
+        {"@type":"Question","name":"Can counselling help with driving anxiety?","acceptedAnswer":{"@type":"Answer","text":"Yes. Counselling can help you understand anxiety responses, learn grounding and coping skills, and gradually rebuild confidence around driving or travelling at a safe pace."}},
+        {"@type":"Question","name":"What happens during a first counselling appointment?","acceptedAnswer":{"@type":"Answer","text":"Your counsellor will ask about the collision, current symptoms, sleep, travel concerns, daily impact, and recovery goals. Together you can create a plan that respects your comfort and pace."}},
+        {"@type":"Question","name":"Does ICBC cover counselling or psychology?","acceptedAnswer":{"@type":"Answer","text":"Eligible customers may have up to 12 pre-approved counselling sessions and 12 psychology sessions within the first 12 weeks after a crash. Confirm your claim eligibility and any fee difference with ICBC or your provider."}},
+        {"@type":"Question","name":"How long does anxiety after a crash last?","acceptedAnswer":{"@type":"Answer","text":"Recovery varies. Some reactions settle within days or weeks, while persistent or worsening symptoms may benefit from professional support. Early care can help prevent avoidance and anxiety from becoming more established."}}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://vanrecovery.ca/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Symptoms",
-          "item": "https://vanrecovery.ca/symptoms/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Anxiety & Stress After a Car Accident",
-          "item": "https://vanrecovery.ca/symptoms/anxiety-after-car-accident/"
-        }
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://vanrecovery.ca/"},
+        {"@type":"ListItem","position":2,"name":"Symptoms","item":"https://vanrecovery.ca/symptoms/"},
+        {"@type":"ListItem","position":3,"name":"Anxiety After a Car Accident","item":"https://vanrecovery.ca/symptoms/anxiety-after-car-accident/"}
       ]
     }
   ]
@@ -3898,459 +1374,313 @@ nav.sticky{
 
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md">
 
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-      <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
-        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-        <span class="font-bold text-xl tracking-tight text-slate-800">
-          ICBC Recovery <span class="text-blue-600 font-black">Hub</span>
-        </span>
-      </a>
+        <div class="flex items-center justify-between h-20">
 
-      <div class="hidden md:flex items-center gap-8">
-        <a data-home-link="symptoms" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">Symptoms</a>
-        <a data-home-link="how-icbc-works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">How ICBC Works</a>
-        <a data-home-link="locations" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">Locations</a>
-        <a data-home-link="assessment" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">30s Check</a>
-      </div>
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
 
-      <button id="mobile-menu-button" class="mobile-menu-button md:hidden p-2 text-slate-600" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="4" x2="20" y1="6" y2="6"/>
-          <line x1="4" x2="20" y1="12" y2="12"/>
-          <line x1="4" x2="20" y1="18" y2="18"/>
-        </svg>
-      </button>
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+
+                <span class="font-bold text-xl tracking-tight text-slate-800">
+                    Van<span class="text-blue-600 font-black">Recovery</span>
+                </span>
+
+            </a>
+
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <a data-home-link="symptoms"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Symptoms
+                </a>
+
+                <a data-home-link="treatment"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Treatment
+                </a>
+
+                <a data-home-link="locations"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Locations
+                </a>
+
+                <a data-home-link="assessment"
+                   class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">
+                    Recovery Check
+                </a>
+
+            </div>
+
+            <!-- Mobile -->
+            <button
+                id="mobile-menu-button"
+                class="mobile-menu-button md:hidden p-2 text-slate-600"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                type="button">
+
+                <svg class="w-6 h-6"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+
+                </svg>
+
+            </button>
+
+        </div>
 
     </div>
-  </div>
 
-  <div id="mobile-menu" class="mobile-menu-panel md:hidden bg-white shadow-lg">
-    <div class="mobile-menu-inner px-8 py-7">
-      <a data-home-link="symptoms" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">Symptoms</a>
-      <a data-home-link="how-icbc-works" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">How ICBC Works</a>
-      <a data-home-link="locations" class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">Locations</a>
-      <a data-home-link="assessment" class="mobile-menu-cta block rounded-xl bg-blue-600 px-5 py-4 text-center text-[18px] font-black text-white shadow-lg">Start 30s Check</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="mobile-menu-panel md:hidden bg-white shadow-lg">
+
+        <div class="mobile-menu-inner px-8 py-7">
+
+            <a data-home-link="symptoms"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Symptoms
+            </a>
+
+            <a data-home-link="treatment"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Treatment
+            </a>
+
+            <a data-home-link="locations"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Locations
+            </a>
+
+            <a data-home-link="assessment"
+               class="mobile-menu-cta block rounded-xl bg-blue-600 px-5 py-4 text-center text-[18px] font-black text-white shadow-lg">
+                Recovery Check
+            </a>
+
+        </div>
+
     </div>
-  </div>
 
 </nav>
 
 <script>
-(function(){
-  const mobileMenu = document.getElementById("mobile-menu");
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuButton = document.getElementById("mobile-menu-button");
 
-  function setMobileMenuOpen(isOpen){
-    if(!mobileMenu || !mobileMenuButton) return;
+function setMobileMenuOpen(isOpen) {
+    if (!mobileMenu || !mobileMenuButton) return;
+
     mobileMenu.classList.toggle("is-open", isOpen);
     mobileMenuButton.classList.toggle("is-open", isOpen);
     mobileMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  }
+}
 
-  if(mobileMenuButton){
-    mobileMenuButton.addEventListener("click", function(){
-      setMobileMenuOpen(!mobileMenu.classList.contains("is-open"));
-    });
-  }
+function toggleMobileMenu() {
+    if (!mobileMenu) return;
+    setMobileMenuOpen(!mobileMenu.classList.contains("is-open"));
+}
 
-  const localTargets = ["symptoms", "how-icbc-works", "locations", "assessment"];
-  const isHomePage = localTargets.some(function(target){ return document.getElementById(target); });
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", toggleMobileMenu);
+}
 
-  function scrollToSection(target){
+const HOME_ANCHOR_PATH = "/";
+const currentPath = window.location.pathname;
+const isLocalFile = window.location.protocol === "file:";
+const isHomePage =
+    isLocalFile ||
+    currentPath === "/" ||
+    currentPath.endsWith("/index.html") ||
+    currentPath.endsWith("/icbc-hub.html");
+
+function scrollToHomeSection(target) {
     const section = document.getElementById(target);
-    if(!section) return false;
+    if (!section) return false;
+
     const nav = document.querySelector("nav");
     const navOffset = nav ? nav.offsetHeight + 18 : 96;
     const top = section.getBoundingClientRect().top + window.pageYOffset - navOffset;
-    window.scrollTo({ top: top, behavior: "smooth" });
-    history.replaceState(null, "", "#" + target);
-    return true;
-  }
 
-  document.querySelectorAll("[data-home-link]").forEach(function(link){
+    window.scrollTo({ top, behavior: "smooth" });
+    history.replaceState(null, "", `#${target}`);
+    return true;
+}
+
+document.querySelectorAll("[data-home-link]").forEach(link => {
+
     const target = link.dataset.homeLink;
-    link.href = isHomePage ? "#" + target : "/#" + target;
-    link.addEventListener("click", function(event){
-      setMobileMenuOpen(false);
-      if(!isHomePage) return;
-      event.preventDefault();
-      scrollToSection(target);
+    link.href = isHomePage ? `#${target}` : `${HOME_ANCHOR_PATH}#${target}`;
+
+    link.addEventListener("click", event => {
+        if (!isHomePage) return;
+
+        event.preventDefault();
+        scrollToHomeSection(target);
     });
-  });
-})();
+
+});
+
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        setMobileMenuOpen(false);
+    });
+
+});
 </script>
 
 <main>
 
 <section class="desktop-hero relative bg-white py-12 md:py-24 overflow-hidden border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
-
-      <div class="z-10 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ebf3ff] text-[#2563eb] text-[13px] font-bold tracking-wider mb-8 border border-[#dbeafe]">
-          <span class="uppercase">ICBC Symptom Guide</span>
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="text-sm font-black tracking-[.2em] uppercase text-blue-600 mb-5">Mental Health Recovery</p>
+        <h1 class="text-5xl md:text-6xl font-black tracking-tight text-slate-900 leading-[1.02] mb-6">Anxiety After an <span class="text-blue-600">ICBC Car Accident</span></h1>
+        <p class="text-xl text-slate-600 leading-relaxed mb-8">Feel safer, sleep better, and rebuild confidence after a collision with the right mental health support.</p>
+        <div class="grid gap-4 mb-9">
+          <div class="flex items-center gap-4"><i data-lucide="check" class="text-blue-600"></i><span class="text-lg md:text-xl font-bold text-slate-800">Response Within 24 Hours</span></div>
+          <div class="flex items-center gap-4"><i data-lucide="check" class="text-blue-600"></i><span class="text-lg md:text-xl font-bold text-slate-800">ICBC Counselling Options</span></div>
         </div>
-
-        <h1 class="text-[44px] md:text-[56px] lg:text-[58px] font-bold text-slate-900 leading-[0.94] tracking-[-0.045em] max-w-[620px] mx-auto lg:mx-0 mb-6">
-          Anxiety and stress after a car accident
-        </h1>
-
-        <p class="text-lg md:text-xl text-slate-500 font-medium mb-8 leading-relaxed max-w-[620px] mx-auto lg:mx-0">
-          Feeling anxious, avoiding driving, or having trouble sleeping after a car accident? Learn when these symptoms are common, when to seek support, and how recovery may help.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-          <a href="/#assessment" class="bg-blue-600 text-white px-9 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-xl text-center">30s Eligibility Check</a>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="/#assessment" class="bg-blue-600 text-white px-9 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-xl text-center">Start Recovery Check</a>
           <a href="#seek-care" class="bg-white text-slate-900 px-9 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 shadow-sm border border-slate-200 text-center">Should I Seek Care?</a>
         </div>
       </div>
-
       <div class="relative group block mt-10 lg:mt-0">
-        <div class="bg-white p-3 rounded-[36px] md:rounded-[48px] shadow-2xl border border-slate-100 overflow-hidden">
-          <div class="aspect-[4/3] rounded-[28px] md:rounded-[40px] overflow-hidden bg-slate-200 relative">
-            <img src="/assets/images/anxiety-after-car-accident-card.png" alt="Person experiencing anxiety and stress after a car accident" class="w-full h-full object-cover object-[38%_center]">
+        <div class="bg-white p-3 rounded-[22px] shadow-2xl border border-slate-100 overflow-hidden">
+          <div class="aspect-[4/3] rounded-[18px] overflow-hidden bg-slate-200 relative">
+            <img src="/assets/images/anxiety-after-car-accident-card.png" alt="Person experiencing anxiety after a car accident" class="w-full h-full object-cover object-center">
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="mobile-hero">
   <div class="mobile-hero-inner">
-    <h1>
-      Anxiety &amp; Stress After an
-      <span>ICBC Car Accident</span>
-    </h1>
-
-    <p class="mobile-subtitle">
-      Emotional recovery with ICBC direct billing.
-    </p>
-
+    <div class="mobile-hero-title">
+      <span class="title-line">Anxiety After an</span>
+      <span class="title-line title-line-accent">ICBC Car Accident</span>
+    </div>
+    <p class="mobile-subtitle">Recover sooner from anxiety with the right assessment and ICBC treatment.</p>
     <div class="mobile-trust">
-      <div class="mobile-trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
-          <path d="M20 6L9 17l-5-5"/>
-        </svg>
-        <span>ICBC Direct Billing Support</span>
-      </div>
-
-      <div class="mobile-trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
-          <path d="M20 6L9 17l-5-5"/>
-        </svg>
-        <span>Anxiety &amp; Stress Support</span>
-      </div>
+      <div class="mobile-trust-item"><i data-lucide="check"></i><span>Response Within 24 Hours</span></div>
+      <div class="mobile-trust-item"><i data-lucide="check"></i><span>ICBC Counselling Options</span></div>
     </div>
-
-    <div class="mobile-photo">
-      <img src="https://vanrecovery.ca/assets/images/anxiety-after-car-accident-card.png" alt="Anxiety and stress after a car accident">
-    </div>
-
-    <a href="/#assessment" class="mobile-cta">30s Eligibility Check</a>
+    <div class="mobile-photo"><img src="https://vanrecovery.ca/assets/images/anxiety-after-car-accident-card.png" alt="Anxiety after a car accident"></div>
+    <a href="/#assessment" class="mobile-cta">Start Recovery Check</a>
   </div>
 </section>
 
 <section id="seek-care" class="page-section">
   <div class="page-container">
-
     <p class="eyebrow">When to seek care</p>
-
-    <h2 class="section-title">
-      Does this sound familiar?
-    </h2>
-
-        <div class="point-grid seek-care-checklist">
-      <div class="point-item"><span class="desktop-copy">Anxious getting into a car</span><span class="mobile-copy">Anxious getting into a car</span></div>
-      <div class="point-item"><span class="desktop-copy">Avoiding driving</span><span class="mobile-copy">Avoiding driving</span></div>
-      <div class="point-item"><span class="desktop-copy">Nightmares or flashbacks</span><span class="mobile-copy">Nightmares or flashbacks</span></div>
-      <div class="point-item"><span class="desktop-copy">Sleep, work, or daily life affected</span><span class="mobile-copy">Sleep, work, or daily life affected</span></div>
+    <h2 class="section-title">Does this sound familiar?</h2>
+    <div class="point-grid seek-care-checklist">
+      <div class="point-item">Anxious getting into a car</div>
+      <div class="point-item">Avoiding driving</div>
+      <div class="point-item">Nightmares or flashbacks</div>
+      <div class="point-item">Sleep, work, or daily life affected</div>
     </div>
-
-        <div class="answer-panel early-assessment-note">
-      <h3>Why get assessed early?</h3>
-      <p>
-        Early support isn&#39;t only about reducing symptoms. It also helps identify the right treatment and recovery plan before symptoms begin affecting daily life.
-      </p>
+    <div class="answer-panel early-assessment-note">
+      <h3>Why get support early?</h3>
+      <p>Early support isn't only about reducing symptoms. It also helps identify the right treatment and recovery plan before symptoms begin affecting daily life.</p>
     </div>
-
   </div>
 </section>
 
 <section id="icbc-treatment" class="page-section">
-
-    <div class="page-container">
-
-        <p class="eyebrow">
-            Treatment Options
-        </p>
-
-        <h2 class="section-title">
-            Counselling Covered by ICBC
-        </h2>
-
-        <p class="section-copy">
-            If anxiety, stress, sleep problems, or driving fear are affecting your recovery, counselling may be included as part of your ICBC treatment plan, depending on your assessment and claim.
-        </p>
-
-        <div class="treatment-grid">
-
-            <article class="treatment-card">
-
-                <h3>1 on 1 Registered Clinical Counselling</h3>
-
-                <div class="treatment-meta">
-                    <span>12 Sessions</span>
-                    <span>In person</span>
-                    <span>55 min</span>
-                </div>
-
-            </article>
-
-            <article class="treatment-card">
-
-                <h3>Subsequent - Family Therapy (Kids Only)</h3>
-
-                <div class="treatment-meta">
-                    <span>12 Sessions</span>
-                    <span>In person</span>
-                    <span>60 min</span>
-                </div>
-
-            </article>
-
-            <article class="treatment-card">
-
-                <h3>Virtual - 1 on 1 Registered Clinical Counselling</h3>
-
-                <div class="treatment-meta">
-                    <span>12 Sessions</span>
-                    <span>Video</span>
-                    <span>55 min</span>
-                </div>
-
-            </article>
-
-        </div>        <div class="coverage-note family-therapy-note">
-
-            <strong>Family Therapy for Children</strong>
-
-            When a child is involved in a collision, recovery may include family counselling as part of the treatment plan. Family therapy helps parents better understand their child's emotional changes and support recovery together at home.
-
-        </div>
-
+  <div class="page-container">
+    <p class="eyebrow">Treatment Options</p>
+    <h2 class="section-title">Anxiety Treatment Covered by ICBC</h2>
+    <p class="section-copy">The right treatment depends on your symptoms and clinical assessment. Depending on your recovery needs, eligible ICBC customers may access pre-approved counselling or psychology treatment during the first 12 weeks after a crash.</p>
+    <div class="treatment-grid">
+      <article class="treatment-card"><div><h3>Clinical Counselling</h3><p class="treatment-description">Individual counselling to help with anxiety, stress, driving fear, sleep problems, and emotional recovery after a motor vehicle accident.</p></div><div class="treatment-meta"><span>12 Sessions</span><span>In Person</span><span>50–55 Min</span></div></article>
+      <article class="treatment-card"><div><h3>Family Therapy (Children)</h3><p class="treatment-description">Support children and parents together after a collision, helping families understand emotional changes and recover with confidence.</p></div><div class="treatment-meta"><span>12 Sessions</span><span>In Person</span><span>60 Min</span></div></article>
+      <article class="treatment-card"><div><h3>Virtual Clinical Counselling</h3><p class="treatment-description">Receive one-on-one counselling remotely with the same clinical support, making it easier to continue treatment from home.</p></div><div class="treatment-meta"><span>12 Sessions</span><span>Virtual</span><span>50–55 Min</span></div></article>
     </div>
-
+    <div class="coverage-note"><strong>Family Therapy for Children</strong>When a child is involved in a collision, recovery may include family counselling as part of the treatment plan. Family therapy helps parents better understand their child's emotional changes and support recovery together at home.</div>
+  </div>
 </section>
 
 <section class="page-section expert-section">
   <div class="expert-panel">
-
-    <!-- Left: Counsellor -->
     <aside class="expert-profile">
-
-      <img 
-        src="/assets/images/counsellor-dada-cheng.avif" 
+      <img
+        src="/assets/images/counsellor-dada-cheng.avif"
         alt="Hoi Pan DaDa Cheng, Registered Clinical Counsellor"
         class="expert-photo"
       >
-
       <h3>Hoi Pan (DaDa) Cheng</h3>
-
-      <p class="expert-role">
-        Registered Clinical Counsellor
-      </p>
-
-      <div class="expert-divider"></div>
-
-      <div class="expert-experience">
-        <div class="experience-icon">
-          <i data-lucide="badge-check"></i>
-        </div>
-
-        <div>
-          <strong>7+ Years Experience</strong>
-        </div>
-      </div>
-
+      <p class="expert-role">Registered Clinical Counsellor</p>
+      <div class="expert-experience"><div><strong>7+ Years Experience</strong></div></div>
     </aside>
-
-    <!-- Right: Review -->
     <div class="expert-content">
-
       <p class="eyebrow">Expert Insight</p>
-
-      <h2 class="section-title">
-        Reviewed by a Counsellor
-      </h2>
-
-      <p class="quote">
-        "In our clinical experience, many people focus on physical recovery first, while emotional symptoms often appear days or weeks later. People often recover more completely when both physical and emotional symptoms are addressed together."
-      </p>
-
-      <p class="expert-note">
-        Last reviewed: June 2026 &middot; Educational content only
-      </p>
-
+      <h2 class="section-title">Clinically Reviewed Anxiety Guidance</h2>
+      <p class="quote">Recovery after a collision involves more than treating pain. Muscle tension, disrupted sleep, stress, and headaches can all affect healing. Acupuncture can be integrated into your recovery plan to help reduce symptoms, improve well-being, and support your return to daily activities.</p>
+      <p class="expert-note">Last reviewed: July 2026 &middot; Educational content only</p>
     </div>
-
   </div>
 </section>
 
-<!-- FAQ Section -->
 <section id="faq" class="faq-section">
   <div class="faq-container">
-
-    <div class="faq-heading">
-      <p>People Also Ask</p>
-      <h2>Anxiety &amp; Stress FAQ</h2>
-    </div>
-
+    <div class="faq-heading"><p>People Also Ask</p><h2>Anxiety FAQ</h2></div>
     <div class="faq-list">
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>I wasn&#39;t seriously injured. Why do I still feel anxious?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          A collision can affect emotional well-being even when physical injuries are minor. Anxiety, fear, or sleep problems may appear days or weeks later as your mind processes the experience. If these feelings continue or begin affecting daily life, an assessment can help determine the right support.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>Why did my anxiety start days after the accident?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Anxiety or stress does not always appear immediately after a collision. Many people focus on physical recovery first and notice sleep difficulties, driving fear, or stress later. This delayed response is a common reaction after a traumatic event.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>Is it normal to be afraid of driving after a car accident?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Yes. Feeling nervous about driving&mdash;or even riding in a car&mdash;is common after a collision. If the fear doesn&#39;t improve or begins affecting your daily routine, counselling may help you regain confidence.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>How do I know if it&#39;s anxiety or PTSD?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Both anxiety and PTSD can develop after a traumatic event and may share similar symptoms. PTSD often involves persistent nightmares, flashbacks, avoidance, or feeling constantly on edge. A clinical assessment can help identify what&#39;s causing your symptoms and recommend appropriate support.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>Will these feelings go away on their own?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Some people recover naturally over time, while others continue to experience anxiety or fear long after the accident. Early assessment can help identify your recovery needs and recommend appropriate support if needed.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>Should I see a counsellor even if my physical injuries are improving?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Yes. Physical and emotional recovery do not always happen at the same pace. In our clinical experience, people often recover more completely when both physical and emotional symptoms are addressed together.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>Does ICBC cover counselling after a car accident?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          In many cases, ICBC may cover counselling for anxiety, stress, sleep problems, or driving fear related to a motor vehicle accident. Treatment recommendations depend on your symptoms, claim, and clinical assessment. Participating clinics may also offer direct billing.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">
-          <span>My child seems different after the accident. Is that normal?</span>
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Yes. Children may respond differently after a collision and may become fearful, withdrawn, have nightmares, or avoid riding in a car. Family counselling can help parents understand these changes and support their child&#39;s recovery.
-        </div>
-      </details>
-
+      <details class="faq-item"><summary class="faq-question"><span>Is anxiety normal after a car accident?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Yes. Feeling shaken, tense, watchful, or nervous about driving can be a common response after a collision. Consider support when symptoms are intense, persistent, or interfere with sleep, work, relationships, or travel.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>What can post-accident anxiety feel like?</span><span class="faq-icon">+</span></summary><div class="faq-answer">It may include racing thoughts, a pounding heart, muscle tension, irritability, poor sleep, distressing memories, difficulty concentrating, or avoiding driving and certain routes.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>Why did anxiety start days after the crash?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Some people feel focused on practical tasks immediately after a collision and notice emotional effects later. Pain, disrupted sleep, claim stress, and returning to the road can also trigger or intensify symptoms.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>When should I seek urgent help?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Seek urgent help if you feel unable to stay safe, have thoughts of self-harm, feel disconnected from reality, or are in severe distress. Call 911 for immediate danger or contact a local crisis service. Otherwise, arrange a prompt assessment if symptoms are worsening or disrupting daily life.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>Can counselling help with driving anxiety?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Yes. Counselling can help you understand anxiety responses, learn grounding and coping skills, and gradually rebuild confidence around driving or travelling at a safe pace.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>What happens during a first counselling appointment?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Your counsellor will ask about the collision, current symptoms, sleep, travel concerns, daily impact, and recovery goals. Together you can create a plan that respects your comfort and pace.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>Does ICBC cover counselling or psychology?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Eligible customers may have up to 12 pre-approved counselling sessions and 12 psychology sessions within the first 12 weeks after a crash. Confirm your claim eligibility and any fee difference with ICBC or your provider.</div></details>
+      <details class="faq-item"><summary class="faq-question"><span>How long does anxiety after a crash last?</span><span class="faq-icon">+</span></summary><div class="faq-answer">Recovery varies. Some reactions settle within days or weeks, while persistent or worsening symptoms may benefit from professional support. Early care can help prevent avoidance and anxiety from becoming more established.</div></details>
     </div>
-
   </div>
 </section>
 
 <section id="related-guides" class="page-section">
   <div class="wide-container">
-
     <p class="eyebrow">Related Symptoms</p>
-
-    <h2 class="section-title">
-      Other symptoms after a car accident
-    </h2>
-
-    <p class="section-copy">
-      Anxiety and stress can appear together with other post-accident symptoms.
-    </p>
-
+    <h2 class="section-title">Other symptoms after a car accident</h2>
+    <p class="section-copy">Car accident injuries often occur together. Explore other symptoms that may affect your recovery.</p>
     <div class="related-grid">
-
-      <a href="/symptoms/headaches-after-car-accident/" class="related-card">
-        <img src="https://vanrecovery.ca/assets/images/headaches-after-car-accident-card.png" alt="Headaches after a car accident">
-        <div>
-          <h3>Headaches After a Car Accident</h3>
-          <p>Headaches may appear after neck strain, whiplash, concussion, or muscle tension.</p>
-        </div>
-      </a>
-
-      <a href="/symptoms/back-pain-after-car-accident/" class="related-card">
-        <img src="https://vanrecovery.ca/assets/images/back-pain-after-car-accident-card.png" alt="Back pain after a car accident">
-        <div>
-          <h3>Back Pain After a Car Accident</h3>
-          <p>Back discomfort may occur when the spine absorbs collision-related force.</p>
-        </div>
-      </a>
-
-      <a href="/symptoms/neck-pain-after-car-accident/" class="related-card">
-        <img src="https://vanrecovery.ca/assets/images/neck-pain-after-car-accident-card.png" alt="Neck pain after a car accident">
-        <div>
-          <h3>Neck Pain After a Car Accident</h3>
-          <p>Neck pain, including shoulder pain, may result from whiplash or soft tissue injury.</p>
-        </div>
-      </a>
-
+      <a href="/symptoms/headaches-after-car-accident/" class="related-card"><img src="https://vanrecovery.ca/assets/images/headaches-after-car-accident-card.png" alt="Headaches after a car accident"><div><h3>Headaches After a Car Accident</h3><p>Headaches may be linked with tension, disrupted sleep, neck strain, or concussion.</p></div></a>
+      <a href="/symptoms/neck-pain-after-car-accident/" class="related-card"><img src="https://vanrecovery.ca/assets/images/neck-pain-after-car-accident-card.png" alt="Neck pain after a car accident"><div><h3>Neck Pain After a Car Accident</h3><p>Neck pain, stiffness, or whiplash symptoms may affect sleep and stress levels.</p></div></a>
+      <a href="/symptoms/back-pain-after-car-accident/" class="related-card"><img src="https://vanrecovery.ca/assets/images/back-pain-after-car-accident-card.png" alt="Back pain after a car accident"><div><h3>Back Pain After a Car Accident</h3><p>Back pain and reduced movement can make travel, sleep, and daily tasks more difficult.</p></div></a>
     </div>
-
   </div>
 </section>
-
-<section class="page-section" style="border-bottom:0;">
-  <div class="cta-panel">
-
-    <h2>
-      Not sure what to do next?
-    </h2>
-
-    <p>
-      Complete the 30-second check to learn what ICBC recovery options may be available.
-    </p>
-
-    <div class="cta-actions">
-      <a href="/#assessment" class="cta-primary">Start 30s Check</a>
-      <a href="/#locations" class="cta-secondary">Find a Clinic</a>
+<section id="cta" class="py-0 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-0 md:px-6 lg:px-8">
+    <div class="cta md:rounded-[18px] md:px-20 md:py-24">
+      <div class="relative z-10">
+        <h2 class="md:text-6xl">Ready to Take the Next Step?</h2>
+        <p class="md:text-2xl">
+          Start your 30-second Recovery Check or choose the clinic location that's most convenient for you.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+          <a href="/#assessment" class="inline-flex items-center justify-center bg-white text-blue-600 hover:-translate-y-1 hover:shadow-2xl transition-all">Take Recovery Check</a>
+          <a href="/#locations" class="inline-flex items-center justify-center border border-white/25 bg-white/10 backdrop-blur text-white hover:bg-white/20 transition-all">View Clinic Locations</a>
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
 
@@ -4495,6 +1825,41 @@ nav.sticky{
   </div>
 
 </footer>
+
+<script>
+(function(){
+  var title = document.querySelector('.mobile-hero-title');
+  if(!title) return;
+
+  var lines = Array.from(title.querySelectorAll('.title-line'));
+
+  function fitMobileTitle(){
+    if(window.innerWidth > 767) return;
+
+    var targetWidth = title.clientWidth;
+    if(!targetWidth) return;
+
+    lines.forEach(function(line){
+      line.style.fontSize = '100px';
+      var naturalWidth = line.getBoundingClientRect().width;
+      if(naturalWidth){
+        line.style.fontSize = ((targetWidth / naturalWidth) * 100).toFixed(2) + 'px';
+      }
+    });
+  }
+
+  fitMobileTitle();
+  window.addEventListener('resize', fitMobileTitle, {passive:true});
+
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(fitMobileTitle);
+  }
+
+  if('ResizeObserver' in window){
+    new ResizeObserver(fitMobileTitle).observe(title);
+  }
+})();
+</script>
 
 <script>if(window.lucide){ lucide.createIcons(); }</script>
 <script>
