@@ -531,7 +531,7 @@ body { font-family: 'Inter', sans-serif; }
 
     color:#0f172a;
 
-    font-size:36px;
+    font-size:clamp(26px, 8vw, 34px);
 
     line-height:.91;
 
@@ -541,7 +541,15 @@ body { font-family: 'Inter', sans-serif; }
 
 }
 
-.mobile-hero h1 span{
+.mobile-hero h1 .mobile-hero-line{
+
+    display:block;
+
+    white-space:nowrap;
+
+}
+
+.mobile-hero h1 .mobile-hero-accent{
 
     color:#2563eb;
 
@@ -957,7 +965,7 @@ body { font-family: 'Inter', sans-serif; }
   }
 
   .symptoms-transition {
-    padding: 38px 24px;
+    padding: 38px 24px 64px;
   }
 
   .symptoms-transition__eyebrow {
@@ -1081,7 +1089,7 @@ body { font-family: 'Inter', sans-serif; }
 @media (max-width: 767px) {
 
   #why-choose-us {
-    padding: 46px 18px !important;
+    padding: 46px 24px !important;
   }
 
   #why-choose-us > div {
@@ -1598,7 +1606,7 @@ body { font-family: 'Inter', sans-serif; }
    ========================= */
 @media (max-width: 767px) {
   #assessment {
-    padding: 14px 12px 48px !important;
+    padding: 14px 24px 48px !important;
   }
 
   .icbc-quiz .quiz-card {
@@ -2288,7 +2296,7 @@ body { font-family: 'Inter', sans-serif; }
   }
 
   .faq-container{
-    padding:0 20px;
+    padding:0 24px;
   }
 
   .faq-heading{
@@ -3313,7 +3321,7 @@ main > section[id] {
 
 .special-situations-section {
   background: #fff;
-  padding: 88px 18px 72px;
+  padding: 88px 24px 72px;
 }
 
 .special-situations-container {
@@ -3583,7 +3591,7 @@ main > section[id] {
 
 @media (max-width: 767px) {
   .recovery-journey-section {
-    padding: 64px 18px 52px;
+    padding: 64px 24px 52px;
   }
 
   .recovery-journey-header {
@@ -4197,8 +4205,8 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     <div class="mobile-hero-inner">
 
         <h1>
-            Recover Sooner After an
-            <span>ICBC Car Accident</span>
+            <span class="mobile-hero-line">Recover Sooner After an</span>
+            <span class="mobile-hero-accent">ICBC Car Accident</span>
         </h1>
 
         <p class="mobile-subtitle">
