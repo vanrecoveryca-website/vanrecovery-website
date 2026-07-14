@@ -855,14 +855,22 @@ main > section[id]{
     max-width:390px;
     margin:0;
     color:var(--ink);
-    font-size:40px;
+    font-size:clamp(30px,10vw,40px);
     line-height:.93;
     letter-spacing:-.055em;
     font-weight:900;
   }
 
-  .mobile-hero-title span{
+  .mobile-hero-title > span{
     display:block;
+    white-space:nowrap;
+  }
+
+  .mobile-hero-line{
+    color:var(--ink);
+  }
+
+  .mobile-hero-accent{
     margin-top:4px;
     color:var(--blue);
     font-size:1.06em;
@@ -1761,8 +1769,8 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 <section class="mobile-hero">
   <div class="mobile-hero-inner">
     <div class="mobile-hero-title">
-      Headaches After an
-      <span>ICBC Car Accident</span>
+      <span class="mobile-hero-line">Headaches After an</span>
+      <span class="mobile-hero-accent">ICBC Car Accident</span>
     </div>
 
     <p class="mobile-subtitle">
