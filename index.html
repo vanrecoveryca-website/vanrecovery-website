@@ -541,21 +541,26 @@ body { font-family: 'Inter', sans-serif; }
 
 }
 
-.mobile-hero h1 .mobile-hero-line{
+.mobile-hero h1 .mobile-hero-line,
+.mobile-hero h1 .mobile-hero-accent{
 
     display:block;
 
     white-space:nowrap;
+
+    font-size:inherit;
+
+    line-height:inherit;
+
+    letter-spacing:inherit;
+
+    font-weight:inherit;
 
 }
 
 .mobile-hero h1 .mobile-hero-accent{
 
     color:#2563eb;
-
-    display:block;
-
-    white-space:nowrap;
 
 }
 
@@ -6137,6 +6142,55 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.22 });
 
   observer.observe(section);
+})();
+</script>
+
+<script>
+(function () {
+  var resizeFrame;
+
+  function fitMobileHeroTitle() {
+    var heading = document.querySelector('.mobile-hero h1');
+    if (!heading) return;
+
+    var lines = heading.querySelectorAll('.mobile-hero-line, .mobile-hero-accent');
+    if (window.innerWidth >= 768) {
+      lines.forEach(function (line) {
+        line.style.removeProperty('font-size');
+      });
+      return;
+    }
+
+    var availableWidth = heading.clientWidth;
+
+    lines.forEach(function (line) {
+      line.style.fontSize = '100px';
+
+      var range = document.createRange();
+      range.selectNodeContents(line);
+      var naturalWidth = range.getBoundingClientRect().width;
+
+      if (naturalWidth > 0) {
+        line.style.fontSize = ((availableWidth / naturalWidth) * 100) + 'px';
+      }
+
+      range.detach();
+    });
+  }
+
+  function scheduleMobileHeroFit() {
+    window.cancelAnimationFrame(resizeFrame);
+    resizeFrame = window.requestAnimationFrame(fitMobileHeroTitle);
+  }
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitMobileHeroTitle);
+  } else {
+    window.addEventListener('load', fitMobileHeroTitle, { once: true });
+  }
+
+  document.addEventListener('DOMContentLoaded', fitMobileHeroTitle);
+  window.addEventListener('resize', scheduleMobileHeroFit);
 })();
 </script>
 </body>
