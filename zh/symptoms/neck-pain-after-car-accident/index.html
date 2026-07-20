@@ -2255,7 +2255,7 @@ const zhMap={
 const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); const nodes=[]; while(walk.nextNode())nodes.push(walk.currentNode);
 nodes.forEach(n=>{const t=n.nodeValue.trim();if(zhMap[t])n.nodeValue=n.nodeValue.replace(t,zhMap[t]);});
 </script>
-<script src="/zh/symptom-translations.js?v=2"></script>
+<script src="/zh/symptom-translations.js?v=3"></script>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
   const nav=document.querySelector("nav .hidden.md\\:flex");
