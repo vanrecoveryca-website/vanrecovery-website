@@ -1920,5 +1920,25 @@ const zhMap={
 const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); const nodes=[]; while(walk.nextNode())nodes.push(walk.currentNode);
 nodes.forEach(n=>{const t=n.nodeValue.trim();if(zhMap[t])n.nodeValue=n.nodeValue.replace(t,zhMap[t]);});
 </script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const nav=document.querySelector("nav .hidden.md\\:flex");
+  if(nav&&!nav.querySelector('[data-english-switch]')){
+    const a=document.createElement("a");
+    a.href=location.pathname.replace(/^\\/zh/,"")||"/";
+    a.textContent="English"; a.dataset.englishSwitch="true";
+    a.className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors";
+    nav.appendChild(a);
+  }
+  const mobile=document.querySelector(".mobile-menu-inner");
+  if(mobile&&!mobile.querySelector('[data-english-switch]')){
+    const a=document.createElement("a");
+    a.href=location.pathname.replace(/^\\/zh/,"")||"/";
+    a.textContent="English"; a.dataset.englishSwitch="true";
+    a.className="mobile-menu-link";
+    mobile.appendChild(a);
+  }
+});
+</script>
 </body>
 </html>
