@@ -1907,7 +1907,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
   sections.forEach(function(section){ observer.observe(section); });
 })();
 </script>
-<script>
+<script type="application/json" id="legacy-translation-map">
 document.documentElement.lang="zh-Hans";
 const zhMap={
 "Symptoms":"症状","Treatment":"治疗","Locations":"诊所地点","Recovery Check":"康复评估",
@@ -1925,6 +1925,7 @@ const zhMap={
 const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); const nodes=[]; while(walk.nextNode())nodes.push(walk.currentNode);
 nodes.forEach(n=>{const t=n.nodeValue.trim();if(zhMap[t])n.nodeValue=n.nodeValue.replace(t,zhMap[t]);});
 </script>
+<script src="/zh/symptom-translations.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
   const nav=document.querySelector("nav .hidden.md\\:flex");
