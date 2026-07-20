@@ -2237,7 +2237,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 })();
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4b7f86ff662c4fdaa2c47690fa05d345","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>
+<script type="application/json" id="legacy-translation-map">
 document.documentElement.lang="zh-Hans";
 const zhMap={
 "Symptoms":"症状","Treatment":"治疗","Locations":"诊所地点","Recovery Check":"康复评估",
@@ -2255,6 +2255,7 @@ const zhMap={
 const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); const nodes=[]; while(walk.nextNode())nodes.push(walk.currentNode);
 nodes.forEach(n=>{const t=n.nodeValue.trim();if(zhMap[t])n.nodeValue=n.nodeValue.replace(t,zhMap[t]);});
 </script>
+<script src="/zh/symptom-translations.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
   const nav=document.querySelector("nav .hidden.md\\:flex");
