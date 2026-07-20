@@ -84,7 +84,10 @@
   });
 
   document.querySelectorAll('a[href^="/symptoms/"]').forEach(function (link) {
-    link.href = "/zh" + link.getAttribute("href");
+    if (link.textContent.trim() !== "English") link.href = "/zh" + link.getAttribute("href");
+  });
+  document.querySelectorAll('a').forEach(function (link) {
+    if (link.textContent.trim() === "English") link.href = "/symptoms/" + slug + "/";
   });
   document.querySelectorAll('[data-home-link]').forEach(function (link) {
     const target = link.getAttribute('data-home-link');
