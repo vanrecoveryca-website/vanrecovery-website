@@ -29,6 +29,14 @@ const pregnancyMap={
 "Clinically Reviewed Pregnancy Guidance":"经临床审核的孕期康复建议",
 "Recovery after a collision should consider both your physical symptoms and your comfort during pregnancy. An early assessment helps identify appropriate treatment, supports daily function, and gives you a clear plan for moving forward.":"车祸后的康复应同时考虑身体症状和孕期舒适度。及早评估有助于确定合适的治疗、维持日常活动能力，并制定清晰的康复计划。",
 "Last reviewed: July 2026 · Educational content only":"最后审核：2026 年 7 月 · 内容仅供健康教育参考",
+"What changes might I notice in my child after a crash?":"孕期发生车祸后，可能出现哪些变化？",
+"When should my child see a health professional?":"孕期发生车祸后，什么时候应该就医？",
+"Can family counselling help after a car accident?":"车祸后心理咨询有帮助吗？",
+"What happens at a first counselling appointment?":"第一次评估会进行什么？",
+"Should parents attend counselling too?":"治疗前需要告知医疗人员自己怀孕吗？",
+"When should I seek urgent help for my child?":"什么情况下应立即就医？",
+"Does ICBC cover counselling or psychology?":"ICBC 是否承保心理咨询或心理治疗？",
+"How long does recovery take for children?":"孕期车祸后的康复需要多长时间？",
 "Headaches After a Car Accident":"车祸后头痛","Headaches may be linked with tension, disrupted sleep, neck strain, or concussion.":"头痛可能与紧张、睡眠中断、颈部拉伤或脑震荡有关。",
 "Neck Pain After a Car Accident":"车祸后颈部疼痛","Neck pain, stiffness, or whiplash symptoms may affect sleep and stress levels.":"颈部疼痛、僵硬或挥鞭伤症状可能影响睡眠和压力水平。",
 "Back Pain After a Car Accident":"车祸后背部疼痛","Back pain and reduced movement can make travel, sleep, and daily tasks more difficult.":"背部疼痛和活动受限可能使出行、睡眠和日常事务更加困难。"
@@ -36,5 +44,5 @@ const pregnancyMap={
 const pw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),pn=[];while(pw.nextNode())pn.push(pw.currentNode);pn.forEach(function(n){const t=n.nodeValue.trim();if(pregnancyMap[t])n.nodeValue=n.nodeValue.replace(t,pregnancyMap[t]);});
 document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("孕期车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='孕期 <span class="text-blue-600">ICBC 车祸康复</span>';});
 }
-const related=document.querySelector("#related-guides .wide-container");if(related&&!related.querySelector(".audience-guidance-links")){const p=document.createElement("p");p.className="audience-guidance-links text-lg text-slate-600 mt-10";p.innerHTML='以下族群的康复需求可能不同： <a class="font-bold text-blue-600" href="/zh/children-after-car-accident/">儿童</a>，<a class="font-bold text-blue-600" href="/zh/pregnancy-after-car-accident/">孕期人士</a>，以及 <a class="font-bold text-blue-600" href="/zh/seniors-after-car-accident/">长者</a>。探索适合您情况的康复建议。';related.appendChild(p);}
+const related=document.querySelector("#related-guides .wide-container");if(related&&!Array.from(related.querySelectorAll("p")).some(function(el){return el.textContent.includes("以下族群的康复需求可能不同");})){const p=document.createElement("p");p.className="audience-guidance-links text-lg text-slate-600 mt-10";p.innerHTML='以下族群的康复需求可能不同： <a class="font-bold text-blue-600" href="/zh/children-after-car-accident/">儿童</a>，<a class="font-bold text-blue-600" href="/zh/pregnancy-after-car-accident/">孕期人士</a>，以及 <a class="font-bold text-blue-600" href="/zh/seniors-after-car-accident/">长者</a>。探索适合您情况的康复建议。';related.appendChild(p);}
 })();
