@@ -76,6 +76,7 @@ const seniorMap={
 };
 const sw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),sn=[];while(sw.nextNode())sn.push(sw.currentNode);sn.forEach(function(n){const t=n.nodeValue.trim();if(seniorMap[t])n.nodeValue=n.nodeValue.replace(t,seniorMap[t]);});
 document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("长者车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='长者 <span class="text-blue-600">ICBC 车祸康复</span>';});
+document.querySelectorAll("nav a").forEach(function(a){if(a.textContent.trim()==="English")a.href="/seniors-after-car-accident/";});
 }
 document.querySelectorAll('a[href="/children-after-car-accident/"],a[href="/pregnancy-after-car-accident/"],a[href="/seniors-after-car-accident/"]').forEach(function(a){a.href="/zh"+a.getAttribute("href");});
 })();
