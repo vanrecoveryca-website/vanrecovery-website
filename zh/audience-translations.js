@@ -80,4 +80,5 @@ document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes(
 document.querySelectorAll("nav a").forEach(function(a){if(a.textContent.trim()==="English")a.href="/seniors-after-car-accident/";});
 }
 document.querySelectorAll('a[href="/children-after-car-accident/"],a[href="/pregnancy-after-car-accident/"],a[href="/seniors-after-car-accident/"]').forEach(function(a){a.href="/zh"+a.getAttribute("href");});
+if(slug==="seniors-after-car-accident"){document.querySelectorAll("nav a").forEach(function(a){if(a.textContent.trim()==="English")a.href="/seniors-after-car-accident/";});}
 })();
