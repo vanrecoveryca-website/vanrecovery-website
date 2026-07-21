@@ -10,4 +10,5 @@ const map=Object.assign({},common,pages[slug]||{});document.title=titles[slug]||
 document.querySelectorAll('[data-home-link]').forEach(a=>{const t=a.getAttribute('data-home-link');a.href=t==='assessment'?'/zh/#assessment':'/zh/#'+t;});
 document.querySelectorAll('a[href^="/symptoms/"]').forEach(a=>a.href='/zh'+a.getAttribute('href'));
 const nav=document.querySelector('nav .hidden.md\\:flex');if(nav){const a=document.createElement('a');a.href='/'+slug+'/';a.textContent='English';a.className='text-sm font-bold text-slate-600 hover:text-blue-600';nav.appendChild(a);}
+if(slug==="children-after-car-accident"){document.querySelectorAll("h3").forEach(function(el){if(el.textContent.trim()==="为什么要尽早获得支持？")el.textContent="为什么要尽早开始治疗？";});}
 })();
