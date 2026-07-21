@@ -95,4 +95,7 @@
     const target = link.getAttribute('data-home-link');
     link.href = target === 'assessment' ? '/zh/#assessment' : '/zh/#' + target;
   });
+  document.querySelectorAll('section.desktop-hero p.section-copy').forEach(function (paragraph) {
+    if (paragraph.textContent.includes('Recovery may be different for') || paragraph.textContent.includes('以下族群的康复需求可能不同')) paragraph.remove();
+  });
 })();
