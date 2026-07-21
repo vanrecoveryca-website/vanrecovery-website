@@ -46,6 +46,7 @@ const pw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),pn=[];whi
 document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("孕期车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='孕期 <span class="text-blue-600">ICBC 车祸康复</span>';});
 }
 if(slug==="seniors-after-car-accident"){
+document.querySelectorAll("section.desktop-hero p.section-copy").forEach(function(el){if(el.textContent.includes("Recovery may be different for")||el.textContent.includes("以下族群的康复需求可能不同"))el.remove();});
 const seniorMap={
 "New or worsening pain, stiffness, or dizziness":"出现新的疼痛、僵硬或头晕，或症状加重",
 "Changes in balance, walking, or confidence moving around":"平衡、行走或活动信心发生变化",
