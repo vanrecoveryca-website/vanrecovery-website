@@ -12,6 +12,7 @@ document.querySelectorAll('a[href^="/symptoms/"]').forEach(a=>a.href='/zh'+a.get
 const nav=document.querySelector('nav .hidden.md\\:flex');if(nav){const a=document.createElement('a');a.href='/'+slug+'/';a.textContent='English';a.className='text-sm font-bold text-slate-600 hover:text-blue-600';nav.appendChild(a);}
 if(slug==="children-after-car-accident"){document.querySelectorAll("h3").forEach(function(el){if(el.textContent.trim()==="为什么要尽早获得支持？")el.textContent="为什么要尽早开始治疗？";});document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("儿童车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='儿童 <span class="text-blue-600">ICBC 车祸康复</span>';});document.querySelectorAll("p").forEach(function(el){if(el.textContent.trim()==="通过全家庭参与的照护，帮助孩子在车祸后恢复安全感、获得理解和支持。")el.textContent="帮助家长了解孩子的情况，尽早安排合适的评估与治疗，促进康复。";});}
 if(slug==="pregnancy-after-car-accident"){
+document.querySelectorAll("section.desktop-hero p.section-copy").forEach(function(el){if(el.textContent.includes("Recovery may be different for")||el.textContent.includes("以下族群的康复需求可能不同"))el.remove();});
 const pregnancyMap={
 "Find the right care and support after a collision during pregnancy.":"孕期发生车祸后，找到适合自己的治疗与康复支持。",
 "New or worsening pain, stiffness, or headaches":"出现新的疼痛、僵硬或头痛，或症状加重",
