@@ -1080,7 +1080,450 @@ main > section[id]{
 
   .expert-profile{
     display:grid;
-    …3772 tokens truncated…"/icbc-hub.html");
+    grid-template-columns:84px 1fr;
+    grid-template-areas:
+      "photo name"
+      "photo role"
+      "meta meta";
+    column-gap:22px;
+    row-gap:8px;
+    align-items:center;
+    text-align:left;
+  }
+
+  .expert-photo{
+    grid-area:photo;
+    width:84px;
+    height:84px;
+    margin:0;
+    border-width:3px;
+  }
+
+  .expert-profile h3{
+    grid-area:name;
+    align-self:center;
+    font-size:22px;
+    line-height:1.08;
+  }
+
+  .expert-role{
+    grid-area:role;
+    align-self:start;
+    margin:6px 0 0;
+    font-size:14px;
+    line-height:1.35;
+  }
+
+  .expert-experience{
+    grid-area:meta;
+    display:block;
+    margin:14px 0 0;
+    text-align:left;
+    transform:none;
+  }
+
+  .expert-content{
+    display:block;
+    margin-top:24px;
+    padding-top:24px;
+    border-top:1px solid #e5e7eb;
+  }
+
+  .expert-content .section-title{
+    font-size:22px;
+    line-height:1.14;
+  }
+
+  .quote{
+    margin-top:18px;
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  .expert-note{
+    margin-top:20px;
+    font-size:12px;
+    line-height:1.5;
+    transform:none;
+  }
+
+  .faq-heading{margin-bottom:28px;}
+
+  .faq-question{
+    padding:18px 0;
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  .faq-answer{
+    padding-bottom:20px;
+  }
+
+  .related-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .related-card{
+    border-radius:12px;
+  }
+
+  .related-card img{
+    height:190px;
+  }
+
+  .site-footer{
+    padding:42px 20px 24px;
+  }
+
+  .footer-container{
+    max-width:430px;
+  }
+
+  .footer-top{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    padding-bottom:28px;
+  }
+
+  .footer-logo-row{
+    gap:12px;
+    margin-bottom:18px;
+  }
+
+  .footer-logo img{
+    width:48px;
+    height:48px;
+  }
+
+  .footer-title{
+    font-size:26px;
+    line-height:1;
+  }
+
+  .footer-location{
+    margin-top:5px;
+    font-size:13px;
+  }
+
+  .footer-description{
+    max-width:none;
+    font-size:14px;
+    line-height:1.55;
+  }
+
+  .footer-links-group{
+    margin-top:26px;
+  }
+
+  .footer-links-title{
+    margin-bottom:12px;
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+
+  .footer-links{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px 28px;
+  }
+
+  .footer-links a{
+    font-size:14px;
+  }
+
+  .footer-clinic h3{
+    margin-bottom:10px;
+    font-size:22px;
+  }
+
+  .clinic-name{
+    margin-bottom:14px;
+    font-size:18px;
+  }
+
+  .clinic-info{
+    gap:9px;
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  .clinic-hours{
+    margin-top:16px;
+    padding-top:0;
+    border-top:none;
+  }
+
+  .hours-label{
+    margin-bottom:8px;
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+
+  .hours-row{
+    gap:10px;
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  .hours-row + .hours-row{
+    margin-top:5px;
+  }
+
+  .footer-bottom{
+    padding-top:18px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+
+  .footer-bottom p{
+    font-size:12px;
+  }
+
+  .site-footer{padding:42px 20px 24px;}
+  .site-footer .footer-container{max-width:430px;}
+  .site-footer .footer-top{display:flex;flex-direction:column;gap:50px;padding-bottom:28px;}
+  .site-footer .footer-logo-row{display:flex;gap:12px;margin-bottom:18px;}
+  .site-footer .footer-logo img{width:48px;height:48px;}
+  .site-footer .footer-title{font-size:26px;line-height:1;}
+  .site-footer .footer-location{margin-top:5px;font-size:13px;}
+  .site-footer .footer-description{max-width:none;font-size:14px;line-height:1.55;}
+  .site-footer .footer-links-group{margin-top:26px;}
+  .site-footer .footer-links-title{margin-bottom:12px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;}
+  .site-footer .footer-links a{font-size:14px;}
+  .site-footer .footer-clinic h3{font-size:22px;margin-bottom:10px;}
+  .site-footer .clinic-name{font-size:18px;margin-bottom:14px;}
+  .site-footer .clinic-info{gap:9px;font-size:14px;line-height:1.5;}
+  .site-footer .clinic-hours{margin-top:16px;padding-top:0;border-top:none;}
+  .site-footer .hours-label{margin-bottom:8px;font-size:10px;letter-spacing:.18em;}
+  .site-footer .hours-row{font-size:13px;line-height:1.35;gap:10px;}
+  .site-footer .hours-row + .hours-row{margin-top:5px;}
+  .site-footer .footer-bottom{padding-top:18px;flex-direction:column;align-items:flex-start;gap:6px;}
+  .site-footer .footer-bottom p{font-size:12px;}
+}
+</style>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://vanrecovery.ca/#organization",
+      "name": "VanRecovery",
+      "url": "https://vanrecovery.ca/",
+      "areaServed": ["Vancouver", "Richmond", "British Columbia"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vanrecovery.ca/#clinical-reviewer-hoi-pan-cheng",
+      "name": "Hoi Pan (DaDa) Cheng",
+      "jobTitle": "Registered Clinical Counsellor",
+      "worksFor": {"@id": "https://vanrecovery.ca/#organization"},
+      "knowsAbout": [
+        "Child and family recovery after a collision",
+        "Family-centred counselling",
+        "Child emotional recovery",
+        "Post-accident family support",
+        "Clinical counselling",
+        "Family therapy"
+      ]
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://vanrecovery.ca/children-after-car-accident/#webpage",
+      "url": "https://vanrecovery.ca/children-after-car-accident/",
+      "name": "Children After a Car Accident",
+      "description": "Learn about child and family recovery support, counselling options, and ICBC recovery after a motor vehicle accident in Vancouver and Richmond.",
+      "inLanguage": "en-CA",
+      "isPartOf": {"@id": "https://vanrecovery.ca/#organization"},
+      "reviewedBy": {"@id": "https://vanrecovery.ca/#clinical-reviewer-hoi-pan-cheng"},
+      "lastReviewed": "2026-07-13",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Child recovery after a car accident",
+        "alternateName": ["Child and family recovery", "Family support after a collision"],
+        "signOrSymptom": [
+          {"@type": "MedicalSymptom", "name": "Sleep or behaviour changes"},
+          {"@type": "MedicalSymptom", "name": "Fear of car rides"},
+          {"@type": "MedicalSymptom", "name": "Nightmares or increased worries"},
+          {"@type": "MedicalSymptom", "name": "School, play, or family life affected"}
+        ],
+        "possibleTreatment": [
+          {"@type": "MedicalTherapy", "name": "Child counselling"},
+          {"@type": "MedicalTherapy", "name": "Family therapy"},
+          {"@type": "MedicalTherapy", "name": "Virtual family support"}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vanrecovery.ca/children-after-car-accident/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"Is anxiety normal after a car accident?","acceptedAnswer":{"@type":"Answer","text":"Yes. Feeling shaken, tense, watchful, or nervous about driving can be a common response after a collision. Consider support when symptoms are intense, persistent, or interfere with sleep, work, relationships, or travel."}},
+        {"@type":"Question","name":"What can post-accident anxiety feel like?","acceptedAnswer":{"@type":"Answer","text":"It may include racing thoughts, a pounding heart, muscle tension, irritability, poor sleep, distressing memories, difficulty concentrating, or avoiding driving and certain routes."}},
+        {"@type":"Question","name":"Why did anxiety start days after the crash?","acceptedAnswer":{"@type":"Answer","text":"Some people feel focused on practical tasks immediately after a collision and notice emotional effects later. Pain, disrupted sleep, claim stress, and returning to the road can also trigger or intensify symptoms."}},
+        {"@type":"Question","name":"When should I seek urgent help?","acceptedAnswer":{"@type":"Answer","text":"Seek urgent help if you feel unable to stay safe, have thoughts of self-harm, feel disconnected from reality, or are in severe distress. Call 911 for immediate danger or contact a local crisis service. Otherwise, arrange a prompt assessment if symptoms are worsening or disrupting daily life."}},
+        {"@type":"Question","name":"Can counselling help with driving anxiety?","acceptedAnswer":{"@type":"Answer","text":"Yes. Counselling can help you understand anxiety responses, learn grounding and coping skills, and gradually rebuild confidence around driving or travelling at a safe pace."}},
+        {"@type":"Question","name":"What happens during a first counselling appointment?","acceptedAnswer":{"@type":"Answer","text":"Your counsellor will ask about the collision, current symptoms, sleep, travel concerns, daily impact, and recovery goals. Together you can create a plan that respects your comfort and pace."}},
+        {"@type":"Question","name":"Does ICBC cover counselling or psychology?","acceptedAnswer":{"@type":"Answer","text":"Eligible customers may have up to 12 pre-approved counselling sessions and 12 psychology sessions within the first 12 weeks after a crash. Confirm your claim eligibility and any fee difference with ICBC or your provider."}},
+        {"@type":"Question","name":"How long does anxiety after a crash last?","acceptedAnswer":{"@type":"Answer","text":"Recovery varies. Some reactions settle within days or weeks, while persistent or worsening symptoms may benefit from professional support. Early care can help prevent avoidance and anxiety from becoming more established."}}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vanrecovery.ca/children-after-car-accident/#breadcrumb",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://vanrecovery.ca/"},
+        {"@type":"ListItem","position":2,"name":"Children After a Car Accident","item":"https://vanrecovery.ca/children-after-car-accident/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-blue-600 flex-shrink-0">
+
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+
+                <span class="font-bold text-xl tracking-tight text-slate-800">
+                    Van<span class="text-blue-600 font-black">Recovery</span>
+                </span>
+
+            </a>
+
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <a data-home-link="symptoms"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Symptoms
+                </a>
+
+                <a data-home-link="treatment"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Treatment
+                </a>
+
+                <a data-home-link="locations"
+                   class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
+                    Locations
+                </a>
+
+                <a data-home-link="assessment"
+                   class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md cursor-pointer">
+                    Recovery Check
+                </a>
+                <a href="/zh/seniors-after-car-accident/" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">ä¸­æ–‡</a>
+
+            </div>
+
+            <!-- Mobile -->
+            <button
+                id="mobile-menu-button"
+                class="mobile-menu-button md:hidden p-2 text-slate-600"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                type="button">
+
+                <svg class="w-6 h-6"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="mobile-menu-panel md:hidden bg-white shadow-lg">
+
+        <div class="mobile-menu-inner px-8 py-7">
+
+            <a data-home-link="symptoms"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Symptoms
+            </a>
+
+            <a data-home-link="treatment"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Treatment
+            </a>
+
+            <a data-home-link="locations"
+               class="block px-1 py-4 text-[18px] font-black text-slate-800 hover:text-blue-600 transition-colors">
+                Locations
+            </a>
+
+            <a data-home-link="assessment"
+               class="mobile-menu-cta block rounded-xl bg-blue-600 px-5 py-4 text-center text-[18px] font-black text-white shadow-lg">
+                Recovery Check
+            </a>
+            <a href="/zh/seniors-after-car-accident/" class="mobile-menu-link">ä¸­æ–‡</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<script>
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+function setMobileMenuOpen(isOpen) {
+    if (!mobileMenu || !mobileMenuButton) return;
+
+    mobileMenu.classList.toggle("is-open", isOpen);
+    mobileMenuButton.classList.toggle("is-open", isOpen);
+    mobileMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+}
+
+function toggleMobileMenu() {
+    if (!mobileMenu) return;
+    setMobileMenuOpen(!mobileMenu.classList.contains("is-open"));
+}
+
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", toggleMobileMenu);
+}
+
+const HOME_ANCHOR_PATH = "/";
+const currentPath = window.location.pathname;
+const isLocalFile = window.location.protocol === "file:";
+const isHomePage =
+    isLocalFile ||
+    currentPath === "/" ||
+    currentPath.endsWith("/index.html") ||
+    currentPath.endsWith("/icbc-hub.html");
 
 function scrollToHomeSection(target) {
     const section = document.getElementById(target);
@@ -1461,8 +1904,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 })();
 </script>
 <script src="/zh/symptom-translations.js?v=3"></script>
-<script src="/zh/audience-translations.js?v=1"></script>
+<script src="/zh/audience-translations.js?v=2"></script>
 </body>
 </html>
-
 
