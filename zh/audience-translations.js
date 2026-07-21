@@ -45,5 +45,37 @@ const pregnancyMap={
 const pw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),pn=[];while(pw.nextNode())pn.push(pw.currentNode);pn.forEach(function(n){const t=n.nodeValue.trim();if(pregnancyMap[t])n.nodeValue=n.nodeValue.replace(t,pregnancyMap[t]);});
 document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("孕期车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='孕期 <span class="text-blue-600">ICBC 车祸康复</span>';});
 }
+if(slug==="seniors-after-car-accident"){
+const seniorMap={
+"New or worsening pain, stiffness, or dizziness":"出现新的疼痛、僵硬或头晕，或症状加重",
+"Changes in balance, walking, or confidence moving around":"平衡、行走或活动信心发生变化",
+"Difficulty with daily routines, sleep, or independence":"日常生活、睡眠或独立活动受到影响",
+"Questions about a safe and steady recovery plan":"对安全、稳妥的康复计划有疑问",
+"Recovery needs can change with age. Early assessment helps identify the right care, support safe movement, and make a plan that fits your comfort and daily routines.":"康复需求可能随年龄而有所不同。及早评估有助于确定合适的治疗、支持安全活动，并制定符合身体舒适度和日常生活的康复计划。",
+"The right treatment depends on your symptoms, medical history, and clinical assessment. Your care team can help you understand appropriate ICBC-supported treatment options after a crash.":"合适的治疗取决于您的症状、病史和临床评估。医疗团队可以帮助您了解车祸后适合长者且由 ICBC 支持的治疗方案。",
+"Movement and pain support tailored to your symptoms and comfort, with care coordinated around your pregnancy needs.":"根据您的症状和舒适度提供活动与疼痛治疗，并配合长者的健康需要协调照护。",
+"Support for stress, sleep changes, driving worries, and emotional recovery after a collision.":"帮助应对车祸后的压力、睡眠变化、驾驶担忧和情绪康复。",
+"Guided movement and gradual return-to-activity support that respects your current comfort and recovery goals.":"在兼顾当前舒适度和康复目标的前提下，提供运动指导并逐步恢复日常活动。",
+"Care during pregnancy":"长者康复照护",
+"Tell your provider that you are pregnant before treatment begins. Your care team can coordinate appropriate options and help you understand the next steps for your recovery.":"开始治疗前，请向医疗人员说明您的病史、用药和目前的健康状况。医疗团队会协调合适的治疗方案，并帮助您了解后续康复步骤。",
+"Registered Clinical Counsellor":"注册临床心理咨询师",
+"Clinically Reviewed Pregnancy Guidance":"经临床审核的长者康复建议",
+"Recovery after a collision should consider both your physical symptoms and your comfort during pregnancy. An early assessment helps identify appropriate treatment, supports daily function, and gives you a clear plan for moving forward.":"车祸后的康复应同时考虑身体症状、既往健康状况和日常活动能力。及早评估有助于确定合适的治疗、维持独立生活，并制定清晰的康复计划。",
+"Pregnancy After a Car Accident FAQ":"长者车祸后常见问题",
+"What changes might I notice in my child after a crash?":"长者车祸后可能出现哪些变化？",
+"When should my child see a health professional?":"长者车祸后什么时候应该就医？",
+"Can family counselling help after a car accident?":"车祸后心理咨询有帮助吗？",
+"What happens at a first counselling appointment?":"第一次评估会进行什么？",
+"Should parents attend counselling too?":"家人可以一起参与康复计划吗？",
+"When should I seek urgent help for my child?":"什么情况下应立即就医？",
+"Does ICBC cover counselling or psychology?":"ICBC 是否承保心理咨询或心理治疗？",
+"How long does recovery take for children?":"长者车祸后的康复需要多长时间？",
+"Headaches may be linked with tension, disrupted sleep, neck strain, or concussion.":"头痛可能与紧张、睡眠中断、颈部拉伤或脑震荡有关。",
+"Neck pain, stiffness, or whiplash symptoms may affect sleep and stress levels.":"颈部疼痛、僵硬或挥鞭伤症状可能影响睡眠和压力水平。",
+"Back pain and reduced movement can make travel, sleep, and daily tasks more difficult.":"背部疼痛和活动受限可能使出行、睡眠和日常事务更加困难。"
+};
+const sw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),sn=[];while(sw.nextNode())sn.push(sw.currentNode);sn.forEach(function(n){const t=n.nodeValue.trim();if(seniorMap[t])n.nodeValue=n.nodeValue.replace(t,seniorMap[t]);});
+document.querySelectorAll("h1").forEach(function(el){if(el.textContent.includes("长者车祸后")&&el.textContent.includes("ICBC 车祸"))el.innerHTML='长者 <span class="text-blue-600">ICBC 车祸康复</span>';});
+}
 document.querySelectorAll('a[href="/children-after-car-accident/"],a[href="/pregnancy-after-car-accident/"],a[href="/seniors-after-car-accident/"]').forEach(function(a){a.href="/zh"+a.getAttribute("href");});
 })();
